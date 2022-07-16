@@ -19,14 +19,6 @@ for line_list in apple_list[1:]:
                 "parent_id": parent_str,
                 "episode_id": id_str,
             })
-        """
-        if line_str[:2] == "> ":
-            description_str = line_str[2:]
-            list_dict["description"] = description_str
-        if line_str[:12] == "- **DATE**: ":
-            date_str = line_str[12:]
-            list_dict["date"] = date_str.replace("年","-").replace("月","-").replace("日","")
-        """
     # key_set = {"title","date","description"}
     key_set = {"title","link","full_id","parent_id","episode_id"}
     if set(list_dict.keys()) == key_set:
