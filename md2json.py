@@ -1,5 +1,6 @@
 # %%
 import json
+import tomlkit
 # %%
 config_dict = {
     "apple": {
@@ -53,4 +54,47 @@ for podcast_str, parameter_dict in config_dict.items():
     with open(F"{file_str}.json",'w') as target_handler:
         json.dump(podcast_dict,target_handler,indent=0)
     result_dict[podcast_str] = podcast_dict
+# %%
+title_dict = dict()
+# for podcast_str, podcast_dict in result_dict.items():
+for podcast_str in ["google","spotify"]:
+    podcast_dict = result_dict[podcast_str]
+    podcast_title_dict = dict()
+    for episode_dict in podcast_dict.values():
+        title_str = episode_dict['title']
+        link_str = episode_dict['link']
+        if title_str in podcast_title_dict.keys():
+            print(title_str)
+            print(episode_dict)
+            print(podcast_title_dict[title_str])
+        else:
+            podcast_title_dict[title_str] = link_str
+    if title_dict == dict():
+        for x,y in podcast_title_dict.items():
+            title_dict[x] = {podcast_str:y}
+    else:
+        for x,y in podcast_title_dict.items():
+            if x not in title_dict.keys():
+                print(x)
+            else:
+                title_episode_dict = title_dict[x]
+                title_episode_dict[podcast_str] = y
+                title_dict[x] = title_episode_dict
+# %%
+with open("link.json",'w') as target_handler:
+    json.dump(title_dict,target_handler,indent=1)
+# %%
+annotation = tomlkit.document()
+annotation.add(tomlkit.comment("Add your own tag to each episode"))
+annotation.add(tomlkit.nl())
+annotation["title"] = "tag record for each episode"
+
+for title_str, link_dict in title_dict.items():
+    episode = tomlkit.table()
+    episode.update(link_dict)
+    episode["tag"] = list()
+    annotation[title_str] = episode
+
+with open("config.toml",'w') as target_handler:
+    tomlkit.dump(annotation,target_handler)
 # %%
