@@ -51,8 +51,10 @@ for podcast_str, parameter_dict in config_dict.items():
                 podcast_dict[episode_str] = list_dict
         else:
             print(line_list)
-    with open(F"{file_str}.json",'w') as target_handler:
-        json.dump(podcast_dict,target_handler,indent=0)
+    podcast_doc = tomlkit.document()
+    podcast_doc.update(podcast_dict)
+    with open(F"{file_str}.toml",'w') as target_handler:
+        tomlkit.dump(podcast_doc,target_handler)
     result_dict[podcast_str] = podcast_dict
 # %%
 title_dict = dict()
@@ -80,9 +82,6 @@ for podcast_str in ["google","spotify"]:
                 title_episode_dict = title_dict[x]
                 title_episode_dict[podcast_str] = y
                 title_dict[x] = title_episode_dict
-# %%
-with open("link.json",'w') as target_handler:
-    json.dump(title_dict,target_handler,indent=1)
 # %%
 annotation = tomlkit.document()
 annotation.add(tomlkit.comment("Add your own tag to each episode"))
