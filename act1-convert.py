@@ -17,8 +17,24 @@ config_dict = {
         "file": "data/SpotifyPodcast",
     },
 }
+print("Start collection")
 result_dict = dict()
-# %%
+print("    Start collection: Feed")
+print("        Feed: grab rss feed")
+req = requests.get("https://feeds.buzzsprout.com/1974862.rss")
+print("        Feed: convert XML into python dictionary")
+feed = bs(req.text,"xml")
+output = dict()
+for unit in feed.find_all('item'):
+    name = unit.title.contents[0]
+    url = unit.enclosure['url']
+    output[name] = url
+result_dict["feed"] = output
+with open("data/feedPodcast.xml","w") as xmlf:
+    xmlf.write(req.text)
+with open("data/feedPodcast.toml","w") as tomlf:
+    tomlkit.dump(output,tomlf)
+print("    Finish collection: Feed")
 for podcast_str, parameter_dict in config_dict.items():
     file_str = parameter_dict["file"]
     podcast_list = [[k for k in n.splitlines() if k != str()] for n in open(F"{file_str}.md").read().split("\n----------\n")]
