@@ -1,7 +1,5 @@
-# %%
-import json
-import tomlkit
-# %%
+from bs4 import BeautifulSoup as bs
+import json, tomlkit, requests
 config_dict = {
     "apple": {
         "parent-id": "/id", "id": "?i=",
