@@ -6,6 +6,13 @@
 body {
  font-size: 2rem;
 }
+span {
+ padding: 0 0.25rem;
+}
+a {
+ text-decoration: none;
+ padding: 0 0.25rem;
+}
 .container {
  max-width: 850px;
  margin: 0 auto;
@@ -27,12 +34,13 @@ audio {
  border-radius: 5px;
 }
 </style>
+<script src="https://kit.fontawesome.com/69ae50d647.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
 <div class="plain">
 <h1>Bailingguo podcast</h1>
-<ul id="playlist"></ul>
+<div id="playlist"></div>
 </div>
 </div>
 <div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
