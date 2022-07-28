@@ -3,10 +3,12 @@ result_doc = tomlkit.load(open("history.toml"))
 title_dict = dict()
 for podcast_str, podcast_dict in result_doc.items():
     for title_str,link_str in podcast_dict.items():
-        title_episode_dict = title_dict.get(title_str,dict())
-        title_episode_dict['name'] = title_str
+        replace_str = title_str.replace("\u200b","").replace("啦‍♂️、","啦🙅‍♂️、")
+        correct_str = " ".join([n for n in replace_str.split(" ") if n != ""])
+        title_episode_dict = title_dict.get(correct_str,dict())
+        title_episode_dict['name'] = correct_str
         title_episode_dict[podcast_str] = link_str
-        title_dict[title_str] = title_episode_dict
+        title_dict[correct_str] = title_episode_dict
 annotation = tomlkit.document()
 annotation.add(tomlkit.comment("Add your own tag to each episode"))
 annotation.add(tomlkit.nl())
