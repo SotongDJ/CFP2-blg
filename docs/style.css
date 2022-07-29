@@ -1,0 +1,53 @@
+body {
+font-size: 2rem;
+font-family: Helvetica, Arial, sans-serif;
+}
+span {
+padding: 0 0.25rem;
+}
+a {
+text-decoration: none;
+padding: 0 0.25rem;
+}
+p {
+padding: 0 1rem;
+}
+h1 {
+margin: 0.5rem 0;
+}
+table {
+border-collapse: seperate;
+border-spacing: 0;
+}
+td {
+border: 0.0625rem solid black;
+text-align: left;
+}
+.buttonDiv {
+white-space: nowrap;
+}
+.title {
+max-width: 850px;
+margin: 0 auto;
+}
+.container {
+max-width: 850px;
+margin: 0 auto;
+overflow: auto;
+height: min-content;
+max-height: 75vh;
+border: 0.0625rem solid black;
+}
+.plain {
+/* white-space: nowrap; */
+width: 100%;
+}
+.playerbar {
+max-width: 850px;
+height: min-content;
+margin: 0 auto;
+}
+audio {
+width: 100%;
+border-radius: 5px;
+}
