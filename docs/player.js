@@ -1,33 +1,37 @@
-var files = [];
-var playlist_dom = document.getElementById("playlist");
-function link(href,short,jump) {
+function link(href,inner,short,jump) {
  if (href == "") {
-  var gp = document.createElement('span');
-  gp.className = short;
-  return gp;
+  var tag = document.createElement('span');
+  tag.className = short;
+  // tag.innerText = inner;
+  return tag;
  } else {
-  var gp = document.createElement('a');
-  gp.href = href;
-  if (jump) { gp.target = "podcast"; };
-  gp.className = short;
-  return gp;
+  var tag = document.createElement('a');
+  tag.href = href;
+  if (jump) { tag.target = "podcast"; };
+  tag.className = short;
+  // tag.innerText = inner;
+  return tag;
  };
 }
+var files = [];
+var playlist_dom = document.getElementById("playlist");
 for (let nub = 0; nub < playlist.length; nub++) {
 // ord = playlist.length - nub - 1;
  ord = nub;
- var li = document.createElement('p');
- li.appendChild(link(playlist[ord]["apple"],"fa-brands fa-apple",true));
- li.appendChild(link(playlist[ord]["google"],"fa-brands fa-google",true));
- li.appendChild(link(playlist[ord]["spotify"],"fa-brands fa-spotify",true));
- li.appendChild(link(playlist[ord]["feed"],"fa-solid fa-download",true));
+ var entryPg = document.createElement('tr');
+ var buttonDiv = document.createElement('td');
+ buttonDiv.className = "buttonDiv";
+ buttonDiv.appendChild(link(playlist[ord]["apple"],"A","fa-brands fa-apple",true));
+ buttonDiv.appendChild(link(playlist[ord]["google"],"G","fa-brands fa-google",true));
+ buttonDiv.appendChild(link(playlist[ord]["spotify"],"S","fa-brands fa-spotify",true));
+ buttonDiv.appendChild(link(playlist[ord]["feed"],"D","fa-solid fa-download",true));
  files.push(playlist[ord]['feed']);
- li.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",false));
-
- te = document.createElement("span");
- te.innerText = playlist[ord]['name'];
- li.appendChild(te);
- playlist_dom.appendChild(li);
+ buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","P","fa-solid fa-play",false));
+ entryPg.appendChild(buttonDiv);
+ titleDiv = document.createElement("td");
+ titleDiv.innerText = playlist[ord]['name'];
+ entryPg.appendChild(titleDiv);
+ playlist_dom.appendChild(entryPg);
 };
 var i = 0;
 var player_dom = document.getElementById("player");
