@@ -17,5 +17,5 @@ for title_str, link_dict in title_dict.items():
     episode.update(link_dict)
     episode["tag"] = list()
     annotation[title_str] = episode
-with open("annotation.toml",'w') as target_handler:
+with open("structure.toml",'w') as target_handler:
     tomlkit.dump(annotation,target_handler)
