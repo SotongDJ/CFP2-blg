@@ -7,28 +7,24 @@ padding: 0 0.25rem;
 }
 a {
 text-decoration: none;
-padding: 0 0.25rem;
+margin: 0 0.25rem;
 }
 p {
 padding: 0 1rem;
+margin: 0;
 }
 h1 {
 margin: 0.5rem 0;
 }
-table {
-border-collapse: seperate;
-border-spacing: 0;
-}
-td {
-border: 0.0625rem solid black;
-text-align: left;
+.entry{
+margin: 1rem 0;
 }
 .buttonDiv {
 white-space: nowrap;
 }
 .title {
 max-width: 850px;
-margin: 0 auto;
+margin: 0.5rem auto;
 }
 .container {
 max-width: 850px;
@@ -39,13 +35,17 @@ max-height: 75vh;
 border: 0.0625rem solid black;
 }
 .plain {
-/* white-space: nowrap; */
-width: 100%;
+white-space: nowrap;
+/* width: 100%; */
+}
+.tagBorder{
+background-color: lightyellow;
+padding: 0.25rem;
+border-radius: 0.5rem;
 }
 .playerbar {
 max-width: 850px;
 height: min-content;
-margin: 0 auto;
 }
 audio {
 width: 100%;
