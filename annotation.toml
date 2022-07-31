@@ -1572,7 +1572,7 @@ feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530770-0516-ai
 apple = "https://podcasts.apple.com/tw/podcast/0516-%E6%9D%B1%E4%BA%AC%E5%A5%A7%E9%81%8B%E7%9A%84%E4%BF%9D%E9%9A%AA%E5%A5%97%E5%9C%A8%E5%B9%B9%E5%98%9B-%E7%94%A8%E9%BA%B5%E5%8C%85%E5%BA%97%E7%9A%84ai%E4%BE%86%E6%89%BE%E7%99%8C%E7%B4%B0%E8%83%9E-%E5%91%B1%E5%90%89%E5%90%83droppings/id1106847606?i=1000521903219"
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA0OTYxNTU1MQ"
 spotify = "https://open.spotify.com/episode/35q6wEQiGmR5aVnMs1GS3J"
-tag = ["呱吉"]
+tag = []
 
 ["台東取消、台北線上繞境上線拉 讀書會：蚵仔煎的身世 （完）"]
 name = "台東取消、台北線上繞境上線拉 讀書會：蚵仔煎的身世 （完）"

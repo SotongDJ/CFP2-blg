@@ -1589,7 +1589,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA0OTYxNTU1MQ",
 "spotify": "https://open.spotify.com/episode/35q6wEQiGmR5aVnMs1GS3J",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530770-0516-ai-droppings.mp3",
-"tag": ["\u5471\u5409"]
+"tag": []
 },
 {
 "name": "台東取消、台北線上繞境上線拉 讀書會：蚵仔煎的身世 （完）",
