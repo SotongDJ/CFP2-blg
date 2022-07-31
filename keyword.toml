@@ -530,7 +530,7 @@ number = 1
 
 ["呱吉"]
 inclusive = ["呱吉"]
-exclusive = []
+exclusive = ["0516"]
 number = 1
 
 [Jim]
