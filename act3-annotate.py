@@ -28,3 +28,11 @@ for entry_name, entry_detail in keyword_doc.items():
     print("  {}".format("\n  ".join(inclusive_collect_list)))
     print(F"Excluded: ({len(exclusive_collect_list)})")
     print("  {}\n".format("\n  ".join(exclusive_collect_list)))
+    for episode_str in inclusive_collect_list:
+        episode_table = structure_doc[episode_str]
+        episode_tag_list = episode_table["tag"]
+        episode_tag_list.append(entry_name)
+        episode_table["tag"] = episode_tag_list
+        structure_doc[episode_str] = episode_table
+with open("annotation.toml",'w') as target_handler:
+    tomlkit.dump(structure_doc,target_handler)
