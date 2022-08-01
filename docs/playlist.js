@@ -1,5 +1,13 @@
 var playlist = [
 {
+"name": "0731 裴洛西踩中國紅線？ 牧師佈道穿金戴銀、脫衣舞俱樂部心得分享",
+"apple": "",
+"google": "",
+"spotify": "",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11054876-0731.mp3",
+"tag": []
+},
+{
 "name": "The KK Show - #144 樂樂法利",
 "apple": "",
 "google": "",
