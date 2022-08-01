@@ -1,10 +1,8 @@
 body {
 font-size: 2rem;
-font-family: Helvetica, Arial, sans-serif;
+font-family: "Noto Sans TC",Helvetica, Arial, sans-serif;
 }
-span {
-padding: 0 0.25rem;
-}
+span {padding: 0 0.25rem;}
 a {
 text-decoration: none;
 margin: 0 0.25rem;
@@ -13,15 +11,10 @@ p {
 padding: 0 1rem;
 margin: 0;
 }
-h1 {
-margin: 0.5rem 0;
-}
-.entry{
-margin: 1rem 0;
-}
-.buttonDiv {
-white-space: nowrap;
-}
+h1 {margin: 0.5rem 0;}
+h2 {margin: 0.5rem 0;}
+.entry{margin: 1rem 0;}
+.buttonDiv {white-space: nowrap;}
 .title {
 max-width: 850px;
 margin: 0.5rem auto;
@@ -46,6 +39,7 @@ border-radius: 0.5rem;
 .playerbar {
 max-width: 850px;
 height: min-content;
+margin: 0 auto;
 }
 audio {
 width: 100%;
