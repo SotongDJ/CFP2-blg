@@ -1,45 +1,46 @@
-body {
-font-size: 2rem;
-font-family: "Noto Sans TC",Helvetica, Arial, sans-serif;
+html {
+-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+font-size:28px;
 }
+.centerise {
+max-width: 850px;
+margin: 0 auto;
+display: grid;
+grid-template-rows : min-content 1fr min-content;
+gap: 0.25rem;
+height : 90vh;
+}
+@media 
+ (-webkit-min-device-pixel-ratio: 2) and (min-width: 2000px),
+ (min-device-pixel-ratio: 2) and (min-width: 2000px) {
+  html {font-size:48px;}
+  .centerise {max-width: 2000px;}
+}
+body {font-family: "Noto Sans TC",Helvetica, Arial, sans-serif;}
 span {padding: 0 0.25rem;}
 a {
 text-decoration: none;
 margin: 0 0.25rem;
 }
 p {
-padding: 0 1rem;
+padding: 0 0.25rem;
 margin: 0;
 }
-h1 {margin: 0.5rem 0;}
-h2 {margin: 0.5rem 0;}
-.entry{margin: 1rem 0;}
+h1 {font-size: 1.25rem;margin: 0.125rem 0;}
+h2 {font-size: 0.75rem;margin: 0.125rem 0;}
+.entry{margin: 0.25rem 0;}
 .buttonDiv {white-space: nowrap;}
-.title {
-max-width: 850px;
-margin: 0.5rem auto;
-}
-.container {
-max-width: 850px;
-margin: 0 auto;
-overflow: auto;
-height: min-content;
-max-height: 75vh;
-border: 0.0625rem solid black;
-}
+.container {overflow: auto; background-color: #d5effd;}
 .plain {
 white-space: nowrap;
 /* width: 100%; */
 }
 .tagBorder{
-background-color: lightyellow;
+background-color: #80d0f8;
 padding: 0.25rem;
 border-radius: 0.5rem;
-}
-.playerbar {
-max-width: 850px;
-height: min-content;
-margin: 0 auto;
 }
 audio {
 width: 100%;

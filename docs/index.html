@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8"/>
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="app.webmanifest">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet"> 
-<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">  -->
-<script src="https://kit.fontawesome.com/69ae50d647.js" crossorigin="anonymous"></script>
-<title>百靈果播放室</title>
-</head>
-<body>
-<div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
-<div class="title">
-<h1>百靈果播放室</h1>
-<h2>位於墨玉程市的非官方百靈果播放室</h2>
-<div id="tagbar" style="display: none;">Tag: </div>
-</div>
-<div class="container"><table id="playlist" class="plain"></table></div>
-<script src="playlist.js"></script>
-<script src="player.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="app.webmanifest">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet"> 
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">  -->
+        <script src="https://kit.fontawesome.com/69ae50d647.js" crossorigin="anonymous"></script>
+        <title>百靈果播放室</title>
+    </head>
+    <body>
+        <div class="centerise">
+            <div class="title">
+                <h1>百靈果播放室</h1>
+                <h2>位於墨玉程市的非官方百靈果播放室</h2>
+                <div id="tagbar" style="display: none;">Tag: </div>
+            </div>
+            <div class="container"><table id="playlist" class="plain"></table></div>
+            <div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
+        </div>
+        <script src="playlist.js"></script>
+        <script src="player.js"></script>
+    </body>
 </html>
