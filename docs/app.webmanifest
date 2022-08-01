@@ -13,10 +13,16 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "https://xn--2os22eixx6na.xn--kpry57d/site/profile.png",
+      "src": "https://xn--2os22eixx6na.xn--kpry57d/site/maskable.png",
       "type": "image/png",
-      "sizes": "550x550",
+      "sizes": "1024x1024",
       "purpose": "any"
+    },
+    {
+      "src": "https://xn--2os22eixx6na.xn--kpry57d/site/maskable.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": []
