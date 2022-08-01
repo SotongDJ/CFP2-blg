@@ -4,7 +4,7 @@
   "dir": "ltr",
   "display": "minimal-ui",
   "name": "百靈果播放室",
-  "orientation": "landscape",
+  "orientation": "any",
   "scope": "/",
   "short_name": "百播",
   "start_url": "/",
