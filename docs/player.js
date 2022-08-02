@@ -82,13 +82,14 @@ for (let nub = 0; nub < filtered.length; nub++) {
  var buttonDiv = document.createElement('p');
  buttonDiv.className = "buttonDiv";
  var controlSpan = document.createElement('span');
- buttonDiv.className = "tagBorder";
- buttonDiv.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
+ controlSpan.className = "tagBorder";
+ controlSpan.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
  files.push(filtered[nub]['feed']);
- buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
+ controlSpan.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
+ buttonDiv.appendChild(controlSpan);
  for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
   tag_str = filtered[nub]["tag"][tagi];
   var keyArr = option['key'];
