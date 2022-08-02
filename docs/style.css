@@ -13,7 +13,7 @@ gap: 0.25rem;
 height : 95vh;
 }
 body {font-family: "Noto Sans TC",Helvetica, Arial, sans-serif;}
-a {text-decoration: none;}
+a {text-decoration: none;color: black;}
 p {
 margin: 0;
 padding: 0.25rem 0;
