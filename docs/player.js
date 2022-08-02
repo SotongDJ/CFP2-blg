@@ -44,7 +44,11 @@ function link(href,fontfront,inner,jump = '',label = '') {
   tag.href = href;
   if (jump != "") { tag.target = jump; };
  };
- if (label != "") { tag.className = tag.className + " " + label};
+ if (label != "") {
+  tag.className = tag.className + " " + label;
+ } else {
+  tag.className = tag.className + " activeBtn";
+ };
  if (fontfront != '') {
   var fontI = document.createElement('i');
   fontI.className = fontfront;
@@ -77,12 +81,14 @@ for (let nub = 0; nub < filtered.length; nub++) {
  entryPg.appendChild(titleDiv);
  var buttonDiv = document.createElement('p');
  buttonDiv.className = "buttonDiv";
- buttonDiv.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast","activeBtn"));
- buttonDiv.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast","activeBtn"));
- buttonDiv.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast","activeBtn"));
- buttonDiv.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast","activeBtn"));
+ var controlSpan = document.createElement('span');
+ buttonDiv.className = "tagBorder";
+ buttonDiv.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
+ buttonDiv.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
+ buttonDiv.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
+ buttonDiv.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
  files.push(filtered[nub]['feed']);
- buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play","","","activeBtn"));
+ buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
  for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
   tag_str = filtered[nub]["tag"][tagi];
   var keyArr = option['key'];
