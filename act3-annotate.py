@@ -34,6 +34,9 @@ for entry_name, entry_detail in keyword_doc.items():
         episode_tag_list = episode_table["tag"]
         episode_tag_list.append(entry_name)
         episode_table["tag"] = episode_tag_list
+        episode_tag_list = episode_table["category"]
+        episode_tag_list.extend(entry_detail["category"])
+        episode_table["category"] = episode_tag_list
         structure_doc[episode_str] = episode_table
 with open("annotation.toml",'w') as target_handler:
     tomlkit.dump(structure_doc,target_handler)
