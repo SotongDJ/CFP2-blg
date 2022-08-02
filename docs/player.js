@@ -77,12 +77,12 @@ for (let nub = 0; nub < filtered.length; nub++) {
  entryPg.appendChild(titleDiv);
  var buttonDiv = document.createElement('p');
  buttonDiv.className = "buttonDiv";
- buttonDiv.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
- buttonDiv.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
+ buttonDiv.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast","activeBtn"));
+ buttonDiv.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast","activeBtn"));
+ buttonDiv.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast","activeBtn"));
+ buttonDiv.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast","activeBtn"));
  files.push(filtered[nub]['feed']);
- buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
+ buttonDiv.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play","","","activeBtn"));
  for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
   tag_str = filtered[nub]["tag"][tagi];
   var keyArr = option['key'];
@@ -91,8 +91,8 @@ for (let nub = 0; nub < filtered.length; nub++) {
   } else {
    addTagStr = "javascript: void(addTag(\""+tag_str+"\"))";
   };
-  buttonDiv.appendChild(link(addTagStr,"fa-solid fa-hashtag"," "+tag_str,'','tagBorder'));  
-  //buttonDiv.appendChild(link(addTagStr,"",tag_str,'','tagBorder'));  
+  //buttonDiv.appendChild(link(addTagStr,"fa-solid fa-hashtag",tag_str,'','tagBorder'));  
+  buttonDiv.appendChild(link(addTagStr,"fa-solid fa-tag"," "+tag_str,'','tagBorder'));  
  }
  entryPg.appendChild(buttonDiv);
  playlist_dom.appendChild(entryPg);
@@ -102,9 +102,8 @@ if (option['key'].length > 0) {
  tagBar_dom.style = "";
  for (let oka = 0; oka < option['key'].length; oka++) {
   removeTagStr = "javascript: void(removeTag(\""+option['key'][oka]+"\"))";
-  tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-hashtag"," "+option['key'][oka],'','tagBorder'));
-  //tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-delete-left",""));
-  //tagBar_dom.appendChild(link(removeTagStr,option['key'][oka],'','tagBorder'));
+  //tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-hashtag",option['key'][oka],'','tagBorder'));
+  tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-tag"," "+option['key'][oka],'','tagBorder'));
  };
 };
 var i = 0;
