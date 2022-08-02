@@ -156,9 +156,346 @@ Excluded: (0)
 Excluded: (0)
   
 
-Kimberley陳芳語 found in: (2)
-  The KK Show - #123 Kimberley 陳芳語
-  The KK Show - # 106 收起你的玻璃心 - Kimberley 陳芳語
+八角籠 found in: (4)
+  八角籠直播-聊聊海德堡
+  八角籠直播 Ep.3 《新疆怎麼樣》
+  八角籠直播 Ep2 《大亂鬥》
+  八角籠直播 #001 警告來賓網路不穩 《熱愛祖國的中國人》
+Excluded: (0)
+  
+
+讀書會 found in: (118)
+  讀書會：同情者 CH 2 越戰美國大兵有嚴重的用藥問題
+  越戰撤退時一團混亂，阿富汗只是歷史重演 讀書會：同情者 Ch 1
+  電影院滑手機、讀書會選書好難、執政者怕事的時候人民怎麼辦？ 讀書會：同情者 00
+  凱莉找到初戀情人、諾亞到底在想什麼、讀書會： 柏青哥 Pachinko 6（完）
+  醫護人員超辛苦、快篩富翁在這裡、讀書會：柏青哥 Pachinko #05
+  Clubhouse聊天感想、讀書會：柏青哥 Pachinko #04
+  上海封城不公平的現象、讀書會：柏青哥 Pachinko #03
+  讀書會：柏青哥 Pachinko #02，所羅門群島跟中國、女人幫忙賺錢被男人嫌
+  讀書會：柏青哥 Pachinko #01，韓國的總統府要換地方了，論鰻魚的重要性
+  讀書會： Pachinko 柏青哥 序
+  讀書會： Fat Leonard 完結，關心一下隔離中的Mindy
+  美國海軍出賣台灣機密為了滿足私慾，讀書會：Fat Leonard Ch 4
+  第一次在秘密基地錄音、小看女人會出大事 | 讀書會：Fat Leonard Ch 3
+  NCIS其實沒有那麽威？ 中國 俄國都想要接近 Fat Leonard？ 讀書會： Fat Leonard #02
+  讀書會：Fat Leonard #01， 美國海軍在亞洲的荒唐事跡
+  林獻堂的兒子們怎麽有辦法跟老爸旅游這麽久不發瘋？ 讀書會：林獻堂環球遊記 End
+  Omicron來了怎麽辦？凱莉試圖融入Ken的朋友圈 讀書會： 林獻堂環球遊記 Ch1
+  社子島夕陽超美、林獻堂花千萬環遊世界找自己 讀書會：環球遊記 序
+  性教育：只要我不尷尬，尷尬的就是別人，讀書會：吃佛 Eat The Buddha 07 Ch22-23 (End)
+  美國演唱會意外8人死亡、上字幕上到大哭、藏人喇嘛用自焚説出他們説不出的話，讀書會：吃佛 Eat the Buddha Ch18-21
+  #彭帥 事件、英國女生夜店被下藥事件、 #西藏314事件、不過年就是搞分裂 讀書會：吃佛 05 Ch 15-17
+  CPTPP喝咖啡後續、迪士尼去韓國搶劇、西藏女性很Open？ 讀書會：吃佛 Eat the Buddha #04
+  油價暴漲、韓國總統候選人希望人人有錢拿、理查吉爾不受全中共歡迎、 讀書會： 吃佛 Eat The Buddha 03
+  新加坡疫情Update，對於西藏的不瞭解感到羞愧、天葬造成的兒時創傷、讀書會：吃佛 Eat The Buddha #02
+  魷魚游戲概念股帶韓國股市一起飛、共產黨弄了一個傀儡喇嘛、讀書會：吃佛 Eat The Buddha #01
+  歐盟叫澳洲跟法國道歉、新讀書會要開始啦、吃佛 Eat The Buddha 序
+  日本打疫苗更新、#華爲 小公主的狡辯、為台灣做事反而被 #李登輝 懷疑意圖 、 讀書會 宮前町九十番地 （完）
+  日本有東京變種新冠肺炎、#顔千鶴 女士是現代女性的好榜樣 、 員工比老闆早去看 #心理咨商 讀書會： 宮前町九十番地 05
+  與大自然最近的距離就是咖啡廳、凱莉與富二代的糾纏、北投都是招待所 讀書會：宮前町九十番地 Ch9-20
+  台北市有煤礦、以前的 #覺青 到底在想什麽： 讀書會 #宮前町九十番地 Ch1-8
+  #讀書會 又要重啓了，宮前町九十番地 序
+  任務失敗的勇氣、會殺人的小叮噹 讀書會：CIA洗腦計劃 （完）
+  以前的間諜訓練要帶SM面具？ 連續殺人魔有參與CIA的實驗計劃？ 讀書會：CIA的洗腦計劃：Ch 5，6
+  醫護人員We Love You！被自己國家下毒還無法伸冤、阿根廷是納粹天堂？ 讀書會： CIA 洗腦計劃 Ch 3、4
+  肛門裡面的逃生手段、美國就是資源回收做的好 讀書會：CIA洗腦計劃 Pt 1
+  第一次遠距離錄 Podcast，尷尬的空白真的很尷尬 讀書會：CIA洗腦計畫 序
+  台東取消、台北線上繞境上線拉 讀書會：蚵仔煎的身世 （完）
+  薑母鴨跟羊肉爐的店家開始放暑假、米酒真的很威 吃播讀書會：蚵仔煎的身世 Part 2
+  回台灣一定要吃的滷肉飯 讀書會：蚵仔煎的身世 Part 1
+  自肥的讀書會，Literally！！！ 讀書會：蚵仔煎的身世 序
+  白人射後不理、傀儡花這本書你會給幾分？讀書會：傀儡花 第八部 第九部 第十部
+  天地會=法輪功？ 金瓶梅到底露骨不露骨？ 讀書會：傀儡花 第七部 第八部 56章
+  以前的高雄真的在發大財、一帶一路以前大家都在做 讀書會：傀儡花 第五部 第六部
+  斯卡羅真的比較帥 我們道歉、台南清朝就有蝦仁肉圓跟炒鱔魚意面？ 讀書會：傀儡花 第三部 第四部
+  斯卡羅的咒語超强、蛇編有話要説 讀書會：傀儡花 第一部 第二部 Ch.1-Ch.7
+  要政治正確還是要收視率？ 傀儡花 vs 斯卡羅 讀書會：傀儡花 序
+  美國大麻合法化以後都沒問題了嗎？ 讀書會：毒家企業 （完）
+  關於藻礁、Los Zetas黑幫蓋了自己的中華電信 讀書會：毒家企業 Ch 6、7
+  中國對墨西哥毒梟產業的援助比你想象的還大 讀書會：毒家企業 Ch4、5
+  老師在毒梟領地内要怎麽教小孩？開飛機運輸發大財 讀書會：毒家企業 Narconomics Ch.1, 2, 3
+  拉丁美洲的毒梟控制整個國家、書展取消有影響嗎？ 讀書會： Narconomics 毒家企業 序
+  遊戲裏的末日避難所都是真的 (終)： 讀書會 宋氏三姐妹 Ch 22, 23, 24
+  屠嬌嬌是宋慶齡的養女、山禁海禁就是為了那個土皇帝： 讀書會 宋氏三姐妹 Ch 19~21
+  孔二小姐是個驕縱的垃圾、宋靄齡跟孔祥熙聯手掏空中國： 讀書會 宋氏三姐妹 Ch 15~18
+  一路睡上去的男人們 讀書會：宋氏三姐妹
+  蔣中正是恐怖情人、陳潔如被騙很大：讀書會 宋氏三姐妹
+  宋慶齡用Tiffany的名片、孫中山881 ： 讀書會 宋氏三姐妹 Ch6、7
+  袁世凱愛喝母乳、宋慶齡不虔誠： 讀書會 宋氏三姐妹 Ch4、5
+  宋靄齡小時候個性很差、孫文對小女生的愛大於革命： 讀書會 宋氏三姐妹 Ch 3
+  孫文其實是個假abc、Charlie Soong 失敗的異國戀情 : 讀書會 宋氏三姐妹 Ch1，Ch2
+  讀書會：宋氏三姊妹與她們的丈夫 Big Sister, Little Sister, Red Sister 序
+  揣摩上意的文在寅以及被抹黑就哭哭的波頓、The Room Where It Happened by John Bolton 讀書會 Ch. 11、12、13、14、15 （End）
+  來自中國的霸氣總裁與小川川、The Room Where It Happened by John Bolton 讀書會 Ch. 7、8、9、10
+  金正恩這個綠茶婊是如何成功玩弄川普、The Room Where It Happened by John Bolton 讀書會 Ch. 3、4、5、6
+  白宮内部比後宮甄嬛傳還精彩、The Room Where It Happened by John Bolton 讀書會 Ch. 1, 2
+  凱莉有話要對戀童癖説、Ken分析加拿大華人移民史、讀書會：浪淘沙 05
+  讀書會：浪淘沙 - 04、Ken就是不愛台灣前途未定論、凱莉這次有化妝
+  讀書會：浪淘沙 - 03
+  讀書會：浪淘沙 - 02
+  讀書會：浪淘沙 - 01
+  讀書會：Charité at War｜戰裡的夏里特 第6集 (End)
+  讀書會：Charité at War｜戰裡的夏里特 第5集
+  讀書會：Charité at War｜戰裡的夏里特 第4集
+  讀書會：Charité at War｜戰裡的夏里特 第3集
+  讀書會：Charité at War｜戰裡的夏里特 第2集
+  讀書會：Charité at War｜戰裡的夏里特 第1集
+  讀書會：Wild Swans ｜鴻：三代中國女人 第25、26、27、28章 End
+  讀書會：Wild Swans ｜鴻：三代中國女人 第22、23、24章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第20、21章
+  讀書會：Wild Swans ｜鴻：三代中國女人 （修正版）第18、19章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第17章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第15、16章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第14章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第12、13章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第10、11章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第九章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第八章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第六、七章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第五章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第四章
+  讀書會：(Rode代理商贊助）Wild Swans ｜鴻：三代中國女人 第三章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第二章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第一章
+  讀書會：Wild Swans ｜鴻：三代中國女人 序
+  讀書會：This American Life - Ten Sessions
+  讀書會：Chernobyl 核爆家園 第五集 （完）
+  讀書會：Chernobyl 核爆家園 第四集
+  讀書會：Chernobyl 核爆家園 第三集
+  讀書會：Chernobyl 核爆家園 第二集
+  讀書會：Chernobyl 核爆家園 第一集
+  讀書會：陳澄波密碼作者 柯宗明先生 訪談
+  讀書會：陳澄波密碼 第六章 終
+  讀書會：陳澄波密碼 - 與陳澄波基金會董事長（長孫）聊天
+  讀書會：陳澄波密碼 第五章
+  讀書會：陳澄波密碼 第四章
+  讀書會：陳澄波密碼 第三章
+  讀書會：陳澄波密碼 第二章
+  讀書會：陳澄波密碼 第一章
+  0306 讀書會 - Born a crime 以母之名 第十五章 Go Hitler!
+  百靈果讀書會 - Born a crime 以母之名 第十四章
+  百靈果讀書會 - Born a crime 以母之名 第十三章
+  百靈果讀書會 - Born a crime 以母之名 第十二章
+  百靈果讀書會 - Born a crime 以母之名 第十一章
+  百靈果讀書會 - Born a crime 以母之名 第十章
+  百靈果讀書會 - Born a crime 以母之名 第九章
+  百靈果讀書會 - Born a crime 以母之名 第八章
+  百靈果讀書會 - Born a crime 以母之名 第七章
+  塔利班拿跟習近平 合照給大家看、公務員要兼差養活自己？ 宮前町九十番地 04
+Excluded: (2)
+  在Clubhouse 上吵架、跟維吾爾族人聊天後續、沒有讀書會
+  0828 閒聊：不是讀書會的自我檢討會
+
+暫代讀書會 found in: (2)
+  0828 閒聊：不是讀書會的自我檢討會
+  在Clubhouse 上吵架、跟維吾爾族人聊天後續、沒有讀書會
+Excluded: (0)
+  
+
+THE_STIR found in: (10)
+  Q&A with RON, the LAST Episode? ... THE STIR EP 10
+  HOW did you get that ACCENT?... THE STIR EP 9
+  You READ WHAT for FUN???? ... THE STIR EP 8
+  Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7
+  BAD BAD TAIWANESE... THE STIR EP. 6
+  We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5
+  When you POINT A FINGER.... THE STIR EP. 4
+  A HOMOPHOBE？ THE STIR EP. 3
+  WHAT ARE YOU EATING???? THE STIR EP. 2
+  POVERTY vs RACISM - THE STIR EP. 1
+Excluded: (0)
+  
+
+同情者 found in: (3)
+  讀書會：同情者 CH 2 越戰美國大兵有嚴重的用藥問題
+  越戰撤退時一團混亂，阿富汗只是歷史重演 讀書會：同情者 Ch 1
+  電影院滑手機、讀書會選書好難、執政者怕事的時候人民怎麼辦？ 讀書會：同情者 00
+Excluded: (0)
+  
+
+柏青哥 found in: (7)
+  凱莉找到初戀情人、諾亞到底在想什麼、讀書會： 柏青哥 Pachinko 6（完）
+  醫護人員超辛苦、快篩富翁在這裡、讀書會：柏青哥 Pachinko #05
+  Clubhouse聊天感想、讀書會：柏青哥 Pachinko #04
+  上海封城不公平的現象、讀書會：柏青哥 Pachinko #03
+  讀書會：柏青哥 Pachinko #02，所羅門群島跟中國、女人幫忙賺錢被男人嫌
+  讀書會：柏青哥 Pachinko #01，韓國的總統府要換地方了，論鰻魚的重要性
+  讀書會： Pachinko 柏青哥 序
+Excluded: (0)
+  
+
+FatLeonard found in: (5)
+  讀書會： Fat Leonard 完結，關心一下隔離中的Mindy
+  美國海軍出賣台灣機密為了滿足私慾，讀書會：Fat Leonard Ch 4
+  第一次在秘密基地錄音、小看女人會出大事 | 讀書會：Fat Leonard Ch 3
+  NCIS其實沒有那麽威？ 中國 俄國都想要接近 Fat Leonard？ 讀書會： Fat Leonard #02
+  讀書會：Fat Leonard #01， 美國海軍在亞洲的荒唐事跡
+Excluded: (1)
+  1226 直播帶貨賺到爆、日本麥當勞薯條短缺、美國海軍暗黑史 推薦Podcast： Fat Leonard
+
+林獻堂環球遊記 found in: (3)
+  林獻堂的兒子們怎麽有辦法跟老爸旅游這麽久不發瘋？ 讀書會：林獻堂環球遊記 End
+  Omicron來了怎麽辦？凱莉試圖融入Ken的朋友圈 讀書會： 林獻堂環球遊記 Ch1
+  社子島夕陽超美、林獻堂花千萬環遊世界找自己 讀書會：環球遊記 序
+Excluded: (0)
+  
+
+吃佛 found in: (8)
+  性教育：只要我不尷尬，尷尬的就是別人，讀書會：吃佛 Eat The Buddha 07 Ch22-23 (End)
+  美國演唱會意外8人死亡、上字幕上到大哭、藏人喇嘛用自焚説出他們説不出的話，讀書會：吃佛 Eat the Buddha Ch18-21
+  #彭帥 事件、英國女生夜店被下藥事件、 #西藏314事件、不過年就是搞分裂 讀書會：吃佛 05 Ch 15-17
+  CPTPP喝咖啡後續、迪士尼去韓國搶劇、西藏女性很Open？ 讀書會：吃佛 Eat the Buddha #04
+  油價暴漲、韓國總統候選人希望人人有錢拿、理查吉爾不受全中共歡迎、 讀書會： 吃佛 Eat The Buddha 03
+  新加坡疫情Update，對於西藏的不瞭解感到羞愧、天葬造成的兒時創傷、讀書會：吃佛 Eat The Buddha #02
+  魷魚游戲概念股帶韓國股市一起飛、共產黨弄了一個傀儡喇嘛、讀書會：吃佛 Eat The Buddha #01
+  歐盟叫澳洲跟法國道歉、新讀書會要開始啦、吃佛 Eat The Buddha 序
+Excluded: (1)
+  0404 中國要美國學學中國的氣度、 愛煮飯的Youtuber原來是黑手黨、推薦書：Eat The Buddha 噬佛
+
+宮前町九十番 found in: (6)
+  日本打疫苗更新、#華爲 小公主的狡辯、為台灣做事反而被 #李登輝 懷疑意圖 、 讀書會 宮前町九十番地 （完）
+  日本有東京變種新冠肺炎、#顔千鶴 女士是現代女性的好榜樣 、 員工比老闆早去看 #心理咨商 讀書會： 宮前町九十番地 05
+  塔利班拿跟習近平 合照給大家看、公務員要兼差養活自己？ 宮前町九十番地 04
+  與大自然最近的距離就是咖啡廳、凱莉與富二代的糾纏、北投都是招待所 讀書會：宮前町九十番地 Ch9-20
+  台北市有煤礦、以前的 #覺青 到底在想什麽： 讀書會 #宮前町九十番地 Ch1-8
+  #讀書會 又要重啓了，宮前町九十番地 序
+Excluded: (0)
+  
+
+CIA洗腦計畫 found in: (5)
+  任務失敗的勇氣、會殺人的小叮噹 讀書會：CIA洗腦計劃 （完）
+  肛門裡面的逃生手段、美國就是資源回收做的好 讀書會：CIA洗腦計劃 Pt 1
+  以前的間諜訓練要帶SM面具？ 連續殺人魔有參與CIA的實驗計劃？ 讀書會：CIA的洗腦計劃：Ch 5，6
+  醫護人員We Love You！被自己國家下毒還無法伸冤、阿根廷是納粹天堂？ 讀書會： CIA 洗腦計劃 Ch 3、4
+  第一次遠距離錄 Podcast，尷尬的空白真的很尷尬 讀書會：CIA洗腦計畫 序
+Excluded: (0)
+  
+
+蚵仔煎的身世 found in: (4)
+  台東取消、台北線上繞境上線拉 讀書會：蚵仔煎的身世 （完）
+  薑母鴨跟羊肉爐的店家開始放暑假、米酒真的很威 吃播讀書會：蚵仔煎的身世 Part 2
+  回台灣一定要吃的滷肉飯 讀書會：蚵仔煎的身世 Part 1
+  自肥的讀書會，Literally！！！ 讀書會：蚵仔煎的身世 序
+Excluded: (0)
+  
+
+傀儡花 found in: (6)
+  白人射後不理、傀儡花這本書你會給幾分？讀書會：傀儡花 第八部 第九部 第十部
+  天地會=法輪功？ 金瓶梅到底露骨不露骨？ 讀書會：傀儡花 第七部 第八部 56章
+  以前的高雄真的在發大財、一帶一路以前大家都在做 讀書會：傀儡花 第五部 第六部
+  斯卡羅真的比較帥 我們道歉、台南清朝就有蝦仁肉圓跟炒鱔魚意面？ 讀書會：傀儡花 第三部 第四部
+  斯卡羅的咒語超强、蛇編有話要説 讀書會：傀儡花 第一部 第二部 Ch.1-Ch.7
+  要政治正確還是要收視率？ 傀儡花 vs 斯卡羅 讀書會：傀儡花 序
+Excluded: (0)
+  
+
+毒家企業 found in: (5)
+  美國大麻合法化以後都沒問題了嗎？ 讀書會：毒家企業 （完）
+  關於藻礁、Los Zetas黑幫蓋了自己的中華電信 讀書會：毒家企業 Ch 6、7
+  中國對墨西哥毒梟產業的援助比你想象的還大 讀書會：毒家企業 Ch4、5
+  老師在毒梟領地内要怎麽教小孩？開飛機運輸發大財 讀書會：毒家企業 Narconomics Ch.1, 2, 3
+  拉丁美洲的毒梟控制整個國家、書展取消有影響嗎？ 讀書會： Narconomics 毒家企業 序
+Excluded: (0)
+  
+
+宋氏三姊妹 found in: (10)
+  遊戲裏的末日避難所都是真的 (終)： 讀書會 宋氏三姐妹 Ch 22, 23, 24
+  屠嬌嬌是宋慶齡的養女、山禁海禁就是為了那個土皇帝： 讀書會 宋氏三姐妹 Ch 19~21
+  孔二小姐是個驕縱的垃圾、宋靄齡跟孔祥熙聯手掏空中國： 讀書會 宋氏三姐妹 Ch 15~18
+  蔣中正是恐怖情人、陳潔如被騙很大：讀書會 宋氏三姐妹
+  宋慶齡用Tiffany的名片、孫中山881 ： 讀書會 宋氏三姐妹 Ch6、7
+  袁世凱愛喝母乳、宋慶齡不虔誠： 讀書會 宋氏三姐妹 Ch4、5
+  宋靄齡小時候個性很差、孫文對小女生的愛大於革命： 讀書會 宋氏三姐妹 Ch 3
+  孫文其實是個假abc、Charlie Soong 失敗的異國戀情 : 讀書會 宋氏三姐妹 Ch1，Ch2
+  一路睡上去的男人們 讀書會：宋氏三姐妹
+  讀書會：宋氏三姊妹與她們的丈夫 Big Sister, Little Sister, Red Sister 序
+Excluded: (0)
+  
+
+The Room Where It Happened by John Bolton found in: (4)
+  揣摩上意的文在寅以及被抹黑就哭哭的波頓、The Room Where It Happened by John Bolton 讀書會 Ch. 11、12、13、14、15 （End）
+  來自中國的霸氣總裁與小川川、The Room Where It Happened by John Bolton 讀書會 Ch. 7、8、9、10
+  金正恩這個綠茶婊是如何成功玩弄川普、The Room Where It Happened by John Bolton 讀書會 Ch. 3、4、5、6
+  白宮内部比後宮甄嬛傳還精彩、The Room Where It Happened by John Bolton 讀書會 Ch. 1, 2
+Excluded: (0)
+  
+
+浪淘沙 found in: (5)
+  凱莉有話要對戀童癖説、Ken分析加拿大華人移民史、讀書會：浪淘沙 05
+  讀書會：浪淘沙 - 04、Ken就是不愛台灣前途未定論、凱莉這次有化妝
+  讀書會：浪淘沙 - 03
+  讀書會：浪淘沙 - 02
+  讀書會：浪淘沙 - 01
+Excluded: (0)
+  
+
+戰裡的夏里特 found in: (6)
+  讀書會：Charité at War｜戰裡的夏里特 第6集 (End)
+  讀書會：Charité at War｜戰裡的夏里特 第5集
+  讀書會：Charité at War｜戰裡的夏里特 第4集
+  讀書會：Charité at War｜戰裡的夏里特 第3集
+  讀書會：Charité at War｜戰裡的夏里特 第2集
+  讀書會：Charité at War｜戰裡的夏里特 第1集
+Excluded: (0)
+  
+
+鴻：三代中國女人 found in: (18)
+  讀書會：Wild Swans ｜鴻：三代中國女人 第25、26、27、28章 End
+  讀書會：Wild Swans ｜鴻：三代中國女人 第22、23、24章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第20、21章
+  讀書會：Wild Swans ｜鴻：三代中國女人 （修正版）第18、19章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第17章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第15、16章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第14章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第12、13章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第10、11章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第九章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第八章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第六、七章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第五章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第四章
+  讀書會：(Rode代理商贊助）Wild Swans ｜鴻：三代中國女人 第三章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第二章
+  讀書會：Wild Swans ｜鴻：三代中國女人 第一章
+  讀書會：Wild Swans ｜鴻：三代中國女人 序
+Excluded: (0)
+  
+
+核爆家園 found in: (5)
+  讀書會：Chernobyl 核爆家園 第五集 （完）
+  讀書會：Chernobyl 核爆家園 第四集
+  讀書會：Chernobyl 核爆家園 第三集
+  讀書會：Chernobyl 核爆家園 第二集
+  讀書會：Chernobyl 核爆家園 第一集
+Excluded: (0)
+  
+
+陳澄波密碼 found in: (8)
+  讀書會：陳澄波密碼作者 柯宗明先生 訪談
+  讀書會：陳澄波密碼 第六章 終
+  讀書會：陳澄波密碼 - 與陳澄波基金會董事長（長孫）聊天
+  讀書會：陳澄波密碼 第五章
+  讀書會：陳澄波密碼 第四章
+  讀書會：陳澄波密碼 第三章
+  讀書會：陳澄波密碼 第二章
+  讀書會：陳澄波密碼 第一章
+Excluded: (0)
+  
+
+以母之名 found in: (12)
+  0328 Born a crime 以母之名 第十八章（完）
+  0320 Born a crime 以母之名 第十七章
+  0314 Born a crime 以母之名 第十六章
+  0306 讀書會 - Born a crime 以母之名 第十五章 Go Hitler!
+  百靈果讀書會 - Born a crime 以母之名 第十四章
+  百靈果讀書會 - Born a crime 以母之名 第十三章
+  百靈果讀書會 - Born a crime 以母之名 第十二章
+  百靈果讀書會 - Born a crime 以母之名 第十一章
+  百靈果讀書會 - Born a crime 以母之名 第十章
+  百靈果讀書會 - Born a crime 以母之名 第九章
+  百靈果讀書會 - Born a crime 以母之名 第八章
+  百靈果讀書會 - Born a crime 以母之名 第七章
 Excluded: (0)
   
 
@@ -168,79 +505,23 @@ Excluded: (0)
 Excluded: (0)
   
 
-阿拉斯 found in: (2)
-  The KK Show - #113 金曲天后阿爆 & 阿拉斯
-  The KK Show - #72 阿爆與阿拉斯 (内有醉漢）
+黃豪平 found in: (3)
+  喜劇演員開喜劇俱樂部是悲劇的開始嗎？ 笑友會的無情工商 ft. 黃豪平, 微笑丹尼
+  The KK Show - #53 黃豪平
+  The KK Show - 003 2020的費玉清 黃豪平
 Excluded: (0)
   
 
-葉耀元教授 found in: (3)
-  『新春特別企劃』百靈果之友 - 葉耀元教授
-  The KK Show - #90 葉耀元教授又來啦
-  The KK Show - #70 Clubhouse 認識的朋友 - 葉耀元教授
+賀瓏 found in: (2)
+  The KK Show - #132 賀瓏
+  The KK Show - 007 博恩夜夜秀真主角 - 賀瓏
 Excluded: (0)
   
 
-Chiels found in: (2)
-  The KK Show - #61 無國界醫生 - Chiels
-  聲音修正 百靈果之友: 003@ 無國界醫生 劉董
-Excluded: (0)
-  
-
-李淳 found in: (2)
-  The KK Show - #101 CPTPP 大解析-李淳
-  The KK Show - #54 好好把RCEP講清楚 - 李淳
-Excluded: (0)
-  
-
-小潘 found in: (4)
-  The KK Show - #49 百靈果的師傅們 - 小潘 寶拉
-  百靈果NEWS 2019-01-06 4. 網路Bonus：小潘閒聊
-  百靈果NEWS 2019-01-06 2. 小潘對2019年有信心嗎？
-  百靈果NEWS 2019-01-06 3. 與小潘閒聊
-Excluded: (0)
-  
-
-于北辰 found in: (2)
-  The KK Show - #92 被排擠的國民黨將軍 - 于北辰將軍
-  The KK Show - #048 國民黨的邊緣人 - 于北辰將軍
-Excluded: (0)
-  
-
-志祺@志祺七七 found in: (2)
-  The KK Show - #138 阿滴&志祺
-  The KK Show - #47 志祺七七 + 阿滴
-Excluded: (0)
-  
-
-阿滴 found in: (3)
-  The KK Show - #138 阿滴&志祺
-  百靈果之友: 001 阿滴 S is for Sister
-  The KK Show - #47 志祺七七 + 阿滴
-Excluded: (0)
-  
-
-Jason劉致昕@報導者 found in: (2)
-  The KK Show #043 - 報導者來了 - Jason
-  百靈果之友: 004 報導者 致昕
-Excluded: (0)
-  
-
-Joeman found in: (2)
-  The KK Show - #134 炎上系Youtuber - Joeman
-  The KK Show - #38 遇到凱莉就無法炫富的 Joeman
-Excluded: (0)
-  
-
-陳柏惟 found in: (2)
-  The KK Show - #55 好想上班的立委- 陳柏惟
-  The KK Show - #036 熟了就會浮起來 - 3Q 陳柏惟
-Excluded: (0)
-  
-
-邱grr found in: (2)
-  The KK Show - 27 斜槓破表的 邱grr （音量調整）
-  The KK Show - 公海大戰小粉紅 ft. 邱Grrr、敏迪、 范琪斐
+酸酸 found in: (3)
+  女演員的互相傷害 觀眾在旁吃瓜 feat 酸酸 and 許乃涵 涵冷娜
+  閒聊 #威爾史密斯 巴掌事件 ft. 酸酸
+  The KK Show - 19 害羞的開屏孔雀 酸酸
 Excluded: (0)
   
 
@@ -258,10 +539,36 @@ Jim found in: (2)
 Excluded: (0)
   
 
-酸酸 found in: (3)
-  女演員的互相傷害 觀眾在旁吃瓜 feat 酸酸 and 許乃涵 涵冷娜
-  閒聊 #威爾史密斯 巴掌事件 ft. 酸酸
-  The KK Show - 19 害羞的開屏孔雀 酸酸
+范琪斐 found in: (4)
+  與范琪斐聊讀書心得，左派媒體的失控與右派媒體的可信度: Rage by Bob Woodward
+  The KK Show - 公海大戰小粉紅 ft. 邱Grrr、敏迪、 范琪斐
+  The KK Show - 24 范琪斐
+  The KK Show - 008 國際新聞扛霸子 - 范琪斐
+Excluded: (0)
+  
+
+志祺@志祺七七 found in: (2)
+  The KK Show - #138 阿滴&志祺
+  The KK Show - #47 志祺七七 + 阿滴
+Excluded: (0)
+  
+
+阿滴 found in: (3)
+  The KK Show - #138 阿滴&志祺
+  百靈果之友: 001 阿滴 S is for Sister
+  The KK Show - #47 志祺七七 + 阿滴
+Excluded: (0)
+  
+
+Joeman found in: (2)
+  The KK Show - #134 炎上系Youtuber - Joeman
+  The KK Show - #38 遇到凱莉就無法炫富的 Joeman
+Excluded: (0)
+  
+
+邱grr found in: (2)
+  The KK Show - 27 斜槓破表的 邱grr （音量調整）
+  The KK Show - 公海大戰小粉紅 ft. 邱Grrr、敏迪、 范琪斐
 Excluded: (0)
   
 
@@ -272,29 +579,15 @@ Excluded: (0)
 Excluded: (1)
   0920 Bob Woodward 新書 Rage 心得、振華搜集你的個資不是給國家 澳洲記者可以作證、希臘難民營大火、Ken要對臺東道歉、 阿爆演唱會
 
-Angel found in: (2)
-  The KK Show - # 60 過了一年變得有韻味 - Angel
-  The KK Show - 010 巴塞隆納的傳教士 - Angel
-Excluded: (1)
-  The KK Show - 18 台語講的比印度話好的Angeli
-
-顧立楷 found in: (2)
-  The KK Show - #71 Soundon前老闆 - 顧立楷
-  The KK Show - 009 這麽帥不去選立委可惜 - 顧立楷
+阿拉斯 found in: (2)
+  The KK Show - #113 金曲天后阿爆 & 阿拉斯
+  The KK Show - #72 阿爆與阿拉斯 (内有醉漢）
 Excluded: (0)
   
 
-范琪斐 found in: (4)
-  與范琪斐聊讀書心得，左派媒體的失控與右派媒體的可信度: Rage by Bob Woodward
-  The KK Show - 公海大戰小粉紅 ft. 邱Grrr、敏迪、 范琪斐
-  The KK Show - 24 范琪斐
-  The KK Show - 008 國際新聞扛霸子 - 范琪斐
-Excluded: (0)
-  
-
-賀瓏 found in: (2)
-  The KK Show - #132 賀瓏
-  The KK Show - 007 博恩夜夜秀真主角 - 賀瓏
+Kimberley陳芳語 found in: (2)
+  The KK Show - #123 Kimberley 陳芳語
+  The KK Show - # 106 收起你的玻璃心 - Kimberley 陳芳語
 Excluded: (0)
   
 
@@ -305,16 +598,66 @@ Excluded: (0)
 Excluded: (0)
   
 
-黃豪平 found in: (3)
-  喜劇演員開喜劇俱樂部是悲劇的開始嗎？ 笑友會的無情工商 ft. 黃豪平, 微笑丹尼
-  The KK Show - #53 黃豪平
-  The KK Show - 003 2020的費玉清 黃豪平
-Excluded: (0)
-  
-
 馬力歐 found in: (2)
   The KK Show - 000 一切的起源，Podcast的馬力歐
   0704 Bonus：只有凱莉跟馬力歐喝一杯
+Excluded: (0)
+  
+
+小潘 found in: (4)
+  The KK Show - #49 百靈果的師傅們 - 小潘 寶拉
+  百靈果NEWS 2019-01-06 4. 網路Bonus：小潘閒聊
+  百靈果NEWS 2019-01-06 2. 小潘對2019年有信心嗎？
+  百靈果NEWS 2019-01-06 3. 與小潘閒聊
+Excluded: (0)
+  
+
+Jason劉致昕@報導者 found in: (2)
+  The KK Show #043 - 報導者來了 - Jason
+  百靈果之友: 004 報導者 致昕
+Excluded: (0)
+  
+
+陳柏惟 found in: (2)
+  The KK Show - #55 好想上班的立委- 陳柏惟
+  The KK Show - #036 熟了就會浮起來 - 3Q 陳柏惟
+Excluded: (0)
+  
+
+于北辰 found in: (2)
+  The KK Show - #92 被排擠的國民黨將軍 - 于北辰將軍
+  The KK Show - #048 國民黨的邊緣人 - 于北辰將軍
+Excluded: (0)
+  
+
+Chiels found in: (2)
+  The KK Show - #61 無國界醫生 - Chiels
+  聲音修正 百靈果之友: 003@ 無國界醫生 劉董
+Excluded: (0)
+  
+
+李淳 found in: (2)
+  The KK Show - #101 CPTPP 大解析-李淳
+  The KK Show - #54 好好把RCEP講清楚 - 李淳
+Excluded: (0)
+  
+
+葉耀元教授 found in: (3)
+  『新春特別企劃』百靈果之友 - 葉耀元教授
+  The KK Show - #90 葉耀元教授又來啦
+  The KK Show - #70 Clubhouse 認識的朋友 - 葉耀元教授
+Excluded: (0)
+  
+
+Angel found in: (2)
+  The KK Show - # 60 過了一年變得有韻味 - Angel
+  The KK Show - 010 巴塞隆納的傳教士 - Angel
+Excluded: (1)
+  The KK Show - 18 台語講的比印度話好的Angeli
+
+顧立楷 found in: (2)
+  The KK Show - #71 Soundon前老闆 - 顧立楷
+  The KK Show - 009 這麽帥不去選立委可惜 - 顧立楷
 Excluded: (0)
   
 
