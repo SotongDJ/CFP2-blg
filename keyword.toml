@@ -413,6 +413,11 @@ inclusive = ["股癌"]
 exclusive = ["推薦Podcast"]
 category = ["Podcaster"]
 
+["瑞典劉先生"]
+inclusive = ["瑞典劉先生"]
+exclusive = []
+category = ["時事","Podcaster"]
+
 ["歐馬克"]
 inclusive = ["歐馬克"]
 exclusive = []
@@ -782,11 +787,6 @@ category = ["時事"]
 
 ["LukeMartin"]
 inclusive = ["Luke Martin"]
-exclusive = []
-category = ["時事"]
-
-["瑞典劉先生"]
-inclusive = ["瑞典劉先生"]
 exclusive = []
 category = ["時事"]
 

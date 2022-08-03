@@ -1,4 +1,5 @@
-KK_Show found in: (145)
+KK_Show found in: (146)
+  The KK Show - #145 瑞典劉先生
   The KK Show - #144 樂樂法利
   The KK Show - #143 陳大天
   The KK Show - #142 浪子回頭 - China Mac
@@ -588,6 +589,12 @@ Excluded: (0)
 Kimberley陳芳語 found in: (2)
   The KK Show - #123 Kimberley 陳芳語
   The KK Show - # 106 收起你的玻璃心 - Kimberley 陳芳語
+Excluded: (0)
+  
+
+瑞典劉先生 found in: (2)
+  The KK Show - #145 瑞典劉先生
+  The KK Show - #93 住在社會主義天堂 - 瑞典劉先生
 Excluded: (0)
   
 
