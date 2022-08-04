@@ -1,3 +1,9 @@
+const tagBarDOM = document.getElementById("tagbar");
+const playlistDOM = document.getElementById("playlist");
+const playerDOM = document.getElementById("player");
+const storeDOM = document.getElementById("store");
+const contentDOM = document.getElementById("contentdiv");
+const faTagStr = "fa-solid fa-tag";
 url = window.location.href;
 if ((!url.includes("?"))) {
  base = url;
@@ -33,14 +39,13 @@ for (var ark = 0; ark < argueKey.length; ++ark) {
   option[key] = value;
  };
 };
-
 function link(href,fontfront,inner,jump = '',label = '') {
  if (href == "") {
   var tag = document.createElement('span');
-  tag.className = "linkMargin hideBtn";
+  tag.className = "linkDecor hideBtn";
  } else {
   var tag = document.createElement('a');
-  tag.className = "linkMargin";
+  tag.className = "linkDecor";
   tag.href = href;
   if (jump != "") { tag.target = jump; };
  };
@@ -56,79 +61,11 @@ function link(href,fontfront,inner,jump = '',label = '') {
  };
  tag.innerHTML = tag.innerHTML + inner;
  return tag;
-}
-var files = [];
-var playlist_dom = document.getElementById("playlist");
-var filtered = [];
-if (option['key'].length > 0) {
- for (let nub = 0; nub < playlist.length; nub++) {
-  ord = playlist.length - nub - 1;
-  var filteredBool = false;
-  for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
-   if (option['key'].includes(playlist[ord]["tag"][pot])) {filteredBool = true};
-  };
-  if (filteredBool) {filtered.push(playlist[ord])};
- };
-} else {
- filtered = playlist;
 };
-
-for (let nub = 0; nub < filtered.length; nub++) {
- var entryPg = document.createElement('div');
- entryPg.className = "entry";
- titleDiv = document.createElement("p");
- titleDiv.innerText = filtered[nub]['name'];
- entryPg.appendChild(titleDiv);
- var buttonDiv = document.createElement('p');
- buttonDiv.className = "buttonDiv";
- var controlSpan = document.createElement('span');
- controlSpan.className = "tagBorder";
- controlSpan.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
- files.push(filtered[nub]['feed']);
- controlSpan.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
- buttonDiv.appendChild(controlSpan);
- for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
-  tag_str = filtered[nub]["tag"][tagi];
-  var keyArr = option['key'];
-  if (keyArr.includes(tag_str)) {
-   addTagStr = "";
-  } else {
-   addTagStr = "javascript: void(addTag(\""+tag_str+"\"))";
-  };
-  //buttonDiv.appendChild(link(addTagStr,"fa-solid fa-hashtag",tag_str,'','tagBorder'));  
-  buttonDiv.appendChild(link(addTagStr,"fa-solid fa-tag"," "+tag_str,'','tagBorder'));  
- }
- entryPg.appendChild(buttonDiv);
- playlist_dom.appendChild(entryPg);
-};
-var tagBar_dom = document.getElementById("tagbar");
-if (option['key'].length > 0) {
- tagBar_dom.style = "";
- for (let oka = 0; oka < option['key'].length; oka++) {
-  removeTagStr = "javascript: void(removeTag(\""+option['key'][oka]+"\"))";
-  //tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-hashtag",option['key'][oka],'','tagBorder'));
-  tagBar_dom.appendChild(link(removeTagStr,"fa-solid fa-tag"," "+option['key'][oka],'','tagBorder'));
- };
-};
-var i = 0;
-var player_dom = document.getElementById("player");
-function next() {
- if (i === files.length - 1) { i = 0; } else { i++; };
- player_dom.src = files[i];
- player_dom.play();
-};
-function goToPlay(ti) {
- player_dom.src = files[ti];
- player_dom.play();
-};
-player_dom.addEventListener('ended', next, false);
-function addTag(add_str) {
+function addTag(addStr) {
  var keyArr = option['key'];
- if (!keyArr.includes(add_str)) {
-  keyArr.push(add_str);
+ if (!keyArr.includes(addStr)) {
+  keyArr.push(addStr);
  };
  window.location.href = base + "?key=" + keyArr.join(",");
 };
@@ -145,3 +82,77 @@ function removeTag(removeStr) {
   window.location.href = base;
  };
 };
+var files = [];
+var filtered = [];
+if (option['key'].length > 0) {
+ for (let nub = 0; nub < playlist.length; nub++) {
+  ord = playlist.length - nub - 1;
+  var filteredBool = false;
+  for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
+   if (option['key'].includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+  };
+  if (filteredBool) {filtered.push(playlist[ord])};
+ };
+} else {
+ filtered = playlist;
+};
+for (let nub = 0; nub < filtered.length; nub++) {
+ var entryPg = document.createElement('div');
+ entryPg.className = "entry";
+ titleDiv = document.createElement("p");
+ titleDiv.innerText = filtered[nub]['name'];
+ entryPg.appendChild(titleDiv);
+ var buttonDiv = document.createElement('p');
+ buttonDiv.className = "buttonDiv";
+ var playSpan = document.createElement('span');
+ playSpan.className = "tagBorder";
+ files.push(filtered[nub]['feed']);
+ playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
+ buttonDiv.appendChild(playSpan);
+ var controlSpan = document.createElement('span');
+ controlSpan.className = "tagBorder";
+ controlSpan.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
+ buttonDiv.appendChild(controlSpan);
+ for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
+  textTagStr = filtered[nub]["tag"][tagi];
+  var keyArr = option['key'];
+  if (keyArr.includes(textTagStr)) {
+   addTagStr = "";
+  } else {
+   addTagStr = "javascript: void(addTag(\""+textTagStr+"\"))";
+  };
+  buttonDiv.appendChild(link(addTagStr,faTagStr," "+textTagStr,'','tagBorder'));  
+ }
+ entryPg.appendChild(buttonDiv);
+ playlistDOM.appendChild(entryPg);
+};
+if (option['key'].length > 0) {
+ tagBarDOM.style = "";
+ for (let oka = 0; oka < option['key'].length; oka++) {
+  removeTagStr = "javascript: void(removeTag(\""+option['key'][oka]+"\"))";
+  okaStr = " "+option['key'][oka]
+  tagBarDOM.appendChild(link(removeTagStr,faTagStr,okaStr,'','tagBorder'));
+ };
+};
+function next() {
+ var orderStr = storeDOM.innerText;
+ var orderInt = parseInt(orderStr) + 1;
+ if (orderInt < files.length) {
+  playerDOM.src = files[orderInt];
+  storeDOM.innerText = orderInt;
+  playerDOM.play();
+ };
+};
+function goToPlay(targetInt) {
+ playerDOM.src = files[targetInt];
+ storeDOM.innerText = targetInt;
+ playerDOM.play();
+};
+playerDOM.addEventListener('ended', next, false);
+function resizeDiv() {
+ contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
+};
+window.onresize = resizeDiv;

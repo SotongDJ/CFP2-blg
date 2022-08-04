@@ -26,8 +26,8 @@
         <meta property="og:type" content="profile">
         <meta property="profile:username" content="SotongDJ">
     </head>
-    <body>
-        <div class="centerise">
+    <body onload="resizeDiv()">
+        <div id="contentdiv" class="centerise">
             <div class="tittlebar">
                 <h1>位於<a href="https://深海墨客.台灣/">墨玉程市</a>的非官方<a href="https://www.bailingguonews.com/">百靈果</a>播放室</h1>
                 <div id="tagbar" style="display: none;">Tag: </div>
@@ -35,6 +35,7 @@
             <div class="container"><div id="playlist" class="plain"></div></div>
             <div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
         </div>
+        <div id="store" style="display: none;"></div>
         <script src="playlist.js"></script>
         <script src="player.js"></script>
     </body>
