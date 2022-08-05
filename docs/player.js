@@ -31,7 +31,7 @@ for (var ar = 0; ar < argueArr.length; ++ar) {
  };
 };
 var argueKey = Object.keys(argueObj);
-var option = {"key":[]};
+var option = {"key":[],"union":"false"};
 for (var ark = 0; ark < argueKey.length; ++ark) {
  var key = argueKey[ark];
  if (Object.keys(option).includes(key)) {
@@ -87,9 +87,16 @@ var filtered = [];
 if (option['key'].length > 0) {
  for (let nub = 0; nub < playlist.length; nub++) {
   ord = playlist.length - nub - 1;
-  var filteredBool = false;
-  for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
-   if (option['key'].includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+  if (option['union'] == 'true') {
+   var filteredBool = false;
+   for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
+    if (option['key'].includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+   };
+  } else {
+   var filteredBool = true;
+   for (let oki = 0; oki < option['key'].length; oki++) {
+    if (!playlist[ord]["tag"].includes(option['key'][oki])) {filteredBool = false};
+   };
   };
   if (filteredBool) {filtered.push(playlist[ord])};
  };

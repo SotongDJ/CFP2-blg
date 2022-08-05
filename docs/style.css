@@ -17,6 +17,7 @@ a {color: black;}
 p {margin: 0; padding: 0.25rem 0;}
 h1 {font-size: 1.25rem; margin: 0.125rem 0 0.3rem 0;}
 audio {width: 100%;}
+.describe{margin: 0 0 0.5rem 0;}
 /* colour palette: ffffff-f0faff-d0eefd-80d0f8-00a0f0 */
 .entry{
 border-radius: 0.25rem;

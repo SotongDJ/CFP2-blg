@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>非官方百靈果播放室</title>
-        <!-- Resource -->
-        <link rel="stylesheet" href="/style.css" />
-        <script crossorigin="anonymous" src="https://kit.fontawesome.com/69ae50d647.js"></script>
-        <!-- Favicon -->
-        <link rel="manifest" href="/app.webmanifest" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <!-- Summary -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@sotongdj">
-        <meta name="twitter:creator" content="@sotongdj">
-        <meta property="og:url" content="https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/">
-        <meta property="og:title" content="非官方百靈果播放室">
-        <meta property="og:description" content="位於墨玉程市的非官方百靈果播放室">
-        <meta property="og:image" content="https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/android-chrome-512x512.png">
-        <meta property="og:image:alt" content="百靈果">
-        <meta property="og:site_name" content="非官方百靈果播放室">
-        <meta property="og:type" content="profile">
-        <meta property="profile:username" content="SotongDJ">
-    </head>
-    <body onload="resizeDiv()">
-        <div id="contentdiv" class="centerise">
-            <div class="tittlebar">
-                <h1>位於<a href="https://深海墨客.台灣/">墨玉程市</a>的非官方<a href="https://www.bailingguonews.com/">百靈果</a>播放室</h1>
-                <div id="tagbar" style="display: none;">Tag: </div>
-            </div>
-            <div class="container"><div id="playlist" class="plain"></div></div>
-            <div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
-        </div>
-        <div id="store" style="display: none;"></div>
-        <script src="playlist.js"></script>
-        <script src="player.js"></script>
-    </body>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>非官方百靈果播放室</title>
+  <!-- Resource -->
+  <link rel="stylesheet" href="/fontawesome.css" />
+  <link rel="stylesheet" href="/google.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <!-- Favicon -->
+  <link rel="manifest" href="/app.webmanifest" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/r/apple-touch-icon.png" />
+  <!-- Summary -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sotongdj">
+  <meta name="twitter:creator" content="@sotongdj">
+  <meta property="og:url" content="https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/">
+  <meta property="og:title" content="非官方百靈果播放室">
+  <meta property="og:description" content="位於墨玉程市的非官方百靈果播放室">
+  <meta property="og:image" content="https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/r/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="百靈果">
+  <meta property="og:site_name" content="非官方百靈果播放室">
+  <meta property="og:type" content="profile">
+  <meta property="profile:username" content="SotongDJ">
+ </head>
+ <body onload="resizeDiv()">
+  <div id="contentdiv" class="centerise">
+   <div class="tittlebar">
+    <h1>非官方<a href="https://www.bailingguonews.com/">百靈果</a>播放室</h1>
+    <div class="describe">位於<a href="https://深海墨客.台灣/">墨玉程市</a>·<a href="https://github.com/SotongDJ/podcast-selector-blg#%E9%9D%9E%E5%AE%98%E6%96%B9%E7%99%BE%E9%9D%88%E6%9E%9C%E6%92%AD%E6%94%BE%E5%AE%A4">關於本服務</a>·<a href="https://github.com/SotongDJ/podcast-selector-blg#%E9%9C%80%E8%A6%81%E5%B9%AB%E5%BF%99%E5%97%8E%EF%BC%9F">需要幫忙嗎？</a></div>
+    <div id="tagbar" style="display: none;">Tag: </div>
+   </div>
+   <div class="container"><div id="playlist" class="plain"></div></div>
+   <div class="playerbar"><audio id="player" controls="true" preload="metadata"></audio></div>
+  </div>
+  <div id="store" style="display: none;"></div>
+  <script src="playlist.js"></script>
+  <script src="player.js"></script>
+ </body>
 </html>
