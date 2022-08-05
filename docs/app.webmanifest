@@ -13,37 +13,37 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "android-chrome-512x512.png",
+      "src": "r/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "maskable-512.png",
+      "src": "r/maskable-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
     {
-      "src": "android-chrome-192x192.png",
+      "src": "r/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
-      "src": "apple-touch-icon.png",
+      "src": "r/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any"
     },
     {
-      "src": "favicon-32x32.png",
+      "src": "r/favicon-32x32.png",
       "type": "image/png",
       "sizes": "32x32",
       "purpose": "any"
     },
     {
-      "src": "favicon-16x16.png",
+      "src": "r/favicon-16x16.png",
       "type": "image/png",
       "sizes": "16x16",
       "purpose": "any"
