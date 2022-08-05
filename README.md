@@ -8,4 +8,8 @@
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to. In order to ensure IT security and limited by the technology used by the website (static website), this website does not provide automatic synchronization of the playback queue to each podcast service. You can only manually add episodes to the playback queue through the new tab page.
 
-網站 Website：[https://百播.深海墨客.台灣/](https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/)
+**網站 Website**：[https://百播.深海墨客.台灣/](https://xn--z6un01b.xn--2os22eixx6na.xn--kpry57d/)
+
+## 需要幫忙嗎？
+
+### Need some help?
