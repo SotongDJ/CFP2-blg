@@ -5,7 +5,7 @@ var playlist = [
 "google": "",
 "spotify": "",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11074788-pelosi.mp3",
-"tag": []
+"tag": ["\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
 {
 "name": "The KK Show - #145 瑞典劉先生",
@@ -165,7 +165,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDgwNDYwOQ",
 "spotify": "https://open.spotify.com/episode/4ZfUU4EZeEMXVSvwKcgqBp",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10804609-.mp3",
-"tag": ["\u516b\u89d2\u7c60"]
+"tag": ["\u516b\u89d2\u7c60", "\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
 {
 "name": "You READ WHAT for FUN???? ... THE STIR EP 8",
@@ -333,7 +333,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDU4NTY4OA",
 "spotify": "https://open.spotify.com/episode/1ZkXE3gqsE0kV9cZsChabR",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10585688-the-kk-show-133.mp3",
-"tag": ["KK_Show", "\u6b50\u99ac\u514b", "Podcaster", "\u5ee3\u64ad\u4eba"]
+"tag": ["KK_Show", "\u6b50\u99ac\u514b", "Podcaster", "\u559c\u5287\u6f14\u54e1", "\u5ee3\u64ad\u4eba"]
 },
 {
 "name": "0508 美國通過習近平法案、世界上最神秘的大公司之一SHEIN、德國的能源備案、#奇異博士2 的心得（無暴雷）、凱莉走出低潮",
@@ -637,7 +637,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTIxOTE4OTAxOA",
 "spotify": "https://open.spotify.com/episode/3XhlmEQaI62GiffhI3loGw",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530647-tough-bobas-live-podcast-ken-ft.mp3",
-"tag": ["\u6b50\u99ac\u514b", "Podcaster", "\u5ee3\u64ad\u4eba"]
+"tag": ["\u6b50\u99ac\u514b", "Podcaster", "\u559c\u5287\u6f14\u54e1", "\u5ee3\u64ad\u4eba"]
 },
 {
 "name": "0220 首映會前每個人的焦慮、加拿大卡車司機在幹嘛、墨西哥酪梨GG、喜劇演員被框列、推薦書：綠燈 Green Light by Mathew McConaughey",
@@ -893,7 +893,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTE3NDcyMDAyNA",
 "spotify": "https://open.spotify.com/episode/5aYzrIXGNP6hJKJMPN56EZ",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530679-ep-3.mp3",
-"tag": ["\u516b\u89d2\u7c60"]
+"tag": ["\u516b\u89d2\u7c60", "\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
 {
 "name": "The KK Show - #110 變裝國王 - JC",
@@ -1397,7 +1397,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA4OTM0NjkyNA",
 "spotify": "https://open.spotify.com/episode/7eBWJnzP4PG0bJHv1zMiaM",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530742-ep2.mp3",
-"tag": ["\u516b\u89d2\u7c60"]
+"tag": ["\u516b\u89d2\u7c60", "\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
 {
 "name": "聲音修正 百靈果之友: 003@ 無國界醫生 劉董",
@@ -1429,7 +1429,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA4NTE5NTQwMQ",
 "spotify": "https://open.spotify.com/episode/2iNL66Mvwce4nzIPYVqMkO",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530746-001.mp3",
-"tag": ["\u516b\u89d2\u7c60"]
+"tag": ["\u516b\u89d2\u7c60", "\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
 {
 "name": "百靈果之友: 002 呱吉 議員說他沒上班",
@@ -3349,7 +3349,7 @@ var playlist = [
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzI5MTA0Nzcw",
 "spotify": "https://open.spotify.com/episode/1wmtMwv1BsfFKa04b1pLxT",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530986-the-kk-show-005.mp3",
-"tag": ["KK_Show", "\u6b50\u99ac\u514b", "Podcaster", "\u5ee3\u64ad\u4eba"]
+"tag": ["KK_Show", "\u6b50\u99ac\u514b", "Podcaster", "\u559c\u5287\u6f14\u54e1", "\u5ee3\u64ad\u4eba"]
 },
 {
 "name": "1215（正成集團贊助播出）愛用國貨，從政府做起、當DNA都是別人的時候，你還是你嗎？、慈禧：開啟現代中國的皇太后",

@@ -157,14 +157,6 @@ Excluded: (0)
 Excluded: (0)
   
 
-八角籠 found in: (4)
-  八角籠直播-聊聊海德堡
-  八角籠直播 Ep.3 《新疆怎麼樣》
-  八角籠直播 Ep2 《大亂鬥》
-  八角籠直播 #001 警告來賓網路不穩 《熱愛祖國的中國人》
-Excluded: (0)
-  
-
 讀書會 found in: (118)
   讀書會：同情者 CH 2 越戰美國大兵有嚴重的用藥問題
   越戰撤退時一團混亂，阿富汗只是歷史重演 讀書會：同情者 Ch 1
@@ -288,9 +280,18 @@ Excluded: (2)
   在Clubhouse 上吵架、跟維吾爾族人聊天後續、沒有讀書會
   0828 閒聊：不是讀書會的自我檢討會
 
-暫代讀書會 found in: (2)
+暫代讀書會 found in: (3)
   0828 閒聊：不是讀書會的自我檢討會
   在Clubhouse 上吵架、跟維吾爾族人聊天後續、沒有讀書會
+  Pelosi 來台灣街訪心得，再次遇到統促黨
+Excluded: (0)
+  
+
+八角籠 found in: (4)
+  八角籠直播-聊聊海德堡
+  八角籠直播 Ep.3 《新疆怎麼樣》
+  八角籠直播 Ep2 《大亂鬥》
+  八角籠直播 #001 警告來賓網路不穩 《熱愛祖國的中國人》
 Excluded: (0)
   
 
@@ -500,6 +501,13 @@ Excluded: (0)
 Excluded: (0)
   
 
+歐馬克 found in: (3)
+  The KK Show - #133 歐馬克
+  Tough Bobas 首映會 Live Podcast：幕後故事分享、Ken大爆料 ft. @歐馬克
+  The KK Show - 005 廣播教主 - 歐馬克
+Excluded: (0)
+  
+
 微笑丹尼 found in: (2)
   喜劇演員開喜劇俱樂部是悲劇的開始嗎？ 笑友會的無情工商 ft. 黃豪平, 微笑丹尼
   The KK Show - #84 真心話大冒險 - 微笑丹尼
@@ -595,13 +603,6 @@ Excluded: (0)
 瑞典劉先生 found in: (2)
   The KK Show - #145 瑞典劉先生
   The KK Show - #93 住在社會主義天堂 - 瑞典劉先生
-Excluded: (0)
-  
-
-歐馬克 found in: (3)
-  The KK Show - #133 歐馬克
-  Tough Bobas 首映會 Live Podcast：幕後故事分享、Ken大爆料 ft. @歐馬克
-  The KK Show - 005 廣播教主 - 歐馬克
 Excluded: (0)
   
 

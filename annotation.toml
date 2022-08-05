@@ -3,7 +3,7 @@
 ["Pelosi 來台灣街訪心得，再次遇到統促黨"]
 name = "Pelosi 來台灣街訪心得，再次遇到統促黨"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11074788-pelosi.mp3"
-tag = []
+tag = ["暫代讀書會"]
 category = []
 
 ["The KK Show - #145 瑞典劉先生"]
@@ -184,7 +184,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%85%AB%E8%A7%92%E7%B1%A0%E7%9B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDgwNDYwOQ"
 spotify = "https://open.spotify.com/episode/4ZfUU4EZeEMXVSvwKcgqBp"
 tag = ["八角籠"]
-category = []
+category = ["暫代讀書會"]
 
 ["You READ WHAT for FUN???? ... THE STIR EP 8"]
 name = "You READ WHAT for FUN???? ... THE STIR EP 8"
@@ -373,7 +373,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-133-%E6%AD%90%E9%A6%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDU4NTY4OA"
 spotify = "https://open.spotify.com/episode/1ZkXE3gqsE0kV9cZsChabR"
 tag = ["KK_Show", "歐馬克"]
-category = ["Podcaster", "廣播人"]
+category = ["Podcaster", "喜劇演員", "廣播人"]
 
 ["0508 美國通過習近平法案、世界上最神秘的大公司之一SHEIN、德國的能源備案、#奇異博士2 的心得（無暴雷）、凱莉走出低潮"]
 name = "0508 美國通過習近平法案、世界上最神秘的大公司之一SHEIN、德國的能源備案、#奇異博士2 的心得（無暴雷）、凱莉走出低潮"
@@ -715,7 +715,7 @@ apple = "https://podcasts.apple.com/tw/podcast/tough-bobas-%E9%A6%96%E6%98%A0%E6
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTIxOTE4OTAxOA"
 spotify = "https://open.spotify.com/episode/3XhlmEQaI62GiffhI3loGw"
 tag = ["歐馬克"]
-category = ["Podcaster", "廣播人"]
+category = ["Podcaster", "喜劇演員", "廣播人"]
 
 ["0220 首映會前每個人的焦慮、加拿大卡車司機在幹嘛、墨西哥酪梨GG、喜劇演員被框列、推薦書：綠燈 Green Light by Mathew McConaughey"]
 name = "0220 首映會前每個人的焦慮、加拿大卡車司機在幹嘛、墨西哥酪梨GG、喜劇演員被框列、推薦書：綠燈 Green Light by Mathew McConaughey"
@@ -1003,7 +1003,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%85%AB%E8%A7%92%E7%B1%A0%E7%9B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTE3NDcyMDAyNA"
 spotify = "https://open.spotify.com/episode/5aYzrIXGNP6hJKJMPN56EZ"
 tag = ["八角籠"]
-category = []
+category = ["暫代讀書會"]
 
 ["The KK Show - #110 變裝國王 - JC"]
 name = "The KK Show - #110 變裝國王 - JC"
@@ -1570,7 +1570,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%85%AB%E8%A7%92%E7%B1%A0%E7%9B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA4OTM0NjkyNA"
 spotify = "https://open.spotify.com/episode/7eBWJnzP4PG0bJHv1zMiaM"
 tag = ["八角籠"]
-category = []
+category = ["暫代讀書會"]
 
 ["聲音修正 百靈果之友: 003@ 無國界醫生 劉董"]
 name = "聲音修正 百靈果之友: 003@ 無國界醫生 劉董"
@@ -1606,7 +1606,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%85%AB%E8%A7%92%E7%B1%A0%E7%9B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA4NTE5NTQwMQ"
 spotify = "https://open.spotify.com/episode/2iNL66Mvwce4nzIPYVqMkO"
 tag = ["八角籠"]
-category = []
+category = ["暫代讀書會"]
 
 ["百靈果之友: 002 呱吉 議員說他沒上班"]
 name = "百靈果之友: 002 呱吉 議員說他沒上班"
@@ -3766,7 +3766,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-005-%E5%BB%A3%E6%92%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzI5MTA0Nzcw"
 spotify = "https://open.spotify.com/episode/1wmtMwv1BsfFKa04b1pLxT"
 tag = ["KK_Show", "歐馬克"]
-category = ["Podcaster", "廣播人"]
+category = ["Podcaster", "喜劇演員", "廣播人"]
 
 ["1215（正成集團贊助播出）愛用國貨，從政府做起、當DNA都是別人的時候，你還是你嗎？、慈禧：開啟現代中國的皇太后"]
 name = "1215（正成集團贊助播出）愛用國貨，從政府做起、當DNA都是別人的時候，你還是你嗎？、慈禧：開啟現代中國的皇太后"
