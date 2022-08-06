@@ -39,7 +39,12 @@ for (var ark = 0; ark < argueKey.length; ++ark) {
   option[key] = value;
  };
 };
-function link(href,fontfront,inner,jump = '',label = '') {
+function fontAwe(fontKey) {
+ var fontI = document.createElement('i');
+ fontI.className = fontKey;
+ return fontI;
+};
+function link(href,innerArr,jump = '',label = '') {
  if (href == "") {
   var tag = document.createElement('span');
   tag.className = "linkDecor hideBtn";
@@ -54,12 +59,10 @@ function link(href,fontfront,inner,jump = '',label = '') {
  } else {
   tag.className = tag.className + " activeBtn";
  };
- if (fontfront != '') {
-  var fontI = document.createElement('i');
-  fontI.className = fontfront;
-  tag.appendChild(fontI);
+ for (let ia = 0; ia < innerArr.length; ia++) {
+  if (typeof(innerArr[ia])=="string") {tag.append(innerArr[ia])};
+  if (typeof(innerArr[ia])=="object") {tag.appendChild(innerArr[ia])};
  };
- tag.innerHTML = tag.innerHTML + inner;
  return tag;
 };
 function addTag(addStr) {
@@ -114,14 +117,14 @@ for (let nub = 0; nub < filtered.length; nub++) {
  var playSpan = document.createElement('span');
  playSpan.className = "tagBorder";
  files.push(filtered[nub]['feed']);
- playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))","fa-solid fa-play",""));
+ playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))",[fontAwe("fa-solid fa-play")]));
  buttonDiv.appendChild(playSpan);
  var controlSpan = document.createElement('span');
  controlSpan.className = "tagBorder";
- controlSpan.appendChild(link(filtered[nub]["apple"],"fa-brands fa-apple","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["google"],"fa-brands fa-google","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["spotify"],"fa-brands fa-spotify","","podcast"));
- controlSpan.appendChild(link(filtered[nub]["feed"],"fa-solid fa-download","","podcast"));
+ controlSpan.appendChild(link(filtered[nub]["apple"],[fontAwe("fa-brands fa-apple")],"podcast"));
+ controlSpan.appendChild(link(filtered[nub]["google"],[fontAwe("fa-brands fa-google")],"podcast"));
+ controlSpan.appendChild(link(filtered[nub]["spotify"],[fontAwe("fa-brands fa-spotify")],"podcast"));
+ controlSpan.appendChild(link(filtered[nub]["feed"],[fontAwe("fa-solid fa-download")],"podcast"));
  buttonDiv.appendChild(controlSpan);
  for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
   textTagStr = filtered[nub]["tag"][tagi];
@@ -131,7 +134,7 @@ for (let nub = 0; nub < filtered.length; nub++) {
   } else {
    addTagStr = "javascript: void(addTag(\""+textTagStr+"\"))";
   };
-  buttonDiv.appendChild(link(addTagStr,faTagStr," "+textTagStr,'','tagBorder'));  
+  buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
  }
  entryPg.appendChild(buttonDiv);
  playlistDOM.appendChild(entryPg);
@@ -140,8 +143,8 @@ if (option['key'].length > 0) {
  tagBarDOM.style = "";
  for (let oka = 0; oka < option['key'].length; oka++) {
   removeTagStr = "javascript: void(removeTag(\""+option['key'][oka]+"\"))";
-  okaStr = " "+option['key'][oka]
-  tagBarDOM.appendChild(link(removeTagStr,faTagStr,okaStr,'','tagBorder'));
+  okaArr = [fontAwe(faTagStr)," "+option['key'][oka]+" ",fontAwe("fa-solid fa-delete-left")];
+  tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
  };
 };
 function next() {
