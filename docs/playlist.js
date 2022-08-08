@@ -1,9 +1,17 @@
 var playlist = [
 {
+"name": "0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助",
+"apple": "https://podcasts.apple.com/tw/podcast/0807-%E5%9C%8B%E5%A4%96%E6%97%85%E9%81%8A%E6%80%8E%E9%BA%BC%E6%89%BE%E5%BB%81%E6%89%80-%E7%94%A8%E5%B1%81%E8%82%A1%E5%91%BC%E5%90%B8%E7%9A%84%E5%8F%AF%E8%83%BD%E6%80%A7-%E6%BE%A4%E5%80%AB%E6%96%AF%E5%9F%BA%E5%90%91%E4%B8%AD%E5%9C%8B%E5%B0%8B%E6%B1%82%E5%8D%94%E5%8A%A9/id1106847606?i=1000575270731",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTA5MjcxMw",
+"spotify": "https://open.spotify.com/episode/3oraxeh1S3w78eCrvTO9s1",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11092713-0807.mp3",
+"tag": []
+},
+{
 "name": "Pelosi 來台灣街訪心得，再次遇到統促黨",
-"apple": "",
-"google": "",
-"spotify": "",
+"apple": "https://podcasts.apple.com/tw/podcast/pelosi-%E4%BE%86%E5%8F%B0%E7%81%A3%E8%A1%97%E8%A8%AA%E5%BF%83%E5%BE%97-%E5%86%8D%E6%AC%A1%E9%81%87%E5%88%B0%E7%B5%B1%E4%BF%83%E9%BB%A8/id1106847606?i=1000574891436",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTA3NDc4OA",
+"spotify": "https://open.spotify.com/episode/3KuAKYPe7yEz0hrkdI7kwj",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11074788-pelosi.mp3",
 "tag": ["\u66ab\u4ee3\u8b80\u66f8\u6703"]
 },
