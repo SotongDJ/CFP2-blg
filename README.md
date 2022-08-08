@@ -10,6 +10,11 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 **網站 Website**：[https://👌.深海墨客.台灣/](https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/)
 
+- 為了避免網路釣魚，大部分瀏覽器拒絕在域名上顯示表情符號（“👌” -> “xn--xp8h”）
+- Most browsers choose to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
+
 ## 需要幫忙嗎？
 
 ### Need some help?
+
+~建設中~
