@@ -2,7 +2,7 @@
 // - https://github.com/mdn/sw-test
 // - https://developer.chrome.com/docs/workbox/caching-strategies-overview/
 //
-const currentVersion = 'v1.1';
+const currentVersion = 'v1.2';
 const addResourcesToCache = async (resources) => {
  const cache = await caches.open(currentVersion);
  await cache.addAll(resources);
@@ -35,6 +35,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('install', (event) => {event.waitUntil(addResourcesToCache(precache_arr));});
 self.addEventListener('fetch', (event) => {
  if (event.request.url.match('^.*(\.mp3)$')) {return false;};
+ if (event.request.url.match('^.*(www\.buzzsprout\.com)*.$')) {return false;};
  event.respondWith(
   caches.open(currentVersion).then(async (cache) => {
    const cachedResponse = await cache.match(event.request);
