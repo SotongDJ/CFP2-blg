@@ -70,90 +70,105 @@ function compareLength(aArr,bArr) {
  if (bArr.length > 0) {return bArr}; 
  return bArr;
 };
-function getArr(inputStr) {
- if (inputStr==="") {return []} else {return inputStr.split(",")};
-};
-var keyArr = compareLength(option['key'], getArr(storage.getItem('key')||""));
+function getArr(inputStr) {return inputStr ? inputStr.split(",") : [];};
+var keyArr = compareLength(option['key'], getArr(storage.getItem('key')));
 storage.setItem("key", keyArr.join(','));
 function addTag(addStr) {
- if (!keyArr.includes(addStr)) {
-  keyArr.push(addStr);
+ var addKeyArr = getArr(storage.getItem('key'));
+ if (!addKeyArr.includes(addStr)) {
+  addKeyArr.push(addStr);
  };
- window.location.href = base + "?key=" + keyArr.join(",");
- storage.setItem("key", keyArr.join(','));
+ storage.setItem("key", addKeyArr.join(','));
+ draw();
 };
 function removeTag(removeStr) {
- var altkeyArr = [];
- for (let ka = 0; ka < keyArr.length; ka++) {
-  if (keyArr[ka] != removeStr) {
-    altkeyArr.push(keyArr[ka]);
+ var addKeyArr = getArr(storage.getItem('key'));
+ var altKeyArr = [];
+ for (let ka = 0; ka < addKeyArr.length; ka++) {
+  if (addKeyArr[ka] != removeStr) {
+    altKeyArr.push(addKeyArr[ka]);
   };
  };
- keyArr = altkeyArr;
- window.location.href = base + ((keyArr.length > 0) ? ("?key=" + keyArr.join(",")) : "");
- storage.setItem("key", keyArr.join(','));
+ storage.setItem("key", altKeyArr.join(','));
+ draw();
 };
-var files = [];
-var filtered = [];
-if (keyArr.length > 0) {
- for (let nub = 0; nub < playlist.length; nub++) {
-  ord = playlist.length - nub - 1;
-  if (option['union'] == 'true') {
-   var filteredBool = false;
-   for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
-    if (keyArr.includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+function filter() {
+ var filterKeyArr = getArr(storage.getItem('key'));
+ var filtered = [];
+ if (filterKeyArr.length > 0) {
+  var playlistKeyArr = Object.keys(playlist);
+  for (let nub = 0; nub < playlistKeyArr.length; nub++) {
+   ord = playlistKeyArr[playlistKeyArr.length - nub - 1];
+   if (option['union'] == 'true') {
+    var filteredBool = false;
+    for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
+     if (filterKeyArr.includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+    };
+   } else {
+    var filteredBool = true;
+    for (let oki = 0; oki < filterKeyArr.length; oki++) {
+     if (!playlist[ord]["tag"].includes(filterKeyArr[oki])) {filteredBool = false};
+    };
    };
-  } else {
-   var filteredBool = true;
-   for (let oki = 0; oki < keyArr.length; oki++) {
-    if (!playlist[ord]["tag"].includes(keyArr[oki])) {filteredBool = false};
+   if (filteredBool) {filtered.push(ord)};
+  };
+ } else {
+  filtered = Object.keys(playlist);
+ };
+ storage.setItem('filtered',filtered.join(","))
+};
+function draw() {
+ filter();
+ playlistDOM.innerHTML = "";
+ tagBarDOM.innerText = "標籤 Tag: ";
+ var drawKeyArr = getArr(storage.getItem('key'));
+ if (drawKeyArr.length > 0) {
+  tagBarDOM.style = "";
+  for (let oka = 0; oka < drawKeyArr.length; oka++) {
+   removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
+   okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left")];
+   tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
+  };
+ } else {
+  tagBarDOM.style = "display: none;";
+ };
+ var files = [];
+ var filteredArr = getArr(storage.getItem('filtered'));;
+ for (let nub = 0; nub < filteredArr.length; nub++) {
+  var tar = filteredArr[nub];
+  var entryPg = document.createElement('div');
+  entryPg.className = "entry";
+  titleDiv = document.createElement("p");
+  titleDiv.innerText = playlist[tar]['name'];
+  entryPg.appendChild(titleDiv);
+  var buttonDiv = document.createElement('p');
+  buttonDiv.className = "buttonDiv";
+  var playSpan = document.createElement('span');
+  playSpan.className = "tagBorder";
+  files.push(playlist[tar]['feed']);
+  playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))",[fontAwe("fa-solid fa-play")]));
+  buttonDiv.appendChild(playSpan);
+  var controlSpan = document.createElement('span');
+  controlSpan.className = "tagBorder";
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download")],"podcast"));
+  buttonDiv.appendChild(controlSpan);
+  for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
+   textTagStr = playlist[tar]["tag"][tagi];
+   if (drawKeyArr.includes(textTagStr)) {
+    addTagStr = "";
+   } else {
+    addTagStr = "javascript: void(addTag(\""+textTagStr+"\"))";
    };
-  };
-  if (filteredBool) {filtered.push(playlist[ord])};
- };
-} else {
- filtered = playlist;
-};
-for (let nub = 0; nub < filtered.length; nub++) {
- var entryPg = document.createElement('div');
- entryPg.className = "entry";
- titleDiv = document.createElement("p");
- titleDiv.innerText = filtered[nub]['name'];
- entryPg.appendChild(titleDiv);
- var buttonDiv = document.createElement('p');
- buttonDiv.className = "buttonDiv";
- var playSpan = document.createElement('span');
- playSpan.className = "tagBorder";
- files.push(filtered[nub]['feed']);
- playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))",[fontAwe("fa-solid fa-play")]));
- buttonDiv.appendChild(playSpan);
- var controlSpan = document.createElement('span');
- controlSpan.className = "tagBorder";
- controlSpan.appendChild(link(filtered[nub]["apple"],[fontAwe("fa-brands fa-apple")],"podcast"));
- controlSpan.appendChild(link(filtered[nub]["google"],[fontAwe("fa-brands fa-google")],"podcast"));
- controlSpan.appendChild(link(filtered[nub]["spotify"],[fontAwe("fa-brands fa-spotify")],"podcast"));
- controlSpan.appendChild(link(filtered[nub]["feed"],[fontAwe("fa-solid fa-download")],"podcast"));
- buttonDiv.appendChild(controlSpan);
- for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
-  textTagStr = filtered[nub]["tag"][tagi];
-  if (keyArr.includes(textTagStr)) {
-   addTagStr = "";
-  } else {
-   addTagStr = "javascript: void(addTag(\""+textTagStr+"\"))";
-  };
-  buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
- }
- entryPg.appendChild(buttonDiv);
- playlistDOM.appendChild(entryPg);
-};
-if (keyArr.length > 0) {
- tagBarDOM.style = "";
- for (let oka = 0; oka < keyArr.length; oka++) {
-  removeTagStr = "javascript: void(removeTag(\""+keyArr[oka]+"\"))";
-  okaArr = [fontAwe(faTagStr)," "+keyArr[oka]+" ",fontAwe("fa-solid fa-delete-left")];
-  tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
+   buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
+  }
+  entryPg.appendChild(buttonDiv);
+  playlistDOM.appendChild(entryPg);
  };
 };
+draw();
 function next() {
  var orderStr = storeDOM.innerText;
  var orderInt = parseInt(orderStr) + 1;
