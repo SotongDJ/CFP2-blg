@@ -73,8 +73,8 @@ function compareLength(aArr,bArr) {
 function getArr(inputStr) {
  if (inputStr==="") {return []} else {return inputStr.split(",")};
 };
-var storeKeyArr = compareLength(getArr(storage.getItem('key')), option['key']);
-var keyArr = compareLength(option['key'], storeKeyArr);
+var keyArr = compareLength(option['key'], getArr(storage.getItem('key')||""));
+storage.setItem("key", keyArr.join(','));
 function addTag(addStr) {
  if (!keyArr.includes(addStr)) {
   keyArr.push(addStr);
