@@ -3,6 +3,7 @@ const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
 const storeDOM = document.getElementById("store");
 const contentDOM = document.getElementById("contentdiv");
+const storage = window.localStorage;
 const faTagStr = "fa-solid fa-tag";
 url = window.location.href;
 if ((!url.includes("?"))) {
@@ -45,60 +46,56 @@ function fontAwe(fontKey) {
  return fontI;
 };
 function link(href,innerArr,jump = '',label = '') {
+ let classArr = [];
  if (href == "") {
   var tag = document.createElement('span');
-  tag.className = "linkDecor hideBtn";
+  classArr.push("hideBtn");
  } else {
   var tag = document.createElement('a');
-  tag.className = "linkDecor";
+  classArr.push("linkDecor");
+  classArr.push("activeBtn");
   tag.href = href;
-  if (jump != "") { tag.target = jump; };
+  if (jump) {tag.target = jump;};
  };
- if (label != "") {
-  tag.className = tag.className + " " + label;
- } else {
-  tag.className = tag.className + " activeBtn";
- };
+ if (label) {classArr.push(label);};
  for (let ia = 0; ia < innerArr.length; ia++) {
   if (typeof(innerArr[ia])=="string") {tag.append(innerArr[ia])};
   if (typeof(innerArr[ia])=="object") {tag.appendChild(innerArr[ia])};
  };
+ tag.className = classArr.join(" ");
  return tag;
 };
+var keyArr = option['key'];
 function addTag(addStr) {
- var keyArr = option['key'];
  if (!keyArr.includes(addStr)) {
   keyArr.push(addStr);
  };
  window.location.href = base + "?key=" + keyArr.join(",");
 };
 function removeTag(removeStr) {
- var keyArr = [];
- for (let ka = 0; ka < option['key'].length; ka++) {
-  if (option['key'][ka] != removeStr) {
-   keyArr.push(option['key'][ka]);
+ var altkeyArr = [];
+ for (let ka = 0; ka < keyArr.length; ka++) {
+  if (keyArr[ka] != removeStr) {
+    altkeyArr.push(keyArr[ka]);
   };
  };
- if (keyArr.length > 0) {    
-  window.location.href = base + "?key=" + keyArr.join(",");
- } else {
-  window.location.href = base;
- };
+ keyArr = altkeyArr;
+ window.location.href = base + ((keyArr.length > 0) ? ("?key=" + keyArr.join(",")) : "");
 };
 var files = [];
 var filtered = [];
-if (option['key'].length > 0) {
+if (keyArr.length > 0) {
  for (let nub = 0; nub < playlist.length; nub++) {
   ord = playlist.length - nub - 1;
   if (option['union'] == 'true') {
    var filteredBool = false;
    for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
-    if (option['key'].includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+    if (keyArr.includes(playlist[ord]["tag"][pot])) {filteredBool = true};
    };
   } else {
    var filteredBool = true;
-   for (let oki = 0; oki < option['key'].length; oki++) {
-    if (!playlist[ord]["tag"].includes(option['key'][oki])) {filteredBool = false};
+   for (let oki = 0; oki < keyArr.length; oki++) {
+    if (!playlist[ord]["tag"].includes(keyArr[oki])) {filteredBool = false};
    };
   };
   if (filteredBool) {filtered.push(playlist[ord])};
@@ -128,7 +125,6 @@ for (let nub = 0; nub < filtered.length; nub++) {
  buttonDiv.appendChild(controlSpan);
  for (let tagi = 0; tagi < filtered[nub]["tag"].length; tagi++) {
   textTagStr = filtered[nub]["tag"][tagi];
-  var keyArr = option['key'];
   if (keyArr.includes(textTagStr)) {
    addTagStr = "";
   } else {
@@ -139,11 +135,11 @@ for (let nub = 0; nub < filtered.length; nub++) {
  entryPg.appendChild(buttonDiv);
  playlistDOM.appendChild(entryPg);
 };
-if (option['key'].length > 0) {
+if (keyArr.length > 0) {
  tagBarDOM.style = "";
- for (let oka = 0; oka < option['key'].length; oka++) {
-  removeTagStr = "javascript: void(removeTag(\""+option['key'][oka]+"\"))";
-  okaArr = [fontAwe(faTagStr)," "+option['key'][oka]+" ",fontAwe("fa-solid fa-delete-left")];
+ for (let oka = 0; oka < keyArr.length; oka++) {
+  removeTagStr = "javascript: void(removeTag(\""+keyArr[oka]+"\"))";
+  okaArr = [fontAwe(faTagStr)," "+keyArr[oka]+" ",fontAwe("fa-solid fa-delete-left")];
   tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
  };
 };
