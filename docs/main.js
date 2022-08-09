@@ -65,12 +65,22 @@ function link(href,innerArr,jump = '',label = '') {
  tag.className = classArr.join(" ");
  return tag;
 };
-var keyArr = option['key'];
+function compareLength(aArr,bArr) {
+ if (aArr.length > 0) {return aArr}; 
+ if (bArr.length > 0) {return bArr}; 
+ return bArr;
+};
+function getArr(inputStr) {
+ if (inputStr==="") {return []} else {return inputStr.split(",")};
+};
+var storeKeyArr = compareLength(getArr(storage.getItem('key')), option['key']);
+var keyArr = compareLength(option['key'], storeKeyArr);
 function addTag(addStr) {
  if (!keyArr.includes(addStr)) {
   keyArr.push(addStr);
  };
  window.location.href = base + "?key=" + keyArr.join(",");
+ storage.setItem("key", keyArr.join(','));
 };
 function removeTag(removeStr) {
  var altkeyArr = [];
@@ -81,6 +91,7 @@ function removeTag(removeStr) {
  };
  keyArr = altkeyArr;
  window.location.href = base + ((keyArr.length > 0) ? ("?key=" + keyArr.join(",")) : "");
+ storage.setItem("key", keyArr.join(','));
 };
 var files = [];
 var filtered = [];

@@ -36,13 +36,13 @@ self.addEventListener('install', (event) => {event.waitUntil(addResourcesToCache
 self.addEventListener('fetch', (event) => {
  if (event.request.url.match('^.*(\.mp3)$')) {return false;};
  event.respondWith(
-    caches.open(currentVersion).then(async (cache) => {
-        const cachedResponse = await cache.match(event.request);
-        const fetchedResponse = fetch(event.request).then((networkResponse) => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-        });
-        return cachedResponse || fetchedResponse;
-    })
+  caches.open(currentVersion).then(async (cache) => {
+   const cachedResponse = await cache.match(event.request);
+   const fetchedResponse = fetch(event.request).then((networkResponse) => {
+    cache.put(event.request, networkResponse.clone());
+    return networkResponse;
+   });
+   return cachedResponse || fetchedResponse;
+  })
  );
 });
