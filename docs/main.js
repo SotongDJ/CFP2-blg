@@ -1,10 +1,9 @@
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
-const storeDOM = document.getElementById("store");
 const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
-const faTagStr = "fa-solid fa-tag";
+const faTagStr = "fa-solid fa-tag fa-fw";
 url = window.location.href;
 if ((!url.includes("?"))) {
  base = url;
@@ -126,13 +125,13 @@ function draw() {
   tagBarDOM.style = "";
   for (let oka = 0; oka < drawKeyArr.length; oka++) {
    removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
-   okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left")];
+   okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
    tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
   };
  } else {
   tagBarDOM.style = "display: none;";
  };
- var files = [];
+ var podObj = {};
  var filteredArr = getArr(storage.getItem('filtered'));;
  for (let nub = 0; nub < filteredArr.length; nub++) {
   var tar = filteredArr[nub];
@@ -145,42 +144,42 @@ function draw() {
   buttonDiv.className = "buttonDiv";
   var playSpan = document.createElement('span');
   playSpan.className = "tagBorder";
-  files.push(playlist[tar]['feed']);
-  playSpan.appendChild(link("javascript: void(goToPlay("+nub+"))",[fontAwe("fa-solid fa-play")]));
+  podObj[nub] = tar;
+  playSpan.appendChild(link("javascript: void(goToPlay(\""+nub+"\"))",[fontAwe("fa-solid fa-play fa-fw")]));
   buttonDiv.appendChild(playSpan);
   var controlSpan = document.createElement('span');
   controlSpan.className = "tagBorder";
-  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple")],"podcast"));
-  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google")],"podcast"));
-  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify")],"podcast"));
-  controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+  controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
   buttonDiv.appendChild(controlSpan);
   for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
    textTagStr = playlist[tar]["tag"][tagi];
-   if (drawKeyArr.includes(textTagStr)) {
-    addTagStr = "";
-   } else {
-    addTagStr = "javascript: void(addTag(\""+textTagStr+"\"))";
-   };
+   addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
    buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
   }
   entryPg.appendChild(buttonDiv);
   playlistDOM.appendChild(entryPg);
+  storage.setItem('podcast',JSON.stringify(podObj))
  };
 };
 draw();
 function next() {
- var orderStr = storeDOM.innerText;
- var orderInt = parseInt(orderStr) + 1;
- if (orderInt < files.length) {
-  playerDOM.src = files[orderInt];
-  storeDOM.innerText = orderInt;
+ var podcastObj = JSON.parse(storage.getItem('podcast')||"{}");
+ var orderStr = storage.getItem('now')||"0";
+ var nextInt = parseInt(orderStr) + 1;
+ if (nextInt < Object.keys(podcastObj).length) {
+  nextStr = nextInt.toString();
+  playerDOM.src = playlist[podcastObj[nextInt]]['feed'];
+  storage.setItem('now', nextStr);
   playerDOM.play();
  };
 };
-function goToPlay(targetInt) {
- playerDOM.src = files[targetInt];
- storeDOM.innerText = targetInt;
+function goToPlay(targetStr) {
+ var podcastObj = JSON.parse(storage.getItem('podcast')||"{}");
+ playerDOM.src = playlist[podcastObj[targetStr]]['feed'];
+ storage.setItem('now', targetStr);
  playerDOM.play();
 };
 playerDOM.addEventListener('ended', next, false);
