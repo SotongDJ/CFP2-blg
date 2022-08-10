@@ -1,5 +1,14 @@
 # Add your own tag to each episode
 
+["The KK Show - #146 權樂"]
+name = "The KK Show - #146 權樂"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11111621-the-kk-show-146.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-146-%E6%AC%8A%E6%A8%82/id1106847606?i=1000575595883"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTExMTYyMQ"
+spotify = "https://open.spotify.com/episode/3TNPa904eKlfo5DhPMHpOb"
+tag = ["KK_Show", "權樂"]
+category = ["喜劇演員", "演員", "文藝"]
+
 ["0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助"]
 name = "0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11092713-0807.mp3"
@@ -52,7 +61,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-144-%E6%A8%82%E6%A8%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTAyOTYxNA"
 spotify = "https://open.spotify.com/episode/76PaXrphXdeR0Smrv6Ce1l"
 tag = ["KK_Show", "樂樂法利"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0724 紐約把馬路變餐廳、美國人為了便宜房價搬去歐洲、推薦：Sleep No More"]
 name = "0724 紐約把馬路變餐廳、美國人為了便宜房價搬去歐洲、推薦：Sleep No More"
@@ -88,7 +97,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-142-%E6%B5%AA%E5%AD%9
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDk0NTY0Mg"
 spotify = "https://open.spotify.com/episode/2kTbdjB8cALvUD30NqaUJa"
 tag = ["KK_Show", "ChinaMac"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0710 巴黎香奈兒總店跟菜市場一樣、舊金山好冷、佛羅倫斯很開心， 從今以後要放寒暑假"]
 name = "0710 巴黎香奈兒總店跟菜市場一樣、舊金山好冷、佛羅倫斯很開心， 從今以後要放寒暑假"
@@ -106,7 +115,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-141-%E5%B0%8F%E6%AD%9
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDkwNTUwOQ"
 spotify = "https://open.spotify.com/episode/3QmayuZCMY0tcbk0oIrqRV"
 tag = ["KK_Show", "小歐"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0703 南韓去NATO玩、中國生氣氣，臉書對反墮胎超積極、世界糧食問題、出國玩咯"]
 name = "0703 南韓去NATO玩、中國生氣氣，臉書對反墮胎超積極、世界糧食問題、出國玩咯"
@@ -214,7 +223,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-138-%E9%98%BF%E6%BB%B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDc4OTg3Nw"
 spotify = "https://open.spotify.com/episode/5jhBJpS45KpnSoehSmTS0y"
 tag = ["KK_Show", "志祺@志祺七七", "阿滴"]
-category = ["Youtubers", "Podcaster", "Youtubers"]
+category = ["Youtuber", "Podcaster", "Youtuber"]
 
 ["0612 中國去南洋吃癟、日經記者想要採訪台灣中心被拒絕、聊聊德國海德堡性侵事件"]
 name = "0612 中國去南洋吃癟、日經記者想要採訪台灣中心被拒絕、聊聊德國海德堡性侵事件"
@@ -232,7 +241,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%A5%B3%E6%BC%94%E5%93%A1%E7%9A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDc2MzUzNA"
 spotify = "https://open.spotify.com/episode/65FAVoxwTCrjF2EU7dfxA7"
 tag = ["酸酸", "涵冷娜"]
-category = ["喜劇演員", "Youtubers", "Podcaster", "喜劇演員"]
+category = ["喜劇演員", "Youtuber", "Podcaster", "喜劇演員", "文藝"]
 
 ["Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"]
 name = "Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"
@@ -286,7 +295,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-136-%E4%BB%B2%E5%A4%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDcxMTIxNw"
 spotify = "https://open.spotify.com/episode/7IUyPI0qa8OzsjxNjY3gcV"
 tag = ["KK_Show", "台南人劇團"]
-category = ["文藝"]
+category = ["文藝", "劇場"]
 
 ["0529 凱莉錄嘻哈、美國德州小學槍擊事件、新疆警察檔案、推薦電影：捍衛戰士：獨行俠"]
 name = "0529 凱莉錄嘻哈、美國德州小學槍擊事件、新疆警察檔案、推薦電影：捍衛戰士：獨行俠"
@@ -304,7 +313,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E5%96%9C%E5%8A%87%E6%BC%94%E5%93
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDY4NDE5MA"
 spotify = "https://open.spotify.com/episode/0XXAOtKav2LCjsShCc6ZcN"
 tag = ["微笑丹尼", "黃豪平"]
-category = ["喜劇演員", "Youtubers", "喜劇演員"]
+category = ["喜劇演員", "Youtuber", "喜劇演員"]
 
 ["We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"]
 name = "We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"
@@ -358,7 +367,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-134-%E7%82%8E%E4%B8%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDYzMTU3NQ"
 spotify = "https://open.spotify.com/episode/6RWmiDzKWDF67XwS27teuj"
 tag = ["KK_Show", "Joeman"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0515 中國到底在幹嘛？ 拉斯維加斯黑幫毀屍滅跡聖地、菲律賓總統大選、推薦電影 ： CODA"]
 name = "0515 中國到底在幹嘛？ 拉斯維加斯黑幫毀屍滅跡聖地、菲律賓總統大選、推薦電影 ： CODA"
@@ -421,7 +430,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-132-%E8%B3%80%E7%93%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMDU0ODQ5NA"
 spotify = "https://open.spotify.com/episode/0gTcROcEW4sgJj9oV4WQYw"
 tag = ["KK_Show", "賀瓏"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0501 迪士尼 vs 州長 、 我們叫員工去療傷、俄國石油制裁的漏洞"]
 name = "0501 迪士尼 vs 州長 、 我們叫員工去療傷、俄國石油制裁的漏洞"
@@ -520,7 +529,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-128-%E9%81%93%E5%BE%B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTI0ODk1MDU3NQ"
 spotify = "https://open.spotify.com/episode/5XytWp3EW1Vo7OBFsvXa7r"
 tag = ["KK_Show", "Jim"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0410 人權理事會少了一個壞人...so what? 巴基斯坦大變天、 推薦： #仲夏夜汁夢 、 Once"]
 name = "0410 人權理事會少了一個壞人...so what? 巴基斯坦大變天、 推薦： #仲夏夜汁夢 、 Once"
@@ -574,7 +583,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E9%96%92%E8%81%8A-%E5%A8%81%E7%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTI0MDc3MDgyMA"
 spotify = "https://open.spotify.com/episode/187TMalJfRe7tVtscNoXGK"
 tag = ["酸酸"]
-category = ["喜劇演員", "Youtubers", "Podcaster"]
+category = ["喜劇演員", "Youtuber", "Podcaster"]
 
 ["The KK Show - #126 長生不老的科學 - 許翱麟教授"]
 name = "The KK Show - #126 長生不老的科學 - 許翱麟教授"
@@ -691,7 +700,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-122-%E5%8C%BF%E5%90%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTIyNDQ1NDQ2NQ"
 spotify = "https://open.spotify.com/episode/60mvDqva5Fw4YrMSI9DQOP"
 tag = ["KK_Show", "蕭東意"]
-category = ["文藝", "演員", "喜劇演員"]
+category = ["文藝", "演員", "劇場", "喜劇演員"]
 
 ["0227 烏克蘭社群媒體資訊戰、凱莉推薦一堆電影 Eternal Sunshine of The Spotless Mind、世界上最爛的人"]
 name = "0227 烏克蘭社群媒體資訊戰、凱莉推薦一堆電影 Eternal Sunshine of The Spotless Mind、世界上最爛的人"
@@ -781,7 +790,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-119-%E9%BB%83%E5%A4%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTIxMjA1Nzk3Mw"
 spotify = "https://open.spotify.com/episode/7vfgu7is4uLiVhLIBTCsiS"
 tag = ["KK_Show", "黃大謙"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0206 #谷愛凌 是超級間諜？ 紐西蘭爲什麽要開放旅游了？ 閒聊Joe Rogan 後續 推薦電影:偶然與想像"]
 name = "0206 #谷愛凌 是超級間諜？ 紐西蘭爲什麽要開放旅游了？ 閒聊Joe Rogan 後續 推薦電影:偶然與想像"
@@ -835,7 +844,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-117-%E5%91%B1%E5%90%8
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTIwMzIxNzAwMA"
 spotify = "https://open.spotify.com/episode/7AOd1ZpbDN5Y4NCgdR20bh"
 tag = ["KK_Show", "呱吉"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0123 哥倫比亞總統候選人曾經被綁架6年、大麻抗Covid、推薦書：WIll 威爾史密斯回憶錄"]
 name = "0123 哥倫比亞總統候選人曾經被綁架6年、大麻抗Covid、推薦書：WIll 威爾史密斯回憶錄"
@@ -889,7 +898,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-115-%E8%88%87%E8%87%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTE5NDE0NjI4Nw"
 spotify = "https://open.spotify.com/episode/2q5OjVaEsvWB5fFddBP32Z"
 tag = ["KK_Show", "泥泥學姐"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0109 凱莉是真五迷、哈薩克暴動 俄國支援、教宗譴責不生小孩的人、推薦書：疫年記西藏"]
 name = "0109 凱莉是真五迷、哈薩克暴動 俄國支援、教宗譴責不生小孩的人、推薦書：疫年記西藏"
@@ -952,7 +961,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-113-%E9%87%91%E6%9B%B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTE4NjExODk4OQ"
 spotify = "https://open.spotify.com/episode/0qRhuGgiXya1XgvQPZ6WxR"
 tag = ["KK_Show", "阿爆", "阿拉斯"]
-category = ["音樂", "原住民", "Youtubers", "音樂", "原住民"]
+category = ["音樂", "原住民", "朋友", "Youtuber", "音樂", "原住民"]
 
 ["1226 直播帶貨賺到爆、日本麥當勞薯條短缺、美國海軍暗黑史 推薦Podcast： Fat Leonard"]
 name = "1226 直播帶貨賺到爆、日本麥當勞薯條短缺、美國海軍暗黑史 推薦Podcast： Fat Leonard"
@@ -1429,7 +1438,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-95-%E9%A6%AC%E4%BE%86
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTExMTc3MTI2NA"
 spotify = "https://open.spotify.com/episode/363S553abjsQ3SzvyWd6kg"
 tag = ["KK_Show", "盧卡斯@BBK_Networ"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0822 OnlyFans 洗白性工作者 怎麽辦？拜登這次很難看 Feat. 敏迪選讀"]
 name = "0822 OnlyFans 洗白性工作者 怎麽辦？拜登這次很難看 Feat. 敏迪選讀"
@@ -1627,7 +1636,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9C%E4%B9
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA4MzU5NTI4OA"
 spotify = "https://open.spotify.com/episode/5KpwsK6VpqowATZJLXXCok"
 tag = ["百靈果之友", "呱吉"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["The KK Show - #88 台越混血的和平黑音人 - 桃子A1J"]
 name = "The KK Show - #88 台越混血的和平黑音人 - 桃子A1J"
@@ -1654,7 +1663,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9C%E4%B9
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA3OTU3ODk0NQ"
 spotify = "https://open.spotify.com/episode/5jFxAPOtbuZBTxKV0yHPXa"
 tag = ["百靈果之友", "阿滴"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["The KK Show - #87 消防到災害管理 - 張賢龢博士"]
 name = "The KK Show - #87 消防到災害管理 - 張賢龢博士"
@@ -1717,7 +1726,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-84-%E7%9C%9F%E5%BF%83
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA2ODg3ODQ3OQ"
 spotify = "https://open.spotify.com/episode/2QxBNZ3nRE7xr42aEj32tV"
 tag = ["KK_Show", "微笑丹尼"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0613 疫情之下 殖民主義回歸？拜登廢除微信抖音禁令，肺炎糾察員的證照"]
 name = "0613 疫情之下 殖民主義回歸？拜登廢除微信抖音禁令，肺炎糾察員的證照"
@@ -1879,7 +1888,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-78-%E5%B8%83%E6%8B%89
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTA0MjM3NTUyMg"
 spotify = "https://open.spotify.com/episode/6sl5FTN5qyLOxuPiJ3DaBA"
 tag = ["KK_Show", "布拉瑞揚@布拉瑞揚舞團"]
-category = ["文藝"]
+category = ["文藝", "舞蹈"]
 
 ["0502 法國退將叫總統硬起來、經濟學人把全台灣人都知道的事情放封面、推薦書：黑森林的白玫瑰、爵士邊緣人"]
 name = "0502 法國退將叫總統硬起來、經濟學人把全台灣人都知道的事情放封面、推薦書：黑森林的白玫瑰、爵士邊緣人"
@@ -2041,7 +2050,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-72-%E9%98%BF%E7%88%86
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTAxNDUxNzA1Nw"
 spotify = "https://open.spotify.com/episode/3LAaUO4r8XTnx4ETkldiCb"
 tag = ["KK_Show", "阿爆", "阿拉斯"]
-category = ["音樂", "原住民", "Youtubers", "音樂", "原住民"]
+category = ["音樂", "原住民", "朋友", "Youtuber", "音樂", "原住民"]
 
 ["0321 中國特使在兇三小？ 亞裔美國人站起來！ 不信武漢肺炎的總統就這麽的走了、推薦書 American Dirt"]
 name = "0321 中國特使在兇三小？ 亞裔美國人站起來！ 不信武漢肺炎的總統就這麽的走了、推薦書 American Dirt"
@@ -2644,7 +2653,7 @@ apple = "https://podcasts.apple.com/tw/podcast/%E8%88%87%E8%8C%83%E7%90%AA%E6%96
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvOTEwOTgyNzg1"
 spotify = "https://open.spotify.com/episode/1jORzxbRpl6obS7xH0kiSL"
 tag = ["范琪斐"]
-category = ["時事", "Youtubers", "Podcaster"]
+category = ["時事", "Youtuber", "Podcaster"]
 
 ["The KK Show - #048 國民黨的邊緣人 - 于北辰將軍"]
 name = "The KK Show - #048 國民黨的邊緣人 - 于北辰將軍"
@@ -2680,7 +2689,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-47-%E5%BF%97%E7%A5%BA
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvOTA1NDE2ODE5"
 spotify = "https://open.spotify.com/episode/4UGgs12EUZBr9SQA4n8B8U"
 tag = ["KK_Show", "志祺@志祺七七", "阿滴"]
-category = ["Youtubers", "Podcaster", "Youtubers"]
+category = ["Youtuber", "Podcaster", "Youtuber"]
 
 ["1004 美國總統大選辯論心得、世仇戰爭、川普中了武漢肺炎、閑聊"]
 name = "1004 美國總統大選辯論心得、世仇戰爭、川普中了武漢肺炎、閑聊"
@@ -2752,7 +2761,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-%E5%85%AC%E6%B5%B7%E5
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODkzNjAwNzM0"
 spotify = "https://open.spotify.com/episode/0lXVI9oGe0qdgfu434zaJQ"
 tag = ["KK_Show", "范琪斐", "邱grr"]
-category = ["時事", "Youtubers", "Podcaster", "Youtubers"]
+category = ["時事", "Youtuber", "Podcaster", "Youtuber"]
 
 ["0913 美國西岸大火又來了、就算川普説謊你還是會支持他嗎？、暴雷 不推薦：三十而已"]
 name = "0913 美國西岸大火又來了、就算川普説謊你還是會支持他嗎？、暴雷 不推薦：三十而已"
@@ -2932,7 +2941,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-38-%E9%81%87%E5%88%B0
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODY1OTE1NDk4"
 spotify = "https://open.spotify.com/episode/7qhuMEzADVhbmjNR0LEmGo"
 tag = ["KK_Show", "Joeman"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0726 紐時買下Podcast復興之母 Serial、中國太空中心的科學家需要你的愛、高雄臺南行"]
 name = "0726 紐時買下Podcast復興之母 Serial、中國太空中心的科學家需要你的愛、高雄臺南行"
@@ -3040,7 +3049,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-34-%E5%B0%8F%E7%B2%89
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODQ5OTkyMDAy"
 spotify = "https://open.spotify.com/episode/1OFkPhuvXyLfrISXezIYR9"
 tag = ["KK_Show", "沈伯洋（助理）教授"]
-category = ["時事", "事實查核"]
+category = ["時事", "事實查核", "學者"]
 
 ["0628 波頓新書 The Room Where It Happened 心得、美國通過香港自治法、韓劇：雖然是精神病但沒關係"]
 name = "0628 波頓新書 The Room Where It Happened 心得、美國通過香港自治法、韓劇：雖然是精神病但沒關係"
@@ -3238,7 +3247,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-27-%E6%96%9C%E6%A7%93
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODE5Mjk3NDg0"
 spotify = "https://open.spotify.com/episode/4KV4opBYW3MnbbEBQCaKMa"
 tag = ["KK_Show", "邱grr"]
-category = ["Youtubers"]
+category = ["Youtuber"]
 
 ["0510 印度的恐怖分子是別人的自由鬥士、推薦書：My Life On The Road、國際傳播司"]
 name = "0510 印度的恐怖分子是別人的自由鬥士、推薦書：My Life On The Road、國際傳播司"
@@ -3256,7 +3265,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-25-5-%E8%88%87-%E5%91
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODE1MzcyNjI2"
 spotify = "https://open.spotify.com/episode/6mlJGAf1M3tf2rZkk3WVbx"
 tag = ["KK_Show", "呱吉"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["The KK Show - 26 人妻啦啦隊 妍言"]
 name = "The KK Show - 26 人妻啦啦隊 妍言"
@@ -3283,7 +3292,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-25-%E5%91%B1%E5%90%89
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODA4ODAwOTM0"
 spotify = "https://open.spotify.com/episode/3bw7Np0BZlkItDnWXEaztj"
 tag = ["KK_Show", "呱吉"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0426 若為自由故疫情皆可抛的美國人、肯亞嚴格執行宵禁、新企劃！"]
 name = "0426 若為自由故疫情皆可抛的美國人、肯亞嚴格執行宵禁、新企劃！"
@@ -3310,7 +3319,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-24-%E8%8C%83%E7%90%AA
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODAzNzg0OTk3"
 spotify = "https://open.spotify.com/episode/6DbzopgxHNJStNuUlBk5UX"
 tag = ["KK_Show", "范琪斐"]
-category = ["時事", "Youtubers", "Podcaster"]
+category = ["時事", "Youtuber", "Podcaster"]
 
 ["0419 武漢肺炎是和平使者、中國對紐時記者說 Get Out、適合大外宣的Podcast"]
 name = "0419 武漢肺炎是和平使者、中國對紐時記者說 Get Out、適合大外宣的Podcast"
@@ -3337,7 +3346,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-23-%E5%9C%B0%E7%8D%84
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzk4MjI1MTI0"
 spotify = "https://open.spotify.com/episode/4XFDs4yY9uXNHpegPP6ySW"
 tag = ["KK_Show", "Jim"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["你知道紐約時報其實很親中嗎？"]
 name = "你知道紐約時報其實很親中嗎？"
@@ -3436,7 +3445,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-19-%E5%AE%B3%E7%BE%9E
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzgyMDUwNTEz"
 spotify = "https://open.spotify.com/episode/2yBWwoTyo1obgf9Vyw6aey"
 tag = ["KK_Show", "酸酸"]
-category = ["喜劇演員", "Youtubers", "Podcaster"]
+category = ["喜劇演員", "Youtuber", "Podcaster"]
 
 ["0322 美國準備給大家1000元、食物銀行庫存短缺、推薦劇：Crash Landing"]
 name = "0322 美國準備給大家1000元、食物銀行庫存短缺、推薦劇：Crash Landing"
@@ -3517,7 +3526,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-16-%E8%80%B3%E8%86%9C
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzY5ODkyMTI1"
 spotify = "https://open.spotify.com/episode/5VuVPbrz2X9JQyB3Jg4enS"
 tag = ["KK_Show", "龍龍"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["0301 川普去印度發大財、意大利確診人數暴增、閑聊猜測228有沒有人去參加"]
 name = "0301 川普去印度發大財、意大利確診人數暴增、閑聊猜測228有沒有人去參加"
@@ -3616,7 +3625,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-011-%E6%8E%92%E7%81%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzUwODgwMTY1"
 spotify = "https://open.spotify.com/episode/5XOUbFJcqvSF0R1FYrOv9u"
 tag = ["KK_Show", "阿爆"]
-category = ["音樂", "原住民"]
+category = ["音樂", "原住民", "朋友"]
 
 ["0126 武漢肺炎是人性大考驗、希拉蕊又跑出來開炮、凱莉去滑雪"]
 name = "0126 武漢肺炎是人性大考驗、希拉蕊又跑出來開炮、凱莉去滑雪"
@@ -3679,7 +3688,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-008-%E5%9C%8B%E9%9A%9
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzQwNTkyODAy"
 spotify = "https://open.spotify.com/episode/0jsL56wQGtB8MIBRL4puWx"
 tag = ["KK_Show", "范琪斐"]
-category = ["時事", "Youtubers", "Podcaster"]
+category = ["時事", "Youtuber", "Podcaster"]
 
 ["0105 浴火重生的百靈果News與神秘嘉賓、跟政治立場不同的長輩溝通、Podcast Ideas"]
 name = "0105 浴火重生的百靈果News與神秘嘉賓、跟政治立場不同的長輩溝通、Podcast Ideas"
@@ -3706,7 +3715,7 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-007-%E5%8D%9A%E6%81%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzM2MTkxMjgw"
 spotify = "https://open.spotify.com/episode/2ncVvglpTxZvDfChZMW25z"
 tag = ["KK_Show", "賀瓏"]
-category = ["喜劇演員", "Youtubers"]
+category = ["喜劇演員", "Youtuber"]
 
 ["1229 市長對總統開嗆不是台灣的專利、中國的引蛇出洞、寵物通靈師"]
 name = "1229 市長對總統開嗆不是台灣的專利、中國的引蛇出洞、寵物通靈師"

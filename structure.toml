@@ -1,5 +1,14 @@
 # Add your own tag to each episode
 
+["The KK Show - #146 權樂"]
+name = "The KK Show - #146 權樂"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11111621-the-kk-show-146.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-146-%E6%AC%8A%E6%A8%82/id1106847606?i=1000575595883"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTExMTYyMQ"
+spotify = "https://open.spotify.com/episode/3TNPa904eKlfo5DhPMHpOb"
+tag = []
+category = []
+
 ["0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助"]
 name = "0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11092713-0807.mp3"
