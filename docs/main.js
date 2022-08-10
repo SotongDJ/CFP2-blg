@@ -39,9 +39,12 @@ for (var ark = 0; ark < argueKey.length; ++ark) {
   option[key] = value;
  };
 };
-function fontAwe(fontKey) {
+function fontAwe(fontKey,fontID="") {
  var fontI = document.createElement('i');
  fontI.className = fontKey;
+ if (fontID) {
+  fontI.id = fontID;
+ };
  return fontI;
 };
 function link(href,innerArr,jump = '',label = '') {
@@ -136,6 +139,7 @@ function draw() {
  for (let nub = 0; nub < filteredArr.length; nub++) {
   var tar = filteredArr[nub];
   var entryPg = document.createElement('div');
+  entryPg.id = "entry"+tar;
   entryPg.className = "entry";
   titleDiv = document.createElement("p");
   titleDiv.innerText = playlist[tar]['name'];
@@ -144,8 +148,9 @@ function draw() {
   buttonDiv.className = "buttonDiv";
   var playSpan = document.createElement('span');
   playSpan.className = "tagBorder";
-  podObj[nub] = tar;
-  playSpan.appendChild(link("javascript: void(goToPlay(\""+nub+"\"))",[fontAwe("fa-solid fa-play fa-fw")]));
+  podObj[tar] = nub;
+  var playIdArr = [fontAwe("fa-solid fa-play fa-fw",fontID="playIco"+tar)];
+  playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
   buttonDiv.appendChild(playSpan);
   var controlSpan = document.createElement('span');
   controlSpan.className = "tagBorder";
@@ -155,33 +160,70 @@ function draw() {
   controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
   buttonDiv.appendChild(controlSpan);
   for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
-   textTagStr = playlist[tar]["tag"][tagi];
-   addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
+   var textTagStr = playlist[tar]["tag"][tagi];
+   var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
    buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
   }
   entryPg.appendChild(buttonDiv);
   playlistDOM.appendChild(entryPg);
-  storage.setItem('podcast',JSON.stringify(podObj))
+  storage.setItem('podcast',JSON.stringify(podObj));
  };
+ whenPlay();
+ doQueue(storage.getItem('now'));
 };
+storage.setItem('now', "");
 draw();
 function next() {
- var podcastObj = JSON.parse(storage.getItem('podcast')||"{}");
- var orderStr = storage.getItem('now')||"0";
- var nextInt = parseInt(orderStr) + 1;
- if (nextInt < Object.keys(podcastObj).length) {
-  nextStr = nextInt.toString();
-  playerDOM.src = playlist[podcastObj[nextInt]]['feed'];
+ var queueObj = JSON.parse(storage.getItem('queue')||"{}");
+ var nowStr = storage.getItem('now');
+ whenPause()
+ var nextStr = queueObj[nowStr];
+ if (nextStr) {
+  playerDOM.src = playlist[nextStr]['feed'];
   storage.setItem('now', nextStr);
+  whenPlay();
   playerDOM.play();
  };
 };
-function goToPlay(targetStr) {
- var podcastObj = JSON.parse(storage.getItem('podcast')||"{}");
- playerDOM.src = playlist[podcastObj[targetStr]]['feed'];
- storage.setItem('now', targetStr);
- playerDOM.play();
+function changeIcon(targetName,targetValue) {
+ var icoDOM = document.getElementById(targetName);
+ if (icoDOM) {icoDOM.className = targetValue};
+}
+function whenPause() {
+ var nowStr = storage.getItem('now')||"";
+ changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
 };
+function whenPlay() {
+ var nowStr = storage.getItem('now')||"";
+ changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
+};
+function doQueue(inputStr) {
+ var gpPodObj = JSON.parse(storage.getItem('podcast')||"{}");
+ var gpPodArr = Object.keys(gpPodObj);
+ var gpQueueObj = {};
+ var inputBool = Object.keys(gpPodObj).includes(inputStr);
+ if (!inputBool) {gpQueueObj[inputStr] = gpPodArr[0];};
+ var targetInt = inputBool ? parseInt(gpPodObj[inputStr]): 0;
+ for (let qa = targetInt; qa < gpPodArr.length - 1; qa++) {
+  gpQueueObj[gpPodArr[qa]] = gpPodArr[qa+1];
+ };
+ storage.setItem('queue',JSON.stringify(gpQueueObj));
+};
+function goToPlay(targetStr) {
+ whenPause();
+ doQueue(targetStr);
+ var nowStr = storage.getItem('now');
+ if (nowStr === targetStr) {
+  playerDOM.paused ? playerDOM.play() : playerDOM.pause();
+ } else {
+  document.getElementById("playIco"+targetStr).className = 'fa-solid fa-pause fa-fw';
+  playerDOM.src = playlist[targetStr]['feed'];
+  storage.setItem('now', targetStr);
+  playerDOM.play();
+ };
+};
+playerDOM.addEventListener('play', whenPlay, false);
+playerDOM.addEventListener('pause', whenPause, false);
 playerDOM.addEventListener('ended', next, false);
 function resizeDiv() {
  contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
