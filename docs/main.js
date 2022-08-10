@@ -157,8 +157,12 @@ function draw() {
   controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
   controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
   controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-  controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
+  // controlSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
   buttonDiv.appendChild(controlSpan);
+  var downloadSpan = document.createElement('span');
+  downloadSpan.className = "tagBorder";
+  downloadSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
+  buttonDiv.appendChild(downloadSpan);
   for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
    var textTagStr = playlist[tar]["tag"][tagi];
    var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";

@@ -15,12 +15,8 @@ height:98vh;
 body{
 font-family:"Noto Sans TC",Helvetica, Arial, sans-serif;
 margin: 0;
-padding: 0rem 0.2rem;
+padding: 0rem 1rem;
 height: 100vh;
-}
-.outer{
-height: 100%;
-padding: 0rem 0.8rem;
 }
 a{color:hsl(0, 0%, 0%);}
 p{margin:0; padding:0.25rem 0;}
@@ -51,7 +47,7 @@ border: 0.0625rem solid hsl(200, 100%, 97%);
 .plain{width:min-content; min-width:95%;}
 .linkDecor{text-decoration:none;}
 .activeBtn{color:hsl(0, 0%, 100%); margin:0 0.25rem;}
-.activeBtn:hover{color:hsl(57, 100%, 79%); margin:0 0.25rem;}
+/* .activeBtn:hover{color:hsl(57, 100%, 79%); margin:0 0.25rem;} */
 .hideBtn{color:hsl(200, 89%, 74%); margin:0 0.25rem;}
 .tagBorder{
 background-color:hsl(200, 100%, 47%);
