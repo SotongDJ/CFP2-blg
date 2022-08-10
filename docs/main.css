@@ -39,7 +39,10 @@ border: 0.0625rem solid hsl(200, 92%, 90%);
 background-color:hsl(200, 100%, 97%);
 border: 0.0625rem solid hsl(200, 100%, 97%);
 }
-.entry:hover{border: 0.0625rem solid hsl(0, 0%, 0%);}
+.entry:hover{
+border: 0.0625rem solid hsl(0, 0%, 0%);
+font-weight: 700;
+}
 .buttonDiv{white-space:nowrap;}
 .tittlebar{margin:0 0 0.25rem 0;}
 .container{overflow:auto;}
@@ -55,6 +58,7 @@ border: 0.0625rem solid hsl(200, 100%, 47%);
 border-radius:0.25rem;
 padding:0.25rem;
 margin:0 0.25rem;
+font-weight: 400;
 }
 .tagBorder:hover{border: 0.0625rem solid hsl(0, 0%, 0%);}
 a.tagBorder{padding:0.25rem 0.5rem;}
