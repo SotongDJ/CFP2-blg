@@ -1,3 +1,4 @@
+const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
