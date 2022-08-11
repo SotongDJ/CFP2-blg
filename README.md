@@ -20,14 +20,9 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - 快速切換至其他平台 | Shortcut button to redirect to other podcast platform
 - 可以 PWA 形式安裝到系統內 | Can be installed into the system as a PWA
 
-  - [Progressive web apps (PWAs) | MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
-
-  > Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps.
-
-  - [漸進式網絡應用程式 | MDN](https://developer.mozilla.org/zh-TW/docs/Web/Progressive_web_apps)
-
-  > 漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。
-
+  > "Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps." - [Progressive web apps (PWAs) | MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+  >
+  > “漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。” - [漸進式網絡應用程式 | MDN](https://developer.mozilla.org/zh-TW/docs/Web/Progressive_web_apps)
 
 - 伺服器無法收集任何使用者資訊 | No user's information is collected at server-side
 
