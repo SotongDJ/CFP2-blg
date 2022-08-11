@@ -14,7 +14,7 @@
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
 
-## 功能 | Function
+## 特點 | Features
 
 - 點選標籤即可篩選並留下所含集數 | Select the tag to keep the episodes with that
 - 快速切換至其他平台 | Shortcut button to redirect to other podcast platform
@@ -45,9 +45,9 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
   > 播放列表需要手動更新和上傳以致無法列出最新集數。
 
-## 需要幫忙嗎？ | Need some help?
+## 幫助 | Help
 
-> 正建設中，未來會擴充
+> 幫助列表正建設中，未來會擴充~
 
 ## TO DO
 
