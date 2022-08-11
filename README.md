@@ -1,20 +1,42 @@
-# 非官方百靈果播放室
+# 非官方百靈果播放室 | Unofficial podcast selector for Bailingguo podcast
 
-## Unofficial podcast selector for Bailingguo podcast
+位於[墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)的非官方[百靈果](https://www.bailingguonews.com/)播放室
 
-- 位於[墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)的非官方[百靈果](https://www.bailingguonews.com/)播放室
+## 網站 | Website
 
-為了更方便的重聽百靈果，所以寫了一個網站，以便於篩選想聽的集數。為了確保資訊安全，以及受限於架站所採用的技術（靜態網站），本網站不提供自動同步播放隊列到各播客服務，僅能通過新標籤頁面手動把集數添加到播放隊列。
+- [https://👌.深海墨客.台灣/](https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/)**
 
-In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to. In order to ensure IT security and limited by the technology used by the website (static website), this website does not provide automatic synchronization of the playback queue to each podcast service. You can only manually add episodes to the playback queue through the new tab page.
+  > 為了避免網路釣魚，大部分瀏覽器**拒絕**在域名上顯示表情符號（“👌” -> “xn--xp8h”）
+  >
+  > Most browsers **choose** to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
 
-**網站 Website**：[https://👌.深海墨客.台灣/](https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/)
+為了更方便的重聽百靈果，所以寫了一個網站以篩選想聽的集數。
 
-- 為了避免網路釣魚，大部分瀏覽器拒絕在域名上顯示表情符號（“👌” -> “xn--xp8h”）
-- Most browsers choose to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
+In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
 
-## 需要幫忙嗎？
+## 功能 | Function
 
-### Need some help?
+- 點選標籤即可篩選並留下所含集數 | Select the tag to keep the episodes with that
+- 快速切換至其他平台 | Shortcut button to redirect to other podcast platform
+- 伺服器無法收集任何用戶資訊 | No user's information is collected at server-side
 
-~建設中~
+  > 本網站屬於靜態網站，也就是所有的網頁和文檔都是預先準備，并不會隨著使用者而進行改變。相對的，需要登入帳戶密碼的網站就屬於動態網站。同時，本站使用瀏覽器的本地緩存空間以暫存用戶目前播放的隊列和集數。
+
+- 無法離線播放 | No offline playback
+
+  > 由於 podcast 音檔緩存的機制過於複雜，目前并不支援離線播放的功能。
+
+- 不一定包含最新集數 | Latest episodes may include (without promise)
+
+  > 播放列表需要手動更新和上傳以致無法列出最新集數。
+
+## 需要幫忙嗎？ | Need some help?
+
+> 正建設中，未來會擴充
+
+## TO DO
+
+- 離線播放
+- 自動更新集數
+- 自行繪製播放列
+- 可自行調整播放對列
