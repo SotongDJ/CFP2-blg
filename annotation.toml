@@ -1,5 +1,14 @@
 # Add your own tag to each episode
 
+["烏賊跟素肚都是男孩子的好朋友、讀書會：同情者 Ep 3"]
+name = "烏賊跟素肚都是男孩子的好朋友、讀書會：同情者 Ep 3"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11117771-ep-3.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/%E7%83%8F%E8%B3%8A%E8%B7%9F%E7%B4%A0%E8%82%9A%E9%83%BD%E6%98%AF%E7%94%B7%E5%AD%A9%E5%AD%90%E7%9A%84%E5%A5%BD%E6%9C%8B%E5%8F%8B-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-3/id1106847606?i=1000575769137"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTExNzc3MQ"
+spotify = "https://open.spotify.com/episode/42rvrEAfY82OgNGA2E4box"
+tag = ["讀書會", "同情者"]
+category = []
+
 ["The KK Show - #146 權樂"]
 name = "The KK Show - #146 權樂"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11111621-the-kk-show-146.mp3"
