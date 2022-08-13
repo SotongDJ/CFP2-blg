@@ -1,3 +1,5 @@
+const tagIndexDOM = document.getElementById("tagindex");
+const indexBarDOM = document.getElementById("indexbar");
 const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
@@ -230,6 +232,15 @@ function goToPlay(targetStr) {
 playerDOM.addEventListener('play', whenPlay, false);
 playerDOM.addEventListener('pause', whenPause, false);
 playerDOM.addEventListener('ended', next, false);
+function toggleIndexBarHide() {
+ if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
+  contentDOM.style['grid-template-rows'] = "min-content min-content min-content 1fr min-content";
+  tagIndexDOM.style ="";
+} else {
+  contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
+  tagIndexDOM.style['display'] = "none";
+ };
+};
 function resizeDiv() {
  contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 };
