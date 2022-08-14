@@ -1,5 +1,6 @@
 const tagIndexDOM = document.getElementById("tagindex");
 const indexBarDOM = document.getElementById("indexbar");
+const hideADOM = document.getElementById("hideA");
 const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
@@ -124,8 +125,7 @@ function filter() {
 };
 function draw() {
  filter();
- playlistDOM.innerHTML = "";
- tagBarDOM.innerText = "標籤 Tag: ";
+ tagBarDOM.innerText = "標籤：";
  var drawKeyArr = getArr(storage.getItem('key'));
  if (drawKeyArr.length > 0) {
   tagBarDOM.style = "";
@@ -137,6 +137,23 @@ function draw() {
  } else {
   tagBarDOM.style = "display: none;";
  };
+ indexBarDOM.innerText = "標籤類別：";
+ if (contentDOM.style['grid-template-rows'] == "min-content 1fr min-content 2fr min-content") {
+  tagClassArr = Object.keys(tag_class);
+  for (let tli = 0; tli < tagClassArr.length; tli++) {
+   tagClassP = document.createElement("div");
+   tagClassP.innerText = tagClassArr[tli];
+   tagClassP.className = "tagBar";
+   tagClassEachArr = tag_class[tagClassArr[tli]];
+   for (let tcea = 0; tcea < tagClassEachArr.length; tcea++) {
+    var textTagStr = tagClassEachArr[tcea];
+    var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
+    tagClassP.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
+   };
+  indexBarDOM.appendChild(tagClassP); 
+  };
+ };
+ playlistDOM.innerHTML = "";
  var podObj = {};
  var filteredArr = getArr(storage.getItem('filtered'));;
  for (let nub = 0; nub < filteredArr.length; nub++) {
@@ -234,11 +251,14 @@ playerDOM.addEventListener('pause', whenPause, false);
 playerDOM.addEventListener('ended', next, false);
 function toggleIndexBarHide() {
  if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
-  contentDOM.style['grid-template-rows'] = "min-content min-content min-content 1fr min-content";
+  contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
   tagIndexDOM.style ="";
-} else {
+  hideADOM.innerText = "隱藏標籤類別";
+  draw();
+ } else {
   contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
   tagIndexDOM.style['display'] = "none";
+  hideADOM.innerText = "顯示標籤類別";
  };
 };
 function resizeDiv() {
