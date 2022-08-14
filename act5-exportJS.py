@@ -11,7 +11,11 @@ for enum_int, value_dict in enumerate(title_dict.values()):
     tag_list = value_dict.get("tag",list())
     category_list = [n for n in value_dict.get("category",list()) if n[0] != "#"]
     tag_list.extend(sorted(list(set(category_list))))
-    value_inner_str = value_inner_str + ",\n\"tag\": {}".format(json.dumps(tag_list))
+    deduplicate_tag_list = list()
+    for tag in tag_list:
+        if tag not in deduplicate_tag_list:
+            deduplicate_tag_list.append(tag)
+    value_inner_str = value_inner_str + ",\n\"tag\": {}".format(json.dumps(deduplicate_tag_list))
     title_list.append(value_inner_str)
 outer_str = "const playlist = {\n"+"\n},\n".join(title_list)+"\n}\n};\n"
 class_dict = dict()
