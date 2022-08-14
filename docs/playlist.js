@@ -437,7 +437,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvMTI1NDA0MTk5NQ",
 "spotify": "https://open.spotify.com/episode/07OJ9gAAd9NOLc50ueaCQg",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530621-the-kk-show-130.mp3",
-"tag": ["KK_Show", "\u694a\u6770\u51f1"]
+"tag": ["KK_Show", "\u694a\u6770\u51f1", "\u5c08\u696d\u4eba\u58eb"]
 },
 "time56":{
 "name": "The KK Show - #129 揭發聯合國的記者 - Naomi O’Leary",
@@ -2485,7 +2485,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODg5NjY2NjE4",
 "spotify": "https://open.spotify.com/episode/14tNmPj1H6WNogekDkna2X",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530875-the-kk-show-044.mp3",
-"tag": ["KK_Show", "\u771f\u84c9"]
+"tag": ["KK_Show", "\u771f\u84c9", "\u6587\u85dd"]
 },
 "time312":{
 "name": "0906 世界都不知道中國對蒙古人的暴行、Joe Rogan 搬去Spotify後被炎上、半推薦電影：入戲",
@@ -2693,7 +2693,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODUzNjk4Nzk2",
 "spotify": "https://open.spotify.com/episode/382W5mU4CMWZN003dL9tDd",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530901-the-kk-show-035.mp3",
-"tag": ["KK_Show", "\u9ed1\u5609\u5609"]
+"tag": ["KK_Show", "\u9ed1\u5609\u5609", "\u5c08\u696d\u4eba\u58eb"]
 },
 "time338":{
 "name": "0705 西雅圖獨立失敗？ 中國一個點都不可少，除非那個點是海參崴、中國網友來信、推薦： Space Force",
@@ -2821,7 +2821,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODMyNjYyNzI0",
 "spotify": "https://open.spotify.com/episode/3ZeKCGjCfiomlkyJKAoomW",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530917-the-kk-show-30.mp3",
-"tag": ["KK_Show", "\u6cd5\u5f8b\u767d\u8a71\u6587", "Podcaster"]
+"tag": ["KK_Show", "\u6cd5\u5f8b\u767d\u8a71\u6587", "Podcaster", "\u5c08\u696d\u4eba\u58eb"]
 },
 "time354":{
 "name": "0531 香港預測、美國總統候選人有夠老、委内瑞拉汽油要漲價、推薦Podcast：台灣通勤第一品牌",
@@ -3189,7 +3189,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNzU4NjM1NTQ5",
 "spotify": "https://open.spotify.com/episode/3mLztcG1osj6QN8rNqE9mo",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530963-the-kk-show-013-wolf.mp3",
-"tag": ["KK_Show", "Wolf"]
+"tag": ["KK_Show", "Wolf", "\u4f86\u8cd3"]
 },
 "time400":{
 "name": "0210 一個app毀掉一個美國初選、你不知道中國人怎麽看武漢肺炎、推薦劇：流感來襲",
@@ -3989,7 +3989,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNTk3MTM0MTMw",
 "spotify": "https://open.spotify.com/episode/38Z0qi0NX30Ux2eyamWzPX",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10531063-0328-born-a-crime.mp3",
-"tag": ["\u4ee5\u6bcd\u4e4b\u540d"]
+"tag": ["\u4ee5\u6bcd\u4e4b\u540d", "\u8b80\u66f8\u6703"]
 },
 "time500":{
 "name": "0324 3.好書推薦 Bad Blood",
@@ -4021,7 +4021,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNTkzMzIzNjI5",
 "spotify": "https://open.spotify.com/episode/6vo4OixrVc2iMU17wxieCh",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10531067-0320-born-a-crime.mp3",
-"tag": ["\u4ee5\u6bcd\u4e4b\u540d"]
+"tag": ["\u4ee5\u6bcd\u4e4b\u540d", "\u8b80\u66f8\u6703"]
 },
 "time504":{
 "name": "0319 1.有錢人跟你想的不一樣 美國名校招生醜聞",
@@ -4053,7 +4053,7 @@ const playlist = {
 "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNTg5NzY3Nzky",
 "spotify": "https://open.spotify.com/episode/56hPMGbTJp8V5r9P2iQIv5",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10531071-0314-born-a-crime.mp3",
-"tag": ["\u4ee5\u6bcd\u4e4b\u540d"]
+"tag": ["\u4ee5\u6bcd\u4e4b\u540d", "\u8b80\u66f8\u6703"]
 },
 "time508":{
 "name": "03101 1. 俄國高官女兒入侵歐盟議會，但是她是正妹、所以沒關係",
@@ -4399,4 +4399,39 @@ const playlist = {
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10531114-born-a-crime.mp3",
 "tag": ["\u8b80\u66f8\u6703", "\u4ee5\u6bcd\u4e4b\u540d"]
 }
+};
+const tag_class = {
+"#節目系列": ["KK_Show","讀書會","暫代讀書會","百靈果之友","免費教你如何做Podcast","八角籠","THE_STIR"],
+"暫代讀書會": ["百靈果之友","免費教你如何做Podcast","八角籠"],
+"讀書會": ["同情者","柏青哥","FatLeonard","林獻堂環球遊記","吃佛","宮前町九十番","CIA洗腦計畫","蚵仔煎的身世","傀儡花","毒家企業","宋氏三姊妹","The Room Where It Happened by John Bolton","浪淘沙","戰裡的夏里特","鴻：三代中國女人","This American Life","核爆家園","陳澄波密碼","以母之名"],
+"喜劇演員": ["樂樂法利","陳大天","小歐","老K","妍霏","學仁","Social","歐馬克","微笑丹尼","博恩","大可愛","權樂","黃逸豪","艾董","黃豪平","TimChen","東區德","賀瓏","么么","怡岑","酸酸","涵冷娜","EstherChen","呱吉","Jim","龍龍","蕭東意"],
+"Youtuber": ["樂樂法利","小歐","微笑丹尼","賀瓏","酸酸","呱吉","Jim","龍龍","范琪斐","志祺 @志祺七七","好和弦 @NiceChord","阿滴","Joeman","黃大謙","ChinaMac","邱grr","泥泥學姐","盧卡斯 @BBK_Networ","阿拉斯"],
+"藝人": ["陳大天","王彩樺","Chapman杜汶澤","黃秋生","陳沂"],
+"企業家": ["Social","Chapman杜汶澤","葉丙成","Jay","顧立楷","林榮基"],
+"Podcaster": ["歐馬克","酸酸","范琪斐","敏迪 @敏迪選讀","志祺 @志祺七七","好和弦 @NiceChord","法律白話文","唐綺陽","簡少年","台灣通勤第一品牌","股癌","瑞典劉先生","Firstory","馬力歐","吳淡如"],
+"廣播人": ["歐馬克","李律","小潘","寶拉","吳淡如"],
+"演員": ["權樂","EstherChen","Chapman杜汶澤","黃秋生","蕭東意"],
+"文藝": ["權樂","涵冷娜","台南人劇團","蕭東意","布拉瑞揚 @布拉瑞揚舞團","孫翠鳳","真蓉"],
+"時事": ["范琪斐","敏迪 @敏迪選讀","瑞典劉先生","陳秋實","Jason劉致昕 @報導者","Byun秉昀","SamsonEllis","吳品瑜","印度尤","Naomi_O’Leary","Kevin","Mario","烏烏醫生","Chiels","李淳","Dr.LeanneWu","Dr.JustinYang","葉耀元教授","陳小雀教授","張賢龢博士","單信瑜教授","高智雄醫檢師","美國台灣觀測站","IORG","沈伯洋（助理）教授","張五岳","LukeMartin"],
+"音樂": ["阿爆","阿拉斯","陳零九","Kimberley陳芳語","王彩樺","桃子A1J","珂拉琪Collage"],
+"原住民": ["阿爆","阿拉斯","陳念琴","東冬侯溫"],
+"朋友": ["阿爆","Howard","Ivan","ShaoYong","趙哥","陳沂","Pom咩"],
+"色色": ["社畜","娃娃","石巴朝","Niki"],
+"劇場": ["台南人劇團","蕭東意"],
+"舞蹈": ["布拉瑞揚 @布拉瑞揚舞團"],
+"專業人士": ["法律白話文","楊杰凱","黑嘉嘉"],
+"導演": ["周冠威","阮鳳儀"],
+"製作人": ["汪怡昕","龍哥"],
+"影視製作": ["Mego","Nick"],
+"媒體人": ["吳淡如","李四端"],
+"記者": ["陳秋實","Jason劉致昕 @報導者","Byun秉昀","SamsonEllis","Naomi_O’Leary","莉婷"],
+"政治人物": ["陳柏惟","林昶佐","吳怡農","李有宜","蔣萬安","范雲","于北辰","林智堅"],
+"醫學": ["烏烏醫生","陳耀昌醫師","Chiels","Dr.LeanneWu","Dr.JustinYang","高智雄醫檢師"],
+"學者": ["烏烏醫生","許翱麟教授","人渣文本","陳耀昌醫師","Chiels","李淳","Dr.LeanneWu","Dr.JustinYang","葉耀元教授","陳小雀教授","張賢龢博士","葉丙成","單信瑜教授","高智雄醫檢師","沈伯洋（助理）教授"],
+"運動": ["人渣文本","莉婷","陳念琴","妍言","Hito大聯盟","Jack"],
+"作者": ["陳耀昌醫師"],
+"聽眾": ["Xin","JC","Vasilisa","Angeli","Angel","Feyza"],
+"編輯": ["Neil"],
+"事實查核": ["IORG","沈伯洋（助理）教授"],
+"來賓": ["Wolf"]
 };
