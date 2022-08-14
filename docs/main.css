@@ -18,7 +18,7 @@ margin: 0;
 padding: 0rem 1rem;
 height: 100vh;
 }
-a{color:hsl(0, 0%, 0%);}
+a{color:hsl(0, 0%, 0%);white-space:nowrap;}
 p{margin:0; padding:0.25rem 0;}
 h1{font-size:1.25rem; margin:0.125rem 0 0.3rem 0;}
 audio{width:100%;}
