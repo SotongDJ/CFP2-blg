@@ -1,36 +1,32 @@
+["百靈果_NEWS"]
+inclusive = ["百靈果NEWS","百靈果News","鹿港繞境"]
+exclusive = ["特別來賓：敏迪選讀","Born a crime","讀書會","0704 Bonus"]
+re = "^[0-9]{4}"
+category = ["#節目系列"]
+
+["百靈果_Bonus"]
+inclusive = ["百靈果 Bonus","百靈果到處跑","百靈果Bonus","百靈果閒聊"]
+exclusive = []
+category = ["#節目系列"]
+
 ["KK_Show"]
-inclusive = ["KK Show"]
+inclusive = ["KK Show","KK SHOW"]
+exclusive = []
+category = ["#節目系列"]
+
+["Live_Podcast"]
+inclusive = ["Live Podcast","KK SHOW","鹿港繞境","1101 台南佈道大會"]
+exclusive = []
+category = ["#節目系列"]
+
+["THE_STIR"]
+inclusive = ["THE STIR"]
 exclusive = []
 category = ["#節目系列"]
 
 ["讀書會"]
 inclusive = ["讀書會","宮前町九十番地 04","以前的台積電就是霧峰林家","海上暈船吹風之旅"]
 exclusive = ["不是讀書會","沒有讀書會"]
-category = ["#節目系列"]
-
-["暫代讀書會"]
-inclusive = ["不是讀書會","沒有讀書會","Pelosi 來台灣街訪心得","女演員的互相傷害","笑友會的無情工商","2021年台灣十大熱門國際新聞","迪化街Live Podcast！","John Oliver 觀後感","百靈果去新竹","與國際接軌前的閒聊","訂閲 QA","百靈果助念祈福法會","228 佈道大會 Live Podcast 特輯","特別來賓：敏迪選讀"]
-exclusive = []
-category = ["#節目系列"]
-
-["百靈果之友"]
-inclusive = ["百靈果之友"]
-exclusive = []
-category = ["#節目系列","暫代讀書會"]
-
-["免費教你如何做Podcast"]
-inclusive = ["免費教你如何做Podcast"]
-exclusive = []
-category = ["#節目系列","暫代讀書會"]
-
-["八角籠"]
-inclusive = ["八角籠"]
-exclusive = []
-category = ["#節目系列","暫代讀書會"]
-
-["THE_STIR"]
-inclusive = ["THE STIR"]
-exclusive = []
 category = ["#節目系列"]
 
 # 讀書會
@@ -90,8 +86,13 @@ inclusive = ["讀書會 宋氏三姐妹","讀書會：宋氏三姐妹","讀書�
 exclusive = []
 category = ["讀書會"]
 
-["The Room Where It Happened by John Bolton"]
+["The_Room_Where_It_Happened_by_John_Bolton"]
 inclusive = ["The Room Where It Happened by John Bolton"]
+exclusive = []
+category = ["讀書會"]
+
+["Rage_by_Bob_Woodward"]
+inclusive = ["Rage by Bob Woodward"]
 exclusive = []
 category = ["讀書會"]
 
@@ -110,7 +111,7 @@ inclusive = ["鴻：三代中國女人"]
 exclusive = []
 category = ["讀書會"]
 
-["This American Life"]
+["This_American_Life"]
 inclusive = ["This American Life - Ten Sessions"]
 exclusive = []
 category = ["讀書會"]
@@ -129,6 +130,45 @@ category = ["讀書會"]
 inclusive = ["Born a crime 以母之名"]
 exclusive = []
 category = ["讀書會"]
+
+# 暫代讀書會
+
+["暫代讀書會"]
+inclusive = ["不是讀書會","沒有讀書會","Pelosi 來台灣街訪心得","女演員的互相傷害","笑友會的無情工商","2021年台灣十大熱門國際新聞","迪化街Live Podcast！","John Oliver 觀後感","百靈果去新竹","與國際接軌前的閒聊","訂閲 QA","百靈果助念祈福法會","228 佈道大會 Live Podcast 特輯","特別來賓：敏迪選讀"]
+exclusive = []
+category = ["#節目系列"]
+
+["百靈果之友"]
+inclusive = ["百靈果之友"]
+exclusive = []
+category = ["#節目系列","暫代讀書會"]
+
+["免費教你如何做Podcast"]
+inclusive = ["免費教你如何做Podcast"]
+exclusive = []
+category = ["#節目系列","暫代讀書會"]
+
+["八角籠"]
+inclusive = ["八角籠"]
+exclusive = []
+category = ["#節目系列","暫代讀書會"]
+
+["Clubhouse企劃"]
+inclusive = ["海外連線","『Clubhouse特別企劃』"]
+exclusive = []
+category = ["#節目系列","暫代讀書會"]
+
+# 事件備註
+
+["紐時集資事件"]
+inclusive = ["你知道紐約時報其實很親中嗎？"]
+exclusive = []
+category = ["#事件備註"]
+
+["五月天事件"]
+inclusive = ["五月天"]
+exclusive = []
+category = ["#事件備註"]
 
 # Comedians/Stand Up comedy
 
@@ -217,6 +257,11 @@ inclusive = ["東區德"]
 exclusive = []
 category = ["喜劇演員"]
 
+["阿秋"]
+inclusive = ["阿秋"]
+exclusive = []
+category = ["喜劇演員"]
+
 ["賀瓏"]
 inclusive = ["賀瓏"]
 exclusive = []
@@ -250,7 +295,7 @@ category = ["喜劇演員","演員"]
 ["呱吉"]
 inclusive = ["呱吉"]
 exclusive = ["0516"]
-category = ["喜劇演員","Youtuber"]
+category = ["喜劇演員","Youtuber","政治人物"]
 
 [Jim]
 inclusive = ["Jim"]
@@ -413,10 +458,15 @@ category = ["文藝"]
 
 # 電影/電視劇/電視節目/廣播/Podcaster
 
-["法律白話文"]
+["劉珞亦 @法律白話文"]
 inclusive = ["法律白話文"]
 exclusive = []
-category = ["Podcaster","專業人士"]
+category = ["Podcaster","專業人士","律師"]
+
+["楊貴智 @法律白話文"]
+inclusive = ["法律白話文","找律師"]
+exclusive = []
+category = ["Podcaster","專業人士","律師"]
 
 ["唐綺陽"]
 inclusive = ["唐綺陽"]
@@ -473,6 +523,11 @@ inclusive = ["龍哥"]
 exclusive = []
 category = ["製作人"]
 
+["Roger"]
+inclusive = ["Roger"]
+exclusive = []
+category = ["製作人"]
+
 [Mego]
 inclusive = ["Mego"]
 exclusive = []
@@ -485,6 +540,11 @@ category = ["影視製作"]
 
 ["李律"]
 inclusive = ["李律"]
+exclusive = []
+category = ["廣播人"]
+
+["邵大倫"]
+inclusive = ["邵大倫"]
 exclusive = []
 category = ["廣播人"]
 
@@ -565,7 +625,7 @@ category = ["政治人物"]
 ["林昶佐"]
 inclusive = ["林昶佐"]
 exclusive = []
-category = ["政治人物"]
+category = ["政治人物","音樂"]
 
 ["吳怡農"]
 inclusive = ["吳怡農"]
