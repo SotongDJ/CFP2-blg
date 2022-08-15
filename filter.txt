@@ -1,4 +1,4 @@
-[百靈果_NEWS]
+[百靈果 NEWS]
   found in: (220)
     0814 川普豪宅為什麼被FBI闖入、歐洲能源現狀是怎樣、經濟學人fat shaming？
     0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助
@@ -228,7 +228,7 @@
     0320 Born a crime 以母之名 第十七章
     0314 Born a crime 以母之名 第十六章
     0306 讀書會 - Born a crime 以母之名 第十五章 Go Hitler!
-[百靈果_Bonus]
+[百靈果 Bonus]
   found in: (5)
     百靈果 Bonus：黃氏兄弟與鏡周刊事件的閒聊
     分享Hello Stranger的實戰經驗、吃瓜#王力宏 吃到大家睡眠不足、百靈果到處跑：新竹十二寮
@@ -237,7 +237,7 @@
     百靈果閒聊 2019-01-07 閒聊：如果中國經濟垮台 會有人跑去銀行領錢出來嗎？
   Excluded: (0)
     
-[KK_Show]
+[KK Show]
   found in: (150)
     The KK Show - #146 權樂
     The KK Show - #145 瑞典劉先生
@@ -391,7 +391,7 @@
     THE KK SHOW - 29 國際級電視製作人 Roger
   Excluded: (0)
     
-[Live_Podcast]
+[Live Podcast]
   found in: (8)
     Tough Bobas 首映會 Live Podcast：幕後故事分享、Ken大爆料 ft. @歐馬克
     【百靈果】北京奧運怎麽選的、迪化街Live Podcast！
@@ -403,7 +403,7 @@
     1101 台南佈道大會、紐時批評大紀元、LGBT逆襲驕傲男孩、三本柱 QA
   Excluded: (0)
     
-[THE_STIR]
+[THE STIR]
   found in: (10)
     Q&A with RON, the LAST Episode? ... THE STIR EP 10
     HOW did you get that ACCENT?... THE STIR EP 9
@@ -650,7 +650,7 @@
     讀書會：宋氏三姊妹與她們的丈夫 Big Sister, Little Sister, Red Sister 序
   Excluded: (0)
     
-[The_Room_Where_It_Happened_by_John_Bolton]
+[The Room Where It Happened by John Bolton]
   found in: (4)
     揣摩上意的文在寅以及被抹黑就哭哭的波頓、The Room Where It Happened by John Bolton 讀書會 Ch. 11、12、13、14、15 （End）
     來自中國的霸氣總裁與小川川、The Room Where It Happened by John Bolton 讀書會 Ch. 7、8、9、10
@@ -658,7 +658,7 @@
     白宮内部比後宮甄嬛傳還精彩、The Room Where It Happened by John Bolton 讀書會 Ch. 1, 2
   Excluded: (0)
     
-[Rage_by_Bob_Woodward]
+[Rage by Bob Woodward]
   found in: (3)
     川普根本張三豐、Be Water就是屌 ：Rage by Bob Woodward, Chap 33-35
     與范琪斐聊讀書心得，左派媒體的失控與右派媒體的可信度: Rage by Bob Woodward
