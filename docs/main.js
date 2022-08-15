@@ -72,8 +72,8 @@ function link(href,innerArr,jump = '',label = '') {
  return tag;
 };
 function compareLength(aArr,bArr) {
- if (aArr.length > 0) {return aArr}; 
- if (bArr.length > 0) {return bArr}; 
+ if (aArr.length > 0) {return aArr};
+ if (bArr.length > 0) {return bArr};
  return bArr;
 };
 function getArr(inputStr) {return inputStr ? inputStr.split(",") : [];};
@@ -85,6 +85,24 @@ function addTag(addStr) {
   addKeyArr.push(addStr);
  };
  storage.setItem("key", addKeyArr.join(','));
+ var targetDOM = document.getElementById(addStr);
+ if (targetDOM) {
+  var tagClassEachASpan = link("",[fontAwe(faTagStr)," "+addStr],'','tagBorder');
+  tagClassEachASpan.id = addStr;
+  targetDOM.replaceWith(tagClassEachASpan);
+ };
+ var tagClassArr = tag_class[addStr];
+ if (tagClassArr) {
+  for (let tcai = 0; tcai < tagClassArr.length; tcai++) {
+   var textTagStr = tagClassArr[tcai]+addStr;
+   var targetDOM = document.getElementById(textTagStr);
+   if (targetDOM) {
+    var tagClassEachASpan = link("",[fontAwe(faTagStr)," "+addStr],'','tagBorder');
+    tagClassEachASpan.id = textTagStr;
+    targetDOM.replaceWith(tagClassEachASpan);
+   };
+  };
+ };
  draw();
 };
 function removeTag(removeStr) {
@@ -96,7 +114,57 @@ function removeTag(removeStr) {
   };
  };
  storage.setItem("key", altKeyArr.join(','));
+ var addTagStr = "javascript: void(addTag(\""+removeStr+"\"))";
+ var targetDOM = document.getElementById(removeStr);
+ if (targetDOM) {
+  var tagClassEachASpan = link(addTagStr,[fontAwe(faTagStr)," "+removeStr],'','tagBorder');
+  tagClassEachASpan.id = removeStr;
+  targetDOM.replaceWith(tagClassEachASpan);
+ };
+ var tagClassArr = tag_class[removeStr];
+ if (tagClassArr) {
+  for (let tcai = 0; tcai < tagClassArr.length; tcai++) {
+   var textTagStr = tagClassArr[tcai]+removeStr;
+   var targetDOM = document.getElementById(textTagStr);
+   if (targetDOM) {
+    var tagClassEachASpan = link(addTagStr,[fontAwe(faTagStr)," "+removeStr],'','tagBorder');
+    tagClassEachASpan.id = textTagStr;
+    targetDOM.replaceWith(tagClassEachASpan);
+   };
+  };
+ };
  draw();
+};
+function fillIndex() {
+ var drawKeyArr = getArr(storage.getItem('key'));
+ indexBarDOM.innerText = "";
+ var tagClassArr = Object.keys(class_tag);
+ for (let tli = 0; tli < tagClassArr.length; tli++) {
+  var tagClassP = document.createElement("div");
+  var tagClassStr = tagClassArr[tli];
+  if (tagClassStr[0] == "#") {
+    var tagClassASpan = link("",[" "+tagClassStr],'','tagBorder');
+    tagClassASpan.id = tagClassStr;
+    tagClassP.appendChild(tagClassASpan);
+    tagClassP.append("：");
+  } else {
+    var addTagStr = drawKeyArr.includes(tagClassStr) ? "" : "javascript: void(addTag(\""+tagClassStr+"\"))";
+    tagClassASpan = link(addTagStr,[fontAwe(faTagStr)," "+tagClassStr],'','tagBorder');
+    tagClassASpan.id = tagClassStr;
+    tagClassP.appendChild(tagClassASpan);
+    tagClassP.append("：");
+  };
+  tagClassP.className = "indexBar";
+  var tagClassEachArr = class_tag[tagClassArr[tli]];
+  for (let tcea = 0; tcea < tagClassEachArr.length; tcea++) {
+   var textTagStr = tagClassEachArr[tcea];
+   var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
+   var tagClassEachASpan = link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder');
+   tagClassEachASpan.id = tagClassArr[tli] + textTagStr;
+   tagClassP.appendChild(tagClassEachASpan);
+  };
+  indexBarDOM.appendChild(tagClassP);
+ };
 };
 function filter() {
  var filterKeyArr = getArr(storage.getItem('key'));
@@ -137,22 +205,6 @@ function draw() {
  } else {
   tagBarDOM.style = "display: none;";
  };
- indexBarDOM.innerText = "標籤類別：";
- if (contentDOM.style['grid-template-rows'] == "min-content 1fr min-content 2fr min-content") {
-  tagClassArr = Object.keys(tag_class);
-  for (let tli = 0; tli < tagClassArr.length; tli++) {
-   tagClassP = document.createElement("div");
-   tagClassP.innerText = tagClassArr[tli];
-   tagClassP.className = "tagBar";
-   tagClassEachArr = tag_class[tagClassArr[tli]];
-   for (let tcea = 0; tcea < tagClassEachArr.length; tcea++) {
-    var textTagStr = tagClassEachArr[tcea];
-    var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
-    tagClassP.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
-   };
-  indexBarDOM.appendChild(tagClassP); 
-  };
- };
  playlistDOM.innerHTML = "";
  var podObj = {};
  var filteredArr = getArr(storage.getItem('filtered'));;
@@ -186,7 +238,7 @@ function draw() {
   for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
    var textTagStr = playlist[tar]["tag"][tagi];
    var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
-   buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));  
+   buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));
   }
   entryPg.appendChild(buttonDiv);
   playlistDOM.appendChild(entryPg);
@@ -196,6 +248,7 @@ function draw() {
  doQueue(storage.getItem('now'));
 };
 storage.setItem('now', "");
+fillIndex();
 draw();
 function next() {
  var queueObj = JSON.parse(storage.getItem('queue')||"{}");
@@ -254,7 +307,6 @@ function toggleIndexBarHide() {
   contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
   tagIndexDOM.style ="";
   hideADOM.innerText = "隱藏標籤類別";
-  draw();
  } else {
   contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
   tagIndexDOM.style['display'] = "none";
