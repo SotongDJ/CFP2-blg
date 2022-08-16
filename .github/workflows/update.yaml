@@ -1,8 +1,8 @@
-name: update podcast feed v2
+name: update podcast feed v2.0.1
 
 on:
   schedule:
-    - cron: "5 16 * * *"
+    - cron: "20 16 * * *"
 
 jobs:
   build:
