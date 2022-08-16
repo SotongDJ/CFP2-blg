@@ -2,7 +2,7 @@ name: update podcast feed
 
 on:
   schedule:
-    - cron: "0 22 * * 0,2,3,4"
+    - cron: "35 14 * * *"
 
 jobs:
   build:
