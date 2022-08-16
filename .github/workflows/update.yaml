@@ -14,10 +14,10 @@ jobs:
       - name: Running Script
         run: |
           pip install -r requirements.txt
-          python act2-update.py
-          python act3-merge.py
-          python act4-annotate.py > filter.txt
-          python act5-exportJS.py
+          python3 act2-update.py
+          python3 act3-merge.py
+          python3 act4-annotate.py > filter.txt
+          python3 act5-exportJS.py
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
