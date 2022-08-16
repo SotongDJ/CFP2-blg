@@ -2,7 +2,7 @@ name: update podcast feed v2.0.2
 
 on:
   schedule:
-    - cron: "28 17 * * *"
+    - cron: "37 17 * * *"
 
 jobs:
   build:
@@ -10,11 +10,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Setting up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-          architecture: "x64"
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -27,6 +22,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: checkout
+        run: |
           git pull origin feed
           git checkout feed
       - name: commit
