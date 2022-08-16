@@ -31,4 +31,4 @@ jobs:
           git commit -a -m "update rss feed"
           git push origin feed
           git checkout main
-          git branch -d feed
+          git branch -D feed
