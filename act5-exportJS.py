@@ -19,16 +19,16 @@ for enum_int, value_dict in enumerate(title_dict.values()):
     title_list.append(value_inner_str)
 outer_str = "const playlist = {\n"+"\n},\n".join(title_list)+"\n}\n};\n"
 
-tag2class_dict = {tag_name:entry_detail["category"] for tag_name, entry_detail in keyword_doc.items()}
+tag2class_dict = {tag_name: [str(n) for n in entry_detail["category"]] for tag_name, entry_detail in keyword_doc.items()}
 tag2class_list = ["\"{}\": {}".format(tag_name,tag_category_list) for tag_name, tag_category_list in tag2class_dict.items()]
 tag2class_str = "const tag_class = {\n"+",\n".join(tag2class_list)+"\n};\n"
 
 class2tag_dict = dict()
 for tag_name, entry_detail in keyword_doc.items():
     for category_name in entry_detail["category"]:
-        category_list = class2tag_dict.get(category_name,list())
+        category_list = class2tag_dict.get(str(category_name),list())
         category_list.append(tag_name)
-        class2tag_dict[category_name] = category_list
+        class2tag_dict[str(category_name)] = category_list
 class2tag_list = list()
 for category_name, category_list in class2tag_dict.items():
     class2tag_list.append("\"{}\": {}".format(category_name,category_list))
