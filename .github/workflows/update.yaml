@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: feed branch checkout
+        run: |
+          git branch feed
+          git checkout feed
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -22,11 +26,8 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-      - name: checkout
-        run: |
-          git pull origin feed
-          git checkout feed
       - name: commit
         run: |
           git commit -a -m "update rss feed"
           git push origin feed
+          git branch -d feed
