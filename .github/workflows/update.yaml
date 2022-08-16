@@ -2,7 +2,7 @@ name: update podcast feed v2
 
 on:
   schedule:
-    - cron: "45 15 * * *"
+    - cron: "5 16 * * *"
 
 jobs:
   build:
@@ -29,4 +29,4 @@ jobs:
       - name: commit
         run: |
           git commit -a -m "new date commit"
-          git push origin master
+          git push origin main
