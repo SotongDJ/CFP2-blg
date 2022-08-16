@@ -1,8 +1,10 @@
 name: update podcast feed v2.0.1
 
+runs-on: self-hosted
+
 on:
   schedule:
-    - cron: "20 16 * * *"
+    - cron: "12 17 * * *"
 
 jobs:
   build:
