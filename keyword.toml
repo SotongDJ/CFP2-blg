@@ -657,6 +657,11 @@ inclusive = ["林智堅"]
 exclusive = []
 category = ["政治人物"]
 
+["郭書成"]
+inclusive = ["郭書成"]
+exclusive = []
+category = ["政治人物"]
+
 # 學者
 
 ["烏烏醫生"]
