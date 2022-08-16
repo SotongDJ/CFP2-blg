@@ -306,11 +306,11 @@ function toggleIndexBarHide() {
  if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
   contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
   tagIndexDOM.style ="";
-  hideADOM.innerText = "隱藏標籤類別";
+  hideADOM.innerText = "隱藏標籤";
  } else {
   contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
   tagIndexDOM.style['display'] = "none";
-  hideADOM.innerText = "顯示標籤類別";
+  hideADOM.innerText = "顯示標籤";
  };
 };
 function resizeDiv() {
