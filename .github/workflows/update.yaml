@@ -13,8 +13,10 @@ jobs:
         uses: actions/checkout@v2
       - name: feed branch checkout
         run: |
-          git branch feed
+          git fetch --all --prune
+          git branch feed || git pull --rebase origin feed
           git checkout feed
+          git pull --rebase origin main
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -24,11 +26,9 @@ jobs:
           python3 act5-exportJS.py
       - name: setup git config
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.name "RSS Update Bot"
+          git config user.email "action@github.com"
       - name: commit
         run: |
           git commit -a -m "update rss feed"
           git push origin feed
-          git checkout main
-          git branch -D feed
