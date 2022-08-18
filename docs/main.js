@@ -14,14 +14,14 @@ const faTagStr = "fa-solid fa-tag fa-fw";
 var url = new URL(window.location.href);
 var argueObj = new Object();
 for (const [key, value] of url.searchParams.entries()) {
-  if (value.includes(",")) {
-   argueObj[key] = value.split(",");
-  } else if (value != ""){
-   argueObj[key] = [value];
-  };
+ if (value.includes(",")) {
+  argueObj[key] = value.split(",");
+ } else if (value != ""){
+  argueObj[key] = [value];
  };
+};
 var argueKey = Object.keys(argueObj);
-var option = {"key":[],"union":"false"};
+var option = {"key":[],"union":"false","sort":"neutral"};
 for (var ark = 0; ark < argueKey.length; ++ark) {
  var key = argueKey[ark];
  if (Object.keys(option).includes(key)) {
@@ -29,6 +29,8 @@ for (var ark = 0; ark < argueKey.length; ++ark) {
   option[key] = value;
  };
 };
+storage.setItem("union", option["union"]);
+storage.setItem("sort", option["sort"]);
 function fontAwe(fontKey,fontID="") {
  var fontI = document.createElement('i');
  fontI.className = fontKey;
@@ -153,27 +155,33 @@ function fillIndex() {
  };
 };
 function filter() {
- var filterKeyArr = getArr(storage.getItem('key'));
+ var sortStr = storage.getItem('sort');
  var filtered = [];
- if (filterKeyArr.length > 0) {
-  var playlistKeyArr = Object.keys(playlist);
-  for (let nub = 0; nub < playlistKeyArr.length; nub++) {
-   ord = playlistKeyArr[playlistKeyArr.length - nub - 1];
-   if (option['union'] == 'true') {
-    var filteredBool = false;
-    for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
-     if (filterKeyArr.includes(playlist[ord]["tag"][pot])) {filteredBool = true};
-    };
-   } else {
-    var filteredBool = true;
+ var filterKeyArr = getArr(storage.getItem('key'));
+ var playlistKeyArr = Object.keys(playlist);
+ for (let nub = 0; nub < playlistKeyArr.length; nub++) {
+  var filteredBool = (filterKeyArr.length == 0);
+  // no filterKey (true) + "neutral" : newest first (true)
+  // no filterKey (true) + "newest" : newest first (true)
+  // no filterKey (true) + "oldest" : oldest first (false)
+  // have filterKey (false) + "neutral" : oldest first (false)
+  // have filterKey (false) + "newest" : newest first (true)
+  // have filterKey (false) + "oldest" : oldest first (false)
+  var sortKeyBool = filteredBool ? (sortStr != "oldest"): (sortStr == "newest");
+  ord = sortKeyBool ? playlistKeyArr[nub] :playlistKeyArr[playlistKeyArr.length - nub - 1];
+  if (!filteredBool) { // if filterKeyArr.length > 0
+    filteredBool = (option['union'] == 'true');
+   if (filteredBool) {
     for (let oki = 0; oki < filterKeyArr.length; oki++) {
      if (!playlist[ord]["tag"].includes(filterKeyArr[oki])) {filteredBool = false};
     };
+   } else {
+    for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
+     if (filterKeyArr.includes(playlist[ord]["tag"][pot])) {filteredBool = true};
+    };
    };
-   if (filteredBool) {filtered.push(ord)};
   };
- } else {
-  filtered = Object.keys(playlist);
+  if (filteredBool) {filtered.push(ord)};
  };
  storage.setItem('filtered',filtered.join(","))
 };
@@ -230,21 +238,21 @@ function draw() {
   playlistDOM.appendChild(entryPg);
   storage.setItem('podcast',JSON.stringify(podObj));
  };
- whenPlay();
+ doPlay();
  doQueue(storage.getItem('now'));
 };
 storage.setItem('now', "");
 fillIndex();
 draw();
-function next() {
+function skipNext() {
  var queueObj = JSON.parse(storage.getItem('queue')||"{}");
  var nowStr = storage.getItem('now');
- whenPause()
+ doPause()
  var nextStr = queueObj[nowStr];
  if (nextStr) {
   playerDOM.src = playlist[nextStr]['feed'];
   storage.setItem('now', nextStr);
-  whenPlay();
+  doPlay();
   playerDOM.play();
  };
 };
@@ -252,11 +260,11 @@ function changeIcon(targetName,targetValue) {
  var icoDOM = document.getElementById(targetName);
  if (icoDOM) {icoDOM.className = targetValue};
 }
-function whenPause() {
+function doPause() {
  var nowStr = storage.getItem('now')||"";
  changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
 };
-function whenPlay() {
+function doPlay() {
  var nowStr = storage.getItem('now')||"";
  changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
 };
@@ -273,7 +281,7 @@ function doQueue(inputStr) {
  storage.setItem('queue',JSON.stringify(gpQueueObj));
 };
 function goToPlay(targetStr) {
- whenPause();
+ doPause();
  doQueue(targetStr);
  var nowStr = storage.getItem('now');
  if (nowStr === targetStr) {
@@ -285,9 +293,9 @@ function goToPlay(targetStr) {
   playerDOM.play();
  };
 };
-playerDOM.addEventListener('play', whenPlay, false);
-playerDOM.addEventListener('pause', whenPause, false);
-playerDOM.addEventListener('ended', next, false);
+playerDOM.addEventListener('play', doPlay, false);
+playerDOM.addEventListener('pause', doPause, false);
+playerDOM.addEventListener('ended', skipNext, false);
 function toggleTag() {
  if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
   contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
@@ -300,6 +308,18 @@ function toggleTag() {
   tagIDOM.className = "fa-solid fa-square-caret-down fa-fw";
   tagADOM.innerText = "顯示標籤";
  };
+};
+function toggleSort() {
+ const sortObj = {
+  "neutral":{"text":"先舊後新", "fa":"fa-solid fa-sort-up fa-fw", "next":"oldest"},
+  "oldest":{"text":"先新後舊", "fa":"fa-solid fa-sort-down fa-fw", "next":"newest"},
+  "newest":{"text":"原始排序", "fa":"fa-solid fa-sort fa-fw", "next":"neutral"}
+ };
+ var sortStr = storage.getItem('sort');
+ sortADOM.innerText = sortObj[sortStr]["text"];
+ sortIDOM.className = sortObj[sortStr]["fa"];
+ storage.setItem("sort", sortObj[sortStr]["next"]);
+ draw();
 };
 function resizeDiv() {
  contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
