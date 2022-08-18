@@ -1,5 +1,14 @@
 # Add your own tag to each episode
 
+["InterPride 取消高雄2025的活動、讀書會：同情者 Ep 4"]
+name = "InterPride 取消高雄2025的活動、讀書會：同情者 Ep 4"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11154018-interpride-2025-ep-4.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/interpride-%E5%8F%96%E6%B6%88%E9%AB%98%E9%9B%842025%E7%9A%84%E6%B4%BB%E5%8B%95-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-4/id1106847606?i=1000576486381"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE1NDAxOA"
+spotify = "https://open.spotify.com/episode/1ZjLmEr3WlwuwWAyS10fsL"
+tag = ["讀書會", "同情者"]
+category = ["#節目系列", "讀書會"]
+
 ["The KK Show - #147 青年里長 - 郭書成"]
 name = "The KK Show - #147 青年里長 - 郭書成"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11146016-the-kk-show-147.mp3"
