@@ -8,32 +8,15 @@ const playerDOM = document.getElementById("player");
 const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
 const faTagStr = "fa-solid fa-tag fa-fw";
-url = window.location.href;
-if ((!url.includes("?"))) {
- base = url;
- search = "";
-} else {
- urlArr = url.split("?");
- base = urlArr[0];
- if (urlArr.length<2) {
-  search = "";
- } else {
-  search = urlArr[1];
- };
-};
-argueArr = search.replace(/#/g,"&").split("&");
-argueObj = {};
-for (var ar = 0; ar < argueArr.length; ++ar) {
- if (argueArr[ar].includes("=")) {
-  key = argueArr[ar].split("=")[0];
-  value = decodeURIComponent(argueArr[ar].split("=")[1]);
+var url = new URL(window.location.href);
+var argueObj = new Object();
+for (const [key, value] of url.searchParams.entries()) {
   if (value.includes(",")) {
    argueObj[key] = value.split(",");
   } else if (value != ""){
    argueObj[key] = [value];
   };
  };
-};
 var argueKey = Object.keys(argueObj);
 var option = {"key":[],"union":"false"};
 for (var ark = 0; ark < argueKey.length; ++ark) {
