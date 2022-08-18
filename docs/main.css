@@ -20,7 +20,7 @@ height: 100vh;
 }
 a{color:hsl(0, 0%, 0%);white-space:nowrap;}
 p{margin:0; padding:0.375rem 0;}
-h1{font-size:1.25rem; margin:0.125rem 0 0.3rem 0;}
+h1{font-size:1.25rem; margin:0.3rem 0;}
 audio{width:100%;}
 /* colour palette:ffffff-f0faff-d0eefd-80d0f8-00a0f0 */
 /* col-pal-hsl:(0 0 1)(200 1 0.97)(200 0.92 0.9)(200 0.9 0.74)(200 1 0.47) */
