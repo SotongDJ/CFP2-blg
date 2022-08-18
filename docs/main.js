@@ -1,6 +1,9 @@
 const tagIndexDOM = document.getElementById("tagindex");
 const indexBarDOM = document.getElementById("indexbar");
-const hideADOM = document.getElementById("hideA");
+const tagADOM = document.getElementById("tagA");
+const tagIDOM = document.getElementById("tagI");
+const sortADOM = document.getElementById("sortA");
+const sortIDOM = document.getElementById("sortI");
 const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
@@ -285,15 +288,17 @@ function goToPlay(targetStr) {
 playerDOM.addEventListener('play', whenPlay, false);
 playerDOM.addEventListener('pause', whenPause, false);
 playerDOM.addEventListener('ended', next, false);
-function toggleIndexBarHide() {
+function toggleTag() {
  if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
   contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
   tagIndexDOM.style ="";
-  hideADOM.innerText = "隱藏標籤";
+  tagIDOM.className = "fa-solid fa-square-caret-up fa-fw";
+  tagADOM.innerText = "隱藏標籤";
  } else {
   contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
   tagIndexDOM.style['display'] = "none";
-  hideADOM.innerText = "顯示標籤";
+  tagIDOM.className = "fa-solid fa-square-caret-down fa-fw";
+  tagADOM.innerText = "顯示標籤";
  };
 };
 function resizeDiv() {

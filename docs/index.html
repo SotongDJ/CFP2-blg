@@ -31,9 +31,11 @@
    style="grid-template-rows:min-content min-content 1fr min-content;">
    <div class="tittlebar">
     <h1>非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
-    <div>
-     <span class="buttonDiv"><i class="fa-solid fa-tag fa-fw"></i>
-      <a id="hideA" href="javascript: void(toggleIndexBarHide())">顯示標籤</a></span>
+    <div class="tagbar">
+      <span class="buttonDiv"><i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i>
+       <a id="tagA" href="javascript: void(toggleTag())">顯示標籤</a></span>
+      <span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
+       <a id="sortA" href="javascript: void(toggleSort())">原始排序</a></span>
      <span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
       <a href="https://github.com/SotongDJ/podcast-selector-blg" target="info">關於</a></span>
      <span class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
