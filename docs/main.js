@@ -40,7 +40,7 @@ function fontAwe(fontKey,fontID="") {
  return fontI;
 };
 function link(href,innerArr,jump = '',label = '') {
- let classArr = [];
+ let classArr = new Array();
  if (href == "") {
   var tag = document.createElement('span');
   classArr.push("hideBtn");
@@ -64,7 +64,7 @@ function compareLength(aArr,bArr) {
  if (bArr.length > 0) {return bArr};
  return bArr;
 };
-function getArr(inputStr) {return inputStr ? inputStr.split(",") : [];};
+function getArr(inputStr) {return inputStr ? inputStr.split(",") : new Array();};
 var keyArr = compareLength(option['key'], getArr(storage.getItem('key')));
 storage.setItem("key", keyArr.join(','));
 function addTag(addStr) {
@@ -95,7 +95,7 @@ function addTag(addStr) {
 };
 function removeTag(removeStr) {
  var addKeyArr = getArr(storage.getItem('key'));
- var altKeyArr = [];
+ var altKeyArr = new Array();
  for (let ka = 0; ka < addKeyArr.length; ka++) {
   if (addKeyArr[ka] != removeStr) {
     altKeyArr.push(addKeyArr[ka]);
@@ -156,7 +156,7 @@ function fillIndex() {
 };
 function filter() {
  var sortStr = storage.getItem('sort');
- var filtered = [];
+ var filtered = new Array();
  var filterKeyArr = getArr(storage.getItem('key'));
  var playlistKeyArr = Object.keys(playlist);
  for (let nub = 0; nub < playlistKeyArr.length; nub++) {
@@ -238,64 +238,110 @@ function draw() {
   playlistDOM.appendChild(entryPg);
   storage.setItem('podcast',JSON.stringify(podObj));
  };
- doPlay();
  doQueue(storage.getItem('now'));
 };
 storage.setItem('now', "");
 fillIndex();
 draw();
-function skipNext() {
+async function doNext() {
+ afterPause();
  var queueObj = JSON.parse(storage.getItem('queue')||"{}");
  var nowStr = storage.getItem('now');
- doPause()
+ playerDOM.pause();
  var nextStr = queueObj[nowStr];
- if (nextStr) {
-  playerDOM.src = playlist[nextStr]['feed'];
-  storage.setItem('now', nextStr);
-  doPlay();
-  playerDOM.play();
- };
+ if (nextStr) {doQueue(nextStr); await doPlay(nextStr);};
+};
+async function doPrev() {
+ afterPause();
+ var antiQueueObj = JSON.parse(storage.getItem('anti-queue')||"{}");
+ var nowStr = storage.getItem('now');
+ playerDOM.pause();
+ var prevStr = antiQueueObj[nowStr];
+ if (prevStr) {doQueue(prevStr); await doPlay(prevStr);};
 };
 function changeIcon(targetName,targetValue) {
  var icoDOM = document.getElementById(targetName);
  if (icoDOM) {icoDOM.className = targetValue};
 }
-function doPause() {
+function afterPause() {
+ navigator.mediaSession.playbackState = 'paused';
  var nowStr = storage.getItem('now')||"";
  changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
 };
-function doPlay() {
+function afterPlay() {
+ navigator.mediaSession.playbackState = 'playing';
  var nowStr = storage.getItem('now')||"";
  changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
+};
+async function doPlay(inputStr) {
+ afterPause();
+ let nameStr = playlist[inputStr]['image'];
+ playerDOM.src = playlist[inputStr]['feed'];
+ storage.setItem('now', inputStr);
+ await playerDOM.play();
+ if ("mediaSession" in navigator) {
+  navigator.mediaSession.metadata = new MediaMetadata({
+   title: playlist[inputStr]['name'],
+   artist: '百靈果 Podcast',
+   album: playlist[inputStr]['tag'].join(" "),
+   artwork: [
+    { src: `/p/${nameStr}/96.png`,  sizes: '96x96',   type: 'image/png' },
+    { src: `/p/${nameStr}/128.png`, sizes: '128x128', type: 'image/png' },
+    { src: `/p/${nameStr}/192.png`, sizes: '192x192', type: 'image/png' },
+    { src: `/p/${nameStr}/256.png`, sizes: '256x256', type: 'image/png' },
+    { src: `/p/${nameStr}/384.png`, sizes: '384x384', type: 'image/png' },
+    { src: `/p/${nameStr}/512.png`, sizes: '512x512', type: 'image/png' },
+   ]
+  });
+ };
 };
 function doQueue(inputStr) {
  var gpPodObj = JSON.parse(storage.getItem('podcast')||"{}");
  var gpPodArr = Object.keys(gpPodObj);
  var gpQueueObj = {};
+ var gpAntiQueueObj = {};
  var inputBool = Object.keys(gpPodObj).includes(inputStr);
  if (!inputBool) {gpQueueObj[inputStr] = gpPodArr[0];};
  var targetInt = inputBool ? parseInt(gpPodObj[inputStr]): 0;
  for (let qa = targetInt; qa < gpPodArr.length - 1; qa++) {
   gpQueueObj[gpPodArr[qa]] = gpPodArr[qa+1];
  };
+ if (targetInt) {
+  for (let qa = 0; qa < targetInt; qa++) {
+   gpAntiQueueObj[gpPodArr[qa+1]] = gpPodArr[qa];
+  };
+ };
  storage.setItem('queue',JSON.stringify(gpQueueObj));
+ storage.setItem('anti-queue',JSON.stringify(gpAntiQueueObj));
 };
-function goToPlay(targetStr) {
- doPause();
+async function goToPlay(targetStr) {
+ afterPause();
  doQueue(targetStr);
  var nowStr = storage.getItem('now');
  if (nowStr === targetStr) {
-  playerDOM.paused ? playerDOM.play() : playerDOM.pause();
- } else {
-  document.getElementById("playIco"+targetStr).className = 'fa-solid fa-pause fa-fw';
-  playerDOM.src = playlist[targetStr]['feed'];
-  storage.setItem('now', targetStr);
-  playerDOM.play();
+  playerDOM.paused ? await playerDOM.play() : playerDOM.pause();
+ } else {await doPlay(targetStr);};
+};
+playerDOM.addEventListener('play', afterPlay, false);
+playerDOM.addEventListener('pause', afterPause, false);
+playerDOM.addEventListener('ended', doNext, false);
+const actionHandlers = [
+['play',          async () => {await playerDOM.play();}],
+['pause',         () => {playerDOM.pause();}],
+['previoustrack', async () => {doPrev();}],
+['nexttrack'    , async () => {doNext();}],
+['stop'         , null], // () => { /* ... */ }],
+['seekbackward' , null], // (details) => { /* ... */ }],
+['seekforward'  , null], // (details) => { /* ... */ }],
+['seekto'       , null], // (details) => { /* ... */ }],
+];
+for (const [action, handler] of actionHandlers) {
+ try {
+  navigator.mediaSession.setActionHandler(action, handler);
+ } catch (error) {
+  console.log(`The media session action "${action}" is not supported yet.`);
  };
 };
-playerDOM.addEventListener('play', doPlay, false);
-playerDOM.addEventListener('pause', doPause, false);
-playerDOM.addEventListener('ended', skipNext, false);
 function toggleTag() {
  if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
   contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
