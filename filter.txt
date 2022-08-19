@@ -798,6 +798,14 @@
     『Clubhouse特別企劃』與在中國封城的聽眾聊天
   Excluded: (0)
     
+[裴洛西訪台事件]
+  found in: (4)
+    0731 裴洛西踩中國紅線？ 牧師佈道穿金戴銀、脫衣舞俱樂部心得分享
+    HOT TAKE: What do TAIWANESE really THINK about NANCY PELOSI'S visit? (English)
+    Pelosi 來台灣街訪心得，再次遇到統促黨
+    0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助
+  Excluded: (0)
+    
 [五月天事件]
   found in: (2)
     【百靈果】找律師 vs #五月天？打工仔如何捍衛自身權益
@@ -861,11 +869,12 @@
   Excluded: (0)
     
 [敏迪 @敏迪選讀]
-  found in: (4)
+  found in: (5)
     0822 OnlyFans 洗白性工作者 怎麽辦？拜登這次很難看 Feat. 敏迪選讀
     0822 特別來賓：敏迪選讀的敏迪其實很活潑？！
     The KK Show - 公海大戰小粉紅 ft. 邱Grrr、敏迪、 范琪斐
     0522 敏迪炎上、芬蘭瑞典申請加入北約
+    0807 國外旅遊怎麼找廁所、用屁股呼吸的可能性、澤倫斯基向中國尋求協助
   Excluded: (0)
     
 [志祺 @志祺七七]
