@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup as bs
-import json, tomlkit, requests, pathlib
+from PIL import Image
+import tomlkit, requests, pathlib
 print("Start collection")
 result_dict = dict()
 print("    ----")
@@ -9,15 +10,36 @@ rss_req = requests.get("https://feeds.buzzsprout.com/1974862.rss")
 print("        Feed: convert XML and update dictionary")
 rss_feed = bs(rss_req.text,"xml")
 rss_dict = dict()
+img_dict = dict()
+img_str = rss_feed.find("image").url.contents[0]
+img_size_list = [96,128,192,256,384,512]
 for unit in rss_feed.find_all('item'):
     name = unit.title.contents[0]
     url = unit.enclosure['url']
     rss_dict[name] = url
+    img_list = [ufa["href"] for ufa in unit.find_all('itunes:image')] + [img_str]
+    img_filename = pathlib.Path(img_list[0]).name
+    img_bool = (img_filename == "60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad.jpg")
+    img_name = "cover.jpg" if img_bool else img_filename
+    img_parent = "artwork" if img_bool else pathlib.Path(img_list[0]).parent.name
+    img_dict[name] = F"{img_name}/{img_parent}"
+    if not pathlib.Path(F"docs/p/{img_name}/{img_parent}/512.png").exists():
+        cover_img_r = requests.get(img_list[0], stream=True)
+        cover_img_r.raw.decode_content = True
+        cover_img = Image.open(cover_img_r.raw)
+        for img_size in img_size_list:
+            pathlib.Path(F"docs/p/{img_name}/{img_parent}/").mkdir(parents=True,exist_ok=True)
+            wpercent = (img_size / float(cover_img.size[0]))
+            hsize = int((float(cover_img.size[1]) * float(wpercent)))
+            cover_img_res = cover_img.resize((img_size, hsize), Image.Resampling.LANCZOS)
+            cover_img_res.save(F"docs/p/{img_name}/{img_parent}/{img_size}.png")
 result_dict["feed"] = rss_dict
 with open("data/feedPodcast.xml","w") as xmlf:
     xmlf.write(rss_req.text)
 with open("data/feedPodcast.toml","w") as tomlf:
     tomlkit.dump(rss_dict,tomlf)
+with open("data/image.toml","w") as tomlf:
+    tomlkit.dump(img_dict,tomlf)
 print("    Finish collection: Feed")
 #
 print("    ----")

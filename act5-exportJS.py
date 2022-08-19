@@ -2,12 +2,13 @@ import tomlkit
 title_dict = tomlkit.load(open("annotation.toml"))
 keyword_doc = tomlkit.load(open("keyword.toml"))
 
-print("Export playlist.js for testing")
-header_list = ["name", "apple", "google", "spotify", "feed"]
+print("Export playlist.js")
+header_list = ["name", "apple", "google", "spotify", "image", "feed"]
 title_list = list()
+total_int = len(title_dict.keys())
 for enum_int, value_dict in enumerate(title_dict.values()):
     value_inner_list = ["\"{}\": \"{}\"".format(header_str,value_dict.get(header_str,"")) for header_str in header_list]
-    value_inner_str = "\"time{}\":".format(enum_int+1) + "{\n" + ",\n".join(value_inner_list)
+    value_inner_str = "\"time{}\":".format(total_int-enum_int) + "{\n" + ",\n".join(value_inner_list)
     tag_list = value_dict.get("tag",list())
     category_list = [n for n in value_dict.get("category",list()) if n[0] != "#"]
     tag_list.extend(sorted(list(set(category_list))))
