@@ -1,6 +1,9 @@
 # Exclude markup language
-*.html
-*.xml
+data/*.html
+data/*.xml
+
+# Exclude system files
+*.DS_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
