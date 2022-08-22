@@ -14,9 +14,9 @@ jobs:
       - name: feed branch checkout
         run: |
           git fetch --all --prune
-          git branch feed || git pull --rebase origin feed
+          git branch -D feed || echo "feed no exist"
+          git branch feed || echo "feed exist"
           git checkout feed
-          git pull --rebase origin main
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -25,10 +25,14 @@ jobs:
           python3 act4-annotate.py > filter.txt
           python3 act5-exportJS.py
       - name: setup git config
+        env:
+          EMAIL: ${{ secrets.email }}
         run: |
           git config user.name "RSS Update Bot"
-          git config user.email "action@github.com"
+          git config user.email "$EMAIL"
       - name: commit
         run: |
           git commit -a -m "update rss feed"
           git push origin feed
+          git checkout main
+          git branch -D feed

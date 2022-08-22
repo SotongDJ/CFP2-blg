@@ -259,10 +259,17 @@ async function doPrev() {
  var prevStr = antiQueueObj[nowStr];
  if (prevStr) {doQueue(prevStr); await doPlay(prevStr);};
 };
+function updatePositionState() {
+navigator.mediaSession.setPositionState({
+duration: playerDOM.duration,
+playbackRate: playerDOM.playbackRate,
+position: playerDOM.currentTime
+});
+};
 function changeIcon(targetName,targetValue) {
  var icoDOM = document.getElementById(targetName);
  if (icoDOM) {icoDOM.className = targetValue};
-}
+};
 function afterPause() {
  navigator.mediaSession.playbackState = 'paused';
  var nowStr = storage.getItem('now')||"";
@@ -272,6 +279,21 @@ function afterPlay() {
  navigator.mediaSession.playbackState = 'playing';
  var nowStr = storage.getItem('now')||"";
  changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
+};
+function handleSeek(details) {
+ const skipTime = details.seekOffset || 10;
+ switch(details.action) {
+  case "seekforward":
+   playerDOM.currentTime = Math.min(playerDOM.currentTime + skipTime, playerDOM.duration);
+   break;
+  case "seekbackward":
+   playerDOM.currentTime = Math.max(playerDOM.currentTime - skipTime, 0);
+   break;
+  case "seekto":
+   playerDOM.currentTime = details.seekTime;
+   break;
+ };
+ updatePositionState();
 };
 async function doPlay(inputStr) {
  afterPause();
@@ -293,6 +315,7 @@ async function doPlay(inputStr) {
     { src: `/p/${nameStr}/512.png`, sizes: '512x512', type: 'image/png' },
    ]
   });
+  updatePositionState();
  };
 };
 function doQueue(inputStr) {
@@ -331,9 +354,9 @@ const actionHandlers = [
 ['previoustrack', async () => {doPrev();}],
 ['nexttrack'    , async () => {doNext();}],
 ['stop'         , null], // () => { /* ... */ }],
-['seekbackward' , null], // (details) => { /* ... */ }],
-['seekforward'  , null], // (details) => { /* ... */ }],
-['seekto'       , null], // (details) => { /* ... */ }],
+['seekbackward' , (details) => {handleSeek(details);}],
+['seekforward'  , (details) => {handleSeek(details);}],
+['seekto'       , (details) => {handleSeek(details);}],
 ];
 for (const [action, handler] of actionHandlers) {
  try {
