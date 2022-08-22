@@ -1,4 +1,13 @@
 const playlist = {
+"time554":{
+"name": "百靈果News｜歐盟要開始針對俄國遊客？ 印度假警察局發大財、推薦頻道： Legal Eagle",
+"apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E6%AD%90%E7%9B%9F%E8%A6%81%E9%96%8B%E5%A7%8B%E9%87%9D%E5%B0%8D%E4%BF%84%E5%9C%8B%E9%81%8A%E5%AE%A2-%E5%8D%B0%E5%BA%A6%E5%81%87%E8%AD%A6%E5%AF%9F%E5%B1%80%E7%99%BC%E5%A4%A7%E8%B2%A1-%E6%8E%A8%E8%96%A6%E9%A0%BB%E9%81%93-legal-eagle/id1106847606?i=1000576751730",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE3MTgyNw",
+"spotify": "https://open.spotify.com/episode/5ik1hSfajI7Hu1i0YHufik",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11171827-news-legal-eagle.mp3",
+"tag": ['百靈果 NEWS']
+},
 "time553":{
 "name": "InterPride 取消高雄2025的活動、讀書會：同情者 Ep 4",
 "apple": "https://podcasts.apple.com/tw/podcast/interpride-%E5%8F%96%E6%B6%88%E9%AB%98%E9%9B%842025%E7%9A%84%E6%B4%BB%E5%8B%95-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-4/id1106847606?i=1000576486381",
