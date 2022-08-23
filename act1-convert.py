@@ -92,5 +92,5 @@ for file_str, parameter_dict in config_dict.items():
         result_dict[podcast_str] = podcast_dict
         print(F"    Finish {podcast_str} collection")
 print("    ----\nFinish collection")
-with open("history.toml",'w') as target_handler:
+with open("mid/history.toml",'w') as target_handler:
     tomlkit.dump(result_dict,target_handler)

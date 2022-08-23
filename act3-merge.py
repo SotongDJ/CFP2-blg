@@ -1,5 +1,5 @@
 import tomlkit
-result_doc = tomlkit.load(open("history.toml"))
+result_doc = tomlkit.load(open("mid/history.toml"))
 alias_doc = tomlkit.load(open("alias.toml"))
 image_doc = tomlkit.load(open("data/image.toml"))
 def correct(input_str):
@@ -38,7 +38,7 @@ for title_str, link_dict in title_dict.items():
         annotation[title_str] = episode
     else:
         youtube_entities[title_str] = episode
-with open("structure.toml",'w') as target_handler:
+with open("mid/structure.toml",'w') as target_handler:
     tomlkit.dump(annotation,target_handler)
 with open("mid/list_lack_youtube.txt","w") as target_handler:
     target_handler.write("".join(["\"{}\"\n".format(n["name"]) for n in annotation.values() if "youtube" not in n.keys()]))

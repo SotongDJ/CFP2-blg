@@ -1,5 +1,5 @@
 import tomlkit, re
-structure_doc = tomlkit.load(open("structure.toml"))
+structure_doc = tomlkit.load(open("mid/structure.toml"))
 keyword_doc = tomlkit.load(open("keyword.toml"))
 def check(input_str,exclude,do_re=str()):
     include_list = list()
@@ -41,5 +41,5 @@ for entry_name, entry_detail in keyword_doc.items():
         episode_tag_list.extend(entry_detail["category"])
         episode_table["category"] = episode_tag_list
         structure_doc[episode_str] = episode_table
-with open("annotation.toml",'w') as target_handler:
+with open("mid/annotation.toml",'w') as target_handler:
     tomlkit.dump(structure_doc,target_handler)

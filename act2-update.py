@@ -147,5 +147,5 @@ with open("data/YouTube.toml","w") as tomlf:
 print("    Finish collection: YouTube")
 #
 print("    ----\nFinish collection")
-with open("history.toml",'w') as target_handler:
+with open("mid/history.toml",'w') as target_handler:
     tomlkit.dump(result_dict,target_handler)
