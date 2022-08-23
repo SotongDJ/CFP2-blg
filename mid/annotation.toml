@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["The KK Show - #148 青年韓粉？歷史哥：我不是！"]
+name = "The KK Show - #148 青年韓粉？歷史哥：我不是！ @歷史哥HistoryBro"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11186483-the-kk-show-148.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-148-%E9%9D%92%E5%B9%B4%E9%9F%93%E7%B2%89-%E6%AD%B7%E5%8F%B2%E5%93%A5-%E6%88%91%E4%B8%8D%E6%98%AF/id1106847606?i=1000577093243"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE4NjQ4Mw"
+spotify = "https://open.spotify.com/episode/56fCT5LWaMd5WmvAYSTOax"
+youtube = "https://www.youtube.com/watch?v=t42lQo1mjr0"
+image = "cover.jpg/artwork"
+tag = ["KK Show"]
+category = ["#節目系列"]
+
 ["百靈果News｜歐盟要開始針對俄國遊客？ 印度假警察局發大財、推薦頻道： Legal Eagle"]
 name = "百靈果News｜歐盟要開始針對俄國遊客？ 印度假警察局發大財、推薦頻道： Legal Eagle"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11171827-news-legal-eagle.mp3"
