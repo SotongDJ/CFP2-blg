@@ -1,4 +1,14 @@
 const playlist = {
+"time555":{
+"name": "The KK Show - #148 青年韓粉？歷史哥：我不是！ @歷史哥HistoryBro",
+"apple": "https://podcasts.apple.com/tw/podcast/the-kk-show-148-%E9%9D%92%E5%B9%B4%E9%9F%93%E7%B2%89-%E6%AD%B7%E5%8F%B2%E5%93%A5-%E6%88%91%E4%B8%8D%E6%98%AF/id1106847606?i=1000577093243",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE4NjQ4Mw",
+"spotify": "https://open.spotify.com/episode/56fCT5LWaMd5WmvAYSTOax",
+"youtube": "https://www.youtube.com/watch?v=t42lQo1mjr0",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11186483-the-kk-show-148.mp3",
+"tag": ['KK Show']
+},
 "time554":{
 "name": "百靈果News｜歐盟要開始針對俄國遊客？ 印度假警察局發大財、推薦頻道： Legal Eagle",
 "apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E6%AD%90%E7%9B%9F%E8%A6%81%E9%96%8B%E5%A7%8B%E9%87%9D%E5%B0%8D%E4%BF%84%E5%9C%8B%E9%81%8A%E5%AE%A2-%E5%8D%B0%E5%BA%A6%E5%81%87%E8%AD%A6%E5%AF%9F%E5%B1%80%E7%99%BC%E5%A4%A7%E8%B2%A1-%E6%8E%A8%E8%96%A6%E9%A0%BB%E9%81%93-legal-eagle/id1106847606?i=1000576751730",
