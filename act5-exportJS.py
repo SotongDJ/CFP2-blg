@@ -1,9 +1,9 @@
 import tomlkit
-title_dict = tomlkit.load(open("annotation.toml"))
+title_dict = tomlkit.load(open("mid/annotation.toml"))
 keyword_doc = tomlkit.load(open("keyword.toml"))
 
 print("Export playlist.js")
-header_list = ["name", "apple", "google", "spotify", "image", "feed"]
+header_list = ["name", "apple", "google", "spotify", "youtube", "image", "feed"]
 title_list = list()
 total_int = len(title_dict.keys())
 for enum_int, value_dict in enumerate(title_dict.values()):

@@ -118,6 +118,34 @@ with open("data/SpotifyPodcast.toml","w") as tomlf:
     tomlkit.dump(spotify_dict,tomlf)
 print("    Finish collection: Spotify")
 #
+print("    ----")
+print("    Start collection: YouTube")
+print("        Feed: grab rss feed")
+youtube_req = requests.get("https://www.youtube.com/feeds/videos.xml?channel_id=UCD2KoUc0f4Bv2Bz0mbOah8g")
+youtube_track = bs(youtube_req.text,"xml")
+print("        Feed: convert XML and update dictionary")
+if pathlib.Path("data/YouTube.toml").exists():
+    youtube_doc = tomlkit.load(open("data/YouTube.toml"))
+    youtube_record = {str(x):str(y) for x,y in youtube_doc.items()}
+else:
+    youtube_record = dict()
+youtube_dict = dict()
+for unit in youtube_track.find_all('entry'):
+    name = unit.title.contents[0]
+    url = unit.link['href']
+    if name in youtube_record.keys():
+        if youtube_record[name] != url:
+            print("ERROR: Duplicate entry no consistent, value:", url, youtube_record[name])
+    else:
+        youtube_dict[name] = url
+youtube_dict.update(youtube_record)
+result_dict["youtube"] = youtube_dict
+with open("data/YouTubeRequests.xml","w") as xmlf:
+    xmlf.write(youtube_req.text)
+with open("data/YouTube.toml","w") as tomlf:
+    tomlkit.dump(youtube_dict,tomlf)
+print("    Finish collection: YouTube")
+#
 print("    ----\nFinish collection")
 with open("history.toml",'w') as target_handler:
     tomlkit.dump(result_dict,target_handler)
