@@ -138,6 +138,11 @@ inclusive = ["不是讀書會","沒有讀書會","Pelosi 來台灣街訪心得",
 exclusive = []
 category = ["#節目系列"]
 
+["百靈果到處跑"]
+inclusive = ["老闆去新竹向員工道歉","John Oliver 觀後感"]
+exclusive = []
+category = ["#節目系列","暫代讀書會"]
+
 ["百靈果之友"]
 inclusive = ["百靈果之友"]
 exclusive = []
@@ -322,7 +327,7 @@ inclusive = ["龍龍"]
 exclusive = []
 category = ["喜劇演員","Youtuber"]
 
-# 表演
+# Youtuber/Podcaster/音樂/色色
 
 ["范琪斐"]
 inclusive = ["范琪斐","敏迪炎上"]
@@ -376,6 +381,11 @@ category = ["Youtuber"]
 
 ["盧卡斯 @BBK Networ"]
 inclusive = ["盧卡斯","BBK Network"]
+exclusive = []
+category = ["Youtuber"]
+
+["歷史哥"]
+inclusive = ["歷史哥"]
 exclusive = []
 category = ["Youtuber"]
 
