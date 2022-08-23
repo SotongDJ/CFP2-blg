@@ -2,7 +2,7 @@ name: update podcast feed v2.0.3
 
 on:
   schedule:
-    - cron: "05 1,21 * * *"
+    - cron: "5 13,21 * * *"
   workflow_dispatch:
 
 jobs:
