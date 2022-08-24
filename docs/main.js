@@ -1,5 +1,6 @@
 const tagIndexDOM = document.getElementById("tagindex");
 const indexBarDOM = document.getElementById("indexbar");
+const unionSDOM = document.getElementById("unionSpan");
 const tagADOM = document.getElementById("tagA");
 const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
@@ -10,7 +11,25 @@ const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
 const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
+// fontawesome str
 const faTagStr = "fa-solid fa-tag fa-fw";
+const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
+const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
+const caretUpStr = "fa-solid fa-square-caret-up fa-fw";
+const caretDownStr = "fa-solid fa-square-caret-down fa-fw";
+// default parameter
+const textSortObj = {
+"neutral":{"text":"排序", "fa":"fa-solid fa-sort fa-fw"},
+"oldest":{"text":"最舊", "fa":"fa-solid fa-sort-up fa-fw"},
+"newest":{"text":"最新", "fa":"fa-solid fa-sort-down fa-fw"},
+};
+const nextSortObj = {
+"neutral":"oldest",
+"oldest":"newest",
+"newest":"neutral",
+};
+const tagHideStr = "min-content min-content 1fr min-content";
+const tagShowStr = "min-content 1fr min-content 2fr min-content";
 // get option from url and save to local storage
 var url = new URL(window.location.href);
 var argueObj = new Object();
@@ -30,8 +49,8 @@ if (Object.keys(option).includes(key)) {
  option[key] = value;
 };
 };
-storage.setItem("union", option["union"]);
-storage.setItem("sort", option["sort"]);
+(option["union"]=="false")||(option["union"]==storage.getItem("union")||storage.setItem("union", option["union"]));
+(option["sort"]=="neutral")||(option["sort"]==storage.getItem("sort")||storage.setItem("sort", option["sort"]));
 // function to replace fontawesome key
 function fontAwe(fontKey,fontID="") {
 var fontI = document.createElement('i');
@@ -69,6 +88,7 @@ return bArr;
 function getArr(inputStr) {return inputStr ? inputStr.split(",") : new Array();};
 var keyArr = compareLength(option['key'], getArr(storage.getItem('key')));
 storage.setItem("key", keyArr.join(','));
+
 
 function addTag(addStr) {
 var addKeyArr = getArr(storage.getItem('key'));
@@ -137,7 +157,8 @@ for (let tli = 0; tli < tagClassArr.length; tli++) {
  tagClassP.appendChild(tagClassASpan);
  tagClassP.append("：");
  } else {
- var addTagStr = drawKeyArr.includes(tagClassStr) ? "" : "javascript: void(addTag(\""+tagClassStr+"\"))";
+ var addTagScriptStr = "javascript: void(addTag(\""+tagClassStr+"\"))";
+ var addTagStr = drawKeyArr.includes(tagClassStr) ? "" : addTagScriptStr;
  tagClassASpan = link(addTagStr,[fontAwe(faTagStr)," "+tagClassStr],'','tagBorder');
  tagClassASpan.id = tagClassStr;
  tagClassP.appendChild(tagClassASpan);
@@ -196,12 +217,14 @@ storage.setItem('filtered',filtered.join(","))
 
 function draw() {
 filter();
-tagBarDOM.innerText = "標籤：";
+unionSDOM.innerHTML = "";
+tagBarDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
  tagBarDOM.style = "";
+ updateUnion();
  for (let oka = 0; oka < drawKeyArr.length; oka++) {
- removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
+ var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
  okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
  tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
  };
@@ -252,6 +275,7 @@ doQueue(storage.getItem('now'));
 
 storage.setItem('now', "");
 fillIndex();
+updateSort();
 draw();
 
 async function doNext() {
@@ -393,32 +417,34 @@ console.log(`The media session action "${action}" is not supported yet.`);
 };
 
 function toggleTag() {
-if (contentDOM.style['grid-template-rows'] == "min-content min-content 1fr min-content") {
-contentDOM.style['grid-template-rows'] = "min-content 1fr min-content 2fr min-content";
-tagIndexDOM.style ="";
-tagIDOM.className = "fa-solid fa-square-caret-up fa-fw";
-tagADOM.innerText = "隱藏標籤";
-} else {
-contentDOM.style['grid-template-rows'] = "min-content min-content 1fr min-content";
-tagIndexDOM.style['display'] = "none";
-tagIDOM.className = "fa-solid fa-square-caret-down fa-fw";
-tagADOM.innerText = "顯示標籤";
+var toggleTagBool = (contentDOM.style['grid-template-rows'] == tagHideStr);
+contentDOM.style['grid-template-rows'] = toggleTagBool?tagShowStr:tagHideStr;
+tagIndexDOM.style = toggleTagBool?"":"display: none;";
+tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
+// tagADOM.innerText = toggleTagBool?"隱藏標籤":"顯示標籤";
 };
+
+function updateSort() {
+var nowSortStr = storage.getItem('sort');
+sortADOM.innerText = textSortObj[nowSortStr]["text"];
+sortIDOM.className = textSortObj[nowSortStr]["fa"];
 };
 
 function toggleSort() {
-const sortObj = {
-"neutral":{"text":"先舊後新", "fa":"fa-solid fa-sort-up fa-fw", "next":"oldest"},
-"oldest":{"text":"先新後舊", "fa":"fa-solid fa-sort-down fa-fw", "next":"newest"},
-"newest":{"text":"原始排序", "fa":"fa-solid fa-sort fa-fw", "next":"neutral"}
-};
-var sortStr = storage.getItem('sort');
-sortADOM.innerText = sortObj[sortStr]["text"];
-sortIDOM.className = sortObj[sortStr]["fa"];
-storage.setItem("sort", sortObj[sortStr]["next"]);
+var nowSortStr = storage.getItem('sort');
+var nextSortStr = nextSortObj[nowSortStr];
+storage.setItem("sort", nextSortStr);
+updateSort();
 draw();
 };
 
+function toggleUnion() {
+var nowUnionStr = storage.getItem('union');
+var nextUnionStr = (nowUnionStr == "true") ? "false" : "true";
+storage.setItem("union", nextUnionStr);
+draw();
+};
+   
 function resizeDiv() {
 contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 };
