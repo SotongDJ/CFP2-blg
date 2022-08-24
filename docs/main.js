@@ -222,7 +222,6 @@ tagBarDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
  tagBarDOM.style = "";
- updateUnion();
  for (let oka = 0; oka < drawKeyArr.length; oka++) {
  var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
  okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
