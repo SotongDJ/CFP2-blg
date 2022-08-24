@@ -224,6 +224,16 @@ tagBarDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
  tagBarDOM.style = "";
+ tagBarDOM.append("已選擇的標籤：");
+ if (drawKeyArr.length > 1) {
+ var drawUnionStr = storage.getItem('union');
+ var unionToggleBool = (drawUnionStr == "true");
+ unionSDOM.appendChild(fontAwe(unionToggleBool?unionToggleOnStr:unionToggleOffStr));
+ var unionA = document.createElement("a");
+ unionA.append(unionToggleBool?"聯集":"交集");
+ unionA.href = "javascript: void(toggleUnion())";
+ unionSDOM.append(unionA);
+ };
  for (let oka = 0; oka < drawKeyArr.length; oka++) {
  var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
  okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
