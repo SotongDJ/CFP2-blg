@@ -409,7 +409,7 @@ playerDOM.addEventListener('pause', afterPause, false);
 playerDOM.addEventListener('ended', doNext, false);
 
 const actionHandlers = [
-['play' , async () => {await playerDOM.play();}],
+['play' , async () => {playerDOM.play();}],
 ['pause' , () => {playerDOM.pause(); }],
 ['previoustrack', async () => {doPrev(); }],
 ['nexttrack' , async () => {doNext(); }],
