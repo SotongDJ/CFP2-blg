@@ -51,6 +51,8 @@ if (Object.keys(option).includes(key)) {
 };
 (option["union"]=="false")||(option["union"]==storage.getItem("union")||storage.setItem("union", option["union"]));
 (option["sort"]=="neutral")||(option["sort"]==storage.getItem("sort")||storage.setItem("sort", option["sort"]));
+storage.getItem("union")||storage.setItem("union", option["union"]);
+storage.getItem("sort")||storage.setItem("sort", option["sort"]);
 // function to replace fontawesome key
 function fontAwe(fontKey,fontID="") {
 var fontI = document.createElement('i');
