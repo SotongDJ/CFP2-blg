@@ -9,6 +9,8 @@ const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
+const canvasDOM = document.createElement('canvas');
+const videoDOM = document.createElement('video');
 const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
 // fontawesome str
@@ -293,7 +295,7 @@ async function doNext() {
 afterPause();
 var queueObj = JSON.parse(storage.getItem('queue')||"{}");
 var nowStr = storage.getItem('now');
-playerDOM.pause();
+mixPause();
 var nextStr = queueObj[nowStr];
 if (nextStr) {doQueue(nextStr); await doPlay(nextStr);};
 };
@@ -302,7 +304,7 @@ async function doPrev() {
 afterPause();
 var antiQueueObj = JSON.parse(storage.getItem('anti-queue')||"{}");
 var nowStr = storage.getItem('now');
-playerDOM.pause();
+mixPause();
 var prevStr = antiQueueObj[nowStr];
 if (prevStr) {doQueue(prevStr); await doPlay(prevStr);};
 };
@@ -354,7 +356,6 @@ afterPause();
 let nameStr = playlist[inputStr]['image'];
 playerDOM.src = playlist[inputStr]['feed'];
 storage.setItem('now', inputStr);
-await playerDOM.play();
 if ("mediaSession" in navigator) {
  navigator.mediaSession.metadata = new MediaMetadata({
  title: playlist[inputStr]['name'],
@@ -369,6 +370,7 @@ if ("mediaSession" in navigator) {
  { src: `/p/${nameStr}/512.png`, sizes: '512x512', type: 'image/png' },
  ]
 });
+await mixPlay();
 updatePositionState();
 };
 };
@@ -398,7 +400,7 @@ afterPause();
 doQueue(targetStr);
 var nowStr = storage.getItem('now');
 if (nowStr === targetStr) {
- playerDOM.paused ? await playerDOM.play() : playerDOM.pause();
+ playerDOM.paused ? await mixPlay() : mixPause();
 } else {
  await doPlay(targetStr);
 };
@@ -408,9 +410,12 @@ playerDOM.addEventListener('play', afterPlay, false);
 playerDOM.addEventListener('pause', afterPause, false);
 playerDOM.addEventListener('ended', doNext, false);
 
+videoDOM.addEventListener('play', () => {mixPlay()}, false);
+videoDOM.addEventListener('pause', () => {mixPause()}, false);
+
 const actionHandlers = [
-['play' , async () => {playerDOM.play();}],
-['pause' , () => {playerDOM.pause(); }],
+['play' , async () => {mixPlay();}],
+['pause' , () => {mixPause(); }],
 ['previoustrack', async () => {doPrev(); }],
 ['nexttrack' , async () => {doNext(); }],
 ['stop' , null ],
@@ -424,6 +429,49 @@ try {
 navigator.mediaSession.setActionHandler(action, handler);
 } catch (error) {
 console.log(`The media session action "${action}" is not supported yet.`);
+};
+};
+
+canvasDOM.width = canvasDOM.height = 512;
+videoDOM.muted = true;
+
+async function doPiP() {
+await updatePiP();
+videoDOM.srcObject = canvasDOM.captureStream();
+await videoDOM.play();
+await videoDOM.requestPictureInPicture();
+};
+
+async function updatePiP() {
+canvasDOM.getContext('2d').clearRect(0, 0, 512, 512);
+const image = new Image();
+image.crossOrigin = true;
+image.src = [...navigator.mediaSession.metadata.artwork].pop().src;
+await image.decode();
+canvasDOM.getContext('2d').drawImage(image, 0, 0, 512, 512);
+};
+
+async function mixPlay() {
+var actionPipStr = document.pictureInPictureEnabled?"javascript: void(doPiP())":"";
+var popPipDOM = document.getElementById("popPiP");
+var popSpan = document.createElement('span');
+popSpan.className = "tagBorder";
+var popArr = [fontAwe("fa-solid fa-arrow-up-right-from-square fa-fw")];
+popSpan.appendChild(link(actionPipStr,popArr));
+popSpan.id = "popPiP";
+popPipDOM.replaceWith(popSpan);
+await playerDOM.play().then(async () => {
+ if (document.pictureInPictureElement) {
+ await updatePiP();
+ if (videoDOM.paused) {await videoDOM.play()};
+ };      
+});
+};
+
+async function mixPause() {
+playerDOM.pause();
+if (document.pictureInPictureElement) {
+videoDOM.paused||videoDOM.pause();
 };
 };
 

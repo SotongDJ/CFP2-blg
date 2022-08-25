@@ -49,7 +49,11 @@ font-weight: 700;
 .buttonDiv{white-space:nowrap;}
 .tittlebar{margin:0 0 0.25rem 0;}
 .container{overflow:auto;}
-.playerbar{margin:0.25rem 0 0 0;}
+.playerbar{
+display:grid;
+grid-template-columns:min-content 1fr;
+gap:0.25rem;
+margin:0.25rem 0 0 0;}
 .plain{width:min-content; min-width:95%;}
 .linkDecor{text-decoration:none;}
 .activeBtn{color:hsl(0, 0%, 100%); margin:0 0.25rem;}
