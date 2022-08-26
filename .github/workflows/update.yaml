@@ -33,6 +33,6 @@ jobs:
       - name: commit
         run: |
           git commit -a -m "update rss feed"
-          git push origin feed
+          git push origin feed --force
           git checkout main
           git branch -D feed
