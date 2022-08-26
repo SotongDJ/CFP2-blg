@@ -41,10 +41,5 @@ jobs:
           git checkout main
           git branch -D feed
       - name: create pull request
-        env:
-          USRNM: ${{ secrets.usrn }}
-          EMAIL: ${{ secrets.email }}
         run: |
-          git config user.name "$USRNM"
-          git config user.email "$EMAIL"
           gh pr create --title "Update RSS Feed" --body "Require owner to review" -a @me -B main -H feed
