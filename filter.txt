@@ -1,3 +1,5 @@
+----
+Start annotation
 [百靈果 NEWS]
   found in: (220)
     0814 川普豪宅為什麼被FBI闖入、歐洲能源現狀是怎樣、經濟學人fat shaming？
@@ -1001,3 +1003,5 @@
     The KK Show - 009 這麽帥不去選立委可惜 - 顧立楷
   Excluded: (0)
     
+    ----
+End annotation
