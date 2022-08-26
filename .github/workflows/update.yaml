@@ -17,7 +17,7 @@ jobs:
           python3 act2-update.py
           python3 act3-merge.py
           python3 act4-annotate.py > filter.txt
-          python3 act5-exportJS.py
+          python3 act5-export.py
       - name: setup git config
         env:
           EMAIL: ${{ secrets.email }}
