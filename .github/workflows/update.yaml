@@ -37,5 +37,7 @@ jobs:
           git checkout main
           git branch -D feed
       - name: create pull request
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh pr create --title "Update RSS Feed" --body "Require owner to review" -a @me -B main -H feed
