@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5"]
+name = "好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11196213-ep-5.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/%E5%A5%BD%E8%90%8A%E5%A1%A2%E5%8D%81%E5%A4%A7%E7%A8%AE%E6%97%8F%E6%AD%A7%E8%A6%96%E7%B6%93%E5%85%B8-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-5/id1106847606?i=1000577330882"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE5NjIxMw"
+spotify = "https://open.spotify.com/episode/1Jp9rgmo4P8Cvv21uaFWQD"
+youtube = "https://www.youtube.com/watch?v=zDx1GgN5SeE"
+image = "cover.jpg/artwork"
+tag = ["讀書會", "同情者"]
+category = ["#節目系列", "讀書會"]
+
 ["The KK Show - #148 青年韓粉？歷史哥：我不是！"]
 name = "The KK Show - #148 青年韓粉？歷史哥：我不是！ @歷史哥HistoryBro"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11186483-the-kk-show-148.mp3"
