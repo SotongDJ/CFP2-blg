@@ -1,4 +1,14 @@
 const playlist = {
+"time556":{
+"name": "好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5",
+"apple": "https://podcasts.apple.com/tw/podcast/%E5%A5%BD%E8%90%8A%E5%A1%A2%E5%8D%81%E5%A4%A7%E7%A8%AE%E6%97%8F%E6%AD%A7%E8%A6%96%E7%B6%93%E5%85%B8-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-5/id1106847606?i=1000577330882",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTE5NjIxMw",
+"spotify": "https://open.spotify.com/episode/1Jp9rgmo4P8Cvv21uaFWQD",
+"youtube": "https://www.youtube.com/watch?v=zDx1GgN5SeE",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11196213-ep-5.mp3",
+"tag": ['讀書會', '同情者']
+},
 "time555":{
 "name": "The KK Show - #148 青年韓粉？歷史哥：我不是！ @歷史哥HistoryBro",
 "apple": "https://podcasts.apple.com/tw/podcast/the-kk-show-148-%E9%9D%92%E5%B9%B4%E9%9F%93%E7%B2%89-%E6%AD%B7%E5%8F%B2%E5%93%A5-%E6%88%91%E4%B8%8D%E6%98%AF/id1106847606?i=1000577093243",
