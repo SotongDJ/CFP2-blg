@@ -89,6 +89,7 @@ if (aArr.length > 0) {return aArr};
 if (bArr.length > 0) {return bArr};
 return bArr;
 };
+
 function getArr(inputStr) {return inputStr ? inputStr.split(",") : new Array();};
 var keyArr = compareLength(option['key'], getArr(storage.getItem('key')));
 storage.setItem("key", keyArr.join(','));
