@@ -36,3 +36,6 @@ jobs:
           git push origin feed --force
           git checkout main
           git branch -D feed
+      - name: create pull request
+        run: |
+          gh pr create --title "Update RSS Feed" --body "Require owner to review" -a @me -B main -H feed
