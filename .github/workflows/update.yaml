@@ -1,13 +1,9 @@
 name: update podcast feed v2.0.3
 
 on:
-  # schedule:
-  #   - cron: "5 * * * * "
+  schedule:
+    - cron: "5 * * * * "
   workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
 
 jobs:
   build:
@@ -15,12 +11,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: feed branch checkout
-        run: |
-          git fetch --all --prune
-          git branch -D feed || echo "feed no exist"
-          git branch feed || echo "feed exist"
-          git checkout feed
+      # - name: feed branch checkout
+      #   run: |
+      #     git fetch --all --prune
+      #     git branch -D feed || echo "feed no exist"
+      #     git branch feed || echo "feed exist"
+      #     git checkout feed
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -31,15 +27,21 @@ jobs:
       - name: setup git config
         env:
           EMAIL: ${{ secrets.email }}
+          KEY: ${{ secrets.key }}
         run: |
           git config user.name "RSS Update Bot"
           git config user.email "$EMAIL"
+          git config user.signingkey "$KEY"
       - name: commit
         run: |
-          git commit -a -m "update rss feed"
-          git push origin feed --force
-          git checkout main
-          git branch -D feed
+          git commit -s -a -m "update rss feed"
+          git push
+      # - name: commit
+      #   run: |
+      #     git commit -a -m "update rss feed"
+      #     git push origin feed --force
+      #     git checkout main
+      #     git branch -D feed
       # - name: create pull request
       #   env:
       #     GITHUB_TOKEN: ${{ github.token }}
