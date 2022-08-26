@@ -1,4 +1,5 @@
 import tomlkit
+print("----\nStart merge")
 result_doc = tomlkit.load(open("mid/history.toml"))
 alias_doc = tomlkit.load(open("alias.toml"))
 image_doc = tomlkit.load(open("data/image.toml"))
@@ -46,3 +47,4 @@ with open("mid/youtube_extra.toml",'w') as target_handler:
     tomlkit.dump(youtube_entities,target_handler)
 with open("mid/list_youtube_only.txt","w") as target_handler:
     target_handler.write("".join(["\"{}\"\n".format(n["name"]) for n in youtube_entities.values()]))
+print("    ----\nEnd merge")

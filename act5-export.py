@@ -1,8 +1,7 @@
 import tomlkit
+print("----\nStart export")
 title_dict = tomlkit.load(open("mid/annotation.toml"))
 keyword_doc = tomlkit.load(open("keyword.toml"))
-
-print("Export playlist.js")
 header_list = ["name", "apple", "google", "spotify", "youtube", "image", "feed"]
 title_list = list()
 total_int = len(title_dict.keys())
@@ -39,3 +38,4 @@ with open("docs/playlist.js",'w') as target_handler:
     target_handler.write(outer_str)
     target_handler.write(tag2class_str)
     target_handler.write(class2tag_str)
+print("    ----\nEnd export")

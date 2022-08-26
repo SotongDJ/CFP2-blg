@@ -1,4 +1,5 @@
 import tomlkit, re
+print("----\nStart annotation")
 structure_doc = tomlkit.load(open("mid/structure.toml"))
 keyword_doc = tomlkit.load(open("keyword.toml"))
 def check(input_str,exclude,do_re=str()):
@@ -43,3 +44,4 @@ for entry_name, entry_detail in keyword_doc.items():
         structure_doc[episode_str] = episode_table
 with open("mid/annotation.toml",'w') as target_handler:
     tomlkit.dump(structure_doc,target_handler)
+print("    ----\nEnd annotation")
