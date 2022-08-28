@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly"]
+name = "百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly @Soft White Underbelly"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11211933-news-soft-white-underbelly.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E8%A5%BF%E6%96%B9%E5%A5%B3%E6%80%A7%E5%9B%A0%E7%82%BA%E9%9F%93%E5%8A%87%E5%8E%BB%E5%8D%97%E9%9F%93%E6%89%BE%E7%9C%9F%E6%84%9B-%E5%8E%BB%E7%BE%8E%E5%9C%8B%E7%9A%84%E4%B8%AD%E5%9C%8B%E7%95%99%E5%AD%B8%E7%94%9F%E9%8A%B3%E6%B8%9B-%E6%8E%A8%E8%96%A6%E9%A0%BB%E9%81%93-soft-white/id1106847606?i=1000577570498"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTIxMTkzMw"
+spotify = "https://open.spotify.com/episode/6iSXMfcV4mgEKsZF9g7eXD"
+youtube = "https://www.youtube.com/watch?v=lpY0RFNDJu0"
+image = "cover.jpg/artwork"
+tag = ["百靈果 NEWS"]
+category = ["#節目系列"]
+
 ["好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5"]
 name = "好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11196213-ep-5.mp3"

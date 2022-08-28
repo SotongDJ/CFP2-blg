@@ -1,4 +1,14 @@
 const playlist = {
+"time557":{
+"name": "百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly @Soft White Underbelly",
+"apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E8%A5%BF%E6%96%B9%E5%A5%B3%E6%80%A7%E5%9B%A0%E7%82%BA%E9%9F%93%E5%8A%87%E5%8E%BB%E5%8D%97%E9%9F%93%E6%89%BE%E7%9C%9F%E6%84%9B-%E5%8E%BB%E7%BE%8E%E5%9C%8B%E7%9A%84%E4%B8%AD%E5%9C%8B%E7%95%99%E5%AD%B8%E7%94%9F%E9%8A%B3%E6%B8%9B-%E6%8E%A8%E8%96%A6%E9%A0%BB%E9%81%93-soft-white/id1106847606?i=1000577570498",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTIxMTkzMw",
+"spotify": "https://open.spotify.com/episode/6iSXMfcV4mgEKsZF9g7eXD",
+"youtube": "https://www.youtube.com/watch?v=lpY0RFNDJu0",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11211933-news-soft-white-underbelly.mp3",
+"tag": ['百靈果 NEWS']
+},
 "time556":{
 "name": "好萊塢十大種族歧視經典、、讀書會：同情者 Ep 5",
 "apple": "https://podcasts.apple.com/tw/podcast/%E5%A5%BD%E8%90%8A%E5%A1%A2%E5%8D%81%E5%A4%A7%E7%A8%AE%E6%97%8F%E6%AD%A7%E8%A6%96%E7%B6%93%E5%85%B8-%E8%AE%80%E6%9B%B8%E6%9C%83-%E5%90%8C%E6%83%85%E8%80%85-ep-5/id1106847606?i=1000577330882",
