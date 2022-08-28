@@ -42,10 +42,6 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
   - 由於 podcast 音檔緩存的機制過於複雜，目前并不支援離線播放的功能。
 
-- 不一定包含最新集數 | Latest episodes may include (without promise)
-
-  - 播放列表需要手動更新和上傳以致無法列出最新集數。
-
 ## 幫助 | Help
 
 > 幫助列表正建設中，未來會擴充~
@@ -53,6 +49,5 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 ## TO DO
 
 - 離線播放
-- 自動更新集數
 - 自行繪製播放列
 - 可自行調整播放對列
