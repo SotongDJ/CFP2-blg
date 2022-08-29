@@ -459,13 +459,11 @@ canvasDOM.getContext('2d').drawImage(image, 0, 0, 512, 512);
 };
 
 async function mixPlay() {
-if (document.pictureInPictureEnabled){
 let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("/p/${nameStr}/512.png")`;
 popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
 popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
-popADOM.href = "javascript: void(doPiP())";
-}
+if (document.pictureInPictureEnabled){popADOM.href = "javascript: void(doPiP())";};
 await playerDOM.play().then(async () => {
  if (document.pictureInPictureElement) {
  await updatePiP();
