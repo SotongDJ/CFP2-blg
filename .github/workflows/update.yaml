@@ -32,14 +32,13 @@ jobs:
           git config user.signingkey "$KEY"
       - name: commit
         run: |
-          git commit -a -S -m "update rss feed"
-          git push
+          git commit -a -S -m "update rss feed" && git push
   deploy:
-    condition: succeeded()
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: [self-hosted, linux, x64]
+    if: ${{ success() }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
