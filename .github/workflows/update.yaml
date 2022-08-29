@@ -5,6 +5,10 @@ on:
     - cron: "5 * * * * "
   workflow_dispatch:
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: [self-hosted, linux, x64]
@@ -30,6 +34,21 @@ jobs:
         run: |
           git commit -a -S -m "update rss feed"
           git push
-      - name: Run GitHub pages deployment
-        if: success()
-        uses: ./.github/actions/pages
+  deploy:
+    condition: succeeded()
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: [self-hosted, linux, x64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './docs'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
