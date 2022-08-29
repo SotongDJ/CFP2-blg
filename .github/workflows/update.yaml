@@ -32,4 +32,4 @@ jobs:
           git push
       - name: Run GitHub pages deployment
         if: success()
-        uses: SotongDJ/podcast-selector-blg/.github/workflows/pages
+        uses: SotongDJ/podcast-selector-blg/.github/actions/pages
