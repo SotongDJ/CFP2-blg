@@ -30,3 +30,6 @@ jobs:
         run: |
           git commit -a -S -m "update rss feed"
           git push
+      - name: Run GitHub pages deployment
+        if: success()
+        uses: ./.github/workflows/pages.yml

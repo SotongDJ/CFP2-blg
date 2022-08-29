@@ -44,10 +44,11 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## 幫助 | Help
 
-> 幫助列表正建設中，未來會擴充~
+- 請前往：<https://github.com/SotongDJ/podcast-selector-blg/wiki>
 
 ## TO DO
 
 - 離線播放
+- ～～自動更新集數～～（完成）
 - 自行繪製播放列
 - 可自行調整播放對列
