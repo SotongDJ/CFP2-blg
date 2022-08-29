@@ -516,19 +516,15 @@ titleAspan.innerText = "百靈果";
 var tumbSpan = document.createElement("span");
 tumbSpan.innerText = "👌";
 tumbSpan.style = "font-family: Noto Emoji";
+var landBool = (window.visualViewport.height > window.visualViewport.width);
+var largeBool = (window.visualViewport.height > 850);
 titleH1DOM.innerHTML = "";
 titleSpanDOM.innerHTML = "";
-if (window.visualViewport.height > window.visualViewport.width) {
-titleH1DOM.appendChild(tumbSpan);
-titleH1DOM.append("非官方");
-titleH1DOM.appendChild(titleAspan);
-titleH1DOM.append("播放室");
-} else {
-titleSpanDOM.appendChild(tumbSpan);
-titleSpanDOM.append("非官方");
-titleSpanDOM.appendChild(titleAspan);
-titleSpanDOM.append("播放室");
-};
+var targetDOM = (landBool||largeBool) ? titleH1DOM : titleSpanDOM;
+targetDOM.appendChild(tumbSpan);
+targetDOM.append("非官方");
+targetDOM.appendChild(titleAspan);
+targetDOM.append("播放室");
 contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 };
 window.onresize = resizeDiv;
