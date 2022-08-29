@@ -17,8 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: [self-hosted, linux, x64]
-    outputs:
-      succes_run: ${{ steps.commit.outputs.result }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -39,14 +37,14 @@ jobs:
           git config user.signingkey "$KEY"
       - name: commit
         run: |
-          (git commit -a -S -m "update rss feed" && git push) || echo "::set-output name=result::fail"
+          git commit -a -S -m "update rss feed" && git push
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: [self-hosted, linux, x64]
     needs: build
-    if: ${{ needs.build.outputs.succes_run != 'fail'}}
+    if: ${{ needs.build.result == 'success'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
