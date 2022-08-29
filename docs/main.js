@@ -1,3 +1,5 @@
+const titleH1DOM = document.getElementById("titleH1");
+const titleSpanDOM = document.getElementById("titleSpan");
 const tagIndexDOM = document.getElementById("tagindex");
 const indexBarDOM = document.getElementById("indexbar");
 const unionSDOM = document.getElementById("unionSpan");
@@ -232,10 +234,11 @@ if (drawKeyArr.length > 0) {
  var drawUnionStr = storage.getItem('union');
  var unionToggleBool = (drawUnionStr == "true");
  unionSDOM.appendChild(fontAwe(unionToggleBool?unionToggleOnStr:unionToggleOffStr));
+ unionSDOM.append(" ");
  var unionA = document.createElement("a");
  unionA.append(unionToggleBool?"聯集":"交集");
  unionA.href = "javascript: void(toggleUnion())";
- unionSDOM.append(unionA);
+ unionSDOM.appendChild(unionA);
  };
  for (let oka = 0; oka < drawKeyArr.length; oka++) {
  var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
@@ -465,7 +468,7 @@ await playerDOM.play().then(async () => {
  if (document.pictureInPictureElement) {
  await updatePiP();
  if (videoDOM.paused) {await videoDOM.play()};
- };      
+ };
 });
 };
 
@@ -504,8 +507,29 @@ var nextUnionStr = (nowUnionStr == "true") ? "false" : "true";
 storage.setItem("union", nextUnionStr);
 draw();
 };
-   
+
 function resizeDiv() {
+var titleAspan = document.createElement('a');
+titleAspan.href = "https://www.bailingguonews.com/";
+titleAspan.target = "info";
+titleAspan.innerText = "百靈果";
+var tumbSpan = document.createElement("span");
+tumbSpan.innerText = "👌";
+tumbSpan.style = "font-family: Noto Emoji";
+titleH1DOM.innerHTML = "";
+titleSpanDOM.innerHTML = "";
+if (window.visualViewport.height > window.visualViewport.width) {
+titleH1DOM.appendChild(tumbSpan);
+titleH1DOM.append("非官方");
+titleH1DOM.appendChild(titleAspan);
+titleH1DOM.append("播放室");
+} else {
+titleSpanDOM.appendChild(tumbSpan);
+titleSpanDOM.append("非官方");
+titleSpanDOM.appendChild(titleAspan);
+titleSpanDOM.append("播放室");
+};
 contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 };
 window.onresize = resizeDiv;
+resizeDiv();

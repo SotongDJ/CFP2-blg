@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>非官方百靈果播放室</title>
+  <meta name="color-scheme" content="dark light">
   <!-- Resource -->
   <link rel="stylesheet" href="/icon.css" />
   <link rel="stylesheet" href="/font.css" />
@@ -30,8 +31,9 @@
   <div id="contentdiv" class="centerise"
    style="grid-template-rows:min-content min-content 1fr min-content;">
    <div class="tittlebar">
-    <h1>非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
-    <div class="tagbar">
+    <h1 id="titleH1">非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
+    <div class="tagContent"><div class="tagBar">
+      <span id="titleSpan"></span>
      <span id="unionSpan" class="buttonDiv"></span>
      <span class="buttonDiv"><i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i>
       <a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
@@ -41,7 +43,7 @@
       <a href="https://github.com/SotongDJ/podcast-selector-blg#%E5%B9%AB%E5%8A%A9--help" target="info">指南</a></span>
      <span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
       <a href="https://github.com/SotongDJ/podcast-selector-blg" target="info">關於</a></span>
-    </div>
+    </div></div>
    </div>
    <div id="tagindex" class="tagIndex" style="display: none;">
     <div id="indexbar" class="indexSection"></div>
