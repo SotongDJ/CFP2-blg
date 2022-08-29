@@ -25,6 +25,12 @@
       "purpose": "maskable"
     },
     {
+      "src": "r/monochrome-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "monochrome"
+    },
+    {
       "src": "r/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
