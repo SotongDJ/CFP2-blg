@@ -1,5 +1,4 @@
 {
-  "background_color": "#000000",
   "description": "位於墨玉程市的非官方百靈果播放室",
   "dir": "ltr",
   "display": "standalone",
@@ -8,12 +7,13 @@
   "scope": "/",
   "short_name": "百播",
   "start_url": "/",
+  "background_color": "#000000",
   "theme_color": "#000000",
   "categories": [],
   "screenshots": [],
   "icons": [
     {
-      "src": "r/android-chrome-512x512.png",
+      "src": "r/blg-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
