@@ -10,7 +10,7 @@ jobs:
     runs-on: [self-hosted, linux, x64]
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Running Script
         run: |
           pip install -r requirements.txt
@@ -32,4 +32,4 @@ jobs:
           git push
       - name: Run GitHub pages deployment
         if: success()
-        uses: ./.github/workflows/pages.yml
+        uses: SotongDJ/podcast-selector-blg/.github/workflows/pages
