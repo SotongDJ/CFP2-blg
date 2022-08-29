@@ -19,7 +19,10 @@ padding: 0rem 1rem;
 height: 100vh;
 }
 
-:root {color:hsl(0, 0%, 0%);}
+:root {
+color:hsl(0, 0%, 0%);
+background-color:hsl(0, 0%, 100%);
+}
 a{color:hsl(0, 0%, 20%);}
 .entry:nth-of-type(odd){
 background-color:hsl(200, 92%, 90%);
@@ -47,7 +50,10 @@ d0eefd (200  92%  90%) 005078 (200, 100%, 24%)
 00a0f0 (200 100%  47%)
 */
 @media (prefers-color-scheme: dark) {
-:root {color:hsl(0, 0%, 80%);}
+:root {
+color:hsl(0, 0%, 80%);
+background-color:hsl(0, 0%, 0%);
+}
 a{color:hsl(0, 0%, 100%);}
 .entry:nth-of-type(odd){
 background-color:hsl(200, 100%, 24%);
