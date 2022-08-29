@@ -128,3 +128,7 @@ font-weight: 400;
 }
 .hideBtn.tagBorder{padding:0.25rem 0.5rem;}
 a.tagBorder{padding:0.25rem 0.5rem;}
+.popPiP{
+background-size: contain;
+border-radius:0.5rem;
+}

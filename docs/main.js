@@ -11,6 +11,8 @@ const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
+const popADOM = document.getElementById("popA");
+const popPipDOM = document.getElementById("popPiP");
 const canvasDOM = document.createElement('canvas');
 const videoDOM = document.createElement('video');
 const contentDOM = document.getElementById("contentdiv");
@@ -274,10 +276,10 @@ for (let nub = 0; nub < filteredArr.length; nub++) {
  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
  controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
  buttonDiv.appendChild(controlSpan);
- var downloadSpan = document.createElement('span');
- downloadSpan.className = "tagBorder";
- downloadSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
- buttonDiv.appendChild(downloadSpan);
+//  var downloadSpan = document.createElement('span');
+//  downloadSpan.className = "tagBorder";
+//  downloadSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
+//  buttonDiv.appendChild(downloadSpan);
  for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
  var textTagStr = playlist[tar]["tag"][tagi];
  var addTagStr = drawKeyArr.includes(textTagStr) ? "" : "javascript: void(addTag(\""+textTagStr+"\"))";
@@ -448,22 +450,22 @@ await videoDOM.requestPictureInPicture();
 
 async function updatePiP() {
 canvasDOM.getContext('2d').clearRect(0, 0, 512, 512);
+let nameStr = playlist[storage.getItem('now')]['image'];
 const image = new Image();
 image.crossOrigin = true;
-image.src = [...navigator.mediaSession.metadata.artwork].pop().src;
+image.src = `/p/${nameStr}/512.png`;
 await image.decode();
 canvasDOM.getContext('2d').drawImage(image, 0, 0, 512, 512);
 };
 
 async function mixPlay() {
-var actionPipStr = document.pictureInPictureEnabled?"javascript: void(doPiP())":"";
-var popPipDOM = document.getElementById("popPiP");
-var popSpan = document.createElement('span');
-popSpan.className = "tagBorder";
-var popArr = [fontAwe("fa-solid fa-arrow-up-right-from-square fa-fw")];
-popSpan.appendChild(link(actionPipStr,popArr));
-popSpan.id = "popPiP";
-popPipDOM.replaceWith(popSpan);
+if (document.pictureInPictureEnabled){
+let nameStr = playlist[storage.getItem('now')]['image'];
+popPipDOM.style['background-image'] = `url("/p/${nameStr}/512.png")`;
+popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
+popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
+popADOM.href = "javascript: void(doPiP())";
+}
 await playerDOM.play().then(async () => {
  if (document.pictureInPictureElement) {
  await updatePiP();
