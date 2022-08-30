@@ -1,4 +1,14 @@
 const playlist = {
+"time558":{
+"name": "The KK Show - #149 離島醫生 - 黃京葦醫師",
+"apple": "https://podcasts.apple.com/tw/podcast/the-kk-show-149-%E9%9B%A2%E5%B3%B6%E9%86%AB%E7%94%9F-%E9%BB%83%E4%BA%AC%E8%91%A6%E9%86%AB%E5%B8%AB/id1106847606?i=1000577798324",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTIyNjY0MQ",
+"spotify": "https://open.spotify.com/episode/6wKHUkx0Ki9pVDkbB999Uf",
+"youtube": "https://www.youtube.com/watch?v=cLdWsf1ad4s",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11226641-the-kk-show-149.mp3",
+"tag": ['KK Show']
+},
 "time557":{
 "name": "百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly @Soft White Underbelly",
 "apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E8%A5%BF%E6%96%B9%E5%A5%B3%E6%80%A7%E5%9B%A0%E7%82%BA%E9%9F%93%E5%8A%87%E5%8E%BB%E5%8D%97%E9%9F%93%E6%89%BE%E7%9C%9F%E6%84%9B-%E5%8E%BB%E7%BE%8E%E5%9C%8B%E7%9A%84%E4%B8%AD%E5%9C%8B%E7%95%99%E5%AD%B8%E7%94%9F%E9%8A%B3%E6%B8%9B-%E6%8E%A8%E8%96%A6%E9%A0%BB%E9%81%93-soft-white/id1106847606?i=1000577570498",

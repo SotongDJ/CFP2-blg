@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["The KK Show - #149 離島醫生 - 黃京葦醫師"]
+name = "The KK Show - #149 離島醫生 - 黃京葦醫師"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11226641-the-kk-show-149.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-149-%E9%9B%A2%E5%B3%B6%E9%86%AB%E7%94%9F-%E9%BB%83%E4%BA%AC%E8%91%A6%E9%86%AB%E5%B8%AB/id1106847606?i=1000577798324"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTIyNjY0MQ"
+spotify = "https://open.spotify.com/episode/6wKHUkx0Ki9pVDkbB999Uf"
+youtube = "https://www.youtube.com/watch?v=cLdWsf1ad4s"
+image = "cover.jpg/artwork"
+tag = []
+category = []
+
 ["百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly"]
 name = "百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly @Soft White Underbelly"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11211933-news-soft-white-underbelly.mp3"
