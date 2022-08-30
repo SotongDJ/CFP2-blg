@@ -37,7 +37,7 @@ jobs:
           git config user.signingkey "$KEY"
       - name: commit
         run: |
-          git commit -a -S -m "update rss feed" && git push
+          git commit -a -S -m "update rss feed [bot action]" && git push
   deploy:
     environment:
       name: github-pages
