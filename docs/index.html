@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>非官方百靈果播放室</title>
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  <!-- Resource -->
-  <link rel="stylesheet" href="/icon.css" />
-  <link rel="stylesheet" href="/font.css" />
-  <link rel="stylesheet" href="/main.css" />
-  <!-- Favicon -->
-  <link rel="manifest" href="/main.webmanifest" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/r/apple-touch-icon.png" />
-  <!-- Summary -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@sotongdj">
-  <meta name="twitter:creator" content="@sotongdj">
-  <meta property="og:url" content="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/">
-  <meta property="og:title" content="非官方百靈果播放室">
-  <meta property="og:description" content="位於墨玉程市的非官方百靈果播放室">
-  <meta property="og:image" content="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/r/android-chrome-512x512.png">
-  <meta property="og:image:alt" content="百靈果">
-  <meta property="og:site_name" content="非官方百靈果播放室">
-  <meta property="og:type" content="profile">
-  <meta property="profile:username" content="SotongDJ">
- </head>
- <body onload="resizeDiv()">
-  <div id="contentdiv" class="centerise"
-   style="grid-template-rows:min-content min-content 1fr min-content;">
-   <div class="tittlebar">
-    <h1 id="titleH1">非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
-    <div class="tagContent"><div class="tagBar">
-     <span id="unionSpan" class="buttonDiv"></span>
-     <span class="buttonDiv"><i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i>
-      <a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
-     <span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
-      <a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
-     <span class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
-      <a href="https://github.com/SotongDJ/podcast-selector-blg/wiki" target="info">指南</a></span>
-     <span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
-      <a href="https://github.com/SotongDJ/podcast-selector-blg" target="info">關於</a></span>
-     <span id="titleSpan"></span>
-    </div></div>
-   </div>
-   <div id="tagindex" class="tagIndex" style="display: none;">
-    <div id="indexbar" class="indexSection"></div>
-   </div>
-   <div id="tagcontent" class="tagContent"><div id="tagbar" class="tagBar" style="display: none;">標籤：</div></div>
-   <div class="container"><div id="playlist" class="plain"></div></div>
-   <div class="playerbar">
-    <a id="popA"><div id="popPiP" class="popPiP"></div></a>
-    <audio id="player" controls="true" preload="metadata"></audio>
-   </div>
-  </div>
-  <script src="register.js"></script>
-  <script src="playlist.js"></script>
-  <script src="main.js"></script>
- </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>非官方百靈果播放室</title>
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<!-- Resource -->
+<link rel="stylesheet" href="/icon.css" />
+<link rel="stylesheet" href="/font.css" />
+<link rel="stylesheet" href="/main.css" />
+<!-- Favicon -->
+<link rel="manifest" href="/main.webmanifest" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/r/apple-touch-icon.png" />
+<!-- Summary -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@sotongdj">
+<meta name="twitter:creator" content="@sotongdj">
+<meta property="og:url" content="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/">
+<meta property="og:title" content="非官方百靈果播放室">
+<meta property="og:description" content="位於墨玉程市的非官方百靈果播放室">
+<meta property="og:image" content="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/r/android-chrome-512x512.png">
+<meta property="og:image:alt" content="百靈果">
+<meta property="og:site_name" content="非官方百靈果播放室">
+<meta property="og:type" content="profile">
+<meta property="profile:username" content="SotongDJ">
+</head>
+<body onload="resizeDiv()">
+<div id="contentdiv" class="centerise"
+style="grid-template-rows:min-content min-content 1fr min-content;">
+
+<div class="tittlebar">
+<h1 id="titleH1">非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
+<div class="tagContent">
+<div class="tagBar">
+<span id="unionSpan" class="buttonDiv"></span>
+<span class="buttonDiv"><i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i>
+<a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
+<span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
+<a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
+<span class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
+<a href="https://github.com/SotongDJ/podcast-selector-blg/wiki" target="info">指南</a></span>
+<span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
+<a href="https://github.com/SotongDJ/podcast-selector-blg" target="info">關於</a></span>
+<span id="titleSpan"></span>
+</div>
+</div>
+</div>
+
+<div id="tagindex" class="tagIndex" style="display: none;">
+<div id="indexbar" class="indexSection"></div>
+</div>
+
+<div id="tagcontent" class="tagContent"><div id="tagbar" class="tagBar" style="display: none;">標籤：</div></div>
+
+<div class="container"><div id="playlist" class="plain"></div></div>
+
+<div id="playerbar" class="playerbar">
+<a id="popA"><div id="popPiP" class="popPiP"></div></a>
+<audio id="player" controls="true" preload="metadata"></audio>
+</div>
+
+</div>
+<script src="register.js"></script>
+<script src="playlist.js"></script>
+<script src="main.js"></script>
+</body>
 </html>

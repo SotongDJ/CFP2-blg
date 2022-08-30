@@ -13,7 +13,7 @@
   "screenshots": [],
   "icons": [
     {
-      "src": "r/blg-512.png",
+      "src": "r/maskable-512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
