@@ -30,7 +30,10 @@ await Promise.all(cachesToDelete.map(deleteCache));
 };
 
 const responseHandle = async (event) => {
-const cachedResponse = await caches.open(currentVersion).then(async (cache) => {cache.match(event.request)});
+const cachedResponse = await caches.open(currentVersion).then(async (cache) => {
+const cachedResp = await cache.match(event.request);
+return cachedResp;
+});
 const fetchedResponse = fetch(event.request).then(async (networkResponse) => {
 await putInCache(event.request, networkResponse.clone());
 return networkResponse;
