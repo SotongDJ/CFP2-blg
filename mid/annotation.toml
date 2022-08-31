@@ -8,8 +8,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/6wKHUkx0Ki9pVDkbB999Uf"
 youtube = "https://www.youtube.com/watch?v=cLdWsf1ad4s"
 image = "cover.jpg/artwork"
-tag = ["KK Show"]
-category = ["#節目系列"]
+tag = ["KK Show", "黃京葦醫師"]
+category = ["#節目系列", "醫學", "學者", "時事", "原住民"]
 
 ["百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly"]
 name = "百靈果News｜西方女性因為韓劇去南韓找真愛、去美國的中國留學生銳減、推薦頻道： Soft White Underbelly @Soft White Underbelly"
