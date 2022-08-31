@@ -689,6 +689,11 @@ category = ["政治人物"]
 
 # 學者
 
+["黃京葦醫師"]
+inclusive = ["黃京葦醫師"]
+exclusive = []
+category = ["醫學","學者","時事","原住民"]
+
 ["烏烏醫生"]
 inclusive = ["烏烏醫生"]
 exclusive = []
