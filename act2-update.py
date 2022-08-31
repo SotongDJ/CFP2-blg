@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 from PIL import Image
-import tomlkit, requests, pathlib
+import json, tomlkit, requests, pathlib
 print("Start collection")
 result_dict = dict()
 print("    ----")
@@ -93,29 +93,46 @@ print("    Finish collection: Google")
 print("    ----")
 print("    Start collection: Spotify")
 print("        Feed: grab rss feed")
-spotify_req = requests.get("https://open.spotify.com/show/5Vv32KtHB3peVZ8TeacUty")
-spotify_track = bs(spotify_req.text,"lxml").find("div",{"data-testid":"infinite-scroll-list"})
-# print("        Feed: convert HTML and update dictionary")
-# if pathlib.Path("data/SpotifyPodcast.toml").exists():
-#     spotify_doc = tomlkit.load(open("data/SpotifyPodcast.toml"))
-#     spotify_record = {str(x):str(y) for x,y in spotify_doc.items()}
-# else:
-#     spotify_record = dict()
-# spotify_dict = dict()
-# for unit in spotify_track.find_all('a'):
-#     url = "https://open.spotify.com"+unit['href']
-#     name = unit.findChildren('h4')[0].contents[-1].replace("\n","")
-#     if name in spotify_record.keys():
-#         if spotify_record[name] != url:
-#             print("ERROR: Duplicate entry no consistent, value:", url, spotify_record[name])
-#     else:
-#         spotify_dict[name] = url
-# spotify_dict.update(spotify_record)
-# result_dict["spotify"] = spotify_dict
-with open("data/SpotifyPodcastRequests.html","w") as xmlf:
+secret_docs = tomlkit.load(open("secret.toml"))
+spotify_auth_url = 'https://accounts.spotify.com/api/token'
+spotify_auth_response = requests.post(spotify_auth_url, {
+    'grant_type': 'client_credentials',
+    'client_id': secret_docs['spotify_id'],
+    'client_secret': secret_docs['spotify_secret'],
+})
+spotify_auth_response_dict = spotify_auth_response.json()
+spotify_access_token = spotify_auth_response_dict['access_token']
+spotify_url = "https://api.spotify.com/v1/shows/5Vv32KtHB3peVZ8TeacUty/episodes?market=TW&limit=50"
+spotify_headers = {
+"Accept": "application/json",
+"Content-Type": "application/json",
+"Authorization": "Bearer {}".format(spotify_access_token),
+}
+spotify_req = requests.get(spotify_url, headers=spotify_headers)
+with open("data/SpotifyPodcastRequests.json","w") as xmlf:
     xmlf.write(spotify_req.text)
-# with open("data/SpotifyPodcast.toml","w") as tomlf:
-#     tomlkit.dump(spotify_dict,tomlf)
+print("        Feed: convert JSON and update dictionary")
+spotify_req_dict = json.loads(spotify_req.text)
+if pathlib.Path("data/SpotifyPodcast.toml").exists():
+    spotify_doc = tomlkit.load(open("data/SpotifyPodcast.toml"))
+    spotify_record = {str(x):str(y) for x,y in spotify_doc.items()}
+else:
+    spotify_record = dict()
+spotify_dict = dict()
+for unit_dict in spotify_req_dict["items"]:
+    url = unit_dict['href'].replace("https://api.spotify.com/v1/episodes/","https://open.spotify.com/episode/")
+    name_wt_hidden = unit_dict['name'].replace(" &ZeroWidthSpace;","")
+    name_single = name_wt_hidden.replace("\n","")
+    name = " ".join([n for n in name_single.split(" ") if n != ""])
+    if name in spotify_record.keys():
+        if spotify_record[name] != url:
+            print("ERROR: Duplicate entry no consistent, value:", url, spotify_record[name])
+    else:
+        spotify_dict[name] = url
+spotify_dict.update(spotify_record)
+result_dict["spotify"] = spotify_dict
+with open("data/SpotifyPodcast.toml","w") as tomlf:
+    tomlkit.dump(spotify_dict,tomlf)
 print("    Finish collection: Spotify")
 #
 print("    ----")

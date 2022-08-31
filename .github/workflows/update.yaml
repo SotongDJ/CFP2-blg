@@ -21,8 +21,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Running Script
+        env:
+          SPT_ID: ${{ secrets.spotify_client_id }}
+          SPT_SC: ${{ secrets.spotify_client_secret }}
         run: |
           pip install -r requirements.txt
+          python3 secret.py --spotify_id "$SPT_ID" --spotify_secret "$SPT_SC"
           python3 act2-update.py
           python3 act3-merge.py
           python3 act4-annotate.py > filter.txt
