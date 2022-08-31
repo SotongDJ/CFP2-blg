@@ -95,27 +95,27 @@ print("    Start collection: Spotify")
 print("        Feed: grab rss feed")
 spotify_req = requests.get("https://open.spotify.com/show/5Vv32KtHB3peVZ8TeacUty")
 spotify_track = bs(spotify_req.text,"lxml").find("div",{"data-testid":"infinite-scroll-list"})
-print("        Feed: convert HTML and update dictionary")
-if pathlib.Path("data/SpotifyPodcast.toml").exists():
-    spotify_doc = tomlkit.load(open("data/SpotifyPodcast.toml"))
-    spotify_record = {str(x):str(y) for x,y in spotify_doc.items()}
-else:
-    spotify_record = dict()
-spotify_dict = dict()
-for unit in spotify_track.find_all('a'):
-    url = "https://open.spotify.com"+unit['href']
-    name = unit.findChildren('h4')[0].contents[-1].replace("\n","")
-    if name in spotify_record.keys():
-        if spotify_record[name] != url:
-            print("ERROR: Duplicate entry no consistent, value:", url, spotify_record[name])
-    else:
-        spotify_dict[name] = url
-spotify_dict.update(spotify_record)
-result_dict["spotify"] = spotify_dict
+# print("        Feed: convert HTML and update dictionary")
+# if pathlib.Path("data/SpotifyPodcast.toml").exists():
+#     spotify_doc = tomlkit.load(open("data/SpotifyPodcast.toml"))
+#     spotify_record = {str(x):str(y) for x,y in spotify_doc.items()}
+# else:
+#     spotify_record = dict()
+# spotify_dict = dict()
+# for unit in spotify_track.find_all('a'):
+#     url = "https://open.spotify.com"+unit['href']
+#     name = unit.findChildren('h4')[0].contents[-1].replace("\n","")
+#     if name in spotify_record.keys():
+#         if spotify_record[name] != url:
+#             print("ERROR: Duplicate entry no consistent, value:", url, spotify_record[name])
+#     else:
+#         spotify_dict[name] = url
+# spotify_dict.update(spotify_record)
+# result_dict["spotify"] = spotify_dict
 with open("data/SpotifyPodcastRequests.html","w") as xmlf:
     xmlf.write(spotify_req.text)
-with open("data/SpotifyPodcast.toml","w") as tomlf:
-    tomlkit.dump(spotify_dict,tomlf)
+# with open("data/SpotifyPodcast.toml","w") as tomlf:
+#     tomlkit.dump(spotify_dict,tomlf)
 print("    Finish collection: Spotify")
 #
 print("    ----")
