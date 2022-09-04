@@ -2,7 +2,7 @@
 // - https://github.com/mdn/sw-test
 // - https://developer.chrome.com/docs/workbox/caching-strategies-overview/
 //
-const currentVersion = 'v1.3';
+const currentVersion = 'v1.4';
 
 const addResourcesToCache = async (resources) => {
 const cache = await caches.open(currentVersion);
@@ -10,7 +10,7 @@ await cache.addAll(resources);
 };
 
 const putInCache = async (request, response) => {
-const cache = await caches.open("v1");
+const cache = await caches.open(currentVersion);
 await cache.put(request, response);
 };
   
@@ -53,10 +53,12 @@ event.waitUntil(enableNavigationPreload());
 event.waitUntil(deleteOldCaches());
 });
 
-self.addEventListener('install', (event) => {event.waitUntil(addResourcesToCache(precache_arr));});
+self.addEventListener('install', (event) => {
+event.waitUntil(addResourcesToCache(precache_arr));
+});
 
 self.addEventListener('fetch', async (event) => {
-if (event.request.url.match('^.*(\.mp3)$')) {return false;};
+// if (event.request.url.match('^.*(\.mp3)$')) {return false;};
 if (event.request.url.match('^.*(www\.buzzsprout\.com)*.$')) {return false;};
 await event.respondWith(responseHandle(event));
 });
