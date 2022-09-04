@@ -15,7 +15,7 @@ exclusive = []
 category = ["#節目系列"]
 
 ["Live Podcast"]
-inclusive = ["Live Podcast","KK SHOW","鹿港繞境","1101 台南佈道大會"]
+inclusive = ["Live Podcast","鹿港繞境","1101 台南佈道大會"]
 exclusive = []
 category = ["#節目系列"]
 
@@ -133,8 +133,13 @@ category = ["讀書會"]
 
 # 暫代讀書會
 
+["隱藏版 KK Show"]
+inclusive = ["女演員的互相傷害","笑友會的無情工商","特別來賓：敏迪選讀","我不是泰國人"]
+exclusive = []
+category = ["#節目系列"]
+
 ["暫代讀書會"]
-inclusive = ["不是讀書會","沒有讀書會","Pelosi 來台灣街訪心得","女演員的互相傷害","笑友會的無情工商","2021年台灣十大熱門國際新聞","迪化街Live Podcast！","John Oliver 觀後感","百靈果去新竹","與國際接軌前的閒聊","訂閲 QA","百靈果助念祈福法會","228 佈道大會 Live Podcast 特輯","特別來賓：敏迪選讀"]
+inclusive = ["不是讀書會","沒有讀書會","Pelosi 來台灣街訪心得","女演員的互相傷害","笑友會的無情工商","2021年台灣十大熱門國際新聞","迪化街Live Podcast！","John Oliver 觀後感","百靈果去新竹","與國際接軌前的閒聊","訂閲 QA","百靈果助念祈福法會","228 佈道大會 Live Podcast 特輯","特別來賓：敏迪選讀","我不是泰國人"]
 exclusive = []
 category = ["#節目系列"]
 
@@ -396,6 +401,11 @@ category = ["音樂","原住民","朋友"]
 
 ["阿拉斯"]
 inclusive = ["阿拉斯"]
+exclusive = []
+category = ["Youtuber","音樂","原住民"]
+
+["巴大雄 @東南美娛樂"]
+inclusive = ["巴大雄"]
 exclusive = []
 category = ["Youtuber","音樂","原住民"]
 
