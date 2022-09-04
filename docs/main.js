@@ -411,14 +411,6 @@ const actionHandlers = [
 ['seekto' , (details) => {seakGoTo(details); }],
 ];
 
-for (const [action, handler] of actionHandlers) {
-try {
-navigator.mediaSession.setActionHandler(action, handler);
-} catch (error) {
-console.log(`The media session action "${action}" is not supported yet.`);
-};
-};
-
 canvasDOM.width = canvasDOM.height = 512;
 videoDOM.muted = true;
 
@@ -451,7 +443,15 @@ playPromise.then(_ => {
 if (document.pictureInPictureElement&&(!window.matchMedia('(display-mode: standalone)').matches)) {
 updatePiP();
 if (videoDOM.paused) {videoDOM.play()};
-if ("mediaSession" in navigator) {
+};
+for (const [action, handler] of actionHandlers) {
+try {
+navigator.mediaSession.setActionHandler(action, handler);
+} catch (error) {
+console.log(`The media session action "${action}" is not supported yet.`);
+};
+};
+try {
 navigator.mediaSession.metadata = new MediaMetadata({
 title: playlist[storage.getItem('now')]['name'],
 artist: '百靈果 Podcast',
@@ -466,7 +466,8 @@ artwork: [
 ]
 });
 updatePositionState();
-};
+} catch (error) {
+console.log(`The media session "${action}" not available yet.`);
 };
 }).catch(error => {
 mixPause();
