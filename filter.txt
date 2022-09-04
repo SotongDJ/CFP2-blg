@@ -394,13 +394,10 @@ Start annotation
   Excluded: (0)
     
 [Live Podcast]
-  found in: (7)
+  found in: (4)
     Tough Bobas 首映會 Live Podcast：幕後故事分享、Ken大爆料 ft.
     【百靈果】北京奧運怎麽選的、迪化街Live Podcast！
     228 佈道大會 Live Podcast 特輯：美國民主黨候選人被俄國支持、中國公知被消失、觀衆現場QA
-    The KK SHOW - #51 低調的廣播人- 邵大倫
-    The KK SHOW - 032 吃豬肉的前穆斯林 阿秋
-    THE KK SHOW - 29 國際級電視製作人 Roger
     1101 台南佈道大會、紐時批評大紀元、LGBT逆襲驕傲男孩、三本柱 QA
   Excluded: (0)
     
@@ -748,8 +745,16 @@ Start annotation
     百靈果讀書會 - Born a crime 以母之名 第七章
   Excluded: (0)
     
+[隱藏版 KK Show]
+  found in: (4)
+    女演員的互相傷害 觀眾在旁吃瓜 feat 酸酸 and 許乃涵 涵冷娜
+    喜劇演員開喜劇俱樂部是悲劇的開始嗎？ 笑友會的無情工商 ft. 黃豪平, 微笑丹尼
+    0822 特別來賓：敏迪選讀的敏迪其實很活潑？！
+    我不是泰國人 - 巴大雄
+  Excluded: (0)
+    
 [暫代讀書會]
-  found in: (13)
+  found in: (14)
     0828 閒聊：不是讀書會的自我檢討會
     在Clubhouse 上吵架、跟維吾爾族人聊天後續、沒有讀書會
     Pelosi 來台灣街訪心得，再次遇到統促黨
@@ -763,6 +768,7 @@ Start annotation
     百靈果助念祈福法會 - 001 爲受到疫情影響的人們祈福
     228 佈道大會 Live Podcast 特輯：美國民主黨候選人被俄國支持、中國公知被消失、觀衆現場QA
     0822 特別來賓：敏迪選讀的敏迪其實很活潑？！
+    我不是泰國人 - 巴大雄
   Excluded: (0)
     
 [百靈果到處跑]

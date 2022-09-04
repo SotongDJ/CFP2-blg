@@ -8,8 +8,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/1s0uzKscI2naMAdOy1yIEz"
 youtube = "https://www.youtube.com/watch?v=sb5xt8LKbm4"
 image = "cover.jpg/artwork"
-tag = []
-category = []
+tag = ["隱藏版 KK Show", "暫代讀書會", "巴大雄 @東南美娛樂"]
+category = ["#節目系列", "#節目系列", "Youtuber", "音樂", "原住民"]
 
 ["The KK Show - #149 離島醫生 - 黃京葦醫師"]
 name = "The KK Show - #149 離島醫生 - 黃京葦醫師"
@@ -404,8 +404,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/65FAVoxwTCrjF2EU7dfxA7"
 youtube = "https://www.youtube.com/watch?v=AG1CuTPxQSA"
 image = "cover.jpg/artwork"
-tag = ["暫代讀書會", "酸酸", "涵冷娜"]
-category = ["#節目系列", "喜劇演員", "Youtuber", "Podcaster", "喜劇演員", "文藝"]
+tag = ["隱藏版 KK Show", "暫代讀書會", "酸酸", "涵冷娜"]
+category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "Podcaster", "喜劇演員", "文藝"]
 
 ["Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"]
 name = "Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"
@@ -492,8 +492,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/0XXAOtKav2LCjsShCc6ZcN"
 youtube = "https://www.youtube.com/watch?v=jwNvaWNRrWs&t=1168s"
 image = "cover.jpg/artwork"
-tag = ["暫代讀書會", "微笑丹尼", "黃豪平"]
-category = ["#節目系列", "喜劇演員", "Youtuber", "喜劇演員"]
+tag = ["隱藏版 KK Show", "暫代讀書會", "微笑丹尼", "黃豪平"]
+category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "喜劇演員"]
 
 ["We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"]
 name = "We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"
@@ -3264,8 +3264,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/5M8ChjqXOlm2mDhvEbBLXZ"
 youtube = "https://www.youtube.com/watch?v=JRtKm4c0RYs"
 image = "cover.jpg/artwork"
-tag = ["KK Show", "Live Podcast", "邵大倫"]
-category = ["#節目系列", "#節目系列", "廣播人"]
+tag = ["KK Show", "邵大倫"]
+category = ["#節目系列", "廣播人"]
 
 ["1101 台南佈道大會、紐時批評大紀元、LGBT逆襲驕傲男孩、三本柱 QA"]
 name = "1101 台南佈道大會、紐時批評大紀元、LGBT逆襲驕傲男孩、三本柱 QA"
@@ -3899,8 +3899,8 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-032-%E5%90%83%E8%B1%A
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODQxMDkzMTEx"
 spotify = "https://open.spotify.com/episode/05F2ntwjkpjXQAIirBFC2y"
 image = "cover.jpg/artwork"
-tag = ["KK Show", "Live Podcast", "阿秋"]
-category = ["#節目系列", "#節目系列", "喜劇演員"]
+tag = ["KK Show", "阿秋"]
+category = ["#節目系列", "喜劇演員"]
 
 ["0614 中國大外宣很有錢、好萊塢的自我審查、Black Face 在台灣可以嗎、凱莉轉型飯局妹、推薦劇：做工的人"]
 name = "0614 中國大外宣很有錢、好萊塢的自我審查、Black Face 在台灣可以嗎、凱莉轉型飯局妹、推薦劇：做工的人"
@@ -4005,8 +4005,8 @@ apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-29-%E5%9C%8B%E9%9A%9B
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvODI4MTczODY5"
 spotify = "https://open.spotify.com/episode/1QZDVzLISkV1GedgLo2apm"
 image = "cover.jpg/artwork"
-tag = ["KK Show", "Live Podcast", "Roger"]
-category = ["#節目系列", "#節目系列", "製作人"]
+tag = ["KK Show", "Roger"]
+category = ["#節目系列", "製作人"]
 
 ["0524 香港國安法歐盟建議民主討論、Podcast發大財、推薦電影 末代皇帝、維吾爾族人的困境"]
 name = "0524 香港國安法歐盟建議民主討論、Podcast發大財、推薦電影 末代皇帝、維吾爾族人的困境"
@@ -5090,8 +5090,8 @@ apple = "https://podcasts.apple.com/tw/podcast/0822-%E7%89%B9%E5%88%A5%E4%BE%86%
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNjY5NDIwNjQ3"
 spotify = "https://open.spotify.com/episode/09iO59pl0St1tSeY77BpD0"
 image = "cover.jpg/artwork"
-tag = ["暫代讀書會", "敏迪 @敏迪選讀"]
-category = ["#節目系列", "時事", "Podcaster"]
+tag = ["隱藏版 KK Show", "暫代讀書會", "敏迪 @敏迪選讀"]
+category = ["#節目系列", "#節目系列", "時事", "Podcaster"]
 
 ["0818 Facebook付錢找人來聽你的語音訊息、不要再吃什麼阿膠了，那是驢子你知道嗎？、推薦Podcast：敏迪"]
 name = "0818 Facebook付錢找人來聽你的語音訊息、不要再吃什麼阿膠了，那是驢子你知道嗎？、推薦Podcast：敏迪"
