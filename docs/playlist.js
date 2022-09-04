@@ -1,4 +1,14 @@
 const playlist = {
+"time560":{
+"name": "百靈果News｜叫助理去首爾約砲是違法的嗎？ 烏克蘭的夏令營、聯合國新疆報告出爐、推薦書：World's Worst Assistant @Team Coco",
+"apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E5%8F%AB%E5%8A%A9%E7%90%86%E5%8E%BB%E9%A6%96%E7%88%BE%E7%B4%84%E7%A0%B2%E6%98%AF%E9%81%95%E6%B3%95%E7%9A%84%E5%97%8E-%E7%83%8F%E5%85%8B%E8%98%AD%E7%9A%84%E5%A4%8F%E4%BB%A4%E7%87%9F-%E8%81%AF%E5%90%88%E5%9C%8B%E6%96%B0%E7%96%86%E5%A0%B1%E5%91%8A%E5%87%BA%E7%88%90-%E6%8E%A8%E8%96%A6%E6%9B%B8-worlds/id1106847606?i=1000578318300",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI1NTUwMQ",
+"spotify": "https://open.spotify.com/episode/336kZ1JVo3InAuN6vvcGNE",
+"youtube": "https://www.youtube.com/watch?v=vyt9RW2pKzQ",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11255501-news-world-s-worst-assistant.mp3",
+"tag": ['百靈果 NEWS']
+},
 "time559":{
 "name": "我不是泰國人 - 巴大雄 @東南美娛樂",
 "apple": "https://podcasts.apple.com/tw/podcast/%E6%88%91%E4%B8%8D%E6%98%AF%E6%B3%B0%E5%9C%8B%E4%BA%BA-%E5%B7%B4%E5%A4%A7%E9%9B%84/id1106847606?i=1000578041045",
