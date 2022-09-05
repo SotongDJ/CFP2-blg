@@ -155,6 +155,10 @@ white-space:nowrap;
 height:min-content;
 overflow:auto;
 }
+.funcContent{
+white-space:nowrap;
+height:min-content;
+}
 .tagIndex{
 white-space:nowrap;
 overflow:auto;

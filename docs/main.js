@@ -529,7 +529,7 @@ var okSpan = document.createElement("span");
 okSpan.className = "mirror";
 okSpan.innerText = "👌";
 targetDOM.appendChild(okSpan);
-targetDOM.append(" 非官方");
+targetDOM.append(" BLG 非官方");
 targetDOM.appendChild(titleAspan);
 targetDOM.append("播放室");
 // contentDOM.style["height"] = (window.visualViewport.height-20)+"px";

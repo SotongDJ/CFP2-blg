@@ -10,6 +10,8 @@
   >
   > Most browsers **choose** to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
 
+- [https://trth.nl/?blg](https://trth.nl/?blg)
+
 為了更方便的重聽百靈果，所以寫了一個網站以篩選想聽的集數。
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
@@ -51,7 +53,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## TO DO
 
-- 離線播放
 - ~~自動更新集數~~（已完成）
+- 離線播放
 - 自行繪製播放列
 - 可自行調整播放對列
