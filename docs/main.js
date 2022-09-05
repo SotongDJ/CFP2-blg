@@ -534,8 +534,8 @@ targetDOM.appendChild(titleAspan);
 targetDOM.append("播放室");
 // contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 if (playerDOM.offsetHeight==0) {
-playerDOM.style["height"] = "5vh";
-playerBarDOM.style["height"] = "5vh";
+playerDOM.style["height"] = "10vh";
+playerBarDOM.style["height"] = "10vh";
 } else {
 playerBarDOM.style["height"] = playerDOM.offsetHeight+"px";
 };
