@@ -4837,7 +4837,7 @@ const playlist = {
 "youtube": "",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10531038-0704-bonus.mp3",
-"tag": ['馬力歐', 'Podcaster']
+"tag": ['隱藏版 KK Show', '馬力歐', 'Podcaster']
 },
 "time76":{
 "name": "讀書會：陳澄波密碼作者 柯宗明先生 訪談",

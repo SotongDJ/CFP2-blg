@@ -5244,8 +5244,8 @@ apple = "https://podcasts.apple.com/tw/podcast/0704-bonus-%E5%8F%AA%E6%9C%89%E5%
 google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/dGFnOnNvdW5kY2xvdWQsMjAxMDp0cmFja3MvNjQ2MDI3MDAy"
 spotify = "https://open.spotify.com/episode/24QCdjG5Cb2bf0FXZZkIHn"
 image = "cover.jpg/artwork"
-tag = ["馬力歐"]
-category = ["Podcaster"]
+tag = ["隱藏版 KK Show", "馬力歐"]
+category = ["#節目系列", "Podcaster"]
 
 ["讀書會：陳澄波密碼作者 柯宗明先生 訪談"]
 name = "讀書會：陳澄波密碼作者 柯宗明先生 訪談"
