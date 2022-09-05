@@ -377,7 +377,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=AG1CuTPxQSA",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10763534-feat-and.mp3",
-"tag": ['隱藏版 KK Show', '暫代讀書會', '酸酸', '涵冷娜', 'Podcaster', 'Youtuber', '喜劇演員', '文藝']
+"tag": ['隱藏版 KK Show', '暫代讀書會', '酸酸', '涵冷娜', 'Podcaster', 'Youtuber', '喜劇演員', '文藝', '演員']
 },
 "time522":{
 "name": "Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7",
@@ -457,7 +457,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=jwNvaWNRrWs&t=1168s",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10684190-ft.mp3",
-"tag": ['隱藏版 KK Show', '暫代讀書會', '微笑丹尼', '黃豪平', 'Youtuber', '喜劇演員']
+"tag": ['隱藏版 KK Show', '暫代讀書會', '微笑丹尼', '黃豪平', 'Youtuber', '喜劇演員', '廣播人', '藝人']
 },
 "time514":{
 "name": "We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5",
@@ -827,7 +827,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=IEOyozHKAU0",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530637-the-kk-show-123-chapman.mp3",
-"tag": ['KK Show', 'Chapman杜汶澤', '企業家', '演員', '藝人']
+"tag": ['KK Show', 'Chapman杜汶澤', '企業家', '文藝', '演員']
 },
 "time477":{
 "name": "0313 聯合國試圖掩蓋真相、全球油價暴漲、RIP 西藏歌手 才旺羅布",
@@ -1497,7 +1497,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=xZO2mcNyDQ8&t=8s",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530704-the-kk-show-102.mp3",
-"tag": ['KK Show', '黃秋生', '演員', '藝人']
+"tag": ['KK Show', '黃秋生', '文藝', '演員']
 },
 "time410":{
 "name": "1010 中國瘋狂處決CIA協力者、澳洲把難民問題甩鍋給別人處理、推薦： The Closer by Dave Chappelle",
@@ -2927,7 +2927,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=5pigna37j00",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530847-the-kk-show-53.mp3",
-"tag": ['KK Show', '黃豪平', '喜劇演員']
+"tag": ['KK Show', '黃豪平', 'Youtuber', '喜劇演員', '廣播人', '藝人']
 },
 "time267":{
 "name": "1115 去希臘當Youtuber是個好時機、俄羅斯變成和平使者、推薦漫畫跟推薦劇！",
@@ -3287,7 +3287,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=dtjJo04O3Xs",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530883-the-kk-show-41-esther-chen.mp3",
-"tag": ['KK Show', 'EstherChen', '喜劇演員', '演員']
+"tag": ['KK Show', 'EstherChen', '喜劇演員', '文藝', '演員']
 },
 "time231":{
 "name": "0816 美國在聯合國沒朋友了？、泰國學生上街抗議、暈船的龜山島牛奶海之旅",
@@ -4047,7 +4047,7 @@ const playlist = {
 "youtube": "",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530959-the-kk-show-015-howard.mp3",
-"tag": ['KK Show', 'Howard', '朋友']
+"tag": ['KK Show', 'Howard', 'Podcaster', '專業人士', '朋友']
 },
 "time155":{
 "name": "0223 中國驅逐美國記者、德國極右派槍擊案、回應中國聽衆留言",
@@ -4377,7 +4377,7 @@ const playlist = {
 "youtube": "",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/10530992-the-kk-show-003-2020.mp3",
-"tag": ['KK Show', '黃豪平', '喜劇演員']
+"tag": ['KK Show', '黃豪平', 'Youtuber', '喜劇演員', '廣播人', '藝人']
 },
 "time122":{
 "name": "1201 Uber害我戒不了酒、抖音抖不掉北京的包袱、推薦歌手 Billie Eilish",
@@ -5653,7 +5653,7 @@ const tag_class = {
 "權樂": ['喜劇演員', '演員', '文藝'],
 "黃逸豪": ['喜劇演員'],
 "艾董": ['喜劇演員'],
-"黃豪平": ['喜劇演員'],
+"黃豪平": ['喜劇演員', '廣播人', '藝人', 'Youtuber'],
 "TimChen": ['喜劇演員'],
 "東區德": ['喜劇演員'],
 "阿秋": ['喜劇演員'],
@@ -5661,8 +5661,8 @@ const tag_class = {
 "么么": ['喜劇演員'],
 "怡岑": ['喜劇演員'],
 "酸酸": ['喜劇演員', 'Youtuber', 'Podcaster'],
-"涵冷娜": ['喜劇演員', '文藝'],
-"EstherChen": ['喜劇演員', '演員'],
+"涵冷娜": ['喜劇演員', '演員', '文藝'],
+"EstherChen": ['喜劇演員', '演員', '文藝'],
 "呱吉": ['喜劇演員', 'Youtuber', '政治人物'],
 "Jim": ['喜劇演員', 'Youtuber'],
 "龍龍": ['喜劇演員', 'Youtuber'],
@@ -5690,8 +5690,8 @@ const tag_class = {
 "王彩樺": ['藝人', '音樂'],
 "桃子A1J": ['音樂'],
 "珂拉琪Collage": ['音樂'],
-"Chapman杜汶澤": ['演員', '藝人', '企業家'],
-"黃秋生": ['演員', '藝人'],
+"Chapman杜汶澤": ['演員', '企業家', '文藝'],
+"黃秋生": ['演員', '文藝'],
 "台南人劇團": ['文藝', '劇場'],
 "蕭東意": ['文藝', '演員', '劇場', '喜劇演員'],
 "布拉瑞揚 @布拉瑞揚舞團": ['文藝', '舞蹈'],
@@ -5763,7 +5763,7 @@ const tag_class = {
 "妍言": ['運動'],
 "Hito大聯盟": ['運動'],
 "Jack": ['運動'],
-"Howard": ['朋友'],
+"Howard": ['朋友', 'Podcaster', '專業人士'],
 "Ivan": ['朋友'],
 "ShaoYong": ['朋友'],
 "趙哥": ['朋友'],
@@ -5789,13 +5789,13 @@ const class_tag = {
 "暫代讀書會": ['百靈果到處跑', '百靈果之友', '免費教你如何做Podcast', '八角籠', 'Clubhouse企劃'],
 "#事件備註": ['日本遶境', '裴洛西訪台事件', '國傳司事件', '紐時集資事件', '五月天事件'],
 "喜劇演員": ['樂樂法利', '陳大天', '小歐', '老K', '妍霏', '學仁', 'Social', '歐馬克', '微笑丹尼', '博恩', '大可愛', '權樂', '黃逸豪', '艾董', '黃豪平', 'TimChen', '東區德', '阿秋', '賀瓏', '么么', '怡岑', '酸酸', '涵冷娜', 'EstherChen', '呱吉', 'Jim', '龍龍', '蕭東意'],
-"Youtuber": ['樂樂法利', '小歐', '微笑丹尼', '賀瓏', '酸酸', '呱吉', 'Jim', '龍龍', '范琪斐', '志祺 @志祺七七', '好和弦 @NiceChord', '阿滴', 'Joeman', '黃大謙', 'ChinaMac', '邱grr', '泥泥學姐', '盧卡斯 @BBK Networ', '歷史哥', '阿拉斯', '巴大雄 @東南美娛樂'],
-"藝人": ['陳大天', '王彩樺', 'Chapman杜汶澤', '黃秋生', '陳沂'],
+"Youtuber": ['樂樂法利', '小歐', '微笑丹尼', '黃豪平', '賀瓏', '酸酸', '呱吉', 'Jim', '龍龍', '范琪斐', '志祺 @志祺七七', '好和弦 @NiceChord', '阿滴', 'Joeman', '黃大謙', 'ChinaMac', '邱grr', '泥泥學姐', '盧卡斯 @BBK Networ', '歷史哥', '阿拉斯', '巴大雄 @東南美娛樂'],
+"藝人": ['陳大天', '黃豪平', '王彩樺', '陳沂'],
 "企業家": ['Social', 'Chapman杜汶澤', '葉丙成', 'Jay', '顧立楷', '林榮基'],
-"Podcaster": ['歐馬克', '酸酸', '范琪斐', '敏迪 @敏迪選讀', '志祺 @志祺七七', '好和弦 @NiceChord', '劉珞亦 @法律白話文', '楊貴智 @法律白話文', '唐綺陽', '簡少年', '台灣通勤第一品牌', '股癌', '瑞典劉先生', 'Firstory', '馬力歐', '吳淡如'],
-"廣播人": ['歐馬克', '李律', '邵大倫', '小潘', '寶拉', '吳淡如'],
-"演員": ['權樂', 'EstherChen', 'Chapman杜汶澤', '黃秋生', '蕭東意'],
-"文藝": ['權樂', '涵冷娜', '台南人劇團', '蕭東意', '布拉瑞揚 @布拉瑞揚舞團', '孫翠鳳', '真蓉'],
+"Podcaster": ['歐馬克', '酸酸', '范琪斐', '敏迪 @敏迪選讀', '志祺 @志祺七七', '好和弦 @NiceChord', '劉珞亦 @法律白話文', '楊貴智 @法律白話文', '唐綺陽', '簡少年', '台灣通勤第一品牌', '股癌', '瑞典劉先生', 'Firstory', '馬力歐', '吳淡如', 'Howard'],
+"廣播人": ['歐馬克', '黃豪平', '李律', '邵大倫', '小潘', '寶拉', '吳淡如'],
+"演員": ['權樂', '涵冷娜', 'EstherChen', 'Chapman杜汶澤', '黃秋生', '蕭東意'],
+"文藝": ['權樂', '涵冷娜', 'EstherChen', 'Chapman杜汶澤', '黃秋生', '台南人劇團', '蕭東意', '布拉瑞揚 @布拉瑞揚舞團', '孫翠鳳', '真蓉'],
 "政治人物": ['呱吉', '陳柏惟', '林昶佐', '吳怡農', '李有宜', '蔣萬安', '范雲', '于北辰', '林智堅', '郭書成'],
 "時事": ['范琪斐', '敏迪 @敏迪選讀', '瑞典劉先生', '陳秋實', 'Jason劉致昕 @報導者', 'Byun秉昀', 'SamsonEllis', '吳品瑜', '印度尤', 'Naomi O’Leary', 'Kevin', 'Mario', '黃京葦醫師', '烏烏醫生', 'Chiels', '李淳', 'Dr.LeanneWu', 'Dr.JustinYang', '葉耀元教授', '陳小雀教授', '張賢龢博士', '單信瑜教授', '高智雄醫檢師', '美國台灣觀測站', 'IORG', '沈伯洋（助理）教授', '張五岳', 'LukeMartin'],
 "音樂": ['阿爆', '阿拉斯', '巴大雄 @東南美娛樂', '陳零九', 'Kimberley陳芳語', '王彩樺', '桃子A1J', '珂拉琪Collage', '林昶佐'],
@@ -5804,7 +5804,7 @@ const class_tag = {
 "色色": ['社畜', '娃娃', '石巴朝', 'Niki'],
 "劇場": ['台南人劇團', '蕭東意'],
 "舞蹈": ['布拉瑞揚 @布拉瑞揚舞團'],
-"專業人士": ['劉珞亦 @法律白話文', '楊貴智 @法律白話文', '楊杰凱', '黑嘉嘉'],
+"專業人士": ['劉珞亦 @法律白話文', '楊貴智 @法律白話文', 'Howard', '楊杰凱', '黑嘉嘉'],
 "律師": ['劉珞亦 @法律白話文', '楊貴智 @法律白話文'],
 "導演": ['周冠威', '阮鳳儀'],
 "製作人": ['汪怡昕', '龍哥', 'Roger'],

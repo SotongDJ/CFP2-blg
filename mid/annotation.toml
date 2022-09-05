@@ -416,7 +416,7 @@ spotify = "https://open.spotify.com/episode/65FAVoxwTCrjF2EU7dfxA7"
 youtube = "https://www.youtube.com/watch?v=AG1CuTPxQSA"
 image = "cover.jpg/artwork"
 tag = ["隱藏版 KK Show", "暫代讀書會", "酸酸", "涵冷娜"]
-category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "Podcaster", "喜劇演員", "文藝"]
+category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "Podcaster", "喜劇演員", "演員", "文藝"]
 
 ["Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"]
 name = "Why DO TAIWANESE people love TRAVELLING? ... THE STIR EP. 7"
@@ -504,7 +504,7 @@ spotify = "https://open.spotify.com/episode/0XXAOtKav2LCjsShCc6ZcN"
 youtube = "https://www.youtube.com/watch?v=jwNvaWNRrWs&t=1168s"
 image = "cover.jpg/artwork"
 tag = ["隱藏版 KK Show", "暫代讀書會", "微笑丹尼", "黃豪平"]
-category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "喜劇演員"]
+category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "喜劇演員", "廣播人", "藝人", "Youtuber"]
 
 ["We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"]
 name = "We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"
@@ -911,7 +911,7 @@ spotify = "https://open.spotify.com/episode/0HzXVCTGtn2oAAtr4lK1VY"
 youtube = "https://www.youtube.com/watch?v=IEOyozHKAU0"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "Chapman杜汶澤"]
-category = ["#節目系列", "演員", "藝人", "企業家"]
+category = ["#節目系列", "演員", "企業家", "文藝"]
 
 ["0313 聯合國試圖掩蓋真相、全球油價暴漲、RIP 西藏歌手 才旺羅布"]
 name = "0313 聯合國試圖掩蓋真相、全球油價暴漲、RIP 西藏歌手 才旺羅布"
@@ -1648,7 +1648,7 @@ spotify = "https://open.spotify.com/episode/2YKtlgRXbE6hD5afdsfF3X"
 youtube = "https://www.youtube.com/watch?v=xZO2mcNyDQ8&t=8s"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "黃秋生"]
-category = ["#節目系列", "演員", "藝人"]
+category = ["#節目系列", "演員", "文藝"]
 
 ["1010 中國瘋狂處決CIA協力者、澳洲把難民問題甩鍋給別人處理、推薦： The Closer by Dave Chappelle"]
 name = "1010 中國瘋狂處決CIA協力者、澳洲把難民問題甩鍋給別人處理、推薦： The Closer by Dave Chappelle"
@@ -3221,7 +3221,7 @@ spotify = "https://open.spotify.com/episode/3tY5KZItsOOmLixBhUTwt9"
 youtube = "https://www.youtube.com/watch?v=5pigna37j00"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "黃豪平"]
-category = ["#節目系列", "喜劇演員"]
+category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber"]
 
 ["1115 去希臘當Youtuber是個好時機、俄羅斯變成和平使者、推薦漫畫跟推薦劇！"]
 name = "1115 去希臘當Youtuber是個好時機、俄羅斯變成和平使者、推薦漫畫跟推薦劇！"
@@ -3617,7 +3617,7 @@ spotify = "https://open.spotify.com/episode/2aC518nDrXbKaA1zQH8nHE"
 youtube = "https://www.youtube.com/watch?v=dtjJo04O3Xs"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "EstherChen"]
-category = ["#節目系列", "喜劇演員", "演員"]
+category = ["#節目系列", "喜劇演員", "演員", "文藝"]
 
 ["0816 美國在聯合國沒朋友了？、泰國學生上街抗議、暈船的龜山島牛奶海之旅"]
 name = "0816 美國在聯合國沒朋友了？、泰國學生上街抗議、暈船的龜山島牛奶海之旅"
@@ -4426,7 +4426,7 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/6kE7SDx9hLhg7G5MjTAEBp"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "Howard"]
-category = ["#節目系列", "朋友"]
+category = ["#節目系列", "朋友", "Podcaster", "專業人士"]
 
 ["0223 中國驅逐美國記者、德國極右派槍擊案、回應中國聽衆留言"]
 name = "0223 中國驅逐美國記者、德國極右派槍擊案、回應中國聽衆留言"
@@ -4770,7 +4770,7 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/7lxzAF6gQ5mF2YjcjD9t2x"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "黃豪平"]
-category = ["#節目系列", "喜劇演員"]
+category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber"]
 
 ["1201 Uber害我戒不了酒、抖音抖不掉北京的包袱、推薦歌手 Billie Eilish"]
 name = "1201 Uber害我戒不了酒、抖音抖不掉北京的包袱、推薦歌手 Billie Eilish"
