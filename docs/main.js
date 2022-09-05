@@ -539,5 +539,9 @@ playerBarDOM.style["height"] = "10vh";
 } else {
 playerBarDOM.style["height"] = playerDOM.offsetHeight+"px";
 };
+if (popPipDOM.style['background-image']) {
+popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
+popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
+};
 };window.onresize = resizeDiv;
 resizeDiv();
