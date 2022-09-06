@@ -2,19 +2,19 @@
 
 位於[墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)的非官方[百靈果](https://www.bailingguonews.com/)播放室
 
-## 網站 | Website
-
-- [https://👌.深海墨客.台灣/](https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/)
-
-  > 為了避免網路釣魚，大部分瀏覽器**拒絕**在域名上顯示表情符號（“👌” -> “xn--xp8h”）
-  >
-  > Most browsers **choose** to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
-
-- [https://trth.nl/?blg](https://trth.nl/?blg)
-
 為了更方便的重聽百靈果，所以寫了一個網站以篩選想聽的集數。
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
+
+## 網站 | Website
+
+- 完整網址：[https://👌.深海墨客.台灣/](https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/)
+
+  > 為了避免網路釣魚，大部分瀏覽器**拒絕**在域名上顯示表情符號（“👌”），而是以 Punycode（“xn--xp8h”）的形式顯示
+  >
+  > Most browsers **choose** to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
+
+- 短網址：[https://trth.nl/?blg](https://trth.nl/?blg)
 
 ## 特點 | Features
 
@@ -30,9 +30,10 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - 本服務無收集任何使用者資訊 | No user's information is collected at website
 
-  - 本網站屬於靜態網站。同時也沒有使用任何追蹤腳本
-  - 本網站託管在 GitHub Pages 上
-  - 依照 GitHub Pages 的揭露，瀏覽本網站時 GitHub 會收集用戶的 IP 地址
+  - 本站屬於靜態網站
+  - 本站沒有使用任何追蹤腳本
+  - 本站託管在 GitHub Pages 上
+  - 依照 GitHub Pages 的揭露，瀏覽本站時 GitHub 會收集用戶的 IP 地址以作安全之用
 
     > "When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not. For more information about GitHub's security practices, see GitHub Privacy Statement." - [Data collection - About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection)
 
@@ -45,7 +46,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - 無法離線播放 | No offline playback (right now)
 
-  - 由於用網頁瀏覽器緩存 podcast 音檔的機制過於複雜，目前仍不支援離線播放的功能
+  - 由於用網頁瀏覽器緩存 podcast 音檔的機制複雜，目前仍不支援離線播放的功能
 
 ## 幫助 | Help
 
