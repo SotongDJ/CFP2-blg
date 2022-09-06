@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["The KK Show - #150 拿出30億反共的男人 - 曹興誠"]
+name = "The KK Show - #150 拿出30億反共的男人 - 曹興誠"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11262919-the-kk-show-150-30.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-150-%E6%8B%BF%E5%87%BA30%E5%84%84%E5%8F%8D%E5%85%B1%E7%9A%84%E7%94%B7%E4%BA%BA-%E6%9B%B9%E8%88%88%E8%AA%A0/id1106847606?i=1000578545829"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI2MjkxOQ"
+spotify = "https://open.spotify.com/episode/25QFPLdkGdhxk8cqTvVOuR"
+youtube = "https://www.youtube.com/watch?v=NWFFdNN0ssQ"
+image = "cover.jpg/artwork"
+tag = ["KK Show"]
+category = ["#節目系列"]
+
 ["百靈果News｜叫助理去首爾約砲是違法的嗎？ 烏克蘭的夏令營、聯合國新疆報告出爐、推薦書：World's Worst Assistant"]
 name = "百靈果News｜叫助理去首爾約砲是違法的嗎？ 烏克蘭的夏令營、聯合國新疆報告出爐、推薦書：World's Worst Assistant @Team Coco"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11255501-news-world-s-worst-assistant.mp3"

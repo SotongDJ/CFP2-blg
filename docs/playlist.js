@@ -1,4 +1,14 @@
 const playlist = {
+"time561":{
+"name": "The KK Show - #150 拿出30億反共的男人 - 曹興誠",
+"apple": "https://podcasts.apple.com/tw/podcast/the-kk-show-150-%E6%8B%BF%E5%87%BA30%E5%84%84%E5%8F%8D%E5%85%B1%E7%9A%84%E7%94%B7%E4%BA%BA-%E6%9B%B9%E8%88%88%E8%AA%A0/id1106847606?i=1000578545829",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI2MjkxOQ",
+"spotify": "https://open.spotify.com/episode/25QFPLdkGdhxk8cqTvVOuR",
+"youtube": "https://www.youtube.com/watch?v=NWFFdNN0ssQ",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11262919-the-kk-show-150-30.mp3",
+"tag": ['KK Show']
+},
 "time560":{
 "name": "百靈果News｜叫助理去首爾約砲是違法的嗎？ 烏克蘭的夏令營、聯合國新疆報告出爐、推薦書：World's Worst Assistant @Team Coco",
 "apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E5%8F%AB%E5%8A%A9%E7%90%86%E5%8E%BB%E9%A6%96%E7%88%BE%E7%B4%84%E7%A0%B2%E6%98%AF%E9%81%95%E6%B3%95%E7%9A%84%E5%97%8E-%E7%83%8F%E5%85%8B%E8%98%AD%E7%9A%84%E5%A4%8F%E4%BB%A4%E7%87%9F-%E8%81%AF%E5%90%88%E5%9C%8B%E6%96%B0%E7%96%86%E5%A0%B1%E5%91%8A%E5%87%BA%E7%88%90-%E6%8E%A8%E8%96%A6%E6%9B%B8-worlds/id1106847606?i=1000578318300",
