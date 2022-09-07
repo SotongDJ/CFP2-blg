@@ -1,65 +1,65 @@
 {
-  "description": "位於墨玉程市的 BLG 非官方百靈果播放室",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "BLG 非官方百靈果播放室",
-  "orientation": "any",
-  "scope": "/",
-  "short_name": "BLG",
-  "start_url": "/",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "categories": [],
-  "screenshots": [],
-  "icons": [
-    {
-      "src": "r/maskable-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any"
-    },
-    {
-      "src": "r/maskable-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "maskable"
-    },
-    {
-      "src": "r/monochrome-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "monochrome"
-    },
-    {
-      "src": "r/android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any"
-    },
-    {
-      "src": "r/apple-touch-icon.png",
-      "type": "image/png",
-      "sizes": "180x180",
-      "purpose": "any"
-    },
-    {
-      "src": "r/favicon-32x32.png",
-      "type": "image/png",
-      "sizes": "32x32",
-      "purpose": "any"
-    },
-    {
-      "src": "r/favicon-16x16.png",
-      "type": "image/png",
-      "sizes": "16x16",
-      "purpose": "any"
-    },
-    {
-      "src": "favicon.ico",
-      "type": "image/x-icon",
-      "sizes": "16x16 24x24 32x32 64x64",
-      "purpose": "any"
-    }
-  ],
-  "shortcuts": []
+"description": "位於墨玉程市的 BLG 非官方百靈果播放室",
+"dir": "ltr",
+"display": "standalone",
+"name": "BLG 非官方百靈果播放室",
+"orientation": "any",
+"scope": "/",
+"short_name": "BLG",
+"start_url": "/",
+"background_color": "#000000",
+"theme_color": "#000000",
+"categories": [],
+"screenshots": [],
+"icons": [
+{
+"src": "r/maskable-512.png",
+"type": "image/png",
+"sizes": "512x512",
+"purpose": "any"
+},
+{
+"src": "r/maskable-512.png",
+"type": "image/png",
+"sizes": "512x512",
+"purpose": "maskable"
+},
+{
+"src": "r/monochrome-512.png",
+"type": "image/png",
+"sizes": "512x512",
+"purpose": "monochrome"
+},
+{
+"src": "r/android-chrome-192x192.png",
+"type": "image/png",
+"sizes": "192x192",
+"purpose": "any"
+},
+{
+"src": "r/apple-touch-icon.png",
+"type": "image/png",
+"sizes": "180x180",
+"purpose": "any"
+},
+{
+"src": "r/favicon-32x32.png",
+"type": "image/png",
+"sizes": "32x32",
+"purpose": "any"
+},
+{
+"src": "r/favicon-16x16.png",
+"type": "image/png",
+"sizes": "16x16",
+"purpose": "any"
+},
+{
+"src": "favicon.ico",
+"type": "image/x-icon",
+"sizes": "64x64",
+"purpose": "any"
+}
+],
+"shortcuts": []
 }

@@ -42,11 +42,8 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
   - 本站使用瀏覽器的本地緩存空間以暫存使用者目前播放的隊列和集數
   - 無法轉移到其他瀏覽器或設備
 
-- 跟隨系統設定調整黑夜模式 | Follow system dark mode settings
-
-- 無法離線播放 | No offline playback (right now)
-
-  - 由於用網頁瀏覽器緩存 podcast 音檔的機制複雜，目前仍不支援離線播放的功能
+- 可隨系統設定調整黑夜模式 | Follow system dark mode settings
+- 可以子母畫面控制播放控制（公開測試中）| Able to use Picture-in-picture mode control playback (Public BETA)
 
 ## 幫助 | Help
 
@@ -56,5 +53,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - ~~自動更新集數~~（已完成）
 - 離線播放
+  - 用網頁瀏覽器緩存 podcast 音檔的機制複雜，目前仍不支援離線播放的功能
+- 修正火狐瀏覽器（Firefox）的顯示風格
 - 自行繪製播放列
 - 可自行調整播放對列
