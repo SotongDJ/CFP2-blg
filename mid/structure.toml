@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["【週二夜現場】曹興誠現場QA"]
+name = "【週二夜現場】曹興誠現場QA"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11276846-qa.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/%E9%80%B1%E4%BA%8C%E5%A4%9C%E7%8F%BE%E5%A0%B4-%E6%9B%B9%E8%88%88%E8%AA%A0%E7%8F%BE%E5%A0%B4qa/id1106847606?i=1000578830775"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI3Njg0Ng"
+spotify = "https://open.spotify.com/episode/5osASVJXEAj3ewPYwjhf3d"
+youtube = "https://www.youtube.com/watch?v=1HjOdxk0410"
+image = "cover.jpg/artwork"
+tag = []
+category = []
+
 ["The KK Show - #150 拿出30億反共的男人 - 曹興誠"]
 name = "The KK Show - #150 拿出30億反共的男人 - 曹興誠"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11262919-the-kk-show-150-30.mp3"

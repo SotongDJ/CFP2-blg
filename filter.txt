@@ -1008,6 +1008,12 @@ Start annotation
     The KK Show - 010 巴塞隆納的傳教士 - Angel
   Excluded: (1)
     The KK Show - 18 台語講的比印度話好的Angeli
+[曹興誠]
+  found in: (2)
+    【週二夜現場】曹興誠現場QA
+    The KK Show - #150 拿出30億反共的男人 - 曹興誠
+  Excluded: (0)
+    
 [顧立楷]
   found in: (2)
     The KK Show - #71 Soundon前老闆 - 顧立楷

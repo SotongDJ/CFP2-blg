@@ -1,4 +1,14 @@
 const playlist = {
+"time562":{
+"name": "【週二夜現場】曹興誠現場QA",
+"apple": "https://podcasts.apple.com/tw/podcast/%E9%80%B1%E4%BA%8C%E5%A4%9C%E7%8F%BE%E5%A0%B4-%E6%9B%B9%E8%88%88%E8%AA%A0%E7%8F%BE%E5%A0%B4qa/id1106847606?i=1000578830775",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI3Njg0Ng",
+"spotify": "https://open.spotify.com/episode/5osASVJXEAj3ewPYwjhf3d",
+"youtube": "https://www.youtube.com/watch?v=1HjOdxk0410",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11276846-qa.mp3",
+"tag": ['曹興誠', '企業家']
+},
 "time561":{
 "name": "The KK Show - #150 拿出30億反共的男人 - 曹興誠",
 "apple": "https://podcasts.apple.com/tw/podcast/the-kk-show-150-%E6%8B%BF%E5%87%BA30%E5%84%84%E5%8F%8D%E5%85%B1%E7%9A%84%E7%94%B7%E4%BA%BA-%E6%9B%B9%E8%88%88%E8%AA%A0/id1106847606?i=1000578545829",
