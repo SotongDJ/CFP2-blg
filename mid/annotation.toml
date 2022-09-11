@@ -19,8 +19,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/5osASVJXEAj3ewPYwjhf3d"
 youtube = "https://www.youtube.com/watch?v=1HjOdxk0410"
 image = "cover.jpg/artwork"
-tag = ["曹興誠"]
-category = ["企業家"]
+tag = ["週二夜現場", "曹興誠"]
+category = ["#節目系列", "企業家"]
 
 ["The KK Show - #150 拿出30億反共的男人 - 曹興誠"]
 name = "The KK Show - #150 拿出30億反共的男人 - 曹興誠"

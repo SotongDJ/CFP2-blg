@@ -17,7 +17,7 @@ const playlist = {
 "youtube": "https://www.youtube.com/watch?v=1HjOdxk0410",
 "image": "cover.jpg/artwork",
 "feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11276846-qa.mp3",
-"tag": ['曹興誠', '企業家']
+"tag": ['週二夜現場', '曹興誠', '企業家']
 },
 "time561":{
 "name": "The KK Show - #150 拿出30億反共的男人 - 曹興誠",
@@ -5635,6 +5635,7 @@ const tag_class = {
 "百靈果 Bonus": ['#節目系列'],
 "KK Show": ['#節目系列'],
 "Live Podcast": ['#節目系列'],
+"週二夜現場": ['#節目系列'],
 "THE STIR": ['#節目系列'],
 "讀書會": ['#節目系列'],
 "同情者": ['讀書會'],
@@ -5815,7 +5816,7 @@ const tag_class = {
 "Wolf": ['來賓']
 };
 const class_tag = {
-"#節目系列": ['百靈果 NEWS', '百靈果 Bonus', 'KK Show', 'Live Podcast', 'THE STIR', '讀書會', '隱藏版 KK Show', '暫代讀書會', '百靈果到處跑', '百靈果之友', '免費教你如何做Podcast', '八角籠', 'Clubhouse企劃'],
+"#節目系列": ['百靈果 NEWS', '百靈果 Bonus', 'KK Show', 'Live Podcast', '週二夜現場', 'THE STIR', '讀書會', '隱藏版 KK Show', '暫代讀書會', '百靈果到處跑', '百靈果之友', '免費教你如何做Podcast', '八角籠', 'Clubhouse企劃'],
 "讀書會": ['同情者', '柏青哥', 'FatLeonard', '林獻堂環球遊記', '吃佛', '宮前町九十番', 'CIA洗腦計畫', '蚵仔煎的身世', '傀儡花', '毒家企業', '宋氏三姊妹', 'The Room Where It Happened by John Bolton', 'Rage by Bob Woodward', '浪淘沙', '戰裡的夏里特', '鴻：三代中國女人', 'This American Life', '核爆家園', '陳澄波密碼', '以母之名'],
 "暫代讀書會": ['百靈果到處跑', '百靈果之友', '免費教你如何做Podcast', '八角籠', 'Clubhouse企劃'],
 "#事件備註": ['日本遶境', '裴洛西訪台事件', '國傳司事件', '紐時集資事件', '五月天事件'],
