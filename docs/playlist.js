@@ -1,4 +1,14 @@
 const playlist = {
+"time563":{
+"name": "百靈果News｜韓國第一夫人的論文抄襲案、 什麼都不做的日本人、買鮮奶油要看證件、推薦書：異世界歸來的舅舅",
+"apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E9%9F%93%E5%9C%8B%E7%AC%AC%E4%B8%80%E5%A4%AB%E4%BA%BA%E7%9A%84%E8%AB%96%E6%96%87%E6%8A%84%E8%A5%B2%E6%A1%88-%E4%BB%80%E9%BA%BC%E9%83%BD%E4%B8%8D%E5%81%9A%E7%9A%84%E6%97%A5%E6%9C%AC%E4%BA%BA-%E8%B2%B7%E9%AE%AE%E5%A5%B6%E6%B2%B9%E8%A6%81%E7%9C%8B%E8%AD%89%E4%BB%B6-%E6%8E%A8%E8%96%A6%E6%9B%B8-%E7%95%B0%E4%B8%96%E7%95%8C%E6%AD%B8%E4%BE%86%E7%9A%84%E8%88%85%E8%88%85/id1106847606?i=1000579092749",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTI5NjQxMg",
+"spotify": "https://open.spotify.com/episode/5IweCFMvXkx4DDBFCWvkEZ",
+"youtube": "https://www.youtube.com/watch?v=c7_DCZ8b3nQ",
+"image": "cover.jpg/artwork",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11296412-news.mp3",
+"tag": ['百靈果 NEWS']
+},
 "time562":{
 "name": "【週二夜現場】曹興誠現場QA",
 "apple": "https://podcasts.apple.com/tw/podcast/%E9%80%B1%E4%BA%8C%E5%A4%9C%E7%8F%BE%E5%A0%B4-%E6%9B%B9%E8%88%88%E8%AA%A0%E7%8F%BE%E5%A0%B4qa/id1106847606?i=1000578830775",
