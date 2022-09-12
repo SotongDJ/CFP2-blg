@@ -62,7 +62,7 @@ max-width:850px;
 margin:calc(1rem + env(safe-area-inset-top)) auto calc(1rem + env(safe-area-inset-bottom)) auto;
 display:grid;
 gap:.25rem;
-height:calc(100vh-2rem-env(safe-area-inset-top)-env(safe-area-inset-bottom));
+height:calc(100vh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
 white-space:nowrap;
 }
 .container{
