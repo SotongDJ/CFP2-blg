@@ -542,5 +542,6 @@ if (popPipDOM.style['background-image']) {
 popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
 popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
 };
-};window.onresize = resizeDiv;
+};
+window.onresize = resizeDiv;
 resizeDiv();
