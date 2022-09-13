@@ -1,5 +1,16 @@
 # Add your own tag to each episode
 
+["The KK Show - #151 會講脫口秀的魔術師 - 巴斯"]
+name = "The KK Show - #151 會講脫口秀的魔術師 - 巴斯"
+feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11308260-the-kk-show-151.mp3"
+apple = "https://podcasts.apple.com/tw/podcast/the-kk-show-151-%E6%9C%83%E8%AC%9B%E8%84%AB%E5%8F%A3%E7%A7%80%E7%9A%84%E9%AD%94%E8%A1%93%E5%B8%AB-%E5%B7%B4%E6%96%AF/id1106847606?i=1000579334846"
+google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTMwODI2MA"
+spotify = "https://open.spotify.com/episode/74WGXhMvyROyazVckRvCki"
+youtube = "https://www.youtube.com/watch?v=e41cfPztS2M"
+image = "cover.jpg/artwork"
+tag = ["KK Show"]
+category = ["#節目系列"]
+
 ["百靈果News｜韓國第一夫人的論文抄襲案、 什麼都不做的日本人、買鮮奶油要看證件、推薦書：異世界歸來的舅舅"]
 name = "百靈果News｜韓國第一夫人的論文抄襲案、 什麼都不做的日本人、買鮮奶油要看證件、推薦書：異世界歸來的舅舅"
 feed = "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11296412-news.mp3"
