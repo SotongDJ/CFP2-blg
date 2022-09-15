@@ -7,7 +7,6 @@ const tagADOM = document.getElementById("tagA");
 const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
-const tagContentDOM = document.getElementById("tagcontent");
 const tagBarDOM = document.getElementById("tagbar");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
@@ -229,7 +228,7 @@ unionSDOM.innerHTML = "";
 tagBarDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
-tagBarDOM.style = "";
+//tagBarDOM.style = "";
 tagBarDOM.append("已選擇的標籤：");
 if (drawKeyArr.length > 1) {
 var drawUnionStr = storage.getItem('union');
@@ -246,8 +245,8 @@ var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
 okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
 tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
-} else {
-tagBarDOM.style = "display: none;";
+//} else {
+//tagBarDOM.style = "display: none;";
 };
 playlistDOM.innerHTML = "";
 var podObj = {};
@@ -488,7 +487,7 @@ if (!videoDOM.paused) {videoDOM.pause()};
 function toggleTag() {
 var toggleTagBool = (contentDOM.style['grid-template-rows'] == tagHideStr);
 contentDOM.style['grid-template-rows'] = toggleTagBool?tagShowStr:tagHideStr;
-tagIndexDOM.style = toggleTagBool?"":"display: none;";
+// tagIndexDOM.style = toggleTagBool?"":"display: none;";
 tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
 // tagADOM.innerText = toggleTagBool?"隱藏標籤":"顯示標籤";
 };

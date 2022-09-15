@@ -33,7 +33,7 @@
 </head>
 <body onload="resizeDiv()">
 <div id="contentdiv" class="centerise"
-style="grid-template-rows:min-content min-content 1fr min-content;">
+style="grid-template-rows:min-content 0 0 1fr min-content;">
 
 <div class="tittlebar">
 <h1 id="titleH1">BLG 非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
@@ -53,11 +53,13 @@ style="grid-template-rows:min-content min-content 1fr min-content;">
 </div>
 </div>
 
-<div id="tagindex" class="tagIndex" style="display: none;">
+<div id="tagindex" class="tagIndex">
 <div id="indexbar" class="indexSection"></div>
 </div>
 
-<div id="tagcontent" class="tagContent"><div id="tagbar" class="tagBar" style="display: none;">標籤：</div></div>
+<div class="tagContent">
+<div id="tagbar" class="tagBar">標籤：</div>
+</div>
 
 <div class="container"><div id="playlist" class="plain"></div></div>
 
