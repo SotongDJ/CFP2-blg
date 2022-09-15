@@ -239,7 +239,8 @@ Start annotation
   Excluded: (0)
     
 [KK Show]
-  found in: (154)
+  found in: (155)
+    The KK Show - #151 會講脫口秀的魔術師 - 巴斯
     The KK Show - #150 拿出30億反共的男人 - 曹興誠
     The KK Show - #149 離島醫生 - 黃京葦醫師
     The KK Show - #148 青年韓粉？歷史哥：我不是！
@@ -802,7 +803,8 @@ Start annotation
   Excluded: (0)
     
 [八角籠]
-  found in: (4)
+  found in: (5)
+    【八角籠挑戰】獎金$10,000 嗆爆百靈果：麥嫂
     八角籠直播-聊聊海德堡
     八角籠直播 Ep.3 《新疆怎麼樣》
     八角籠直播 Ep2 《大亂鬥》
