@@ -8,8 +8,8 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/74WGXhMvyROyazVckRvCki"
 youtube = "https://www.youtube.com/watch?v=e41cfPztS2M"
 image = "cover.jpg/artwork"
-tag = ["KK Show"]
-category = ["#節目系列"]
+tag = ["KK Show", "巴斯"]
+category = ["#節目系列", "喜劇演員", "專業人士", "工程師", "魔術師"]
 
 ["百靈果News｜韓國第一夫人的論文抄襲案、 什麼都不做的日本人、買鮮奶油要看證件、推薦書：異世界歸來的舅舅"]
 name = "百靈果News｜韓國第一夫人的論文抄襲案、 什麼都不做的日本人、買鮮奶油要看證件、推薦書：異世界歸來的舅舅"
@@ -548,7 +548,7 @@ spotify = "https://open.spotify.com/episode/0XXAOtKav2LCjsShCc6ZcN"
 youtube = "https://www.youtube.com/watch?v=jwNvaWNRrWs&t=1168s"
 image = "cover.jpg/artwork"
 tag = ["隱藏版 KK Show", "暫代讀書會", "微笑丹尼", "黃豪平"]
-category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "喜劇演員", "廣播人", "藝人", "Youtuber"]
+category = ["#節目系列", "#節目系列", "喜劇演員", "Youtuber", "喜劇演員", "廣播人", "藝人", "Youtuber", "魔術師"]
 
 ["We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"]
 name = "We TALKED about the Filipino PRESIDENTIAL election and RON CRIED... THE STIR EP. 5"
@@ -757,7 +757,7 @@ spotify = "https://open.spotify.com/episode/07OJ9gAAd9NOLc50ueaCQg"
 youtube = "https://www.youtube.com/watch?v=8R-kfkbAjx4"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "楊杰凱"]
-category = ["#節目系列", "專業人士"]
+category = ["#節目系列", "專業人士", "專利師"]
 
 ["The KK Show - #129 揭發聯合國的記者 - Naomi O’Leary"]
 name = "The KK Show - #129 揭發聯合國的記者 - Naomi O’Leary"
@@ -3265,7 +3265,7 @@ spotify = "https://open.spotify.com/episode/3tY5KZItsOOmLixBhUTwt9"
 youtube = "https://www.youtube.com/watch?v=5pigna37j00"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "黃豪平"]
-category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber"]
+category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber", "魔術師"]
 
 ["1115 去希臘當Youtuber是個好時機、俄羅斯變成和平使者、推薦漫畫跟推薦劇！"]
 name = "1115 去希臘當Youtuber是個好時機、俄羅斯變成和平使者、推薦漫畫跟推薦劇！"
@@ -4470,7 +4470,7 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/6kE7SDx9hLhg7G5MjTAEBp"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "Howard"]
-category = ["#節目系列", "朋友", "Podcaster", "專業人士"]
+category = ["#節目系列", "朋友", "Podcaster", "專業人士", "口譯員"]
 
 ["0223 中國驅逐美國記者、德國極右派槍擊案、回應中國聽衆留言"]
 name = "0223 中國驅逐美國記者、德國極右派槍擊案、回應中國聽衆留言"
@@ -4814,7 +4814,7 @@ google = "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvb
 spotify = "https://open.spotify.com/episode/7lxzAF6gQ5mF2YjcjD9t2x"
 image = "cover.jpg/artwork"
 tag = ["KK Show", "黃豪平"]
-category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber"]
+category = ["#節目系列", "喜劇演員", "廣播人", "藝人", "Youtuber", "魔術師"]
 
 ["1201 Uber害我戒不了酒、抖音抖不掉北京的包袱、推薦歌手 Billie Eilish"]
 name = "1201 Uber害我戒不了酒、抖音抖不掉北京的包袱、推薦歌手 Billie Eilish"
