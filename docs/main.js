@@ -32,8 +32,6 @@ const textSortObj = {
 const nextSortObj = {
 "neutral":"oldest","oldest":"newest","newest":"neutral",
 };
-const tagHideStr = "min-content min-content 1fr min-content";
-const tagShowStr = "min-content 1fr min-content 2fr min-content";
 // get option from url and save to local storage
 var url = new URL(window.location.href);
 var argueObj = new Object();
@@ -229,6 +227,7 @@ tagBarDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
 //tagBarDOM.style = "";
+toggleLayout(2,"min-content")
 tagBarDOM.append("已選擇的標籤：");
 if (drawKeyArr.length > 1) {
 var drawUnionStr = storage.getItem('union');
@@ -245,8 +244,9 @@ var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
 okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
 tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
-//} else {
+} else {
 //tagBarDOM.style = "display: none;";
+toggleLayout(2,"0px")
 };
 playlistDOM.innerHTML = "";
 var podObj = {};
@@ -484,11 +484,29 @@ if (!videoDOM.paused) {videoDOM.pause()};
 };
 };
 
+function toggleLayout(positionInt,replaceStr,conditionStr) {
+var layoutArr = contentDOM.style['grid-template-rows'].split(" ");
+if (conditionStr) {
+beforeStr = layoutArr[positionInt];
+conditionBool = (beforeStr == conditionStr);
+layoutArr[positionInt]=conditionBool?replaceStr:conditionStr;
+} else {
+layoutArr[positionInt]=replaceStr;
+conditionBool = true;
+};
+contentDOM.style['grid-template-rows'] = layoutArr.join(" ");
+return conditionBool;
+};
+
 function toggleTag() {
-var toggleTagBool = (contentDOM.style['grid-template-rows'] == tagHideStr);
-contentDOM.style['grid-template-rows'] = toggleTagBool?tagShowStr:tagHideStr;
+// var toggleTagBool = (contentDOM.style['grid-template-rows'] == tagHideStr);
+// contentDOM.style['grid-template-rows'] = toggleTagBool?tagShowStr:tagHideStr;
 // tagIndexDOM.style = toggleTagBool?"":"display: none;";
+var toggleTagBool = toggleLayout(1,"1fr","0px");
 tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
+if (window.visualViewport.height <= 800) {
+toggleTagBool?toggleLayout(3,"0px"):toggleLayout(3,"1fr");
+};
 // tagADOM.innerText = toggleTagBool?"隱藏標籤":"顯示標籤";
 };
 
