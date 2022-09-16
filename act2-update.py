@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 from PIL import Image
-import json, tomlkit, requests, pathlib
+import json, tomlkit, requests, pathlib, hashlib, time
 print("Start collection")
 result_dict = dict()
 print("    ----")
@@ -10,36 +10,46 @@ rss_req = requests.get("https://feeds.buzzsprout.com/1974862.rss")
 print("        Feed: convert XML and update dictionary")
 rss_feed = bs(rss_req.text,"xml")
 rss_dict = dict()
-img_dict = dict()
-img_str = rss_feed.find("image").url.contents[0]
+name2url_dict = dict()
+url2file_dict = dict()
+if pathlib.Path("data/image.toml").exists():
+    img_doc = tomlkit.load(open("data/image.toml"))
+    name2url_dict.update({str(x):str(y) for x,y in img_doc["name2url"].items()})  # type: ignore
+    url2file_dict.update({str(x):str(y) for x,y in img_doc["url2file"].items()})  # type: ignore
+img_str = rss_feed.find("image").url.contents[0]  # type: ignore
 img_size_list = [96,128,192,256,384,512]
 for unit in rss_feed.find_all('item'):
     name = unit.title.contents[0]
     url = unit.enclosure['url']
     rss_dict[name] = url
     img_list = [ufa["href"] for ufa in unit.find_all('itunes:image')] + [img_str]
-    img_filename = pathlib.Path(img_list[0]).name
-    img_bool = (img_filename == "60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad.jpg")
-    img_name = "cover.jpg" if img_bool else img_filename
-    img_parent = "artwork" if img_bool else pathlib.Path(img_list[0]).parent.name
-    img_dict[name] = F"{img_name}/{img_parent}"
-    if not pathlib.Path(F"docs/p/{img_name}/{img_parent}/512.png").exists():
-        cover_img_r = requests.get(img_list[0], stream=True)
+    img_url = img_list[0]
+    name2url_dict[name] = img_url
+    if img_url not in url2file_dict.keys():
+        print(F"request: {img_url} for {name}")
+        cover_img_r = requests.get(img_url, stream=True)
+        time.sleep(1)
         cover_img_r.raw.decode_content = True
         cover_img = Image.open(cover_img_r.raw)
-        for img_size in img_size_list:
-            pathlib.Path(F"docs/p/{img_name}/{img_parent}/").mkdir(parents=True,exist_ok=True)
-            wpercent = (img_size / float(cover_img.size[0]))
-            hsize = int((float(cover_img.size[1]) * float(wpercent)))
-            cover_img_res = cover_img.resize((img_size, hsize), Image.Resampling.LANCZOS)
-            cover_img_res.save(F"docs/p/{img_name}/{img_parent}/{img_size}.png")
+        h = hashlib.new('sha256')
+        h.update(cover_img.tobytes())
+        img_name = h.hexdigest()
+        url2file_dict[img_url] = img_name
+        if not pathlib.Path(F"docs/p/{img_name}/512.png").exists():
+            print(F"resize: docs/p/{img_name}")
+            for img_size in img_size_list:
+                pathlib.Path(F"docs/p/{img_name}/").mkdir(parents=True,exist_ok=True)
+                wpercent = (img_size / float(cover_img.size[0]))
+                hsize = int((float(cover_img.size[1]) * float(wpercent)))
+                cover_img_res = cover_img.resize((img_size, hsize), Image.Resampling.LANCZOS)
+                cover_img_res.save(F"docs/p/{img_name}/{img_size}.png")
 result_dict["feed"] = rss_dict
 with open("data/feedPodcast.xml","w") as xmlf:
     xmlf.write(rss_req.text)
 with open("data/feedPodcast.toml","w") as tomlf:
     tomlkit.dump(rss_dict,tomlf)
 with open("data/image.toml","w") as tomlf:
-    tomlkit.dump(img_dict,tomlf)
+    tomlkit.dump({"name2url":name2url_dict,"url2file":url2file_dict},tomlf)
 print("    Finish collection: Feed")
 #
 print("    ----")
@@ -54,7 +64,7 @@ if pathlib.Path("data/ApplePodcast.toml").exists():
 else:
     apple_record = dict()
 apple_dict = dict()
-for unit in apple_track.find_all('a',{"class":"link tracks__track__link--block"}):
+for unit in apple_track.find_all('a',{"class":"link tracks__track__link--block"}):  # type: ignore
     name_wt_hidden = unit.contents[0].replace(" &ZeroWidthSpace;","")
     name_single = name_wt_hidden.replace("\n","")
     name = " ".join([n for n in name_single.split(" ") if n != ""])
@@ -79,7 +89,7 @@ google_req = requests.get("https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5z
 google_track = bs(google_req.text,"lxml").find('div',{'jsname':'quCAxd'})
 print("        Feed: convert HTML and update dictionary")
 google_dict = dict()
-for unit in google_track.find_all('a'):
+for unit in google_track.find_all('a'):  # type: ignore
     url = unit['href'].split("?sa=")[0].replace("./","https://podcasts.google.com/")
     name = unit.findChildren("div", {'class': 'e3ZUqe'})[0].contents[0]
     google_dict[name] = url

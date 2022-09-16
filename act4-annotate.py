@@ -35,12 +35,12 @@ for entry_name, entry_detail in keyword_doc.items():
         print("    {}".format("\n    ".join(exclusive_collect_list)))
     for episode_str in inclusive_collect_list:
         episode_table = structure_doc[episode_str]
-        episode_tag_list = episode_table["tag"]
-        episode_tag_list.append(entry_name)
-        episode_table["tag"] = episode_tag_list
-        episode_tag_list = episode_table["category"]
-        episode_tag_list.extend(entry_detail["category"])
-        episode_table["category"] = episode_tag_list
+        episode_tag_list = episode_table["tag"]  # type: ignore
+        episode_tag_list.append(entry_name)  # type: ignore
+        episode_table["tag"] = episode_tag_list  # type: ignore
+        episode_tag_list = episode_table["category"]  # type: ignore
+        episode_tag_list.extend(entry_detail["category"])  # type: ignore
+        episode_table["category"] = episode_tag_list  # type: ignore
         structure_doc[episode_str] = episode_table
 with open("mid/annotation.toml",'w') as target_handler:
     tomlkit.dump(structure_doc,target_handler)

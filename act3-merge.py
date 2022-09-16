@@ -2,13 +2,15 @@ import tomlkit
 print("----\nStart merge")
 result_doc = tomlkit.load(open("mid/history.toml"))
 alias_doc = tomlkit.load(open("alias.toml"))
-image_doc = tomlkit.load(open("data/image.toml"))
+img_doc = tomlkit.load(open("data/image.toml"))
+name2url_dict = {str(x):str(y) for x,y in img_doc["name2url"].items()} # type: ignore
+url2file_dict = {str(x):str(y) for x,y in img_doc["url2file"].items()} # type: ignore
 def correct(input_str):
     replace_str = input_str.replace("\u200b","").replace("啦‍♂️、","啦🙅‍♂️、")
     output_str = " ".join([n for n in replace_str.split(" ") if n != ""])
     if output_str in alias_doc.keys():
         output_str = alias_doc[output_str]
-    splitAt_str = output_str.split("@")[0]
+    splitAt_str = output_str.split("@")[0]  # type: ignore
     shrink_str = " ".join([n for n in splitAt_str.split(" ") if n != ""])
     return output_str, shrink_str
 title_dict = dict()
@@ -16,13 +18,13 @@ for podcast_str, podcast_dict in result_doc.items():
     for title_str,link_str in podcast_dict.items():
         name_str, id_str = correct(title_str)
         title_episode_dict = title_dict.get(id_str,dict())
-        title_episode_dict['name'] = sorted([title_episode_dict.get('name',""),name_str], key=lambda x:len(x))[-1]
+        title_episode_dict['name'] = sorted([title_episode_dict.get('name',""),name_str], key=lambda x:len(x))[-1]  # type: ignore
         title_episode_dict[podcast_str] = link_str
         title_dict[id_str] = title_episode_dict
-for title_str,link_str in image_doc.items():
+for title_str,link_str in name2url_dict.items():
     name_str, id_str = correct(title_str)
     title_episode_dict = title_dict.get(id_str,dict())
-    title_episode_dict["image"] = link_str
+    title_episode_dict["image"] = url2file_dict[link_str]
     title_dict[id_str] = title_episode_dict
 annotation = tomlkit.document()
 annotation.add(tomlkit.comment("Add your own tag to each episode"))
