@@ -1,4 +1,14 @@
 const playlist = {
+"time566":{
+"name": "百靈果News｜新疆封城餓死人、英國還需要皇室嗎、烏克蘭的反擊、推薦：Summer of 85, 好機車",
+"apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BE%E9%9D%88%E6%9E%9Cnews-%E6%96%B0%E7%96%86%E5%B0%81%E5%9F%8E%E9%A4%93%E6%AD%BB%E4%BA%BA-%E8%8B%B1%E5%9C%8B%E9%82%84%E9%9C%80%E8%A6%81%E7%9A%87%E5%AE%A4%E5%97%8E-%E7%83%8F%E5%85%8B%E8%98%AD%E7%9A%84%E5%8F%8D%E6%93%8A-%E6%8E%A8%E8%96%A6-summer-of-85-%E5%A5%BD%E6%A9%9F%E8%BB%8A/id1106847606?i=1000579831283",
+"google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjIyMTM2MTk4MC9zb3VuZHMucnNz/episode/QnV6enNwcm91dC0xMTMzNTk1MA",
+"spotify": "https://open.spotify.com/episode/3MmddYmHrSXCjCsf2saz73",
+"youtube": "",
+"image": "e5b8c2da7e6ce54bd780a0030714a67b9bc6cd9da84bc993e5cad3238463ecd6",
+"feed": "https://chrt.fm/track/346315/www.buzzsprout.com/1974862/11335950-news-summer-of-85.mp3",
+"tag": ['百靈果 NEWS']
+},
 "time565":{
 "name": "【八角籠挑戰】獎金$10,000 嗆爆百靈果：麥嫂",
 "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AB%E8%A7%92%E7%B1%A0%E6%8C%91%E6%88%B0-%E7%8D%8E%E9%87%91%2410-000-%E5%97%86%E7%88%86%E7%99%BE%E9%9D%88%E6%9E%9C-%E9%BA%A5%E5%AB%82/id1106847606?i=1000579576008",
