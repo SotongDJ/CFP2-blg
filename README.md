@@ -47,7 +47,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## 幫助 | Help
 
-- 請前往：<https://github.com/SotongDJ/podcast-selector-blg/wiki>
+- 請前往：<https://github.com/SotongDJ/cfp2-blg/wiki>
 
 ## TO DO
 
