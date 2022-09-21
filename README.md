@@ -57,3 +57,6 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - 修正火狐瀏覽器（Firefox）的顯示風格
 - 自行繪製播放列
 - 可自行調整播放對列
+- 分享按鈕
+- 月份標簽
+
