@@ -1,4 +1,4 @@
-# 非官方百靈果播放室 | Unofficial podcast selector for Bailingguo podcast
+# 非官方百靈果播放室 | Unofficial podcast player for Bailingguo podcast
 
 位於[墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)的非官方[百靈果](https://www.bailingguonews.com/)播放室
 
