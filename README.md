@@ -58,5 +58,5 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - 自行繪製播放列
 - 可自行調整播放對列
 - 分享按鈕
-- 月份標簽
+- 月份標籤
 
