@@ -6,7 +6,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## 漢文版本
 
-- **[README](https://github.com/SotongDJ/CFP2-blg/blob/main/README.md)**
+- **[README](https://github.com/SotongDJ/CFP2-blg/blob/main/README.hant.md)**
 
 ## Website
 
@@ -22,7 +22,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - Click the button and redirect to other platform
 - Can be installed into the system as a PWA
 
-  - By using the Progressive Web App (PWA) technique, this player can be installed on the operating system (Windows, macOS, Linux, Chrome OS, iOS, and Android) and have user experiences similar to the native app (for example: playback control in the notification bar, system level playback control)
+  - By using the Progressive Web App (PWA) technique, this player can be installed on the operating system (Windows, macOS, Linux, Chrome OS, iOS, and Android) and have user experiences similar to the native app (like playback control in the notification bar, system level playback control)
 
     > "Progressive Web Apps (PWAs) are web apps that use service workers, manifests, and other web-platform features in combination with progressive enhancement to give users an experience on par with native apps." - [Progressive web apps (PWAs) | MDN](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
