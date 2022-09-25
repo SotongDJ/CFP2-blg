@@ -6,7 +6,7 @@
 
 ## English version
 
-- **[README](https://github.com/SotongDJ/CFP2-blg/blob/main/README.en.md)**
+- **[README](https://github.com/SotongDJ/CFP2-blg/blob/main/README.md)**
 
 ## 網站
 
