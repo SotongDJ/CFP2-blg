@@ -6,7 +6,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## 漢文版本
 
-- **[README](https://github.com/SotongDJ/CFP2/blob/main/README.en.md)**
+- **[README](https://github.com/SotongDJ/CFP2-blg/blob/main/README.md)**
 
 ## Website
 
