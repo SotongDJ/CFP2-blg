@@ -52,11 +52,15 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 ## TO DO
 
 - ~~自動更新集數~~（已完成）
+- 月份標籤
+- 單集介紹
+  - 整合 YouTube 精華片段
+- 分享按鈕
+  - 單集分享
+  - 標簽分享
+- 修正火狐瀏覽器（Firefox）的顯示風格
+- 自製播放列
+- 可自行調整播放隊列
 - 離線播放
   - 用網頁瀏覽器緩存 podcast 音檔的機制複雜，目前仍不支援離線播放的功能
-- 修正火狐瀏覽器（Firefox）的顯示風格
-- 自行繪製播放列
-- 可自行調整播放對列
-- 分享按鈕
-- 月份標籤
 
