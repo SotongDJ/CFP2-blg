@@ -17,6 +17,7 @@ padding:0rem 1rem;
 --clr6:hsl(200,  92%,  90%);
 --clr7:hsl(200,  89%,  74%);
 --clr8:hsl(200, 100%,  47%);
+--clr0:hsl(200, 100%,  35%);
 --clr2:hsl(  0,   0%,  20%);
 --clr3:hsl(  0,   0%,   0%);
 --clr9:hsl(  0,   0%,   0%);
@@ -52,6 +53,7 @@ background-color:var(--rtbg);
 --clr6:hsl(200, 100%,  24%);
 --clr7:hsl(200, 100%,  35%);
 --clr8:hsl(200, 100%,  47%);
+--clr0:hsl(200, 100%,  24%);
 --clr2:hsl(  0,   0%,  60%);
 --clr3:hsl(  0,   0%,  80%);
 --clr9:hsl(  0,   0%, 100%);
@@ -68,7 +70,7 @@ background-color:var(--rtbg);
 --bnbg:var(--clr4);
 --bnbr:var(--clr3);
 --atxt:var(--clr3);
---htxt:var(--clr5);
+--htxt:var(--clr0);
 }
 
 a{
