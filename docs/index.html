@@ -55,6 +55,8 @@ style="grid-template-rows:min-content 0 0 1fr min-content;">
 <a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
 <span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
 <a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
+<span class="buttonDiv"><i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+<a href="javascript:void(toggleContrast())">對比</a></span>
 <span class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
 <a href="https://github.com/SotongDJ/cfp2-blg/wiki" target="info">指南</a></span>
 <span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
@@ -72,7 +74,9 @@ style="grid-template-rows:min-content 0 0 1fr min-content;">
 <div id="tagbar" class="tagBar">標籤：</div>
 </div>
 
-<div class="container"><div id="playlist" class="plain"></div></div>
+<div id="playlistContain" class="container">
+<div id="playlist" class="plain"></div>
+</div>
 
 <div id="playerbar" class="playerbar">
 <a id="popA"><div id="popPiP" class="popPiP"></div></a>

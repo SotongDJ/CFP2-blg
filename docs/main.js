@@ -8,6 +8,7 @@ const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
 const tagBarDOM = document.getElementById("tagbar");
+const plContainDOM = document.getElementById("playlistContain");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
 const playerBarDOM = document.getElementById("playerbar");
@@ -449,8 +450,9 @@ canvasDOM.getContext('2d').drawImage(image, 0, 0, 512, 512);
 async function mixPlay() {
 let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
-popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
-popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
+popPipDOM.style["width"] = "10vh";
+popPipDOM.style["height"] = "10vh";
+popPipDOM.style["visibility"] = "visible";
 if (document.pictureInPictureEnabled){popADOM.href = "javascript: void(doPiP())";};
 var playPromise = playerDOM.play();
 if (playPromise !== undefined) {
@@ -504,10 +506,22 @@ function toggleTag() {
 // tagIndexDOM.style = toggleTagBool?"":"display: none;";
 var toggleTagBool = toggleLayout(1,"1fr","0px");
 tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
+tagIndexDOM.style["visibility"] = toggleTagBool?"visible":"hidden";
 if (window.visualViewport.height <= 800) {
 toggleTagBool?toggleLayout(3,"0px"):toggleLayout(3,"1fr");
+plContainDOM.style["visibility"] = toggleTagBool?"hidden":"visible";
+} else {
+toggleLayout(3,"1fr");
+plContainDOM.style["visibility"] = "visible";
 };
 // tagADOM.innerText = toggleTagBool?"隱藏標籤":"顯示標籤";
+};
+
+function toggleUnion() {
+var nowUnionStr = storage.getItem('union');
+var nextUnionStr = (nowUnionStr == "true") ? "false" : "true";
+storage.setItem("union", nextUnionStr);
+draw();
 };
 
 function updateSort() {
@@ -524,11 +538,9 @@ updateSort();
 draw();
 };
 
-function toggleUnion() {
-var nowUnionStr = storage.getItem('union');
-var nextUnionStr = (nowUnionStr == "true") ? "false" : "true";
-storage.setItem("union", nextUnionStr);
-draw();
+function toggleContrast() {
+contrastBool = (document.body.className == "contrast");
+document.body.className = contrastBool?"":"contrast";
 };
 
 function resizeDiv() {
@@ -549,16 +561,19 @@ targetDOM.append(" BLG 非官方");
 targetDOM.appendChild(titleAspan);
 targetDOM.append("播放室");
 // contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
-if (playerDOM.offsetHeight==0) {
-playerDOM.style["height"] = "10vh";
-playerBarDOM.style["height"] = "10vh";
-} else {
-playerBarDOM.style["height"] = playerDOM.offsetHeight+"px";
-};
+// if (playerDOM.offsetHeight==0) {
+playerBarDOM.style["height"] = "min-content";
+// playerBarDOM.style["height"] = playerDOM.offsetHeight+"px";
+// popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
 if (popPipDOM.style['background-image']) {
-popPipDOM.style["width"] = playerDOM.offsetHeight+"px";
-popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
+popPipDOM.style["width"] = "10vh";
+popPipDOM.style["visibility"] = "visible";
+} else{
+popPipDOM.style["width"] = "0px";
+popPipDOM.style["visibility"] = "hidden";
 };
+popPipDOM.style["height"] = "10vh";
+playerDOM.style["height"] = "10vh";
 };
 window.onresize = resizeDiv;
 resizeDiv();
