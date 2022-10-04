@@ -85,6 +85,7 @@ white-space:nowrap;
 .container{
 overflow:auto;
 background-color:var(--ctbg);
+border:.125rem solid var(--ctbr);
 border-radius:0.25rem;
 }
 .entry{
@@ -143,6 +144,7 @@ grid-template-columns:min-content 1fr;
 gap:.25rem;
 margin:.25rem 0 0 0;
 background-color:var(--plbg);
+border:.125rem solid var(--plbr);
 border-radius:0.25rem;
 }
 .popPiP{
