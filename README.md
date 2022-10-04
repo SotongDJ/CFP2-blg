@@ -37,10 +37,11 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - User data is stored in the browser
 
- - This site uses the browser's local cache space to temporarily store the queue and episodes currently played by the user
- - Cannot transfer to other browsers or devices
+  - This site uses the browser's local cache space to temporarily store the queue and episodes currently played by the user
+  - Cannot transfer to other browsers or devices
 
 - Follow system dark mode settings
+- Able to switch to high contrast theme
 - Able to use Picture-in-picture mode control playback (Public BETA)
 
 ## Help
@@ -51,7 +52,8 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - ~~auto-update episodes~~（archived）
 - ~~fix other browser's theme~~（archived）
-- month tag
+- ~~design high contrast theme~~（archived）
+- ~~month tag~~（archived）
 - episode detail info
   - include youtube shorts/teaser
 - share button
@@ -62,4 +64,3 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - offline playback
   - use browser to cache podcast and manage downloaded content are too complicated
   - offline playback is may support in future
-
