@@ -8,6 +8,9 @@ const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
 const tagBarDOM = document.getElementById("tagbar");
+const tagListDOM = document.getElementById("taglist");
+const tagNoteDOM = document.getElementById("tagnote");
+const detailDOM = document.getElementById("detail");
 const plContainDOM = document.getElementById("playlistContain");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
@@ -224,13 +227,13 @@ storage.setItem('filtered',filtered.join(","))
 function draw() {
 filter();
 unionSDOM.innerHTML = "";
-tagBarDOM.innerHTML = "";
+tagListDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
-//tagBarDOM.style = "";
 toggleLayout(2,"min-content")
-tagBarDOM.append("已選擇的標籤：");
+tagBarDOM.style["visibility"] = "visible";
 if (drawKeyArr.length > 1) {
+tagNoteDOM.innerText = "：";
 var drawUnionStr = storage.getItem('union');
 var unionToggleBool = (drawUnionStr == "true");
 unionSDOM.appendChild(fontAwe(unionToggleBool?unionToggleOnStr:unionToggleOffStr));
@@ -239,15 +242,17 @@ var unionA = document.createElement("a");
 unionA.append(unionToggleBool?"聯集":"交集");
 unionA.href = "javascript: void(toggleUnion())";
 unionSDOM.appendChild(unionA);
+} else {
+tagNoteDOM.innerText = "已選擇：";
 };
 for (let oka = 0; oka < drawKeyArr.length; oka++) {
 var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
 okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-left fa-fw")];
-tagBarDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
+tagListDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
 } else {
-//tagBarDOM.style = "display: none;";
 toggleLayout(2,"0px")
+tagBarDOM.style["visibility"] = "hidden";
 };
 playlistDOM.innerHTML = "";
 var podObj = {};
@@ -541,6 +546,21 @@ draw();
 function toggleContrast() {
 contrastBool = (document.body.className == "contrast");
 document.body.className = contrastBool?"":"contrast";
+};
+
+function toggleDetail() {
+var toggleDetailBool = toggleLayout(4,"1fr","0px");
+if (toggleDetailBool) {
+detailDOM.style["visibility"] = "visible";
+toggleLayout(1,"0px")
+tagIndexDOM.style["visibility"] = "hidden";
+toggleLayout(3,"0px")
+plContainDOM.style["visibility"] = "hidden";
+} else {
+detailDOM.style["visibility"] = "hidden";
+toggleLayout(3,"1fr")
+plContainDOM.style["visibility"] = "visible";
+};
 };
 
 function resizeDiv() {

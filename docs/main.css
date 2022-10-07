@@ -183,7 +183,8 @@ border:solid var(--high);
 }
 .tagContent{
 height:min-content;
-overflow:auto;
+overflow-x: auto;
+overflow-y: hidden;
 }
 .funcContent{height:min-content;}
 .tagIndex{
