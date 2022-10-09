@@ -32,8 +32,8 @@ background-color:var(--rtbg);
 --ixbr:var(--clr6);
 --ctbg:var(--clr4);
 --ctbr:var(--clr4);
---plbg:var(--clr4);
---plbr:var(--clr4);
+--plbg:var(--clr1);
+--plbr:var(--clr1);
 --ppbr:var(--clr4);
 --odbg:var(--clr6);
 --odbr:var(--clr6);
@@ -101,6 +101,13 @@ background-color:var(--ctbg);
 border:solid var(--ctbr);
 border-radius:0.25rem;
 visibility: visible;
+}
+.detail{
+background-color:var(--ctbg);
+border:solid var(--ctbr);
+border-radius:0.25rem;
+padding: 1rem;
+visibility: hidden;
 }
 .entry{
 border-radius:.25rem;

@@ -7,6 +7,8 @@ const tagADOM = document.getElementById("tagA");
 const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
+const moreIDOM = document.getElementById("moreI");
+const contraIDOM = document.getElementById("contraI");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
 const tagNoteDOM = document.getElementById("tagnote");
@@ -27,6 +29,8 @@ const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
 const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
 const caretUpStr = "fa-solid fa-square-caret-up fa-fw";
 const caretDownStr = "fa-solid fa-square-caret-down fa-fw";
+const constrastOnStr = "fa-solid fa-circle-half-stroke fa-fw";
+const constrastOffStr = "fa-solid fa-circle-half-stroke fa-fw fa-flip-horizontal";
 // default parameter
 const textSortObj = {
 "neutral":{"text":"排序", "fa":"fa-solid fa-sort fa-fw"},
@@ -35,6 +39,14 @@ const textSortObj = {
 };
 const nextSortObj = {
 "neutral":"oldest","oldest":"newest","newest":"neutral",
+};
+const sectionObj = {
+"header":0,
+"option":1,
+"index":2,
+"select":3,
+"list":4,
+"player":5,
 };
 // get option from url and save to local storage
 var url = new URL(window.location.href);
@@ -230,7 +242,7 @@ unionSDOM.innerHTML = "";
 tagListDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
-toggleLayout(2,"min-content")
+toggleLayout("select","min-content")
 tagBarDOM.style["visibility"] = "visible";
 if (drawKeyArr.length > 1) {
 tagNoteDOM.innerText = "：";
@@ -251,7 +263,7 @@ okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-
 tagListDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
 } else {
-toggleLayout(2,"0px")
+toggleLayout("select","0px")
 tagBarDOM.style["visibility"] = "hidden";
 };
 playlistDOM.innerHTML = "";
@@ -491,7 +503,8 @@ if (!videoDOM.paused) {videoDOM.pause()};
 };
 };
 
-function toggleLayout(positionInt,replaceStr,conditionStr) {
+function toggleLayout(sectionStr,replaceStr,conditionStr) {
+var positionInt = sectionObj[sectionStr];
 var layoutArr = contentDOM.style['grid-template-rows'].split(" ");
 if (conditionStr) {
 beforeStr = layoutArr[positionInt];
@@ -506,20 +519,22 @@ return conditionBool;
 };
 
 function toggleTag() {
-// var toggleTagBool = (contentDOM.style['grid-template-rows'] == tagHideStr);
-// contentDOM.style['grid-template-rows'] = toggleTagBool?tagShowStr:tagHideStr;
-// tagIndexDOM.style = toggleTagBool?"":"display: none;";
-var toggleTagBool = toggleLayout(1,"1fr","0px");
+// hide option
+toggleLayout("option","0px")
+moreIDOM.className = caretDownStr;
+detailDOM.style["visibility"] = "hidden";
+// toggle index
+var toggleTagBool = toggleLayout("index","1fr","0px");
 tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
 tagIndexDOM.style["visibility"] = toggleTagBool?"visible":"hidden";
+// toggle playlist
 if (window.visualViewport.height <= 800) {
-toggleTagBool?toggleLayout(3,"0px"):toggleLayout(3,"1fr");
+toggleTagBool?toggleLayout("list","0px"):toggleLayout("list","1fr");
 plContainDOM.style["visibility"] = toggleTagBool?"hidden":"visible";
 } else {
-toggleLayout(3,"1fr");
+toggleLayout("list","1fr");
 plContainDOM.style["visibility"] = "visible";
 };
-// tagADOM.innerText = toggleTagBool?"隱藏標籤":"顯示標籤";
 };
 
 function toggleUnion() {
@@ -546,19 +561,24 @@ draw();
 function toggleContrast() {
 contrastBool = (document.body.className == "contrast");
 document.body.className = contrastBool?"":"contrast";
+contraIDOM.className = contrastBool?constrastOnStr:constrastOffStr;
 };
 
 function toggleDetail() {
-var toggleDetailBool = toggleLayout(4,"1fr","0px");
-if (toggleDetailBool) {
-detailDOM.style["visibility"] = "visible";
-toggleLayout(1,"0px")
+// toggle option
+var toggleDetailBool = toggleLayout("option","1fr","0px");
+moreIDOM.className = toggleDetailBool?caretUpStr:caretDownStr;
+detailDOM.style["visibility"] = toggleDetailBool?"visible":"hidden";
+// hide index
+toggleLayout("index","0px")
+tagIDOM.className = caretDownStr;
 tagIndexDOM.style["visibility"] = "hidden";
-toggleLayout(3,"0px")
-plContainDOM.style["visibility"] = "hidden";
+// toggle playlist
+if (window.visualViewport.height <= 800) {
+toggleDetailBool?toggleLayout("list","0px"):toggleLayout("list","1fr");
+plContainDOM.style["visibility"] = toggleDetailBool?"hidden":"visible";
 } else {
-detailDOM.style["visibility"] = "hidden";
-toggleLayout(3,"1fr")
+toggleLayout("list","1fr");
 plContainDOM.style["visibility"] = "visible";
 };
 };
