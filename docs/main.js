@@ -634,7 +634,7 @@ var drawKeyArr = getArr(storage.getItem('key'));
 var shareData = {
 url: "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(","),
 title: "BLG 非官方百靈果播放室",
-text: "百靈果："+drawKeyArr.join(","),
+text: "百靈果 Podcast，標籤："+drawKeyArr.join("、"),
 };
 try {
 await navigator.share(shareData);
