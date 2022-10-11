@@ -11,6 +11,9 @@ const moreIDOM = document.getElementById("moreI");
 const contraIDOM = document.getElementById("contraI");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
+const shareBtnDOM = document.getElementById("share_btn");
+const shareResultDOM = document.getElementById("share_result");
+const shareContentDOM = document.getElementById("share_content");
 const tagNoteDOM = document.getElementById("tagnote");
 const detailDOM = document.getElementById("detail");
 const plContainDOM = document.getElementById("playlistContain");
@@ -617,3 +620,48 @@ playerDOM.style["height"] = "10vh";
 };
 window.onresize = resizeDiv;
 resizeDiv();
+
+function shareBehave() {
+if (navigator.share) {
+navigatorShare();
+} else {
+clipboardShare();
+};
+};
+
+async function navigatorShare() {
+var drawKeyArr = getArr(storage.getItem('key'));
+var shareData = {
+url: "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(","),
+title: "BLG 非官方百靈果播放室",
+text: "百靈果："+drawKeyArr.join(","),
+};
+try {
+await navigator.share(shareData);
+shareResultDOM.textContent = "謝謝分享";
+} catch (err) {
+const { name, message } = err;
+if (name === "AbortError") {
+shareResultDOM.textContent = "取消分享";
+} else {
+shareResultDOM.textContent = err;
+};
+};
+};
+
+function clipboardShare() {
+var drawKeyArr = getArr(storage.getItem('key'));
+shareUrl = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
+shareContentDOM.value = shareUrl;
+shareContentDOM.setAttribute("type", "text");
+shareContentDOM.select();
+try {
+var successful = document.execCommand("copy");
+var msg = successful ? "成功" : "失敗";
+alert(`${shareUrl} - 複製${msg}`);
+} catch (err) {
+alert("無法複製");
+}
+shareContentDOM.setAttribute("type", "hidden");
+window.getSelection().removeAllRanges();
+}

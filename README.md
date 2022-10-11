@@ -50,15 +50,16 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## TO DO
 
-- ~~auto-update episodes~~（archived）
-- ~~fix other browser's theme~~（archived）
-- ~~design high contrast theme~~（archived）
-- ~~month tag~~（archived）
-- episode detail info
-  - include youtube shorts/teaser
+- ~~auto-update episodes~~ (archived)
+- ~~fix other browser's theme~~ (archived)
+- ~~design high contrast theme~~ (archived)
+- ~~month tag~~ (archived)
 - share button
+  - ~~tag share~~ (archived)
   - episode share
-  - tag share
+- episode detail info
+  - podcast episode detail
+  - include youtube shorts/teaser
 - customize playback control UI
 - able to customize playback queue
 - offline playback
