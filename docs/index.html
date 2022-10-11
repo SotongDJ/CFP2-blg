@@ -42,7 +42,7 @@
 <meta property="og:type" content="profile">
 <meta property="profile:username" content="SotongDJ">
 </head>
-<body onload="resizeDiv()">
+<body onload="resizeDiv()" class="neutral lowContrast">
 <div id="contentdiv" class="centerise"
  style="grid-template-rows:min-content 0px 0px 0px 1fr min-content;">
 
@@ -54,6 +54,8 @@
 <a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
 <span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
 <a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
+<span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
+<a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></span>
 <span class="buttonDiv"><i id="moreI" class="fa-solid fa-angles-right fa-fw"></i>
 <a href="javascript:void(toggleDetail())">更多</a></span>
 <span id="titleSpan"></span>
@@ -62,16 +64,18 @@
 </div>
 
 <div id="detail" class="detail">
+<div class="buttonDiv"><i id="colourI" class="fa-solid fa-cloud fa-fw"></i>
+<a id="colourA" href="javascript:void(toggleColour())">預設天氣</a></div>
 <div class="buttonDiv"><i id="contraI" class="fa-solid fa-circle-half-stroke fa-fw"></i>
-<a href="javascript:void(toggleContrast())">對比</a></div>
+<a id="contraA" href="javascript:void(toggleContrast())">對比</a></div>
 <div class="buttonDiv"><i class="fa-solid fa-envelope fa-fw"></i>
 <a href="mailto:github@stdj.me?subject=BLG 回饋信件&body=內容類型：（問題？建議？）%0A細節：（越詳細越好）">
 回饋
 </a></div>
 <div class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
 <a href="https://github.com/SotongDJ/cfp2-blg/wiki" target="info">指南</a></div>
-<div class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
-<a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
+<div class="buttonDiv"><i class="fa-brands fa-instagram fa-fw"></i>
+<a href="https://www.instagram.com/cfp2_blg/" target="info">Instagram</a></div>
 </div>
     
 <div id="tagindex" class="tagIndex">

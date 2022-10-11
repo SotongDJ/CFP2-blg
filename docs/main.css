@@ -10,7 +10,7 @@ margin:0;
 padding:0rem 1rem;
 }
 
-:root {
+.neutral {
 --clr1:hsl(  0,   0%, 100%);
 --clr4:hsl(198, 100%,  98%);
 --clr5:hsl(200, 100%,  97%);
@@ -23,6 +23,52 @@ padding:0rem 1rem;
 --clr9:hsl(  0,   0%,   0%);
 --oddc:hsl(230,  92%,  90%);
 --evnc:hsl(232, 100%,  97%);
+}
+@media (prefers-color-scheme:dark) {
+.neutral {
+--clr1:hsl(  0,   0%,   0%);
+--clr4:hsl(201, 100%,   6%);
+--clr5:hsl(200, 100%,  12%);
+--clr6:hsl(200, 100%,  24%);
+--clr7:hsl(200, 100%,  35%);
+--clr8:hsl(200, 100%,  47%);
+--clr0:hsl(200, 100%,  24%);
+--clr2:hsl(  0,   0%,  60%);
+--clr3:hsl(  0,   0%,  80%);
+--clr9:hsl(  0,   0%, 100%);
+--oddc:hsl(230, 100%,  24%);
+--evnc:hsl(232, 100%,  12%);
+}
+}
+.light {
+--clr1:hsl(  0,   0%, 100%);
+--clr4:hsl(198, 100%,  98%);
+--clr5:hsl(200, 100%,  97%);
+--clr6:hsl(200,  92%,  90%);
+--clr7:hsl(200,  89%,  74%);
+--clr8:hsl(200, 100%,  47%);
+--clr0:hsl(200, 100%,  35%);
+--clr2:hsl(  0,   0%,  20%);
+--clr3:hsl(  0,   0%,   0%);
+--clr9:hsl(  0,   0%,   0%);
+--oddc:hsl(230,  92%,  90%);
+--evnc:hsl(232, 100%,  97%);
+}
+.dark {
+--clr1:hsl(  0,   0%,   0%);
+--clr4:hsl(201, 100%,   6%);
+--clr5:hsl(200, 100%,  12%);
+--clr6:hsl(200, 100%,  24%);
+--clr7:hsl(200, 100%,  35%);
+--clr8:hsl(200, 100%,  47%);
+--clr0:hsl(200, 100%,  24%);
+--clr2:hsl(  0,   0%,  60%);
+--clr3:hsl(  0,   0%,  80%);
+--clr9:hsl(  0,   0%, 100%);
+--oddc:hsl(230, 100%,  24%);
+--evnc:hsl(232, 100%,  12%);
+}
+.lowContrast {
 color:var(--text);
 background-color:var(--rtbg);
 --high:var(--clr9);
@@ -45,31 +91,27 @@ background-color:var(--rtbg);
 --ahrf:var(--clr2);
 --htxt:var(--clr7);
 }
-@media (prefers-color-scheme:dark) {
-:root {
---clr1:hsl(  0,   0%,   0%);
---clr4:hsl(201, 100%,   6%);
---clr5:hsl(200, 100%,  12%);
---clr6:hsl(200, 100%,  24%);
---clr7:hsl(200, 100%,  35%);
---clr8:hsl(200, 100%,  47%);
---clr0:hsl(200, 100%,  24%);
---clr2:hsl(  0,   0%,  60%);
---clr3:hsl(  0,   0%,  80%);
---clr9:hsl(  0,   0%, 100%);
---oddc:hsl(230, 100%,  24%);
---evnc:hsl(232, 100%,  12%);
-}
-}
-.contrast {
+.highContrast {
+color:var(--text);
+background-color:var(--rtbg);
+--high:var(--clr9);
+--rtbg:var(--clr1);
+--text:var(--clr3);
+--ixbg:var(--clr6);
 --ixbr:var(--clr3);
+--ctbg:var(--clr4);
 --ctbr:var(--clr3);
+--plbg:var(--clr1);
+--plbr:var(--clr1);
 --ppbr:var(--clr3);
+--odbg:var(--clr6);
 --odbr:var(--clr3);
+--evbg:var(--clr5);
 --evbr:var(--clr3);
 --bnbg:var(--clr4);
 --bnbr:var(--clr3);
 --atxt:var(--clr3);
+--ahrf:var(--clr2);
 --htxt:var(--clr0);
 }
 

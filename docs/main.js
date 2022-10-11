@@ -8,7 +8,10 @@ const tagIDOM = document.getElementById("tagI");
 const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
 const moreIDOM = document.getElementById("moreI");
+const colourIDOM = document.getElementById("colourI");
+const colourADOM = document.getElementById("colourA");
 const contraIDOM = document.getElementById("contraI");
+const contraADOM = document.getElementById("contraA");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
 const shareBtnDOM = document.getElementById("share_btn");
@@ -34,6 +37,8 @@ const caretUpStr = "fa-solid fa-square-caret-up fa-fw";
 const caretDownStr = "fa-solid fa-square-caret-down fa-fw";
 const constrastOnStr = "fa-solid fa-circle-half-stroke fa-fw";
 const constrastOffStr = "fa-solid fa-circle-half-stroke fa-fw fa-flip-horizontal";
+const lightColourStr = "fa-solid fa-sun fa-fw";
+const darkColourStr = "fa-solid fa-moon fa-fw";
 // default parameter
 const textSortObj = {
 "neutral":{"text":"排序", "fa":"fa-solid fa-sort fa-fw"},
@@ -50,6 +55,10 @@ const sectionObj = {
 "select":3,
 "list":4,
 "player":5,
+};
+const themeObj = {
+"colour":0,
+"contrast":1,
 };
 // get option from url and save to local storage
 var url = new URL(window.location.href);
@@ -561,10 +570,33 @@ updateSort();
 draw();
 };
 
+function toggleTheme(sectionStr,replaceStr,conditionArr) {
+var positionInt = themeObj[sectionStr];
+var layoutArr = document.body.className.split(" ");
+if (conditionArr) {
+beforeStr = layoutArr[positionInt];
+conditionBool = conditionArr.includes(beforeStr);
+layoutArr[positionInt]=conditionBool?replaceStr:conditionArr[0];
+} else {
+layoutArr[positionInt]=replaceStr;
+conditionBool = true;
+};
+document.body.className = layoutArr.join(" ");
+return conditionBool;
+};
+
+function toggleColour() {
+var toggleColourBool = toggleTheme("colour","dark",["light","neutral"]);
+colourIDOM.className = toggleColourBool?darkColourStr:lightColourStr;
+colourADOM.innerText = toggleColourBool?"黑夜":"白晝";
+var targetColourStr = toggleColourBool?"dark":"light";
+document.documentElement.setAttribute("data-theme", targetColourStr);
+};
+
 function toggleContrast() {
-contrastBool = (document.body.className == "contrast");
-document.body.className = contrastBool?"":"contrast";
-contraIDOM.className = contrastBool?constrastOnStr:constrastOffStr;
+var toggleContrastBool = toggleTheme("contrast","highContrast",["lowContrast"]);
+contraIDOM.className = toggleContrastBool?constrastOnStr:constrastOffStr;
+contraADOM.innerText = toggleContrastBool?"高對比度":"低對比度";
 };
 
 function toggleDetail() {
