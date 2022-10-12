@@ -1,8 +1,10 @@
 # Unofficial podcast player for Bailingguo podcast
 
-The unofficial podcast player for [Bailingguo](https://www.bailingguonews.com/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
+The unofficial, CuttleFish podcast player (CFP2) for [Bailingguo](https://www.bailingguonews.com/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
+
+![Homepage of CuttleFish Podcast Player for Bailingguo podcast](/docs/ss/front-light-low.png "Homepage with light and low contrast theme")
 
 ## 漢文版本
 
@@ -52,7 +54,8 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 - ~~auto-update episodes~~ (archived)
 - ~~fix other browser's theme~~ (archived)
-- ~~design high contrast theme~~ (archived)
+- ~~design different colour theme~~ (archived)
+- ~~design different contrast theme~~ (archived)
 - ~~month tag~~ (archived)
 - share button
   - ~~tag share~~ (archived)

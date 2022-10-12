@@ -2,15 +2,74 @@
 "description": "位於墨玉程市的 BLG 非官方百靈果播放室",
 "dir": "ltr",
 "display": "standalone",
+"display_override": ["fullscreen", "minimal-ui"],
 "name": "BLG 非官方百靈果播放室",
+"lang": "zh-Hant-TW",
 "orientation": "any",
 "scope": "/",
 "short_name": "BLG",
 "start_url": "/",
 "background_color": "#000000",
 "theme_color": "#000000",
-"categories": [],
-"screenshots": [],
+"categories": ["books","entertainment","lifestyle","podcast","politics"],
+"screenshots": [
+{
+"src": "/ss/phone-light-low.png",
+"sizes": "864x1689",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/phone-light-high.png",
+"sizes": "864x1689",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/phone-dark-low.png",
+"sizes": "864x1872",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/phone-dark-high.png",
+"sizes": "864x1872",
+"type": "image/png",
+"platform": "narrow",
+"label": "Homescreen in dark theme with high contrast"
+},
+{
+"src": "/ss/front-light-low.png",
+"sizes": "1044x641",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with low contrast"
+},
+{
+"src": "/ss/front-light-high.png",
+"sizes": "1044x641",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in light theme with high contrast"
+},
+{
+"src": "/ss/front-dark-low.png",
+"sizes": "1044x641",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with low contrast"
+},
+{
+"src": "/ss/front-dark-high.png",
+"sizes": "1044x641",
+"type": "image/png",
+"platform": "wide",
+"label": "Homescreen in dark theme with high contrast"
+}
+],
 "icons": [
 {
 "src": "r/maskable-512.png",

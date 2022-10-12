@@ -252,6 +252,7 @@ function draw() {
 filter();
 unionSDOM.innerHTML = "";
 tagListDOM.innerHTML = "";
+shareResultDOM.textContent = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
 toggleLayout("select","min-content")
@@ -588,7 +589,7 @@ return conditionBool;
 function toggleColour() {
 var toggleColourBool = toggleTheme("colour","dark",["light","neutral"]);
 colourIDOM.className = toggleColourBool?darkColourStr:lightColourStr;
-colourADOM.innerText = toggleColourBool?"黑夜":"白晝";
+colourADOM.innerText = toggleColourBool?"黑夜主題":"白晝主題";
 var targetColourStr = toggleColourBool?"dark":"light";
 document.documentElement.setAttribute("data-theme", targetColourStr);
 };
@@ -666,7 +667,7 @@ var drawKeyArr = getArr(storage.getItem('key'));
 var shareData = {
 url: "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(","),
 title: "BLG 非官方百靈果播放室",
-text: "百靈果 Podcast，標籤："+drawKeyArr.join("、"),
+text: "【百靈果 Podcast】標籤："+drawKeyArr.join("、"),
 };
 try {
 await navigator.share(shareData);
