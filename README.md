@@ -17,6 +17,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
   > Most browsers **choose** to display emoji ("👌") in punycode form ("xn--xp8h") to prevent phising
 
 - Shortened link：[https://trth.nl/?blg](https://trth.nl/?blg)
+- Backend git repo: <https://github.com/SotongDJ/CFP2>
 
 ## Features
 
