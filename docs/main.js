@@ -281,7 +281,9 @@ tagBarDOM.style["visibility"] = "hidden";
 };
 playlistDOM.innerHTML = "";
 var podObj = {};
-var filteredArr = getArr(storage.getItem('filtered'));;
+var nowStr = storage.getItem('now');
+var storedArr = getArr(storage.getItem('filtered'));
+var filteredArr = (nowStr&&!storedArr.includes(nowStr))?[nowStr].concat(storedArr):storedArr;
 for (let nub = 0; nub < filteredArr.length; nub++) {
 var tar = filteredArr[nub];
 var entryPg = document.createElement('div');
@@ -366,6 +368,8 @@ changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
 function afterPlay() {
 navigator.mediaSession.playbackState = 'playing';
 var nowStr = storage.getItem('now')||"";
+var nowDOM = document.getElementById("entry"+nowStr);
+if (nowDOM) {nowDOM.scrollIntoView({ behavior: 'smooth' })};
 changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
 let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
@@ -478,7 +482,8 @@ canvasDOM.getContext('2d').drawImage(image, 0, 0, 512, 512);
 };
 
 async function mixPlay() {
-let nameStr = playlist[storage.getItem('now')]['image'];
+let nowStr = storage.getItem('now');
+let nameStr = playlist[nowStr]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 popPipDOM.style["width"] = "10vh";
 popPipDOM.style["height"] = "10vh";
