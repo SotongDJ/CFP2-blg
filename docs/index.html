@@ -97,7 +97,6 @@
 <div id="playlist" class="plain"></div>
 </div>
 
-<audio id="player" preload="metadata"></audio>
 <div id="playerbar" class="playerbar">
 <a id="popA" style="margin: auto;"><div id="popPiP" class="popPiP"></div></a>
 <div id="seeker" style="display:grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr;">
@@ -106,7 +105,7 @@
 <input id="slider" type="range" min="0" step="1" value="" aria-label="Audio">
 <div id="totalTimer" style="text-align:left;"></div>
 </div>
-<span class="tagBorder" style="display:grid; grid-template-columns: repeat(5, 1fr);">
+<span class="tagBorder" style="display:grid; grid-template-columns: repeat(5, 1fr); height: min-content; margin: auto;">
 <a href="javascript: void(doPrev())" class="linkDecor activeBtn"><i class="fa-solid fa-backward-step fa-fw"></i></a>
 <a href="javascript: void(seakBack({}))" class="linkDecor activeBtn"><i class="fa-solid fa-rotate-left fa-fw"></i></a>
 <a href="javascript: void(mixPlay())" id="playBtn" class="linkDecor activeBtn" style="display: block;"><i class="fa-solid fa-play fa-fw"></i></a>
@@ -116,6 +115,7 @@
 </span>
 </div>
 </div>
+<audio id="player" preload="metadata"></audio>
 
 </div>
 <script src="register.js"></script>
