@@ -64,8 +64,8 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - episode detail info
   - podcast episode detail
   - include youtube shorts/teaser
-- customize playback control UI
+- ~~customize playback control UI~~ (archived)
 - able to customize playback queue
 - offline playback
   - use browser to cache podcast and manage downloaded content are too complicated
-  - offline playback is may support in future
+  - offline playback may be supported in future

@@ -23,6 +23,12 @@ const plContainDOM = document.getElementById("playlistContain");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
 const playerBarDOM = document.getElementById("playerbar");
+const playBTN = document.getElementById("playBtn");
+const pauseBTN = document.getElementById("pauseBtn");
+const seekerDOM = document.getElementById("seeker");
+const currentDOM = document.getElementById("currentTime");
+const sliderDOM = document.getElementById("slider");
+const totalDOM = document.getElementById("totalTimer");
 const popADOM = document.getElementById("popA");
 const popPipDOM = document.getElementById("popPiP");
 const canvasDOM = document.createElement('canvas');
@@ -347,11 +353,13 @@ if (prevStr) {doQueue(prevStr); await doPlay(prevStr);};
 };
 
 function updatePositionState() {
+if (navigator.mediaSession.metadata) {
 navigator.mediaSession.setPositionState({
 duration: playerDOM.duration,
 playbackRate: playerDOM.playbackRate,
 position: playerDOM.currentTime
 });
+};
 };
 
 function changeIcon(targetName,targetValue) {
@@ -363,6 +371,8 @@ function afterPause() {
 navigator.mediaSession.playbackState = 'paused';
 var nowStr = storage.getItem('now')||"";
 changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
+playBTN.style["display"] = "block";
+pauseBTN.style["display"] = "none";
 };
 
 function afterPlay() {
@@ -371,6 +381,8 @@ var nowStr = storage.getItem('now')||"";
 var nowDOM = document.getElementById("entry"+nowStr);
 if (nowDOM) {nowDOM.scrollIntoView({ behavior: 'smooth' })};
 changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
+playBTN.style["display"] = "none";
+pauseBTN.style["display"] = "block";
 let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
@@ -386,25 +398,19 @@ artwork: [
 { src: `https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png`, sizes: '512x512', type: 'image/png' },
 ]
 });
-updatePositionState();    
 };
 
 function seakBack(details) {
 const skipTime = details.seekOffset || 10;
 playerDOM.currentTime = Math.max(playerDOM.currentTime - skipTime, 0);
-updatePositionState();
 };
 
 function seakForw(details) {
 const skipTime = details.seekOffset || 10;
 playerDOM.currentTime = Math.min(playerDOM.currentTime + skipTime, playerDOM.duration);
-updatePositionState();
 };
 
-function seakGoTo(details) {
-playerDOM.currentTime = details.seekTime;
-updatePositionState();
-};
+function seakGoTo(details) {playerDOM.currentTime = details.seekTime;};
 
 async function doPlay(inputStr) {
 playerDOM.src = playlist[inputStr]['feed'];
@@ -443,9 +449,32 @@ await doPlay(targetStr);
 };
 };
 
+function convertTimer(inputSeconds) {
+var seconds = Math.floor(inputSeconds % 60);
+if (seconds < 10) {seconds = "0" + seconds};
+var minutes = Math.floor(inputSeconds / 60);
+return minutes + ":" + seconds;
+};
+
 playerDOM.addEventListener('play', afterPlay, false);
 playerDOM.addEventListener('pause', afterPause, false);
 playerDOM.addEventListener('ended', doNext, false);
+playerDOM.addEventListener('loadedmetadata', function() {
+totalDOM.innerHTML = convertTimer(playerDOM.duration);
+currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
+sliderDOM.max= playerDOM.duration;
+sliderDOM.setAttribute("value", playerDOM.currentTime);
+});
+playerDOM.addEventListener('timeupdate', function() {
+currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
+sliderDOM.value = playerDOM.currentTime;
+sliderDOM.setAttribute("value", playerDOM.currentTime);
+updatePositionState();
+});
+sliderDOM.addEventListener("change", function () {
+playerDOM.currentTime = sliderDOM.value;
+updatePositionState();
+});
 
 videoDOM.addEventListener('play', () => {mixPlay()}, false);
 videoDOM.addEventListener('pause', () => {mixPause()}, false);
@@ -503,7 +532,6 @@ navigator.mediaSession.setActionHandler(action, handler);
 console.log(`The media session action "${action}" is not supported yet.`);
 };
 };
-updatePositionState();    
 }).catch(error => {
 mixPause();
 setTimeout(() => {
@@ -634,6 +662,8 @@ titleH1DOM.innerHTML = "";
 titleSpanDOM.innerHTML = "";
 var landBool = (window.visualViewport.height > window.visualViewport.width);
 var targetDOM = landBool ? titleH1DOM : titleSpanDOM;
+seekerDOM.style["grid-template-columns"] = landBool ? "1fr" : "1fr 1fr";
+seekerDOM.style["grid-template-rows"] = landBool ? "1fr 1fr": "1fr";
 var okSpan = document.createElement("span");
 okSpan.className = "mirror";
 okSpan.innerText = "👌";
@@ -649,13 +679,14 @@ playerBarDOM.style["height"] = "min-content";
 if (popPipDOM.style['background-image']) {
 popPipDOM.style["width"] = "10vh";
 popPipDOM.style["visibility"] = "visible";
-} else{
+} else {
 popPipDOM.style["width"] = "0px";
 popPipDOM.style["visibility"] = "hidden";
 };
 popPipDOM.style["height"] = "10vh";
 playerDOM.style["height"] = "10vh";
 };
+
 window.onresize = resizeDiv;
 resizeDiv();
 
