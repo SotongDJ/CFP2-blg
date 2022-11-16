@@ -4,7 +4,7 @@
 // - https://developer.chrome.com/docs/workbox/caching-strategies-overview/
 // - https://jakearchibald.com/2014/offline-cookbook/#stale-while-revalidate
 //
-const currentVersion = 'v1.6';
+const currentVersion = 'v1.7';
 
 const deleteCache = async (key) => {await caches.delete(key);};
 
