@@ -93,7 +93,7 @@ optionObj[key] = (optionObj[key]==[])?value:value[0];
 };
 for (var opt = 0; opt < optionKey.length; ++opt) {
 var key = optionKey[opt];
-(key=="key")||(optionObj[key]==defaultObj[key])||storage.setItem(key,optionObj[key]);
+(key=="key")||((optionObj[key]==defaultObj[key])?(storage.getItem(key))||storage.setItem(key,optionObj[key]):storage.setItem(key,optionObj[key]));
 };
 // function to replace fontawesome key
 function fontAwe(fontKey,fontID="") {
