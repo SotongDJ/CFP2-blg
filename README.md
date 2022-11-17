@@ -60,9 +60,9 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 - ~~design different colour theme~~ (archived)
 - ~~design different contrast theme~~ (archived)
 - ~~month tag~~ (archived)
-- share button
+- ~~share button~~ (archived)
   - ~~tag share~~ (archived)
-  - episode share
+  - ~~episode share~~ (archived)
 - episode detail info
   - podcast episode detail
   - include youtube shorts/teaser

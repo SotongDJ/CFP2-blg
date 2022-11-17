@@ -14,11 +14,11 @@ const contraIDOM = document.getElementById("contraI");
 const contraADOM = document.getElementById("contraA");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
-const shareBtnDOM = document.getElementById("share_btn");
 const shareResultDOM = document.getElementById("share_result");
 const shareContentDOM = document.getElementById("share_content");
 const tagNoteDOM = document.getElementById("tagnote");
-const detailDOM = document.getElementById("detail");
+const trackTitleDOM = document.getElementById("tracktitle");
+const morePageDOM = document.getElementById("morePage");
 const plContainDOM = document.getElementById("playlistContain");
 const playlistDOM = document.getElementById("playlist");
 const playerDOM = document.getElementById("player");
@@ -37,6 +37,10 @@ const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
 // fontawesome str
 const faTagStr = "fa-solid fa-tag fa-fw";
+const faShareStr = "fa-solid fa-share-alt fa-fw";
+const selectedStr = "fa-solid fa-circle-check fa-fw";
+const playingStr = "fa-solid fa-circle-play fa-fw"; // fa-spin fa-fw";
+const pausedStr = "fa-solid fa-circle-pause fa-fw";
 const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
 const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
 const caretUpStr = "fa-solid fa-square-caret-up fa-fw";
@@ -50,7 +54,7 @@ const neutralColourStr = "fa-solid fa-cloud fa-fw";
 const lightColourStr = "fa-solid fa-sun fa-fw";
 const darkColourStr = "fa-solid fa-moon fa-fw";
 // default parameter
-const sectionObj = {"header":0,"option":1,"index":2,"select":3,"list":4,"player":5};
+const sectionObj = {"header":0,"option":1,"index":2,"select":3,"list":4,"title":5,"player":6,"audio":7};
 const themeObj = {"colour":0,"contrast":1};
 const paramObj = {
 "sort":{
@@ -75,7 +79,12 @@ var url = new URL(window.location.href);
 var argueObj = new Object();
 for (const [key,value] of url.searchParams.entries()) {
 if (value.includes(",")) {
-argueObj[key] = value.split(",");
+valueOriArr = value.split(",");
+valueArr = Array();
+for (let i = 0; i < valueOriArr.length; i++) {
+(valueOriArr[i]=="")||valueArr.push(valueOriArr[i]);
+}
+argueObj[key] = valueArr;
 } else if (value != ""){
 argueObj[key] = [value];
 };
@@ -88,13 +97,19 @@ for (var ark = 0; ark < argueKey.length; ++ark) {
 var key = argueKey[ark];
 if (optionKey.includes(key)) {
 var value = argueObj[key];
-optionObj[key] = (optionObj[key]==[])?value:value[0];
+optionObj[key] = (key=="key")?value:value[0];
 };
 };
 for (var opt = 0; opt < optionKey.length; ++opt) {
 var key = optionKey[opt];
-(key=="key")||((optionObj[key]==defaultObj[key])?(storage.getItem(key))||storage.setItem(key,optionObj[key]):storage.setItem(key,optionObj[key]));
+if (argueObj["do"]&&argueObj["do"][0]=="reset") {
+optionObj[key]=defaultObj[key];
+storage.setItem(key,optionObj[key]);
+} else {
+(key=="key")||((optionObj[key]==defaultObj[key])?((storage.getItem(key))||storage.setItem(key,optionObj[key])):storage.setItem(key,optionObj[key]));
 };
+};
+(argueObj["do"])&&(argueObj["do"][0]=="reset")&&(window.location.href="/");
 // function to replace fontawesome key
 function fontAwe(fontKey,fontID="") {
 var fontI = document.createElement('i');
@@ -279,7 +294,9 @@ unionA.append(unionToggleBool?"聯集":"交集");
 unionA.href = "javascript: void(toggleUnion())";
 unionSDOM.appendChild(unionA);
 } else {
-tagNoteDOM.innerText = "已選擇：";
+tagNoteDOM.innerHTML = "";
+tagNoteDOM.appendChild(fontAwe(faTagStr));
+tagNoteDOM.append(" 已選：");
 };
 for (let oka = 0; oka < drawKeyArr.length; oka++) {
 var removeTagStr = "javascript: void(removeTag(\""+drawKeyArr[oka]+"\"))";
@@ -381,6 +398,20 @@ function afterPause() {
 navigator.mediaSession.playbackState = 'paused';
 var nowStr = storage.getItem('now')||"";
 changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
+if (nowStr!=""){
+trackTitleDOM.innerHTML = "";
+trackTitleDOM.appendChild(fontAwe(pausedStr));
+trackTitleDOM.append(" 暫停：");
+trackTitleDOM.append(playlist[nowStr]['name']);
+var shareSingleADOM = document.createElement("a");
+shareSingleADOM.href = "javascript: void(shareNow())";
+shareSingleADOM.innerText = " 分享本集";
+var shareSingleSDOM = document.createElement("span");
+shareSingleSDOM.className = "buttonDiv";
+shareSingleSDOM.append(fontAwe(faShareStr));
+shareSingleSDOM.appendChild(shareSingleADOM);
+trackTitleDOM.append(shareSingleSDOM);
+};
 playBTN.style["display"] = "block";
 pauseBTN.style["display"] = "none";
 };
@@ -388,9 +419,26 @@ pauseBTN.style["display"] = "none";
 function afterPlay() {
 navigator.mediaSession.playbackState = 'playing';
 var nowStr = storage.getItem('now')||"";
+changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
 var nowDOM = document.getElementById("entry"+nowStr);
 if (nowDOM) {nowDOM.scrollIntoView({ behavior:'smooth' })};
-changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
+if (nowStr!=""){
+trackTitleDOM.innerHTML = "";
+trackTitleDOM.appendChild(fontAwe(playingStr));
+trackTitleDOM.append(" 播放：");
+trackTitleDOM.append(playlist[nowStr]['name']);
+trackTitleDOM.append(" ");
+// <div class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
+// <a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
+var shareSingleADOM = document.createElement("a");
+shareSingleADOM.href = "javascript: void(shareNow())";
+shareSingleADOM.innerText = " 分享本集";
+var shareSingleSDOM = document.createElement("span");
+shareSingleSDOM.className = "buttonDiv";
+shareSingleSDOM.append(fontAwe(faShareStr));
+shareSingleSDOM.appendChild(shareSingleADOM);
+trackTitleDOM.append(shareSingleSDOM);
+};
 playBTN.style["display"] = "none";
 pauseBTN.style["display"] = "block";
 let nameStr = playlist[storage.getItem('now')]['image'];
@@ -430,6 +478,12 @@ await mixPlay();
 function initPlay(inputStr) {
 playerDOM.src = playlist[inputStr]['feed'];
 storage.setItem('now',inputStr);
+trackTitleDOM.innerHTML = "";
+trackTitleDOM.appendChild(fontAwe(selectedStr));
+trackTitleDOM.append(" 已選：");
+trackTitleDOM.append(playlist[inputStr]['name']);
+var nowDOM = document.getElementById("entry"+inputStr);
+if (nowDOM) {nowDOM.scrollIntoView({ behavior:'smooth' })};
 };
 
 function doQueue(inputStr) {
@@ -583,7 +637,7 @@ function toggleTag() {
 // hide option
 toggleLayout("option","0px")
 moreIDOM.className = caretDownStr;
-detailDOM.style["visibility"] = "hidden";
+morePageDOM.style["visibility"] = "hidden";
 // toggle index
 var toggleTagBool = toggleLayout("index","1fr","0px");
 tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
@@ -602,7 +656,7 @@ function toggleMoreOpt() {
 // toggle option
 var toggleMoreOptBool = toggleLayout("option","1fr","0px");
 moreIDOM.className = toggleMoreOptBool?caretUpStr:caretDownStr;
-detailDOM.style["visibility"] = toggleMoreOptBool?"visible":"hidden";
+morePageDOM.style["visibility"] = toggleMoreOptBool?"visible":"hidden";
 // hide index
 toggleLayout("index","0px")
 tagIDOM.className = caretDownStr;
@@ -625,13 +679,13 @@ draw();
 };
 
 function updateBtn(sectionStr,targetADOM,targetIDOM) {
-var nowStr = storage.getItem(sectionStr);
-targetADOM.innerText = paramObj[sectionStr][nowStr]["text"];
-targetIDOM.className = paramObj[sectionStr][nowStr]["class"];
+var sectionNowStr = storage.getItem(sectionStr);
+targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
+targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
 };
 function toggleBtn(sectionStr){
-var nowStr = storage.getItem(sectionStr);
-var nextStr = paramObj[sectionStr][nowStr]['next'];
+var sectionNowStr = storage.getItem(sectionStr);
+var nextStr = paramObj[sectionStr][sectionNowStr]['next'];
 storage.setItem(sectionStr,nextStr);
 };
 
@@ -697,20 +751,35 @@ playerDOM.style["height"] = "10vh";
 window.onresize = resizeDiv;
 resizeDiv();
 
-function shareBehave() {
+function shareTags() {
 if (navigator.share) {
-navigatorShare();
+var drawKeyArr = getArr(storage.getItem('key'));
+var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
+var targetTitle_str = "【百靈果 Podcast】標籤："+drawKeyArr.join("、");
+navigatorShare(targetUrl_str,targetTitle_str);
 } else {
-clipboardShare();
+clipboardShare(targetUrl_str);
 };
 };
 
-async function navigatorShare() {
+function shareNow() {
+if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
+var nowStr = storage.getItem('now');
+// let currentTsStr = str(storage.getItem('currentTS'));
+var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr;//+"&currentTS="+currentTsStr;
+var targetTitle_str = "【百靈果 Podcast】："+playlist[nowStr]['name'];
+navigatorShare(targetUrl_str,targetTitle_str);
+} else {
+clipboardShare(targetUrl_str);
+};
+};
+    
+async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
-url:"https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(","),
+url:targetUrl,
 title:"BLG 非官方百靈果播放室",
-text:"【百靈果 Podcast】標籤："+drawKeyArr.join("、"),
+text:targetTitle,
 };
 try {
 await navigator.share(shareData);
@@ -725,9 +794,8 @@ shareResultDOM.textContent = err;
 };
 };
 
-function clipboardShare() {
-var drawKeyArr = getArr(storage.getItem('key'));
-shareUrl = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
+function clipboardShare(targetUrl) {
+shareUrl = targetUrl;
 shareContentDOM.value = shareUrl;
 shareContentDOM.setAttribute("type","text");
 shareContentDOM.select();

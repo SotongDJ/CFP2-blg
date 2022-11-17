@@ -44,7 +44,7 @@
 </head>
 <body onload="resizeDiv()" class="neutral lowContrast">
 <div id="contentdiv" class="centerise"
- style="grid-template-rows:min-content 0px 0px 0px 1fr min-content;">
+ style="grid-template-rows:min-content 0px 0px 0px 1fr min-content min-content 0px;">
 
 <div class="tittlebar">
 <h1 id="titleH1">BLG 非官方<a href="https://www.bailingguonews.com/" target="info">百靈果</a>播放室</h1>
@@ -54,8 +54,8 @@
 <a id="tagA" href="javascript:void(toggleTag())">標籤</a></span>
 <span class="buttonDiv"><i id="sortI" class="fa-solid fa-sort fa-fw"></i>
 <a id="sortA" href="javascript:void(toggleSort())">排序</a></span>
-<span class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
-<a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></span>
+<span class="buttonDiv"><i class="fa-brands fa-instagram fa-fw"></i>
+<a href="https://www.instagram.com/cfp2_blg/" target="info">埃居</a></span>
 <span class="buttonDiv"><i id="moreI" class="fa-solid fa-angles-right fa-fw"></i>
 <a href="javascript:void(toggleMoreOpt())">更多</a></span>
 <span id="titleSpan"></span>
@@ -63,7 +63,7 @@
 </div>
 </div>
 
-<div id="detail" class="detail">
+<div id="morePage" class="morePage" style="visibility:hidden;">
 <div class="buttonDiv"><i id="colourI" class="fa-solid fa-cloud fa-fw"></i>
 <a id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
 <div class="buttonDiv"><i id="contraI" class="fa-solid fa-circle-half-stroke fa-fw"></i>
@@ -74,8 +74,10 @@
 </a></div>
 <div class="buttonDiv"><i class="fa-solid fa-life-ring fa-fw"></i>
 <a href="https://github.com/SotongDJ/cfp2-blg/wiki" target="info">指南</a></div>
-<div class="buttonDiv"><i class="fa-brands fa-instagram fa-fw"></i>
-<a href="https://www.instagram.com/cfp2_blg/" target="info">Instagram</a></div>
+<div class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
+<a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
+<div class="buttonDiv"><i class="fa-solid fa-trash-can fa-fw"></i>
+<a href="/?do=reset">重置</a></div>
 </div>
 
 <div id="tagindex" class="tagIndex">
@@ -85,9 +87,9 @@
 <div class="tagContent">
 <div id="tagbar" class="tagBar" style="visibility:hidden;">
 <span id="unionSpan" class="buttonDiv"></span>
-<span id="tagnote">已選擇：</span>
+<span id="tagnote">標籤</span>
 <span id="taglist"></span>
-<a href="javascript:void(shareBehave())" id="share_btn" class="linkDecor activeBtn tagBorder"><i class="fa-solid fa-share-alt fa-fw"></i> 分享</a>
+<a href="javascript:void(shareTags())" class="linkDecor activeBtn tagBorder"><i class="fa-solid fa-share-alt fa-fw"></i> 分享標籤</a>
 <span id="share_result" class="result"></span>
 <input id="share_content" type="hidden"></input>
 </div>
@@ -95,6 +97,12 @@
 
 <div id="playlistContain" class="container">
 <div id="playlist" class="plain"></div>
+</div>
+
+<div class="tagContent">
+<div class="tagBar" style="visibility:visible;">
+<span id="tracktitle"><i class="fa-solid fa-circle-minus fa-fw"></i> 未選擇集數：請點選任意集數播放</span>
+</div>
 </div>
 
 <div id="playerbar" class="playerbar">
@@ -115,7 +123,10 @@
 </span>
 </div>
 </div>
+
+<div class="tagContent">
 <audio id="player" preload="metadata"></audio>
+</div>
 
 </div>
 <script src="register.js"></script>
