@@ -1,9 +1,9 @@
 {
-"description": "位於墨玉程市的 BLG 非官方百靈果播放室",
+"description": "位於墨玉程市的 CFP2-BLG 百靈果播放室",
 "dir": "ltr",
 "display": "standalone",
 "display_override": ["fullscreen", "minimal-ui"],
-"name": "BLG 非官方百靈果播放室",
+"name": "CFP2-BLG 百靈果播放室",
 "lang": "zh-Hant-TW",
 "orientation": "any",
 "scope": "/",

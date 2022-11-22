@@ -5,6 +5,7 @@ html{
 font-size:20px;
 }
 body{
+overscroll-behavior: contain;
 font-family:"Noto Sans TC","Noto Emoji",Helvetica, Arial, sans-serif;
 margin:0;
 padding:0rem 1rem;
@@ -187,6 +188,7 @@ width:fit-content;
 }
 .linkDecor{text-decoration:none;}
 .mirror{
+font-family:"Noto Emoji";
 display:inline-block;
 transform:matrix(-1, 0, 0, 1, 0, 0);
 }

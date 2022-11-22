@@ -714,23 +714,43 @@ function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
 function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
 
 function resizeDiv() {
-var titleAspan = document.createElement('a');
-titleAspan.href = "https://www.bailingguonews.com/";
-titleAspan.target = "info";
-titleAspan.innerText = "百靈果";
+var verticalBool = (window.visualViewport.height > window.visualViewport.width);
+var targetDOM = verticalBool?titleH1DOM:titleSpanDOM;
+seekerDOM.style["grid-template-columns"] = verticalBool?"1fr":"1fr 1fr";
+seekerDOM.style["grid-template-rows"] = verticalBool?"1fr 1fr":"1fr";
+var squidAdom = document.createElement("a");
+squidAdom.className = "mirror";
+squidAdom.href = "https://xn--2os22eixx6na.xn--kpry57d/";
+squidAdom.target = "info";
+squidAdom.title = "墨玉程市";
+squidAdom.innerText = "🦑";
+var cfp2Aspan = document.createElement('a');
+cfp2Aspan.href = "https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/";
+cfp2Aspan.target = "info";
+cfp2Aspan.title = "CFP2";
+cfp2Aspan.innerText = "CFP2";
+var okAdom = document.createElement("a");
+okAdom.className = "mirror";
+okAdom.href = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/";
+okAdom.title = "Bailingguo 百靈果";
+okAdom.innerText = "👌";
+var blgAspan = document.createElement('a');
+blgAspan.href = "https://www.bailingguonews.com/";
+blgAspan.target = "info";
+blgAspan.title = "Bailingguo 百靈果";
+blgAspan.innerText = "BLG 百靈果";
 // var largeBool = (window.visualViewport.height > 1080);
 titleH1DOM.innerHTML = "";
 titleSpanDOM.innerHTML = "";
-var landBool = (window.visualViewport.height > window.visualViewport.width);
-var targetDOM = landBool?titleH1DOM:titleSpanDOM;
-seekerDOM.style["grid-template-columns"] = landBool?"1fr":"1fr 1fr";
-seekerDOM.style["grid-template-rows"] = landBool?"1fr 1fr":"1fr";
-var okSpan = document.createElement("span");
-okSpan.className = "mirror";
-okSpan.innerText = "👌";
-targetDOM.appendChild(okSpan);
-targetDOM.append(" BLG 非官方");
-targetDOM.appendChild(titleAspan);
+//["·","　"," "]
+verticalBool||targetDOM.append("｜");
+targetDOM.appendChild(squidAdom);
+targetDOM.append(" ");
+targetDOM.appendChild(cfp2Aspan);
+targetDOM.append("·");
+targetDOM.appendChild(okAdom);
+targetDOM.append(" ");
+targetDOM.appendChild(blgAspan);
 targetDOM.append("播放室");
 // contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
 // if (playerDOM.offsetHeight==0) {
@@ -778,7 +798,7 @@ clipboardShare(targetUrl_str);
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
 url:targetUrl,
-title:"BLG 非官方百靈果播放室",
+title:"CFP2 BLG 百靈果播放室",
 text:targetTitle,
 };
 try {
