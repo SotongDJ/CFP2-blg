@@ -727,22 +727,22 @@ squidAdom.innerText = "🦑";
 var cfp2Aspan = document.createElement('a');
 cfp2Aspan.href = "https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/";
 cfp2Aspan.target = "info";
-cfp2Aspan.title = "CFP2";
+cfp2Aspan.title = "All CFP2 所有播放室";
 cfp2Aspan.innerText = "CFP2";
 var okAdom = document.createElement("a");
 okAdom.className = "mirror";
 okAdom.href = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/";
-okAdom.title = "Bailingguo 百靈果";
+okAdom.title = "Refresh site 重新更新本站";
 okAdom.innerText = "👌";
 var blgAspan = document.createElement('a');
 blgAspan.href = "https://www.bailingguonews.com/";
 blgAspan.target = "info";
-blgAspan.title = "Bailingguo 百靈果";
-blgAspan.innerText = "BLG 百靈果";
+blgAspan.title = "Bailingguo podcast 百靈果 Podcast";
+blgAspan.innerText = verticalBool?"BLG ":"BLG 百靈果";
 // var largeBool = (window.visualViewport.height > 1080);
 titleH1DOM.innerHTML = "";
 titleSpanDOM.innerHTML = "";
-//["·","　"," "]
+// ["·","　"," "]
 verticalBool||targetDOM.append("｜");
 targetDOM.appendChild(squidAdom);
 targetDOM.append(" ");

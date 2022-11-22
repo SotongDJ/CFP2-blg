@@ -1,6 +1,6 @@
-# Unofficial podcast player for Bailingguo podcast
+# CuttleFish podcast player for Bailingguo podcast
 
-The unofficial, CuttleFish podcast player (CFP2) for [Bailingguo](https://www.bailingguonews.com/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
+The unofficial,  (CFP2) for [Bailingguo](https://www.bailingguonews.com/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
 
