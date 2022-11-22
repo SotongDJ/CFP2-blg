@@ -50,8 +50,10 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## LICENSE
 
-- The fonts (Noto Sans Mono, Noto Sans TC) use in this website is licensed under the SIL Open Font License, Version 1.1.
+- The fonts (Noto Sans Mono, Noto Sans TC) use in this website is licensed under the SIL Open Font License 1.1.
   - See <https://fonts.google.com/attribution> for more detail
+- The icons (Font Awesome Free) use in this website is licensed under the CC BY 4.0 License and SIL Open Font License 1.1 License
+  - See <https://fontawesome.com/license/free> for more detail
 
 ## TO DO
 

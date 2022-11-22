@@ -50,8 +50,10 @@
 
 ## LICENSE
 
-- 本網站所使用的字體（Noto Sans Mono、Noto Sans TC）均經由 SIL Open Font License, Version 1.1 釋出
+- 本網站所使用的字體（Noto Sans Mono、Noto Sans TC）均經由 SIL Open Font License 1.1 釋出
   - 請前往 <https://fonts.google.com/attribution> 查閱更多細節
+- 本網站所使用的圖標（Font Awesome Free）經由 CC BY 4.0 License 和 SIL Open Font License 1.1 釋出
+  - 請前往 <https://fontawesome.com/license/free> 查閱更多細節
 
 ## TO DO
 
