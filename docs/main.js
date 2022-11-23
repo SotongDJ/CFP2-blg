@@ -43,8 +43,10 @@ const playingStr = "fa-solid fa-circle-play fa-fw"; // fa-spin fa-fw";
 const pausedStr = "fa-solid fa-circle-pause fa-fw";
 const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
 const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
-const caretUpStr = "fa-solid fa-square-caret-up fa-fw";
-const caretDownStr = "fa-solid fa-square-caret-down fa-fw";
+const tagUpStr = "fa-solid fa-square-caret-up fa-fw";
+const tagDownStr = "fa-solid fa-square-caret-down fa-fw";
+const moreUpStr = "fa-solid fa-square-minus fa-fw";
+const moreDownStr = "fa-solid fa-square-plus fa-fw";
 const sortFaStr = "fa-solid fa-sort fa-fw";
 const sortUpStr = "fa-solid fa-sort-up fa-fw";
 const sortDownStr = "fa-solid fa-sort-down fa-fw";
@@ -636,11 +638,11 @@ return conditionBool;
 function toggleTag() {
 // hide option
 toggleLayout("option","0px")
-moreIDOM.className = caretDownStr;
+moreIDOM.className = moreDownStr;
 morePageDOM.style["visibility"] = "hidden";
 // toggle index
 var toggleTagBool = toggleLayout("index","1fr","0px");
-tagIDOM.className = toggleTagBool?caretUpStr:caretDownStr;
+tagIDOM.className = toggleTagBool?tagUpStr:tagDownStr;
 tagIndexDOM.style["visibility"] = toggleTagBool?"visible":"hidden";
 // toggle playlist
 if (window.visualViewport.height <= 800) {
@@ -655,11 +657,11 @@ plContainDOM.style["visibility"] = "visible";
 function toggleMoreOpt() {
 // toggle option
 var toggleMoreOptBool = toggleLayout("option","1fr","0px");
-moreIDOM.className = toggleMoreOptBool?caretUpStr:caretDownStr;
+moreIDOM.className = toggleMoreOptBool?moreUpStr:moreDownStr;
 morePageDOM.style["visibility"] = toggleMoreOptBool?"visible":"hidden";
 // hide index
 toggleLayout("index","0px")
-tagIDOM.className = caretDownStr;
+tagIDOM.className = tagDownStr;
 tagIndexDOM.style["visibility"] = "hidden";
 // toggle playlist
 if (window.visualViewport.height <= 800) {
