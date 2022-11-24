@@ -447,7 +447,7 @@ let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
 title:playlist[storage.getItem('now')]['name'],
-artist:'百靈果 Podcast',
+artist:'百靈果 News',
 album:playlist[storage.getItem('now')]['tag'].join(" "),
 artwork:[
 { src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
@@ -739,7 +739,7 @@ okAdom.innerText = "👌";
 var blgAspan = document.createElement('a');
 blgAspan.href = "https://www.bailingguonews.com/";
 blgAspan.target = "info";
-blgAspan.title = "Bailingguo podcast 百靈果 Podcast";
+blgAspan.title = "Bailingguo News 百靈果 News";
 blgAspan.innerText = verticalBool?"BLG ":"BLG 百靈果";
 // var largeBool = (window.visualViewport.height > 1080);
 titleH1DOM.innerHTML = "";
@@ -777,7 +777,7 @@ function shareTags() {
 if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
 var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
-var targetTitle_str = "【百靈果 Podcast】標籤："+drawKeyArr.join("、");
+var targetTitle_str = "【百靈果 News】標籤："+drawKeyArr.join("、");
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -790,7 +790,7 @@ var drawKeyArr = getArr(storage.getItem('key'));
 var nowStr = storage.getItem('now');
 // let currentTsStr = str(storage.getItem('currentTS'));
 var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr;//+"&currentTS="+currentTsStr;
-var targetTitle_str = "【百靈果 Podcast】："+playlist[nowStr]['name'];
+var targetTitle_str = "【百靈果 News】："+playlist[nowStr]['name'];
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -800,7 +800,7 @@ clipboardShare(targetUrl_str);
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
 url:targetUrl,
-title:"CFP2 BLG 百靈果播放室",
+title:"CFP2-BLG 百靈果播放室",
 text:targetTitle,
 };
 try {
