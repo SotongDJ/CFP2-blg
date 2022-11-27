@@ -71,28 +71,28 @@
 },
 {
 "src": "/ss/ios-light-low.png",
-"sizes": "1080x2340",
+"sizes": "1242x2208",
 "type": "image/png",
 "platform": "narrow",
 "label": "Homescreen in light theme with low contrast"
 },
 {
 "src": "/ss/ios-light-high.png",
-"sizes": "1080x2340",
+"sizes": "1242x2208",
 "type": "image/png",
 "platform": "narrow",
 "label": "Homescreen in light theme with high contrast"
 },
 {
 "src": "/ss/ios-dark-low.png",
-"sizes": "1080x2340",
+"sizes": "1242x2208",
 "type": "image/png",
 "platform": "narrow",
 "label": "Homescreen in dark theme with low contrast"
 },
 {
 "src": "/ss/ios-dark-high.png",
-"sizes": "1080x2340",
+"sizes": "1242x2208",
 "type": "image/png",
 "platform": "narrow",
 "label": "Homescreen in dark theme with high contrast"
