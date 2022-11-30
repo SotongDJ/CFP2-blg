@@ -146,6 +146,7 @@ border-radius:0.25rem;
 visibility: visible;
 }
 .morePage{
+overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
 border-radius:0.25rem;

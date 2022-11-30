@@ -14,7 +14,13 @@ const contraIDOM = document.getElementById("contraI");
 const contraADOM = document.getElementById("contraA");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
-const shareResultDOM = document.getElementById("share_result");
+const shareRsDivDOM = document.getElementById("shareResultDiv");
+const shareRsADOM = document.getElementById("shareResultA");
+const shareTagDOM = document.getElementById("shareTag");
+const shareEpiDOM = document.getElementById("shareEpi");
+const shareCutDOM = document.getElementById("shareCuT");
+const tagSpanDOM = document.getElementById("tagSpan");
+const cuTSpanDOM = document.getElementById("cuTSpan");
 const shareContentDOM = document.getElementById("share_content");
 const tagNoteDOM = document.getElementById("tagnote");
 const trackTitleDOM = document.getElementById("tracktitle");
@@ -37,10 +43,10 @@ const contentDOM = document.getElementById("contentdiv");
 const storage = window.localStorage;
 // fontawesome str
 const faTagStr = "fa-solid fa-tag fa-fw";
-const faShareStr = "fa-solid fa-share-alt fa-fw";
 const selectedStr = "fa-solid fa-circle-check fa-fw";
 const playingStr = "fa-solid fa-circle-play fa-fw"; // fa-spin fa-fw";
 const pausedStr = "fa-solid fa-circle-pause fa-fw";
+const stopStr = "fa-solid fa-circle-stop fa-fw";
 const unionToggleOnStr = "fa-solid fa-toggle-on fa-fw";
 const unionToggleOffStr = "fa-solid fa-toggle-off fa-fw";
 const tagUpStr = "fa-solid fa-square-caret-up fa-fw";
@@ -102,13 +108,16 @@ var value = argueObj[key];
 optionObj[key] = (key=="key")?value:value[0];
 };
 };
+((optionObj["now"]!="")&&(optionObj["currentTS"]=="")&&storage.getItem("currentTS"))&&storage.setItem("currentTS","");
 for (var opt = 0; opt < optionKey.length; ++opt) {
 var key = optionKey[opt];
 if (argueObj["do"]&&argueObj["do"][0]=="reset") {
 optionObj[key]=defaultObj[key];
 storage.setItem(key,optionObj[key]);
 } else {
-(key=="key")||((optionObj[key]==defaultObj[key])?((storage.getItem(key))||storage.setItem(key,optionObj[key])):storage.setItem(key,optionObj[key]));
+var optionValue = (key=="key")?optionObj[key].join(","):optionObj[key];
+var defaultValue = (key=="key")?"":defaultObj[key];
+(optionValue==defaultValue)?((storage.getItem(key))||storage.setItem(key,optionValue)):storage.setItem(key,optionValue);
 };
 };
 (argueObj["do"])&&(argueObj["do"][0]=="reset")&&(window.location.href="/");
@@ -149,12 +158,12 @@ return bArr;
 
 function getArr(inputStr) {return inputStr?inputStr.split(","):new Array();};
 var keyArr = compareLength(optionObj['key'],getArr(storage.getItem('key')));
-storage.setItem("key",keyArr.join(','));
+storage.setItem("key",keyArr.join(","));
 
 function addTag(addStr) {
 var addKeyArr = getArr(storage.getItem('key'));
 if (!addKeyArr.includes(addStr)) {addKeyArr.push(addStr);};
-storage.setItem("key",addKeyArr.join(','));
+storage.setItem("key",addKeyArr.join(","));
 var targetDOM = document.getElementById(addStr);
 if (targetDOM) {
 var tagClassEachASpan = link("",[fontAwe(faTagStr)," "+addStr],'','tagBorder');
@@ -182,7 +191,7 @@ var altKeyArr = new Array();
 for (let ka = 0; ka < addKeyArr.length; ka++) {
 if (addKeyArr[ka] != removeStr) {altKeyArr.push(addKeyArr[ka]);};
 };
-storage.setItem("key",altKeyArr.join(','));
+storage.setItem("key",altKeyArr.join(","));
 var addTagStr = "javascript: void(addTag(\""+removeStr+"\"))";
 var targetDOM = document.getElementById(removeStr);
 if (targetDOM) {
@@ -280,11 +289,12 @@ function draw() {
 filter();
 unionSDOM.innerHTML = "";
 tagListDOM.innerHTML = "";
-shareResultDOM.textContent = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
 toggleLayout("select","min-content")
 tagBarDOM.style["visibility"] = "visible";
+shareTagDOM.style["display"] = "block";
+tagSpanDOM.innerText = "（"+drawKeyArr.join("、")+"）";
 if (drawKeyArr.length > 1) {
 tagNoteDOM.innerText = "：";
 var drawUnionStr = storage.getItem('union');
@@ -308,6 +318,8 @@ tagListDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 } else {
 toggleLayout("select","0px")
 tagBarDOM.style["visibility"] = "hidden";
+shareTagDOM.style["display"] = "none";
+tagSpanDOM.innerText = "";
 };
 playlistDOM.innerHTML = "";
 var podObj = {};
@@ -337,6 +349,11 @@ controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-goog
 controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
 buttonDiv.appendChild(controlSpan);
+var shareSpan = document.createElement('span');
+shareSpan.className = "tagBorder";
+var shareStr = "javascript: void(shareNow(0,\""+tar+"\"))";
+shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-fw")]));
+buttonDiv.appendChild(shareSpan);
 //  var downloadSpan = document.createElement('span');
 //  downloadSpan.className = "tagBorder";
 //  downloadSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
@@ -368,7 +385,12 @@ var queueObj = JSON.parse(storage.getItem('queue')||"{}");
 var nowStr = storage.getItem('now');
 mixPause();
 var nextStr = queueObj[nowStr];
-if (nextStr) {doQueue(nextStr); await doPlay(nextStr);};
+if (nextStr) {
+doQueue(nextStr);
+await doPlay(nextStr);
+} else {
+afterStop();
+};
 };
 
 async function doPrev() {
@@ -388,7 +410,7 @@ playbackRate:playerDOM.playbackRate,
 position:playerDOM.currentTime
 });
 };
-storage.setItem("currentTS",playerDOM.currentTime)
+storage.setItem("currentTS",playerDOM.currentTime.toString())
 };
 
 function changeIcon(targetName,targetValue) {
@@ -405,19 +427,19 @@ trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(pausedStr));
 trackTitleDOM.append(" 暫停：");
 trackTitleDOM.append(playlist[nowStr]['name']);
-var shareSingleADOM = document.createElement("a");
-shareSingleADOM.href = "javascript: void(shareNow())";
-shareSingleADOM.innerText = " 分享本集";
-var shareSingleSDOM = document.createElement("span");
-shareSingleSDOM.className = "buttonDiv";
-shareSingleSDOM.append(fontAwe(faShareStr));
-shareSingleSDOM.appendChild(shareSingleADOM);
-trackTitleDOM.append(shareSingleSDOM);
+shareEpiDOM.style["display"] = "block";
+shareCutDOM.style["display"] = "block";
 };
 playBTN.style["display"] = "block";
 pauseBTN.style["display"] = "none";
 };
-
+function afterStop() {
+trackTitleDOM.innerHTML = "";
+trackTitleDOM.appendChild(fontAwe(stopStr));
+trackTitleDOM.append(" 播放完成：請點選任意集數開始播放");
+shareEpiDOM.style["display"] = "none";
+shareCutDOM.style["display"] = "none";
+};
 function afterPlay() {
 navigator.mediaSession.playbackState = 'playing';
 var nowStr = storage.getItem('now')||"";
@@ -429,17 +451,8 @@ trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(playingStr));
 trackTitleDOM.append(" 播放：");
 trackTitleDOM.append(playlist[nowStr]['name']);
-trackTitleDOM.append(" ");
-// <div class="buttonDiv"><i class="fa-solid fa-circle-info fa-fw"></i>
-// <a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
-var shareSingleADOM = document.createElement("a");
-shareSingleADOM.href = "javascript: void(shareNow())";
-shareSingleADOM.innerText = " 分享本集";
-var shareSingleSDOM = document.createElement("span");
-shareSingleSDOM.className = "buttonDiv";
-shareSingleSDOM.append(fontAwe(faShareStr));
-shareSingleSDOM.appendChild(shareSingleADOM);
-trackTitleDOM.append(shareSingleSDOM);
+shareEpiDOM.style["display"] = "block";
+shareCutDOM.style["display"] = "block";
 };
 playBTN.style["display"] = "none";
 pauseBTN.style["display"] = "block";
@@ -482,7 +495,9 @@ playerDOM.src = playlist[inputStr]['feed'];
 storage.setItem('now',inputStr);
 trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(selectedStr));
-trackTitleDOM.append(" 已選：");
+var theTimeStr = "（時刻，"+convertTimer(storage.getItem("currentTS"))+"）";
+trackTitleDOM.append((storage.getItem("currentTS"))?theTimeStr:" ");
+trackTitleDOM.append("已選：");
 trackTitleDOM.append(playlist[inputStr]['name']);
 var nowDOM = document.getElementById("entry"+inputStr);
 if (nowDOM) {nowDOM.scrollIntoView({ behavior:'smooth' })};
@@ -531,12 +546,18 @@ playerDOM.addEventListener('pause',afterPause,false);
 playerDOM.addEventListener('ended',doNext,false);
 playerDOM.addEventListener('loadedmetadata',function() {
 totalDOM.innerHTML = convertTimer(playerDOM.duration);
+if(storage.getItem("currentTS")){
+currentDOM.innerHTML = convertTimer(storage.getItem("currentTS"))
+}else{
 currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
+};
+cuTSpanDOM.innerText = "（"+convertTimer(playerDOM.currentTime)+"）";
 sliderDOM.max= playerDOM.duration;
 sliderDOM.setAttribute("value",playerDOM.currentTime);
 });
 playerDOM.addEventListener('timeupdate',function() {
-currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
+currentDOM.innerText = convertTimer(playerDOM.currentTime);
+cuTSpanDOM.innerText = "（"+convertTimer(playerDOM.currentTime)+"）";
 sliderDOM.value = playerDOM.currentTime;
 sliderDOM.setAttribute("value",playerDOM.currentTime);
 updatePositionState();
@@ -671,8 +692,9 @@ plContainDOM.style["visibility"] = toggleMoreOptBool?"hidden":"visible";
 toggleLayout("list","1fr");
 plContainDOM.style["visibility"] = "visible";
 };
+clearShare();
 };
-    
+
 function toggleUnion() {
 var nowUnionStr = storage.getItem('union');
 var nextUnionStr = (nowUnionStr == "true")?"false":"true";
@@ -784,34 +806,38 @@ clipboardShare(targetUrl_str);
 };
 };
 
-function shareNow() {
+function shareNow(t=0,at="") {
 if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
-var nowStr = storage.getItem('now');
-// let currentTsStr = str(storage.getItem('currentTS'));
-var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr;//+"&currentTS="+currentTsStr;
+var nowStr = (at=="")?storage.getItem('now'):at;
+var currentTsStr = (storage.getItem('currentTS')==""||t==0)?"":"&currentTS="+storage.getItem('currentTS');
+var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
 var targetTitle_str = "【百靈果 News】："+playlist[nowStr]['name'];
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
 };
 };
-    
+
+function clearShare(){shareRsDivDOM.style["display"] = "none";};
+
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
 url:targetUrl,
 title:"CFP2-BLG 百靈果播放室",
 text:targetTitle,
 };
+shareRsDivDOM.style["display"] = "block";
+shareRsADOM.textContent = "嘗試分享";
 try {
 await navigator.share(shareData);
-shareResultDOM.textContent = "謝謝分享";
+shareRsADOM.textContent = "謝謝分享";
 } catch (err) {
 const { name,message } = err;
 if (name === "AbortError") {
-shareResultDOM.textContent = "取消分享";
+shareRsADOM.textContent = "取消分享";
 } else {
-shareResultDOM.textContent = err;
+shareRsADOM.textContent = err;
 };
 };
 };
@@ -821,12 +847,16 @@ shareUrl = targetUrl;
 shareContentDOM.value = shareUrl;
 shareContentDOM.setAttribute("type","text");
 shareContentDOM.select();
+shareRsDivDOM.style["display"] = "block";
+shareRsADOM.textContent = "嘗試分享";
 try {
 var successful = document.execCommand("copy");
 var msg = successful?"成功":"失敗";
 alert(`${shareUrl} - 複製${msg}`);
+shareRsADOM.textContent = `複製${msg}`;
 } catch (err) {
 alert("無法複製");
+shareRsADOM.textContent = `無法複製`;
 }
 shareContentDOM.setAttribute("type","hidden");
 window.getSelection().removeAllRanges();
