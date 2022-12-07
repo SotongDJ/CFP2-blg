@@ -44,7 +44,7 @@
 </head>
 <body onload="resizeDiv()" class="neutral lowContrast">
 <div id="contentdiv" class="centerise"
- style="grid-template-rows:min-content 0px 0px 0px 1fr min-content min-content 0px;">
+ style="grid-template-rows:min-content 0px 0px 0px 1fr min-content 0px;">
 
 <div class="tittlebar">
 <h1 id="titleH1" class="title">CFP2-<a href="https://www.bailingguonews.com/" target="info">BLG 百靈果</a>播放室</h1>
@@ -116,19 +116,17 @@
 <div id="playlist" class="plain"></div>
 </div>
 
-<div class="tagContent">
-<div class="tagBar" style="visibility:visible;">
-<span id="tracktitle"><i class="fa-solid fa-circle-minus fa-fw"></i> 未選擇集數：請點選任意集數播放</span>
-</div>
-</div>
-
 <div id="playerbar" class="playerbar">
 <a id="popA" style="margin: auto;"><div id="popPiP" class="popPiP"></div></a>
+<div style="display:grid; grid-template-rows: min-content min-content; grid-template-columns: 1fr;">
+<div class="tagBar" style="visibility:visible;overflow:auto;width:100%;">
+<span id="tracktitle"><i class="fa-solid fa-circle-minus fa-fw"></i> 未選擇集數：請點選任意集數播放</span>
+</div>
 <div id="seeker" style="display:grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr;">
-<div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;align-content: center;">
-<div id="currentTime" style="text-align:right;"></div>
-<input id="slider" type="range" min="0" step="1" value="" aria-label="Audio">
-<div id="totalTimer" style="text-align:left;"></div>
+<div style="display:grid; grid-template-columns: 2fr 3fr 2fr; gap: 0.5rem;align-content: center;">
+<div id="currentTime" style="text-align:right;width:100%;"></div>
+<input id="slider" style="width:100%;" type="range" min="0" step="1" value="" aria-label="Audio">
+<div id="totalTimer" style="text-align:left;width:100%;"></div>
 </div>
 <span class="tagBorder" style="display:grid; grid-template-columns: repeat(5, 1fr); height: min-content; margin: auto;">
 <a href="javascript: void(doPrev())" class="linkDecor activeBtn"><i class="fa-solid fa-backward-step fa-fw"></i></a>
@@ -140,6 +138,7 @@
 </span>
 </div>
 </div>
+</div>
 
 <div class="tagContent">
 <audio id="player" preload="metadata"></audio>
@@ -147,6 +146,7 @@
 
 </div>
 <script src="register.js"></script>
+<script src="demo.js"></script>
 <script src="https://xn--2os22eixx6na.xn--kpry57d/CFP2/blg-playlist.js"></script>
 <script src="main.js"></script>
 </body>

@@ -62,7 +62,15 @@ const neutralColourStr = "fa-solid fa-cloud fa-fw";
 const lightColourStr = "fa-solid fa-sun fa-fw";
 const darkColourStr = "fa-solid fa-moon fa-fw";
 // default parameter
-const sectionObj = {"header":0,"option":1,"index":2,"select":3,"list":4,"title":5,"player":6,"audio":7};
+const sectionObj = {
+"titlebar":{"pos":0,"dom":titleH1DOM},
+"more_option":{"pos":1,"dom":morePageDOM},
+"tags_list":{"pos":2,"dom":tagIndexDOM},
+"selected_tags":{"pos":3,"dom":tagBarDOM},
+"episodes_list":{"pos":4,"dom":plContainDOM},
+"player":{"pos":5,"dom":playerBarDOM},
+"audio":{"pos":6,"dom":playerDOM}
+};
 const themeObj = {"colour":0,"contrast":1};
 const paramObj = {
 "sort":{
@@ -291,7 +299,7 @@ unionSDOM.innerHTML = "";
 tagListDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
-toggleLayout("select","min-content")
+toggleLayout("selected_tags","min-content")
 tagBarDOM.style["visibility"] = "visible";
 shareTagDOM.style["display"] = "block";
 tagSpanDOM.innerText = "（"+drawKeyArr.join("、")+"）";
@@ -316,7 +324,7 @@ okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-
 tagListDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
 } else {
-toggleLayout("select","0px")
+toggleLayout("selected_tags","0px")
 tagBarDOM.style["visibility"] = "hidden";
 shareTagDOM.style["display"] = "none";
 tagSpanDOM.innerText = "";
@@ -331,39 +339,48 @@ var tar = filteredArr[nub];
 var entryPg = document.createElement('div');
 entryPg.id = "entry"+tar;
 entryPg.className = "entry";
-titleDiv = document.createElement("p");
-titleDiv.innerText = playlist[tar]['name'];
-entryPg.appendChild(titleDiv);
-var buttonDiv = document.createElement('p');
-buttonDiv.className = "buttonDiv";
+var popDetailStr = "javascript: void(popDetail(\""+tar+"\"))";
+var titlePdom = document.createElement("p");
+titlePdom.className = "titletrack";
+titlePdom.innerText = playlist[tar]['name']+" ";
+var titleAdom = document.createElement("a");
+titleAdom.href = popDetailStr;
+titleAdom.appendChild(fontAwe("fa-solid fa-circle-info fa-fw"));
+titlePdom.appendChild(titleAdom);
+entryPg.appendChild(titlePdom);
+var buttonPdom = document.createElement('p');
+buttonPdom.className = "buttonPdom";
 var playSpan = document.createElement('span');
 playSpan.className = "tagBorder";
 podObj[tar] = nub;
 var playIdArr = [fontAwe("fa-solid fa-play fa-fw",fontID="playIco"+tar)];
 playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
-buttonDiv.appendChild(playSpan);
+buttonPdom.appendChild(playSpan);
 var controlSpan = document.createElement('span');
 controlSpan.className = "tagBorder";
 controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
 controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
-buttonDiv.appendChild(controlSpan);
+buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
 var shareStr = "javascript: void(shareNow(0,\""+tar+"\"))";
 shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-fw")]));
-buttonDiv.appendChild(shareSpan);
-//  var downloadSpan = document.createElement('span');
-//  downloadSpan.className = "tagBorder";
-//  downloadSpan.appendChild(link(playlist[tar]["feed"],[fontAwe("fa-solid fa-download fa-fw")],"podcast"));
-//  buttonDiv.appendChild(downloadSpan);
+buttonPdom.appendChild(shareSpan);
+var tagsSpan = document.createElement('span');
+tagsSpan.className = "tagBorder tagBtn";
+tagsSpan.appendChild(link(popDetailStr,[fontAwe(faTagStr)]));
+buttonPdom.appendChild(tagsSpan);
+var tagsListSpan = document.createElement('span');
+tagsListSpan.className = "tagList";
 for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
 var textTagStr = playlist[tar]["tag"][tagi];
 var addTagStr = drawKeyArr.includes(textTagStr)?"":"javascript: void(addTag(\""+textTagStr+"\"))";
-buttonDiv.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));
+tagsListSpan.appendChild(link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder'));
 }
-entryPg.appendChild(buttonDiv);
+buttonPdom.appendChild(tagsListSpan);
+entryPg.appendChild(buttonPdom);
 playlistDOM.appendChild(entryPg);
 storage.setItem('podcast',JSON.stringify(podObj));
 };
@@ -495,8 +512,6 @@ playerDOM.src = playlist[inputStr]['feed'];
 storage.setItem('now',inputStr);
 trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(selectedStr));
-var theTimeStr = "（時刻，"+convertTimer(storage.getItem("currentTS"))+"）";
-trackTitleDOM.append((storage.getItem("currentTS"))?theTimeStr:" ");
 trackTitleDOM.append("已選：");
 trackTitleDOM.append(playlist[inputStr]['name']);
 var nowDOM = document.getElementById("entry"+inputStr);
@@ -605,9 +620,6 @@ async function mixPlay() {
 let nowStr = storage.getItem('now');
 let nameStr = playlist[nowStr]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
-popPipDOM.style["width"] = "10vh";
-popPipDOM.style["height"] = "10vh";
-popPipDOM.style["visibility"] = "visible";
 if (document.pictureInPictureEnabled){popADOM.href = "javascript: void(doPiP())";};
 var playPromise = playerDOM.play();
 if (playPromise !== undefined) {
@@ -642,7 +654,7 @@ if (!videoDOM.paused) {videoDOM.pause()};
 };
 
 function toggleLayout(sectionStr,replaceStr,conditionStr) {
-var positionInt = sectionObj[sectionStr];
+var positionInt = sectionObj[sectionStr]["pos"];
 var layoutArr = contentDOM.style['grid-template-rows'].split(" ");
 if (conditionStr) {
 beforeStr = layoutArr[positionInt];
@@ -658,38 +670,38 @@ return conditionBool;
 
 function toggleTag() {
 // hide option
-toggleLayout("option","0px")
+toggleLayout("more_option","0px")
 moreIDOM.className = moreDownStr;
 morePageDOM.style["visibility"] = "hidden";
 // toggle index
-var toggleTagBool = toggleLayout("index","1fr","0px");
+var toggleTagBool = toggleLayout("tags_list","1fr","0px");
 tagIDOM.className = toggleTagBool?tagUpStr:tagDownStr;
 tagIndexDOM.style["visibility"] = toggleTagBool?"visible":"hidden";
 // toggle playlist
 if (window.visualViewport.height <= 800) {
-toggleTagBool?toggleLayout("list","0px"):toggleLayout("list","1fr");
+toggleTagBool?toggleLayout("episodes_list","0px"):toggleLayout("episodes_list","1fr");
 plContainDOM.style["visibility"] = toggleTagBool?"hidden":"visible";
 } else {
-toggleLayout("list","1fr");
+toggleLayout("episodes_list","1fr");
 plContainDOM.style["visibility"] = "visible";
 };
 };
 
 function toggleMoreOpt() {
 // toggle option
-var toggleMoreOptBool = toggleLayout("option","1fr","0px");
+var toggleMoreOptBool = toggleLayout("more_option","1fr","0px");
 moreIDOM.className = toggleMoreOptBool?moreUpStr:moreDownStr;
 morePageDOM.style["visibility"] = toggleMoreOptBool?"visible":"hidden";
 // hide index
-toggleLayout("index","0px")
+toggleLayout("tags_list","0px")
 tagIDOM.className = tagDownStr;
 tagIndexDOM.style["visibility"] = "hidden";
 // toggle playlist
 if (window.visualViewport.height <= 800) {
-toggleMoreOptBool?toggleLayout("list","0px"):toggleLayout("list","1fr");
+toggleMoreOptBool?toggleLayout("episodes_list","0px"):toggleLayout("episodes_list","1fr");
 plContainDOM.style["visibility"] = toggleMoreOptBool?"hidden":"visible";
 } else {
-toggleLayout("list","1fr");
+toggleLayout("episodes_list","1fr");
 plContainDOM.style["visibility"] = "visible";
 };
 clearShare();
@@ -702,23 +714,16 @@ storage.setItem("union",nextUnionStr);
 draw();
 };
 
-function updateBtn(sectionStr,targetADOM,targetIDOM) {
-var sectionNowStr = storage.getItem(sectionStr);
-targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
-targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
-};
 function toggleBtn(sectionStr){
 var sectionNowStr = storage.getItem(sectionStr);
 var nextStr = paramObj[sectionStr][sectionNowStr]['next'];
 storage.setItem(sectionStr,nextStr);
 };
-
-function toggleSort() {
-toggleBtn("sort");
-updateBtn("sort",sortADOM,sortIDOM);
-draw();
+function updateBtn(sectionStr,targetADOM,targetIDOM) {
+var sectionNowStr = storage.getItem(sectionStr);
+targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
+targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
 };
-
 function updateTheme(sectionStr) {
 var positionInt = paramObj[sectionStr]["position"];
 var nowThemeStr = storage.getItem(sectionStr);
@@ -726,15 +731,18 @@ var layoutArr = document.body.className.split(" ");
 layoutArr[positionInt]=nowThemeStr;
 document.body.className = layoutArr.join(" ");
 }
-
+    
+function toggleSort() {
+toggleBtn("sort");
+updateBtn("sort",sortADOM,sortIDOM);
+draw();
+};
 function toggleTheme(sectionStr,targetADOM,targetIDOM) {
 toggleBtn(sectionStr);
 updateTheme(sectionStr);
 updateBtn(sectionStr,targetADOM,targetIDOM);
 };
 function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
-//var targetColourStr = toggleColourBool?"dark":"light";
-//document.documentElement.setAttribute("data-theme",targetColourStr);
 function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
 
 function resizeDiv() {
@@ -776,20 +784,6 @@ targetDOM.appendChild(okAdom);
 targetDOM.append(" ");
 targetDOM.appendChild(blgAspan);
 targetDOM.append("播放室");
-// contentDOM.style["height"] = (window.visualViewport.height-20)+"px";
-// if (playerDOM.offsetHeight==0) {
-playerBarDOM.style["height"] = "min-content";
-// playerBarDOM.style["height"] = playerDOM.offsetHeight+"px";
-// popPipDOM.style["height"] = playerDOM.offsetHeight+"px";
-if (popPipDOM.style['background-image']) {
-popPipDOM.style["width"] = "10vh";
-popPipDOM.style["visibility"] = "visible";
-} else {
-popPipDOM.style["width"] = "0px";
-popPipDOM.style["visibility"] = "hidden";
-};
-popPipDOM.style["height"] = "10vh";
-playerDOM.style["height"] = "10vh";
 };
 
 window.onresize = resizeDiv;
