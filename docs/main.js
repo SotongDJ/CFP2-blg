@@ -25,8 +25,9 @@ const shareContentDOM = document.getElementById("share_content");
 const tagNoteDOM = document.getElementById("tagnote");
 const trackTitleDOM = document.getElementById("tracktitle");
 const morePageDOM = document.getElementById("morePage");
-const plContainDOM = document.getElementById("playlistContain");
+const epiListDOM = document.getElementById("playlistContain");
 const playlistDOM = document.getElementById("playlist");
+const detailPgDOM = document.getElementById("detailContain");
 const playerDOM = document.getElementById("player");
 const playerBarDOM = document.getElementById("playerbar");
 const playBTN = document.getElementById("playBtn");
@@ -63,13 +64,14 @@ const lightColourStr = "fa-solid fa-sun fa-fw";
 const darkColourStr = "fa-solid fa-moon fa-fw";
 // default parameter
 const sectionObj = {
-"titlebar":{"pos":0,"dom":titleH1DOM},
-"more_option":{"pos":1,"dom":morePageDOM},
-"tags_list":{"pos":2,"dom":tagIndexDOM},
-"selected_tags":{"pos":3,"dom":tagBarDOM},
-"episodes_list":{"pos":4,"dom":plContainDOM},
-"player":{"pos":5,"dom":playerBarDOM},
-"audio":{"pos":6,"dom":playerDOM}
+"titlebar":{"pos":0,"dom":titleH1DOM,"on":"min-content"},
+"more_option":{"pos":1,"dom":morePageDOM,"on":"1fr"},
+"tags_list":{"pos":2,"dom":tagIndexDOM,"on":"1fr"},
+"selected_tags":{"pos":3,"dom":tagBarDOM,"on":"min-content"},
+"episodes_list":{"pos":4,"dom":epiListDOM,"on":"1fr"},
+"episode_detail":{"pos":5,"dom":detailPgDOM,"on":"1fr"},
+"player":{"pos":6,"dom":playerBarDOM,"on":"min-content"},
+"audio":{"pos":7,"dom":playerDOM,"on":"0px"}
 };
 const themeObj = {"colour":0,"contrast":1};
 const paramObj = {
@@ -299,8 +301,7 @@ unionSDOM.innerHTML = "";
 tagListDOM.innerHTML = "";
 var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
-toggleLayout("selected_tags","min-content")
-tagBarDOM.style["visibility"] = "visible";
+toggleLayout("selected_tags","on")
 shareTagDOM.style["display"] = "block";
 tagSpanDOM.innerText = "（"+drawKeyArr.join("、")+"）";
 if (drawKeyArr.length > 1) {
@@ -324,8 +325,7 @@ okaArr = [fontAwe(faTagStr)," "+drawKeyArr[oka]+" ",fontAwe("fa-solid fa-delete-
 tagListDOM.appendChild(link(removeTagStr,okaArr,'','tagBorder'));
 };
 } else {
-toggleLayout("selected_tags","0px")
-tagBarDOM.style["visibility"] = "hidden";
+toggleLayout("selected_tags","off")
 shareTagDOM.style["display"] = "none";
 tagSpanDOM.innerText = "";
 };
@@ -342,11 +342,13 @@ entryPg.className = "entry";
 var popDetailStr = "javascript: void(popDetail(\""+tar+"\"))";
 var titlePdom = document.createElement("p");
 titlePdom.className = "titletrack";
-titlePdom.innerText = playlist[tar]['name'];// +" ";
-// var titleAdom = document.createElement("a");
-// titleAdom.href = popDetailStr;
+// titlePdom.innerText = playlist[tar]['name'];
+var titleAdom = document.createElement("a");
+titleAdom.innerText = playlist[tar]['name'];
+titleAdom.href = popDetailStr;
+// titleAdom.append(" ");
 // titleAdom.appendChild(fontAwe("fa-solid fa-circle-info fa-fw"));
-// titlePdom.appendChild(titleAdom);
+titlePdom.appendChild(titleAdom);
 entryPg.appendChild(titlePdom);
 var buttonPdom = document.createElement('p');
 buttonPdom.className = "buttonPdom";
@@ -655,57 +657,53 @@ if (!videoDOM.paused) {videoDOM.pause()};
 };
 };
 
-function toggleLayout(sectionStr,replaceStr,conditionStr) {
+function toggleLayout(sectionStr,modeStr) {
 var positionInt = sectionObj[sectionStr]["pos"];
+var targetDOM = sectionObj[sectionStr]["dom"];
+var onStr = sectionObj[sectionStr]["on"];
 var layoutArr = contentDOM.style['grid-template-rows'].split(" ");
-if (conditionStr) {
-beforeStr = layoutArr[positionInt];
-conditionBool = (beforeStr == conditionStr);
-layoutArr[positionInt]=conditionBool?replaceStr:conditionStr;
-} else {
-layoutArr[positionInt]=replaceStr;
+var beforeStr = layoutArr[positionInt];
+var offBool = (beforeStr=="0px");
+var conditionBool = false;
+if (modeStr=="toggle"){
+layoutArr[positionInt] = offBool?onStr:"0px";
+targetDOM.style["visibility"] = offBool?"visible":"hidden";
+conditionBool = offBool?true:false;
+}else if (modeStr=="on"){
+layoutArr[positionInt] = onStr;
+targetDOM.style["visibility"] = "visible";
 conditionBool = true;
+}else if (modeStr=="off"){
+layoutArr[positionInt] = "0px";
+targetDOM.style["visibility"] = "hidden";
+conditionBool = false;
+}else if (modeStr=="check"){
+conditionBool = offBool?false:true;
 };
 contentDOM.style['grid-template-rows'] = layoutArr.join(" ");
 return conditionBool;
 };
 
 function toggleTag() {
-// hide option
-toggleLayout("more_option","0px")
+// hide other sections
+toggleLayout("more_option","off");
 moreIDOM.className = moreDownStr;
-morePageDOM.style["visibility"] = "hidden";
+toggleLayout("episode_detail","off");
 // toggle index
-var toggleTagBool = toggleLayout("tags_list","1fr","0px");
+var toggleTagBool = toggleLayout("tags_list","toggle");
 tagIDOM.className = toggleTagBool?tagUpStr:tagDownStr;
-tagIndexDOM.style["visibility"] = toggleTagBool?"visible":"hidden";
-// toggle playlist
-if (window.visualViewport.height <= 800) {
-toggleTagBool?toggleLayout("episodes_list","0px"):toggleLayout("episodes_list","1fr");
-plContainDOM.style["visibility"] = toggleTagBool?"hidden":"visible";
-} else {
-toggleLayout("episodes_list","1fr");
-plContainDOM.style["visibility"] = "visible";
-};
+resizeDiv();
 };
 
 function toggleMoreOpt() {
-// toggle option
-var toggleMoreOptBool = toggleLayout("more_option","1fr","0px");
-moreIDOM.className = toggleMoreOptBool?moreUpStr:moreDownStr;
-morePageDOM.style["visibility"] = toggleMoreOptBool?"visible":"hidden";
-// hide index
-toggleLayout("tags_list","0px")
+// hide other sections
+toggleLayout("tags_list","off")
 tagIDOM.className = tagDownStr;
-tagIndexDOM.style["visibility"] = "hidden";
-// toggle playlist
-if (window.visualViewport.height <= 800) {
-toggleMoreOptBool?toggleLayout("episodes_list","0px"):toggleLayout("episodes_list","1fr");
-plContainDOM.style["visibility"] = toggleMoreOptBool?"hidden":"visible";
-} else {
-toggleLayout("episodes_list","1fr");
-plContainDOM.style["visibility"] = "visible";
-};
+toggleLayout("episode_detail","off");
+// toggle option
+var toggleMoreOptBool = toggleLayout("more_option","toggle");
+moreIDOM.className = toggleMoreOptBool?moreUpStr:moreDownStr;
+resizeDiv();
 clearShare();
 };
 
@@ -747,11 +745,12 @@ updateBtn(sectionStr,targetADOM,targetIDOM);
 function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
 function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
 
-function resizeDiv() {
-var verticalBool = (window.visualViewport.height > window.visualViewport.width);
-var targetDOM = verticalBool?titleH1DOM:titleSpanDOM;
-seekerDOM.style["grid-template-columns"] = verticalBool?"1fr":"1fr min-content";
-seekerDOM.style["grid-template-rows"] = verticalBool?"1fr min-content":"1fr";
+function initialDiv() {
+var targetStr_arr = ["titleH1","titleSpan"];
+for (let index = 0; index < targetStr_arr.length; index++) {
+var targetDOM = document.getElementById(targetStr_arr[index]);
+targetDOM.innerHTML = "";
+targetDOM.style["display"] = "none";
 var squidAdom = document.createElement("a");
 squidAdom.className = "mirror";
 squidAdom.href = "https://xn--2os22eixx6na.xn--kpry57d/";
@@ -772,12 +771,8 @@ var blgAspan = document.createElement('a');
 blgAspan.href = "https://www.bailingguonews.com/";
 blgAspan.target = "info";
 blgAspan.title = "Bailingguo News 百靈果 News";
-blgAspan.innerText = verticalBool?"BLG ":"BLG 百靈果";
-// var largeBool = (window.visualViewport.height > 1080);
-titleH1DOM.innerHTML = "";
-titleSpanDOM.innerHTML = "";
-// ["·","　"," "]
-verticalBool||targetDOM.append("｜");
+blgAspan.innerText = (index==0)?"BLG ":"BLG 百靈果";
+(index==1)&&targetDOM.append("｜");
 targetDOM.appendChild(squidAdom);
 targetDOM.append(" ");
 targetDOM.appendChild(cfp2Aspan);
@@ -787,8 +782,25 @@ targetDOM.append(" ");
 targetDOM.appendChild(blgAspan);
 targetDOM.append("播放室");
 };
+};
+function resizeDiv() {
+var verticalBool = (window.visualViewport.height > window.visualViewport.width);
+seekerDOM.style["grid-template-columns"] = verticalBool?"1fr":"1fr min-content";
+seekerDOM.style["grid-template-rows"] = verticalBool?"1fr min-content":"1fr";
+titleH1DOM.style["display"] = verticalBool?"block":"none";
+titleSpanDOM.style["display"] = verticalBool?"none":"inline";
+var smallHeightBool = window.visualViewport.height <= 800;
+var moreOptBool = toggleLayout("more_option","check");
+var tagslstBool = toggleLayout("tags_list","check");
+if (smallHeightBool) {
+(moreOptBool||tagslstBool)?toggleLayout("episodes_list","off"):toggleLayout("episodes_list","on");
+} else {
+toggleLayout("episodes_list","on");
+};
+};
 
 window.onresize = resizeDiv;
+initialDiv();
 resizeDiv();
 
 function shareTags() {
