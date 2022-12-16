@@ -125,11 +125,19 @@ a.tagBorder{padding:.25rem .5rem;}
 margin:0 .25rem;
 color:var(--atxt);
 }
+.detailTag{
+margin:0 .25rem;
+white-space:nowrap;
+}
 audio{
 width:100%;
 height:min-content;
 }
 .buttonDiv{padding:.4rem 0 .5rem 0;}
+.buttonBar{
+white-space:nowrap;
+padding:1rem .25rem;
+}
 .centerise{
 max-width:850px;
 margin:calc(1rem + env(safe-area-inset-top)) auto calc(1rem + env(safe-area-inset-bottom)) auto;
@@ -165,15 +173,17 @@ margin:.5rem;
 padding:.25rem;
 background-color:var(--evbg);
 border:solid var(--evbr);
+min-width: min-content;
 white-space: normal;
 }
-.entryDetail a{
+.entryDetailMove{
 padding-left:.5rem;
 }
 .extraLink {
+white-space: normal;
+/* white-space: nowrap;
 width: 98%;
-white-space: nowrap;
-overflow: hidden;
+overflow: hidden; */
 }
 .entry:nth-of-type(odd){
 background-color:var(--odbg);
