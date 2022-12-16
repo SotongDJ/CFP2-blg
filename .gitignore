@@ -4,6 +4,9 @@ data/*.xml
 data/*.json
 secret.toml
 
+# Exclude demo
+docs/demo.js
+
 # Exclude system files
 *.DS_*
 

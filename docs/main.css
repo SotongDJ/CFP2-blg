@@ -5,7 +5,7 @@ html{
 font-size:20px;
 }
 body{
-overscroll-behavior: contain;
+overscroll-behavior:contain;
 font-family:"Noto Sans TC","Noto Emoji",Helvetica, Arial, sans-serif;
 margin:0;
 padding:0rem 1rem;
@@ -89,7 +89,7 @@ background-color:var(--rtbg);
 --bnbg:var(--clr8);
 --bnbr:var(--clr8);
 --atxt:var(--clr1);
---ahrf:var(--clr2);
+--ahrf:var(--clr3);
 --htxt:var(--clr7);
 }
 .highContrast {
@@ -112,7 +112,7 @@ background-color:var(--rtbg);
 --bnbg:var(--clr4);
 --bnbr:var(--clr3);
 --atxt:var(--clr3);
---ahrf:var(--clr2);
+--ahrf:var(--clr3);
 --htxt:var(--clr0);
 }
 
@@ -143,21 +143,37 @@ overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
 border-radius:0.25rem;
-visibility: visible;
+visibility:visible;
 }
 .morePage{
 overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
 border-radius:0.25rem;
-padding: 1rem;
-visibility: hidden;
+padding:1rem;
+visibility:hidden;
 }
 .entry{
 border-radius:.25rem;
 margin:.5rem;
 padding:.25rem;
 width:100%;
+}
+.entryDetail{
+border-radius:.25rem;
+margin:.5rem;
+padding:.25rem;
+background-color:var(--evbg);
+border:solid var(--evbr);
+white-space: normal;
+}
+.entryDetail a{
+padding-left:.5rem;
+}
+.extraLink {
+width: 98%;
+white-space: nowrap;
+overflow: hidden;
 }
 .entry:nth-of-type(odd){
 background-color:var(--odbg);
@@ -174,6 +190,9 @@ border:solid var(--high);
 h1{
 font-size:1.25rem;
 margin:.3rem 0;
+}
+h3{
+margin:.5rem;
 }
 .hideBtn{
 margin:0 .25rem;
@@ -202,16 +221,22 @@ width:min-content;
 min-width:95%;
 }
 .playerbar{
-display: grid;
-grid-template-columns: 10vh 1fr;
-gap:.25rem;
+display:grid;
+grid-template-columns:minmax(10vh,100px) 1fr;
+gap:1rem;
 margin:.25rem 0 0 0;
+padding:0;
 background-color:var(--plbg);
 border:solid var(--plbr);
 border-radius:0.25rem;
 }
 .popPiP{
+background-image:url("/r/512.png");
 background-size:contain;
+min-height:100px;
+min-width:100px;
+height:10vh;
+width:10vh;
 border:solid var(--ppbr);
 border-radius:.5rem;
 }
@@ -220,6 +245,12 @@ background-color:var(--oddc);
 }
 .selected.entry:nth-of-type(even){
 background-color:var(--evnc);
+}
+.playInfoSec{
+display:grid;
+grid-template-rows: min-content min-content;
+grid-template-columns: 1fr;
+gap:0.5rem;
 }
 .tagBar{padding:.375rem 0;}
 .tagBorder{
@@ -230,13 +261,30 @@ padding:.25rem;
 margin:0 .25rem;
 font-weight:400;
 }
-.tagBorder:hover{
-border:solid var(--high);
-}
+.tagBorder:hover{border:solid var(--high);}
 .tagContent{
 height:min-content;
-overflow-x: auto;
-overflow-y: hidden;
+overflow-x:auto;
+overflow-y:hidden;
+}
+.tagBtn{
+display:none;
+visibility:hidden;
+}
+.tagList{
+display:inline;
+visibility:visible;
+}
+@media (max-width:400px) {
+.tagBtn{
+display:inline;
+visibility:visible;
+}
+.tagList{
+display:none;
+visibility:hidden;
+}
+.entry{width:360px;}
 }
 .funcContent{height:min-content;}
 .tagIndex{
@@ -244,14 +292,25 @@ overflow:auto;
 background-color:var(--ixbg);
 border:solid var(--ixbr);
 border-radius:.25rem;
-visibility: hidden;
+visibility:hidden;
 }
+.titletrack{overflow:hidden;}
 .tittlebar{
 margin:0 0 .25rem 0;
-overflow-x: auto;
-overflow-y: hidden;
-white-space: nowrap;
+overflow-x:auto;
+overflow-y:hidden;
+white-space:nowrap;
 }
-.title a {
-text-decoration: none;
+/* .title a {text-decoration:none;} */
+.controlBar {
+display:grid;
+grid-template-columns:min-content 1fr min-content;
+gap:0.5rem;
+align-content:center;
+}
+.seeker{
+display:grid;
+grid-template-rows:1fr min-content;
+grid-template-columns:1fr;
+gap:.5rem;
 }
