@@ -89,7 +89,7 @@ background-color:var(--rtbg);
 --bnbg:var(--clr8);
 --bnbr:var(--clr8);
 --atxt:var(--clr1);
---ahrf:var(--clr2);
+--ahrf:var(--clr1);
 --htxt:var(--clr7);
 }
 .highContrast {
@@ -112,7 +112,7 @@ background-color:var(--rtbg);
 --bnbg:var(--clr4);
 --bnbr:var(--clr3);
 --atxt:var(--clr3);
---ahrf:var(--clr2);
+--ahrf:var(--clr3);
 --htxt:var(--clr0);
 }
 
@@ -159,6 +159,22 @@ margin:.5rem;
 padding:.25rem;
 width:100%;
 }
+.entryDetail{
+border-radius:.25rem;
+margin:.5rem;
+padding:.25rem;
+background-color:var(--evbg);
+border:solid var(--evbr);
+white-space: normal;
+}
+.entryDetail a{
+padding-left:.5rem;
+}
+.extraLink {
+width: 98%;
+white-space: nowrap;
+overflow: hidden;
+}
 .entry:nth-of-type(odd){
 background-color:var(--odbg);
 border:solid var(--odbr);
@@ -174,6 +190,9 @@ border:solid var(--high);
 h1{
 font-size:1.25rem;
 margin:.3rem 0;
+}
+h3{
+margin:.5rem;
 }
 .hideBtn{
 margin:0 .25rem;
@@ -206,7 +225,7 @@ display:grid;
 grid-template-columns:minmax(10vh,100px) 1fr;
 gap:1rem;
 margin:.25rem 0 0 0;
-padding:0 .5rem .5rem .5rem;
+padding:0;
 background-color:var(--plbg);
 border:solid var(--plbr);
 border-radius:0.25rem;
@@ -226,6 +245,12 @@ background-color:var(--oddc);
 }
 .selected.entry:nth-of-type(even){
 background-color:var(--evnc);
+}
+.playInfoSec{
+display:grid;
+grid-template-rows: min-content min-content;
+grid-template-columns: 1fr;
+gap:0.5rem;
 }
 .tagBar{padding:.375rem 0;}
 .tagBorder{
@@ -276,7 +301,7 @@ overflow-x:auto;
 overflow-y:hidden;
 white-space:nowrap;
 }
-.title a {text-decoration:none;}
+/* .title a {text-decoration:none;} */
 .controlBar {
 display:grid;
 grid-template-columns:min-content 1fr min-content;

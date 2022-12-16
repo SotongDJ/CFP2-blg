@@ -103,7 +103,7 @@ for (let i = 0; i < valueOriArr.length; i++) {
 (valueOriArr[i]=="")||valueArr.push(valueOriArr[i]);
 }
 argueObj[key] = valueArr;
-} else if (value != ""){
+} else if (value != "") {
 argueObj[key] = [value];
 };
 };
@@ -274,7 +274,7 @@ var sortKeyBool = filteredBool?(sortStr != "oldest"):(sortStr == "newest");
 ord = sortKeyBool?playlistKeyArr[nub] :playlistKeyArr[playlistKeyArr.length - nub - 1];
 if (filteredBool) {
 filtered.push(ord);
-} else{ // if filterKeyArr.length > 0
+} else { // if filterKeyArr.length > 0
 if (storage.getItem('union') == 'true') {
 var unionBool = false;
 for (let pot = 0; pot < playlist[ord]["tag"].length; pot++) {
@@ -443,7 +443,7 @@ function afterPause() {
 navigator.mediaSession.playbackState = 'paused';
 var nowStr = storage.getItem('now')||"";
 changeIcon("playIco"+nowStr,'fa-solid fa-play fa-fw');
-if (nowStr!=""){
+if (nowStr!="") {
 trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(pausedStr));
 trackTitleDOM.append(" 暫停：");
@@ -467,7 +467,7 @@ var nowStr = storage.getItem('now')||"";
 changeIcon("playIco"+nowStr,'fa-solid fa-pause fa-fw');
 var nowDOM = document.getElementById("entry"+nowStr);
 if (nowDOM) {nowDOM.scrollIntoView({ behavior:'smooth' })};
-if (nowStr!=""){
+if (nowStr!="") {
 trackTitleDOM.innerHTML = "";
 trackTitleDOM.appendChild(fontAwe(playingStr));
 trackTitleDOM.append(" 播放：");
@@ -565,9 +565,9 @@ playerDOM.addEventListener('pause',afterPause,false);
 playerDOM.addEventListener('ended',doNext,false);
 playerDOM.addEventListener('loadedmetadata',function() {
 totalDOM.innerHTML = convertTimer(playerDOM.duration);
-if(storage.getItem("currentTS")){
+if(storage.getItem("currentTS")) {
 currentDOM.innerHTML = convertTimer(storage.getItem("currentTS"))
-}else{
+} else {
 currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
 };
 cuTSpanDOM.innerText = "（"+convertTimer(playerDOM.currentTime)+"）";
@@ -624,7 +624,7 @@ async function mixPlay() {
 let nowStr = storage.getItem('now');
 let nameStr = playlist[nowStr]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
-if (document.pictureInPictureEnabled){popADOM.href = "javascript: void(doPiP())";};
+if (document.pictureInPictureEnabled) {popADOM.href = "javascript: void(doPiP())";};
 var playPromise = playerDOM.play();
 if (playPromise !== undefined) {
 playPromise.then(_ => {
@@ -665,19 +665,19 @@ var layoutArr = contentDOM.style['grid-template-rows'].split(" ");
 var beforeStr = layoutArr[positionInt];
 var offBool = (beforeStr=="0px");
 var conditionBool = false;
-if (modeStr=="toggle"){
+if (modeStr=="toggle") {
 layoutArr[positionInt] = offBool?onStr:"0px";
 targetDOM.style["visibility"] = offBool?"visible":"hidden";
 conditionBool = offBool?true:false;
-}else if (modeStr=="on"){
+} else if (modeStr=="on") {
 layoutArr[positionInt] = onStr;
 targetDOM.style["visibility"] = "visible";
 conditionBool = true;
-}else if (modeStr=="off"){
+} else if (modeStr=="off") {
 layoutArr[positionInt] = "0px";
 targetDOM.style["visibility"] = "hidden";
 conditionBool = false;
-}else if (modeStr=="check"){
+} else if (modeStr=="check") {
 conditionBool = offBool?false:true;
 };
 contentDOM.style['grid-template-rows'] = layoutArr.join(" ");
@@ -707,6 +707,96 @@ resizeDiv();
 clearShare();
 };
 
+function closeDetail() {
+toggleLayout("episode_detail","off");
+resizeDiv();
+};
+
+function popDetail(tar) {
+// hide other sections
+toggleLayout("more_option","off");
+moreIDOM.className = moreDownStr;
+toggleLayout("tags_list","off")
+tagIDOM.className = tagDownStr;
+toggleLayout("episode_detail","on");
+resizeDiv();
+//
+var drawKeyArr = getArr(storage.getItem('key'));
+var entryPg = document.createElement('div');
+entryPg.id = "entry"+tar;
+entryPg.className = "entryDetail";
+var topPdom = document.createElement("p");
+var topAdom = document.createElement("a");
+topAdom.href = "javascript: void(closeDetail())";
+topAdom.appendChild(fontAwe("fa-solid fa-circle-info fa-fw"));
+topAdom.append(" 單集細節·");
+topAdom.append("點此關閉 ");
+topAdom.appendChild(fontAwe("fa-solid fa-square-xmark fa-fw"));
+topPdom.appendChild(topAdom);
+entryPg.appendChild(topPdom);
+var titleHdom = document.createElement("h3");
+titleHdom.className = "titletrack";
+titleHdom.append(playlist[tar]['name']);
+entryPg.appendChild(titleHdom);
+var tagsListSpan = document.createElement('p');
+for (let tagi = 0; tagi < playlist[tar]["tag"].length; tagi++) {
+var textTagStr = playlist[tar]["tag"][tagi];
+var haveKeyBool = drawKeyArr.includes(textTagStr);
+var addTagStr = haveKeyBool?"":"javascript: void(addTag(\""+textTagStr+"\"))";
+var tagLink = document.createElement(haveKeyBool?"span":"a");
+tagLink.className = haveKeyBool?"hideBtn":"activeBtn";
+tagLink.href = addTagStr;
+tagLink.appendChild(fontAwe(faTagStr));
+tagLink.append(" "+textTagStr);
+tagsListSpan.appendChild(tagLink);
+// tagsListSpan.appendChild(link(addTagStr,[fontAwe(faTagStr),textTagStr]));
+};
+entryPg.appendChild(tagsListSpan);
+entryPg.appendChild(document.createElement('p'));
+var buttonPdom = document.createElement('p');
+buttonPdom.className = "buttonPdom";
+var playSpan = document.createElement('span');
+playSpan.className = "tagBorder";
+var playIdArr = [fontAwe("fa-solid fa-play fa-fw",fontID="playIco"+tar)];
+playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
+buttonPdom.appendChild(playSpan);
+var controlSpan = document.createElement('span');
+controlSpan.className = "tagBorder";
+controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+buttonPdom.appendChild(controlSpan);
+var shareSpan = document.createElement('span');
+shareSpan.className = "tagBorder";
+var shareStr = "javascript: void(shareNow(0,\""+tar+"\"))";
+shareSpan.appendChild(link(shareStr,[fontAwe("fa-solid fa-share-from-square fa-fw")]));
+buttonPdom.appendChild(shareSpan);
+entryPg.appendChild(buttonPdom);
+var extraArr = Object.keys(playlist[tar]["extra"]);
+if (extraArr.length > 0) {
+entryPg.appendChild(document.createElement('p'));
+for (let ind = 0; ind < extraArr.length; ind++) {
+var extraKey = extraArr[ind];
+var extraValue = playlist[tar]["extra"][extraKey];
+var extraP = document.createElement('p');
+extraP.className = "extraLink";
+var extraA = document.createElement('a');
+extraA.appendChild(fontAwe("fa-brands fa-youtube fa-fw"));
+extraA.append(" ",extraKey);
+extraA.href = extraValue;
+extraA.target = "extra";
+extraP.appendChild(extraA);
+entryPg.appendChild(extraP);
+};
+};
+var tagDivP = document.createElement('p');
+tagDivP.innerHTML = playlist[tar]['description'];
+entryPg.appendChild(tagDivP);
+detailPgDOM.innerHTML = "";
+detailPgDOM.appendChild(entryPg);
+};
+
 function toggleUnion() {
 var nowUnionStr = storage.getItem('union');
 var nextUnionStr = (nowUnionStr == "true")?"false":"true";
@@ -714,7 +804,7 @@ storage.setItem("union",nextUnionStr);
 draw();
 };
 
-function toggleBtn(sectionStr){
+function toggleBtn(sectionStr) {
 var sectionNowStr = storage.getItem(sectionStr);
 var nextStr = paramObj[sectionStr][sectionNowStr]['next'];
 storage.setItem(sectionStr,nextStr);
@@ -790,10 +880,13 @@ seekerDOM.style["grid-template-rows"] = verticalBool?"1fr min-content":"1fr";
 titleH1DOM.style["display"] = verticalBool?"block":"none";
 titleSpanDOM.style["display"] = verticalBool?"none":"inline";
 var smallHeightBool = window.visualViewport.height <= 800;
+var epiDtalBool = toggleLayout("episode_detail","check");
 var moreOptBool = toggleLayout("more_option","check");
 var tagslstBool = toggleLayout("tags_list","check");
 if (smallHeightBool) {
-(moreOptBool||tagslstBool)?toggleLayout("episodes_list","off"):toggleLayout("episodes_list","on");
+(epiDtalBool||moreOptBool||tagslstBool)?toggleLayout("episodes_list","off"):toggleLayout("episodes_list","on");
+} else if (epiDtalBool) {
+toggleLayout("episodes_list","off");
 } else {
 toggleLayout("episodes_list","on");
 };
@@ -827,7 +920,7 @@ clipboardShare(targetUrl_str);
 };
 };
 
-function clearShare(){shareRsDivDOM.style["display"] = "none";};
+function clearShare() {shareRsDivDOM.style["display"] = "none";};
 
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
