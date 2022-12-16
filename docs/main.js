@@ -744,7 +744,7 @@ var textTagStr = playlist[tar]["tag"][tagi];
 var haveKeyBool = drawKeyArr.includes(textTagStr);
 var addTagStr = haveKeyBool?"":"javascript: void(addTag(\""+textTagStr+"\"))";
 var tagLink = document.createElement(haveKeyBool?"span":"a");
-tagLink.className = haveKeyBool?"hideBtn":"activeBtn";
+tagLink.className = haveKeyBool?"hideBtn":"";
 tagLink.href = addTagStr;
 tagLink.appendChild(fontAwe(faTagStr));
 tagLink.append(" "+textTagStr);
