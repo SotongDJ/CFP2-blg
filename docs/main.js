@@ -1,3 +1,4 @@
+// DOM elements
 const titleH1DOM = document.getElementById("titleH1");
 const titleSpanDOM = document.getElementById("titleSpan");
 const tagIndexDOM = document.getElementById("tagindex");
@@ -41,8 +42,11 @@ const popPipDOM = document.getElementById("popPiP");
 const canvasDOM = document.createElement('canvas');
 const videoDOM = document.createElement('video');
 const contentDOM = document.getElementById("contentdiv");
+
+// Local storage
 const storage = window.localStorage;
-// fontawesome str
+
+// Fontawesome strings
 const faTagStr = "fa-solid fa-tag fa-fw";
 const selectedStr = "fa-solid fa-circle-check fa-fw";
 const playingStr = "fa-solid fa-circle-play fa-fw"; // fa-spin fa-fw";
@@ -62,7 +66,8 @@ const contrastOffStr = "fa-solid fa-circle-half-stroke fa-fw fa-flip-horizontal"
 const neutralColourStr = "fa-solid fa-cloud fa-fw";
 const lightColourStr = "fa-solid fa-sun fa-fw";
 const darkColourStr = "fa-solid fa-moon fa-fw";
-// default parameter
+
+// Default parameters
 const sectionObj = {
 "titlebar":{"pos":0,"dom":titleH1DOM,"on":"min-content"},
 "more_option":{"pos":1,"dom":morePageDOM,"on":"1fr"},
@@ -95,6 +100,7 @@ const paramObj = {
 // get option from url and save to local storage
 var url = new URL(window.location.href);
 var argueObj = new Object();
+
 for (const [key,value] of url.searchParams.entries()) {
 if (value.includes(",")) {
 valueOriArr = value.split(",");
@@ -107,10 +113,12 @@ argueObj[key] = valueArr;
 argueObj[key] = [value];
 };
 };
+
 var argueKey = Object.keys(argueObj);
 var defaultObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
 var optionObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
 var optionKey = Object.keys(optionObj);
+
 for (var ark = 0; ark < argueKey.length; ++ark) {
 var key = argueKey[ark];
 if (optionKey.includes(key)) {
@@ -118,7 +126,9 @@ var value = argueObj[key];
 optionObj[key] = (key=="key")?value:value[0];
 };
 };
+
 ((optionObj["now"]!="")&&(optionObj["currentTS"]=="")&&storage.getItem("currentTS"))&&storage.setItem("currentTS","");
+
 for (var opt = 0; opt < optionKey.length; ++opt) {
 var key = optionKey[opt];
 if (argueObj["do"]&&argueObj["do"][0]=="reset") {
@@ -130,7 +140,9 @@ var defaultValue = (key=="key")?"":defaultObj[key];
 (optionValue==defaultValue)?((storage.getItem(key))||storage.setItem(key,optionValue)):storage.setItem(key,optionValue);
 };
 };
+
 (argueObj["do"])&&(argueObj["do"][0]=="reset")&&(window.location.href="/");
+
 // function to replace fontawesome key
 function fontAwe(fontKey,fontID="") {
 var fontI = document.createElement('i');
@@ -138,6 +150,7 @@ fontI.className = fontKey;
 if (fontID) {fontI.id = fontID;};
 return fontI;
 };
+
 // function to replace fontawesome key
 function link(href,innerArr,jump = '',label = '') {
 let classArr = new Array();
@@ -839,8 +852,9 @@ function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
 
 function resizeDiv() {
 var verticalBool = (window.visualViewport.height > window.visualViewport.width);
-seekerDOM.style["grid-template-columns"] = verticalBool?"1fr":"1fr min-content";
-seekerDOM.style["grid-template-rows"] = verticalBool?"1fr min-content":"1fr";
+// playerBarDOM.className = verticalBool?"playerbar":"playerpop";
+// playerBarDOM.style = verticalBool?"":"bottom:.5rem;right:.5rem;";
+// infoSecDOM.style = verticalBool?"":"width: min-content;";
 titleH1DOM.style["display"] = verticalBool?"block":"none";
 titleSpanDOM.style["display"] = verticalBool?"none":"inline";
 var smallHeightBool = window.visualViewport.height <= 800;
@@ -857,7 +871,6 @@ toggleLayout("episodes_list","on");
 };
 
 window.onresize = resizeDiv;
-initialDiv();
 resizeDiv();
 
 function shareTags() {
