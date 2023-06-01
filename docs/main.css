@@ -264,6 +264,11 @@ grid-template-columns: 1fr;
 gap:0.5rem;
 /* width:min-content; */
 }
+@media (max-height:400px) {
+.playInfoSec{
+width: min-content;
+}
+}
 .tagBar{padding:.375rem 0;}
 .tagBorder{
 background-color:var(--bnbg);
@@ -326,7 +331,7 @@ grid-template-rows:1fr min-content;
 grid-template-columns:1fr;
 gap:.5rem;
 }
-@media (min-aspect-ratio: 1/1) {
+@media (min-aspect-ratio: 1/1) and (min-height:401px) {
 .seeker{
     grid-template-rows:1fr;
     grid-template-columns:1fr min-content;
