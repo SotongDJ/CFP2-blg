@@ -837,44 +837,6 @@ updateBtn(sectionStr,targetADOM,targetIDOM);
 function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
 function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
 
-function initialDiv() {
-var targetStr_arr = ["titleH1","titleSpan"];
-for (let index = 0; index < targetStr_arr.length; index++) {
-var targetDOM = document.getElementById(targetStr_arr[index]);
-targetDOM.innerHTML = "";
-targetDOM.style["display"] = "none";
-var squidAdom = document.createElement("a");
-squidAdom.className = "mirror";
-squidAdom.href = "https://xn--2os22eixx6na.xn--kpry57d/";
-squidAdom.target = "info";
-squidAdom.title = "墨玉程市";
-squidAdom.innerText = "🦑";
-var cfp2Aspan = document.createElement('a');
-cfp2Aspan.href = "https://xn--2os22eixx6na.xn--kpry57d/category/CFP2/";
-cfp2Aspan.target = "info";
-cfp2Aspan.title = "All CFP2 所有播放室";
-cfp2Aspan.innerText = "CFP2";
-var okAdom = document.createElement("a");
-okAdom.className = "mirror";
-okAdom.href = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/";
-okAdom.title = "Refresh site 重新更新本站";
-okAdom.innerText = "👌";
-var blgAspan = document.createElement('a');
-blgAspan.href = "https://www.bailingguonews.com/";
-blgAspan.target = "info";
-blgAspan.title = "Bailingguo News 百靈果 News";
-blgAspan.innerText = (index==0)?"BLG 百靈果":"BLG ";
-targetDOM.appendChild(squidAdom);
-targetDOM.append(" ");
-targetDOM.appendChild(cfp2Aspan);
-targetDOM.append("·");
-targetDOM.appendChild(okAdom);
-targetDOM.append(" ");
-targetDOM.appendChild(blgAspan);
-(index==0)&&targetDOM.append("播放室");
-(index==1)&&targetDOM.append("｜");
-};
-};
 function resizeDiv() {
 var verticalBool = (window.visualViewport.height > window.visualViewport.width);
 seekerDOM.style["grid-template-columns"] = verticalBool?"1fr":"1fr min-content";
