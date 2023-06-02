@@ -238,7 +238,7 @@ margin:.25rem 0 0 0;
 padding:0;
 background-color:var(--plbg);
 border:solid var(--plbr);
-border-radius:.25rem;
+border-radius:.5rem;
 }
 .popPiP{
 background-image:url("/r/512.png");
@@ -265,7 +265,7 @@ gap:0.5rem;
 @media (max-height:400px) {
 .playerbar{
 border:solid var(--ctbr);
-position: fixed;
+position: absolute;
 padding: .5rem;
 bottom: .25rem;
 right: .25rem;
