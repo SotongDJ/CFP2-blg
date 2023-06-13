@@ -65,24 +65,29 @@
 
 <div id="morePage" class="morePage" style="visibility:hidden;">
 <div id="shareTag" class="buttonDiv" style="display:none;">
+ <a href="javascript:void(shareTags())">
  <i class="fa-solid fa-tags fa-fw"></i>
- <a href="javascript:void(shareTags())">分享標籤
+ 分享標籤
  <span id="tagSpan"></span>
  </a></div>
 <div id="shareEpi" class="buttonDiv" style="display:none;">
+ <a href="javascript:void(shareNow())">
  <i class="fa-solid fa-record-vinyl fa-fw"></i>
- <a href="javascript:void(shareNow())">分享本集
+ 分享本集
  </a></div>
 <div id="shareCuT" class="buttonDiv" style="display:none;">
+ <a href="javascript:void(shareNow(1))">
  <i class="fa-solid fa-stopwatch fa-fw"></i>
- <a href="javascript:void(shareNow(1))">分享此刻
+ 分享此刻
  <span id="cuTSpan"></span>
  </a></div>
 <div id="shareResultDiv" class="buttonDiv" style="display:none;">
- <i class="fa-solid fa-champagne-glasses fa-fw"></i>
+ <i class="fa-solid fa-circle-xmark fa-fw"></i>
  <a href="javascript:void(clearShare())">
- <span id="shareResultA"></span>
- <i class="fa-solid fa-delete-left fa-fw"></i></a></div>
+ <span id="shareResultA"></span></a>
+ ：
+ <a id="shareLink">Link</a>
+</div>
 <div class="buttonDiv"><i id="colourI" class="fa-solid fa-cloud fa-fw"></i>
  <a id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
 <div class="buttonDiv"><i id="contraI" class="fa-solid fa-circle-half-stroke fa-fw"></i>
@@ -144,9 +149,7 @@
 </div>
 </div>
 
-<div class="tagContent">
-<audio id="player" preload="metadata"></audio>
-</div>
+<div><audio id="player" preload="metadata"></audio></div>
 
 </div>
 <script src="register.js"></script>

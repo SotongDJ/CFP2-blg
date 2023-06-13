@@ -17,6 +17,7 @@ const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
 const shareRsDivDOM = document.getElementById("shareResultDiv");
 const shareRsADOM = document.getElementById("shareResultA");
+const shareLinkDOM = document.getElementById("shareLink");
 const shareTagDOM = document.getElementById("shareTag");
 const shareEpiDOM = document.getElementById("shareEpi");
 const shareCutDOM = document.getElementById("shareCuT");
@@ -907,70 +908,45 @@ text:targetTitle,
 };
 shareRsDivDOM.style["display"] = "block";
 shareRsADOM.textContent = "嘗試分享";
+shareLinkDOM.href = targetUrl;
 try {
 await navigator.share(shareData);
 shareRsADOM.textContent = "謝謝分享";
+shareLinkDOM.href = targetUrl;
 } catch (err) {
 const { name,message } = err;
 if (name === "AbortError") {
 shareRsADOM.textContent = "取消分享";
+shareLinkDOM.href = targetUrl;
 } else {
 shareRsADOM.textContent = err;
+shareLinkDOM.href = targetUrl;
 };
 };
 };
 
 function clipboardShare(targetUrl) {
-shareUrl = targetUrl;
-shareContentDOM.value = shareUrl;
-shareContentDOM.setAttribute("type","text");
+shareContentDOM.value = targetUrl;
+shareContentDOM.setAttribute("type", "text");
 shareContentDOM.select();
 shareRsDivDOM.style["display"] = "block";
 shareRsADOM.textContent = "嘗試分享";
+shareLinkDOM.href = targetUrl;
 try {
-var successful = document.execCommand("copy");
-var msg = successful?"成功":"失敗";
-alert(`${shareUrl} - 複製${msg}`);
-shareRsADOM.textContent = `複製${msg}`;
+navigator.clipboard.writeText(targetUrl)
+.then(() => {
+alert(`${targetUrl} - 複製成功`);
+shareRsADOM.textContent = "複製成功";
+shareLinkDOM.href = targetUrl;
+})
+.catch(() => {
+alert("複製失敗");
+shareRsADOM.textContent = "複製失敗";
+shareLinkDOM.href = targetUrl;
+});
 } catch (err) {
 alert("無法複製");
-shareRsADOM.textContent = `無法複製`;
-}
-shareContentDOM.setAttribute("type","hidden");
-window.getSelection().removeAllRanges();
-}
-// dragElement(document.querySelector("#playerbar"));
-// function dragElement(movingBox) {
-//   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//   movingBox.onmousedown = dragMouseDown;
-
-//   function dragMouseDown(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // get the mouse cursor position at startup:
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     document.onmouseup = closeDragElement;
-//     // call a function whenever the cursor moves:
-//     document.onmousemove = elementDrag;
-//   }
-
-//   function elementDrag(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // calculate the new cursor position:
-//     pos1 = pos3 - e.clientX;
-//     pos2 = pos4 - e.clientY;
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     // set the element's new position:
-//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//   }
-
-//   function closeDragElement() {
-//     // stop moving when mouse button is released:
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
-// }
+shareRsADOM.textContent = "無法複製";
+shareLinkDOM.href = targetUrl;
+};
+};
