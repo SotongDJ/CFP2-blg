@@ -243,12 +243,16 @@ border-radius:.5rem;
 .popPiP{
 background-image:url("/r/512.png");
 background-size:contain;
-min-height:100px;
-min-width:100px;
 height:10vh;
 width:10vh;
 border:solid var(--ppbr);
 border-radius:.5rem;
+}
+@media (min-width:350px) {
+.popPiP{
+min-height:100px;
+min-width:100px;
+}
 }
 .selected.entry:nth-of-type(odd){
 background-color:var(--oddc);
