@@ -146,6 +146,15 @@ gap:.25rem;
 height:calc(100vh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
 white-space:nowrap;
 }
+@media (max-width:350px) {
+.centerise{
+margin:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+}
+.playerPost {display: inline;}
+@media (max-width:400px) {
+.playerPost {display: none;}
+}
 .container{
 overflow:auto;
 background-color:var(--ctbg);
@@ -262,21 +271,15 @@ border-radius:.5rem;
 .popPiP{
 background-image:url("/r/512.png");
 background-size:contain;
-height:10vh;
-width:10vh;
+height:100px;
+width:100px;
 border:solid var(--ppbr);
 border-radius:.5rem;
 }
-@media (min-width:485px) {
+@media (max-width:485px) {
 .popPiP{
-min-height:100px;
-min-width:100px;
-}
-}
-@media (min-width:350px) {
-.popPiP{
-min-height:15vh;
-min-width:15vh;
+height:10vh;
+width:10vh;
 }
 }
 .selected.entry:nth-of-type(odd){
@@ -334,10 +337,6 @@ overflow-y:hidden;
 white-space:nowrap;
 }
 /* .title a {text-decoration:none;} */
-.playerPost {display: inline;}
-@media (max-width:400px) {
-.playerPost {display: none;}
-}
 .titleH1 {display:block;}
 .titleSpan {display:none;}
 .controlBar {
