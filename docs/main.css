@@ -312,8 +312,8 @@ gap:0.5rem;
 border:solid var(--ctbr);
 position: absolute;
 padding: .5rem;
-bottom: calc(env(safe-area-inset-bottom) + .25rem);
-right: calc(env(safe-area-inset-right) + .25rem);
+bottom: calc(env(safe-area-inset-bottom) + .5rem);
+right: calc(env(safe-area-inset-right) + .5rem);
 }
 .playInfoSec{
 width: min-content;
@@ -364,7 +364,7 @@ grid-template-rows:1fr min-content;
 grid-template-columns:1fr;
 gap:.5rem;
 }
-@media (max-height:400px) {
+@media (max-height:550px) {
 .titleH1 {display:none;}
 .titleSpan {display:inline;}
 }
