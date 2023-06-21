@@ -267,10 +267,16 @@ width:10vh;
 border:solid var(--ppbr);
 border-radius:.5rem;
 }
-@media (min-width:350px) {
+@media (min-width:485px) {
 .popPiP{
 min-height:100px;
 min-width:100px;
+}
+}
+@media (min-width:350px) {
+.popPiP{
+min-height:15vh;
+min-width:15vh;
 }
 }
 .selected.entry:nth-of-type(odd){
@@ -328,9 +334,9 @@ overflow-y:hidden;
 white-space:nowrap;
 }
 /* .title a {text-decoration:none;} */
-.playerPost {display: none;}
-@media (max-width:400px) {
 .playerPost {display: inline;}
+@media (max-width:400px) {
+.playerPost {display: none;}
 }
 .titleH1 {display:block;}
 .titleSpan {display:none;}
