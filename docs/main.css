@@ -271,8 +271,8 @@ gap:0.5rem;
 border:solid var(--ctbr);
 position: absolute;
 padding: .5rem;
-bottom: .25rem;
-right: .25rem;
+bottom: calc(env(safe-area-inset-bottom) + .25rem);
+right: calc(env(safe-area-inset-right) + .25rem);
 }
 .playInfoSec{
 width: min-content;
@@ -328,6 +328,12 @@ overflow-y:hidden;
 white-space:nowrap;
 }
 /* .title a {text-decoration:none;} */
+.playerPost {display: none;}
+@media (max-width:400px) {
+.playerPost {display: inline;}
+}
+.titleH1 {display:block;}
+.titleSpan {display:none;}
 .controlBar {
 display:grid;
 grid-template-columns:min-content 1fr min-content;
@@ -341,6 +347,16 @@ grid-template-columns:1fr;
 gap:.5rem;
 }
 @media (min-aspect-ratio: 1/1) and (min-height:401px) {
+.tagBtn{
+display:inline;
+visibility:visible;
+}
+.tagList{
+display:none;
+visibility:hidden;
+}
+.titleH1 {display:none;}
+.titleSpan {display:inline;}
 .seeker{
     grid-template-rows:1fr;
     grid-template-columns:1fr min-content;
