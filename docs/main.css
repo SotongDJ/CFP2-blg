@@ -348,12 +348,12 @@ gap:.5rem;
 }
 @media (min-aspect-ratio: 1/1) and (min-height:401px) {
 .tagBtn{
-display:inline;
-visibility:visible;
-}
-.tagList{
 display:none;
 visibility:hidden;
+}
+.tagList{
+display:inline;
+visibility:visible;
 }
 .titleH1 {display:none;}
 .titleSpan {display:inline;}
