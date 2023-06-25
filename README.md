@@ -4,7 +4,7 @@ The unofficial,  (CFP2) for [Bailingguo](https://www.bailingguonews.com/) podcas
 
 In order to make it easier to listen to Bailingguo podcast, I wrote a website to facilitate the selection of the episodes I want to listen to.
 
-![Homepage of CuttleFish Podcast Player for Bailingguo podcast](/docs/ss/front-light-low.png "Homepage with light and low contrast theme")
+![Homepage of CuttleFish Podcast Player for Bailingguo podcast](/docs/ss/landscape-light-low.png "Homepage with light and low contrast theme")
 
 ## 漢文版本
 

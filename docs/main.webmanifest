@@ -14,116 +14,60 @@
 "categories": ["books","entertainment","lifestyle","podcast","politics"],
 "screenshots": [
 {
-"src": "/ss/macos-light-low.png",
-"sizes": "1000x597",
+"src": "/ss/landscape-light-low.png",
+"sizes": "1016x635",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in light theme with low contrast"
+"label": "Landscape in light theme with low contrast"
 },
 {
-"src": "/ss/macos-light-high.png",
-"sizes": "1000x597",
+"src": "/ss/landscape-light-high.png",
+"sizes": "1016x635",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in light theme with high contrast"
+"label": "Landscape in light theme with high contrast"
 },
 {
-"src": "/ss/macos-dark-low.png",
-"sizes": "1000x597",
+"src": "/ss/landscape-dark-low.png",
+"sizes": "1016x635",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in dark theme with low contrast"
+"label": "Landscape in dark theme with low contrast"
 },
 {
-"src": "/ss/macos-dark-high.png",
-"sizes": "1000x597",
+"src": "/ss/landscape-dark-high.png",
+"sizes": "1016x635",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in dark theme with high contrast"
+"label": "Landscape in dark theme with high contrast"
 },
 {
-"src": "/ss/android-light-low.png",
-"sizes": "1080x2340",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in light theme with low contrast"
-},
-{
-"src": "/ss/android-light-high.png",
-"sizes": "1080x2340",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in light theme with high contrast"
-},
-{
-"src": "/ss/android-dark-low.png",
-"sizes": "1080x2340",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in dark theme with low contrast"
-},
-{
-"src": "/ss/android-dark-high.png",
-"sizes": "1080x2340",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in dark theme with high contrast"
-},
-{
-"src": "/ss/ios-light-low.png",
-"sizes": "1242x2208",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in light theme with low contrast"
-},
-{
-"src": "/ss/ios-light-high.png",
-"sizes": "1242x2208",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in light theme with high contrast"
-},
-{
-"src": "/ss/ios-dark-low.png",
-"sizes": "1242x2208",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in dark theme with low contrast"
-},
-{
-"src": "/ss/ios-dark-high.png",
-"sizes": "1242x2208",
-"type": "image/png",
-"platform": "narrow",
-"label": "Homescreen in dark theme with high contrast"
-},
-{
-"src": "/ss/windows-light-low.png",
-"sizes": "752x615",
+"src": "/ss/portrait-light-low.png",
+"sizes": "1080x2400",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in light theme with low contrast"
+"label": "Portrait in light theme with low contrast"
 },
 {
-"src": "/ss/windows-light-high.png",
-"sizes": "752x615",
+"src": "/ss/portrait-light-high.png",
+"sizes": "1080x2400",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in light theme with high contrast"
+"label": "Portrait in light theme with high contrast"
 },
 {
-"src": "/ss/windows-dark-low.png",
-"sizes": "752x615",
+"src": "/ss/portrait-dark-low.png",
+"sizes": "1080x2400",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in dark theme with low contrast"
+"label": "Portrait in dark theme with low contrast"
 },
 {
-"src": "/ss/windows-dark-high.png",
-"sizes": "752x615",
+"src": "/ss/portrait-dark-high.png",
+"sizes": "1080x2400",
 "type": "image/png",
 "platform": "wide",
-"label": "Homescreen in dark theme with high contrast"
+"label": "Portrait in dark theme with high contrast"
 }
 ],
 "icons": [

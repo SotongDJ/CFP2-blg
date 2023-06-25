@@ -4,7 +4,7 @@
 
 為了更方便的重聽百靈果，所以寫了一個網站以篩選想聽的集數。
 
-![Homepage of CuttleFish Podcast Player for Bailingguo podcast](/docs/ss/front-light-low.png "Homepage with light and low contrast theme")
+![Homepage of CuttleFish Podcast Player for Bailingguo podcast](/docs/ss/landscape-light-low.png "Homepage with light and low contrast theme")
 
 ## English version
 
