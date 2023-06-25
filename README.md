@@ -57,19 +57,19 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 
 ## TO DO
 
-- ~~auto-update episodes~~ (archived)
-- ~~fix other browser's theme~~ (archived)
-- ~~design different colour theme~~ (archived)
-- ~~design different contrast theme~~ (archived)
-- ~~month tag~~ (archived)
-- ~~share button~~ (archived)
-  - ~~tag share~~ (archived)
-  - ~~episode share~~ (archived)
-- episode detail info
-  - podcast episode detail
-  - include youtube shorts/teaser
-- ~~customize playback control UI~~ (archived)
-- able to customize playback queue
-- offline playback
+- [x] ~~auto-update episodes~~ (archived)
+- [x] ~~fix other browser's theme~~ (archived)
+- [x] ~~design different colour theme~~ (archived)
+- [x] ~~design different contrast theme~~ (archived)
+- [x] ~~month tag~~ (archived)
+- [x] ~~share button~~ (archived)
+  - [x] ~~tag share~~ (archived)
+  - [x] ~~episode share~~ (archived)
+- [x] ~~episode detail info~~ (archived)
+  - [x] ~~podcast episode detail~~ (archived)
+  - [ ] include youtube shorts/teaser (W.I.P.)
+- [x] ~~customize playback control UI~~ (archived)
+- [ ] able to customize playback queue
+- [ ] offline playback
   - use browser to cache podcast and manage downloaded content are too complicated
   - offline playback may be supported in future
