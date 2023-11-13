@@ -144,6 +144,16 @@ height:min-content;
 white-space:nowrap;
 padding:1rem .25rem;
 }
+.tagBorder.buttonDiv{
+/*
+width: min-content;
+*/
+margin: .5rem;
+padding: .5rem;
+}
+a.white {
+color: var(--atxt);
+}
 .centerise{
 max-width:850px;
 margin:calc(1rem + env(safe-area-inset-top)) auto calc(1rem + env(safe-area-inset-bottom)) auto;
@@ -176,7 +186,7 @@ overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
 border-radius:0.25rem;
-padding:1rem;
+padding:0;
 visibility:hidden;
 }
 .tagBtn{
