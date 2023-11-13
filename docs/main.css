@@ -337,7 +337,7 @@ right: calc(env(safe-area-inset-right) + .5rem);
 width: min-content;
 }
 }
-.tagBar{padding:.375rem 0;}
+.tagBar{padding:.5rem 0;}
 .tagBorder{
 background-color:var(--bnbg);
 border:solid var(--bnbr);
