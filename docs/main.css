@@ -22,6 +22,7 @@ padding:0rem 1rem;
 --clr2:hsl(  0,   0%,  20%);
 --clr3:hsl(  0,   0%,   0%);
 --clr9:hsl(  0,   0%,   0%);
+--clra:hsl(200,   0%,  90%);
 --oddc:hsl(230,  92%,  90%);
 --evnc:hsl(232, 100%,  97%);
 }
@@ -37,6 +38,7 @@ padding:0rem 1rem;
 --clr2:hsl(  0,   0%,  60%);
 --clr3:hsl(  0,   0%,  80%);
 --clr9:hsl(  0,   0%, 100%);
+--clra:hsl(200,   0%,  35%);
 --oddc:hsl(230, 100%,  24%);
 --evnc:hsl(232, 100%,  12%);
 }
@@ -52,6 +54,7 @@ padding:0rem 1rem;
 --clr2:hsl(  0,   0%,  20%);
 --clr3:hsl(  0,   0%,   0%);
 --clr9:hsl(  0,   0%,   0%);
+--clra:hsl(200,   0%,  90%);
 --oddc:hsl(230,  92%,  90%);
 --evnc:hsl(232, 100%,  97%);
 }
@@ -66,6 +69,7 @@ padding:0rem 1rem;
 --clr2:hsl(  0,   0%,  60%);
 --clr3:hsl(  0,   0%,  80%);
 --clr9:hsl(  0,   0%, 100%);
+--clra:hsl(200,   0%,  35%);
 --oddc:hsl(230, 100%,  24%);
 --evnc:hsl(232, 100%,  12%);
 }
@@ -77,15 +81,16 @@ background-color:var(--rtbg);
 --text:var(--clr3);
 --ixbg:var(--clr6);
 --ixbr:var(--clr6);
---ctbg:var(--clr4);
---ctbr:var(--clr4);
---plbg:var(--clr4);
---plbr:var(--clr4);
+--ctbg:var(--clr6);
+--ctbr:var(--clr6);
+--plbg:var(--clr6);
+--plbr:var(--clr6);
 --ppbr:var(--clr4);
---odbg:var(--clr6);
---odbr:var(--clr6);
---evbg:var(--clr5);
---evbr:var(--clr5);
+--odbg:var(--clr5);
+--odbr:var(--clr5);
+--evbg:var(--clr1);
+--evbr:var(--clr1);
+--acbg:var(--clra);
 --bnbg:var(--clr8);
 --bnbr:var(--clr8);
 --atxt:var(--clr1);
@@ -100,15 +105,16 @@ background-color:var(--rtbg);
 --text:var(--clr3);
 --ixbg:var(--clr6);
 --ixbr:var(--clr3);
---ctbg:var(--clr4);
+--ctbg:var(--clr6);
 --ctbr:var(--clr3);
---plbg:var(--clr4);
+--plbg:var(--clr1);
 --plbr:var(--clr3);
 --ppbr:var(--clr3);
---odbg:var(--clr6);
+--odbg:var(--clr5);
 --odbr:var(--clr3);
---evbg:var(--clr5);
+--evbg:var(--clr1);
 --evbr:var(--clr3);
+--acbg:var(--clra);
 --bnbg:var(--clr4);
 --bnbr:var(--clr3);
 --atxt:var(--clr3);
@@ -182,9 +188,10 @@ display:none;
 visibility:hidden;
 }
 .entry{
-border-radius:.25rem;
-margin:.125rem;
-padding:.25rem;
+/* border-radius:.25rem; */
+/* margin:.125rem; */
+margin:0;
+padding:.25rem .5rem;
 width:17rem;
 }
 @media (min-width:401px) {
@@ -228,15 +235,16 @@ overflow: hidden; */
 }
 .entry:nth-of-type(odd){
 background-color:var(--odbg);
-border:solid var(--odbr);
+border:0;
 }
 .entry:nth-of-type(even){
 background-color:var(--evbg);
-border:solid var(--evbr);
+border:0;
 }
 .entry:hover{
+background-color:var(--acbg);
 font-weight:700;
-border:solid var(--high);
+border:0;
 }
 h1{
 font-size:1.25rem;
@@ -269,7 +277,7 @@ padding:.3rem .25rem .6rem 0;
 }
 .plain{
 width:min-content;
-min-width:95%;
+min-width:100%;
 }
 .playerbar{
 display:grid;
