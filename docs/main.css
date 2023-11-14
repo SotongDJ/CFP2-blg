@@ -178,14 +178,14 @@ padding:0rem;
 overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
-border-radius:0.25rem;
+border-radius:.25rem;
 visibility:visible;
 }
 .morePage{
 overflow:auto;
 background-color:var(--ctbg);
 border:solid var(--ctbr);
-border-radius:0.25rem;
+border-radius:.25rem;
 padding:0;
 visibility:hidden;
 }
@@ -297,7 +297,7 @@ margin:.25rem 0 0 0;
 padding:.25rem;
 background-color:var(--plbg);
 border:solid var(--plbr);
-border-radius:.5rem;
+border-radius:.25rem;
 }
 .popPiP{
 background-image:url("/r/512.png");
@@ -305,7 +305,7 @@ background-size:contain;
 height:100px;
 width:100px;
 border:solid var(--ppbr);
-border-radius:.5rem;
+border-radius:.25rem;
 }
 @media (max-width:485px) {
 .popPiP{
@@ -356,7 +356,7 @@ overflow-y:hidden;
 height:min-content;
 background-color: var(--ixbg);
 border: solid var(--ixbr);
-border-radius: .25rem;
+border-radius:.25rem;
 padding: .5rem;
 }
 .tagIndex{
