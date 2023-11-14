@@ -352,7 +352,13 @@ height:min-content;
 overflow-x:auto;
 overflow-y:hidden;
 }
-.funcContent{height:min-content;}
+.funcContent{
+height:min-content;
+background-color: var(--ixbg);
+border: solid var(--ixbr);
+border-radius: .25rem;
+padding: .5rem;
+}
 .tagIndex{
 overflow:auto;
 background-color:var(--ixbg);
