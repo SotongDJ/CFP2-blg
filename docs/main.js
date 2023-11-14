@@ -116,8 +116,8 @@ argueObj[key] = [value];
 };
 
 var argueKey = Object.keys(argueObj);
-var defaultObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
-var optionObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"lowContrast"};
+var defaultObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"highContrast"};
+var optionObj = {"key":[],"now":"","currentTS":"","union":"false","sort":"neutral","colour":"neutral","contrast":"highContrast"};
 var optionKey = Object.keys(optionObj);
 
 for (var ark = 0; ark < argueKey.length; ++ark) {

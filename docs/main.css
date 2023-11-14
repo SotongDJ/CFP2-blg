@@ -271,7 +271,7 @@ color:var(--htxt);
 .indexBar{padding:.5625rem 0;}
 .indexSection{
 margin:.125rem 0;
-padding:.25rem;
+padding:.25rem .5rem;
 height:min-content;
 width:fit-content;
 }
@@ -291,11 +291,11 @@ min-width:100%;
 }
 .playerbar{
 display:grid;
-grid-template-columns:minmax(10vh,100px) 1fr;
+grid-template-columns:110px 1fr;
 gap:1rem;
 margin:.25rem 0 0 0;
-padding:.25rem;
-background-color:var(--plbg);
+padding:.25rem .5rem;
+background-color:var(--evbg);
 border:solid var(--plbr);
 border-radius:.25rem;
 }
@@ -354,8 +354,8 @@ overflow-y:hidden;
 }
 .funcContent{
 height:min-content;
-background-color: var(--ixbg);
-border: solid var(--ixbr);
+background-color: var(--evbg);
+border: solid var(--plbr);
 border-radius:.25rem;
 padding: .5rem;
 }
