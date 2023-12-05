@@ -6,13 +6,16 @@ const indexBarDOM = document.getElementById("indexbar");
 const unionSDOM = document.getElementById("unionSpan");
 const tagADOM = document.getElementById("tagA");
 const tagIDOM = document.getElementById("tagI");
-const sortADOM = document.getElementById("sortA");
 const sortIDOM = document.getElementById("sortI");
+const sortADOM = document.getElementById("sortA");
+const sortMDOM = document.getElementById("sortM");
 const moreIDOM = document.getElementById("moreI");
 const colourIDOM = document.getElementById("colourI");
 const colourADOM = document.getElementById("colourA");
+const colourMDOM = document.getElementById("colourM");
 const contraIDOM = document.getElementById("contraI");
 const contraADOM = document.getElementById("contraA");
+const contraMDOM = document.getElementById("contraM");
 const tagBarDOM = document.getElementById("tagbar");
 const tagListDOM = document.getElementById("taglist");
 const shareRsDivDOM = document.getElementById("shareResultDiv");
@@ -407,11 +410,14 @@ doQueue(storage.getItem('now'));
 
 (storage.getItem("now")=="")||initPlay(storage.getItem("now"));
 fillIndex();
-updateBtn("sort",sortADOM,sortIDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM);
+updateBtn("sort",sortMDOM);
 updateTheme("colour");
-updateBtn("colour",colourADOM,colourIDOM);
+updateTxtNBtn("colour",colourADOM,colourIDOM);
+updateBtn("colour",colourMDOM);
 updateTheme("contrast");
-updateBtn("contrast",contraADOM,contraIDOM);
+updateTxtNBtn("contrast",contraADOM,contraIDOM);
+updateBtn("contrast",contraMDOM);
 draw();
 
 async function doNext() {
@@ -830,6 +836,10 @@ var sectionNowStr = storage.getItem(sectionStr);
 targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
 targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
 };
+function updateTxtNBtn(sectionStr,targetIDOM) {
+var sectionNowStr = storage.getItem(sectionStr);
+targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
+};
 function updateTheme(sectionStr) {
 var positionInt = paramObj[sectionStr]["position"];
 var nowThemeStr = storage.getItem(sectionStr);
@@ -840,16 +850,18 @@ document.body.className = layoutArr.join(" ");
     
 function toggleSort() {
 toggleBtn("sort");
-updateBtn("sort",sortADOM,sortIDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM);
+updateBtn("sort",sortMDOM);
 draw();
 };
-function toggleTheme(sectionStr,targetADOM,targetIDOM) {
+function toggleTheme(sectionStr,targetADOM,targetIDOM,targetMDOM) {
 toggleBtn(sectionStr);
 updateTheme(sectionStr);
-updateBtn(sectionStr,targetADOM,targetIDOM);
+updateTxtNBtn(sectionStr,targetADOM,targetIDOM);
+updateBtn(sectionStr,targetMDOM);
 };
-function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM)};
-function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM)};
+function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM,colourMDOM)};
+function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM,contraMDOM)};
 
 function resizeDiv() {
 var verticalBool = (window.visualViewport.height > window.visualViewport.width);
