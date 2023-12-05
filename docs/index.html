@@ -55,8 +55,11 @@
  <a href="https://www.bailingguonews.com/" target="info" title="Bailingguo News 百靈果 News" class="linkDecor activeBtn tagBorder"><span class="mirror">👌</span> BLG </a>
  <span>｜</span></span>
 <span class="linkDecor activeBtn tagBorder">
+ <a href="javascript:void(toggleMoreOpt())" class="white">
+ <i id="moreI" class="fa-solid fa-bars fa-fw"></i></a></span>
+<span class="linkDecor activeBtn tagBorder">
  <a href="javascript:void(toggleTag())" class="white">
- <i id="tagI" class="fa-solid fa-square-caret-down fa-fw"></i></a></span>
+ <i id="tagI" class="fa-solid fa-tags fa-fw"></i></a></span>
 <span class="linkDecor activeBtn tagBorder">
  <a href="javascript:void(toggleSort())" class="white">
  <i id="sortI" class="fa-solid fa-sort fa-fw"></i></a></span>
@@ -69,9 +72,6 @@
 <span class="linkDecor activeBtn tagBorder">
  <a href="https://www.instagram.com/cfp2_blg/" class="white" target="info">
  <i class="fa-brands fa-instagram fa-fw"></i></a></span>
-<span class="linkDecor activeBtn tagBorder">
- <a href="javascript:void(toggleMoreOpt())" class="white">
- <i id="moreI" class="fa-solid fa-square-plus fa-fw"></i></a></span>
 </div>
 </div>
 </div>
@@ -79,57 +79,57 @@
 <div id="morePage" class="morePage" style="visibility:hidden;">
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-tags fa-fw"></i>
- <a id="tagA" href="javascript:void(toggleTag())">標籤</a></div>
+ <a class="activeBtn" id="tagA" href="javascript:void(toggleTag())">標籤</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-sort fa-fw"></i>
- <a id="sortA" href="javascript:void(toggleSort())">排序</a></div>
+ <a class="activeBtn" id="sortA" href="javascript:void(toggleSort())">排序</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-cloud fa-fw"></i>
- <a id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
+ <a class="activeBtn" id="colourA" href="javascript:void(toggleColour())">預設晝夜</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
- <a id="contraA" href="javascript:void(toggleContrast())">對比</a></div>
+ <a class="activeBtn" id="contraA" href="javascript:void(toggleContrast())">對比</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-brands fa-instagram fa-fw"></i>
- <a href="https://www.instagram.com/cfp2_blg/" target="info">埃居</a></div>
+ <a class="activeBtn" href="https://www.instagram.com/cfp2_blg/" target="info">埃居</a></div>
 <div id="shareTag" class="tagBorder activeBtn buttonDiv" style="display:none;">
- <a href="javascript:void(shareTags())" class="white">
+ <a class="activeBtn" href="javascript:void(shareTags())" class="white">
  <i class="fa-solid fa-tags fa-fw"></i>
  分享標籤
  <span id="tagSpan"></span>
  </a></div>
 <div id="shareEpi" class="tagBorder activeBtn buttonDiv" style="display:none;">
- <a href="javascript:void(shareNow())" class="white">
+ <a class="activeBtn" href="javascript:void(shareNow())" class="white">
  <i class="fa-solid fa-record-vinyl fa-fw"></i>
  分享本集
  </a></div>
 <div id="shareCuT" class="tagBorder activeBtn buttonDiv" style="display:none;">
- <a href="javascript:void(shareNow(1))" class="white">
+ <a class="activeBtn" href="javascript:void(shareNow(1))" class="white">
  <i class="fa-solid fa-stopwatch fa-fw"></i>
  分享此刻
  <span id="cuTSpan"></span>
  </a></div>
 <div id="shareResultDiv" class="tagBorder activeBtn buttonDiv" style="display:none;">
  <i class="fa-solid fa-circle-xmark fa-fw"></i>
- <a href="javascript:void(clearShare())">
+ <a class="activeBtn" href="javascript:void(clearShare())">
  <span id="shareResultA"></span></a>：<a id="shareLink">Link</a>
 </div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-envelope fa-fw"></i>
- <a href="mailto:github@stdj.me?subject=BLG 回饋信件&body=內容類型：（問題？建議？）%0A細節：（越詳細越好）">回饋</a>
+ <a class="activeBtn" href="mailto:github@stdj.me?subject=BLG 回饋信件&body=內容類型：（問題？建議？）%0A細節：（越詳細越好）">回饋</a>
  </div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-life-ring fa-fw"></i>
- <a href="https://github.com/SotongDJ/cfp2-blg/wiki" target="info">指南</a></div>
+ <a class="activeBtn" href="https://github.com/SotongDJ/cfp2-blg/wiki" target="info">指南</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-circle-info fa-fw"></i>
- <a href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
+ <a class="activeBtn" href="https://github.com/SotongDJ/cfp2-blg" target="info">關於</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-trash-can fa-fw"></i>
- <a href="/?do=reset">重置本站</a></div>
+ <a class="activeBtn" href="/?do=reset">重置本站</a></div>
 <div class="tagBorder activeBtn buttonDiv">
  <i class="fa-solid fa-rotate fa-fw"></i>
- <a href="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/">重新更新</a></div>
+ <a class="activeBtn" href="https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/">重新更新</a></div>
 </div>
 
 <div id="tagindex" class="tagIndex">
