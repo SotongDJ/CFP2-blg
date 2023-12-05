@@ -410,14 +410,11 @@ doQueue(storage.getItem('now'));
 
 (storage.getItem("now")=="")||initPlay(storage.getItem("now"));
 fillIndex();
-updateTxtNBtn("sort",sortADOM,sortIDOM);
-updateBtn("sort",sortMDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM,sortMDOM);
 updateTheme("colour");
-updateTxtNBtn("colour",colourADOM,colourIDOM);
-updateBtn("colour",colourMDOM);
+updateTxtNBtn("colour",colourADOM,colourIDOM,colourMDOM);
 updateTheme("contrast");
-updateTxtNBtn("contrast",contraADOM,contraIDOM);
-updateBtn("contrast",contraMDOM);
+updateTxtNBtn("contrast",contraADOM,contraIDOM,contraMDOM);
 draw();
 
 async function doNext() {
@@ -831,14 +828,11 @@ var sectionNowStr = storage.getItem(sectionStr);
 var nextStr = paramObj[sectionStr][sectionNowStr]['next'];
 storage.setItem(sectionStr,nextStr);
 };
-function updateBtn(sectionStr,targetADOM,targetIDOM) {
+function updateTxtNBtn(sectionStr,targetADOM,targetIDOM,targetMDOM) {
 var sectionNowStr = storage.getItem(sectionStr);
 targetADOM.innerText = paramObj[sectionStr][sectionNowStr]["text"];
 targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
-};
-function updateTxtNBtn(sectionStr,targetIDOM) {
-var sectionNowStr = storage.getItem(sectionStr);
-targetIDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
+targetMDOM.className = paramObj[sectionStr][sectionNowStr]["class"];
 };
 function updateTheme(sectionStr) {
 var positionInt = paramObj[sectionStr]["position"];
@@ -850,15 +844,13 @@ document.body.className = layoutArr.join(" ");
     
 function toggleSort() {
 toggleBtn("sort");
-updateTxtNBtn("sort",sortADOM,sortIDOM);
-updateBtn("sort",sortMDOM);
+updateTxtNBtn("sort",sortADOM,sortIDOM,sortMDOM);
 draw();
 };
 function toggleTheme(sectionStr,targetADOM,targetIDOM,targetMDOM) {
 toggleBtn(sectionStr);
 updateTheme(sectionStr);
-updateTxtNBtn(sectionStr,targetADOM,targetIDOM);
-updateBtn(sectionStr,targetMDOM);
+updateTxtNBtn(sectionStr,targetADOM,targetIDOM,targetMDOM);
 };
 function toggleColour() {toggleTheme("colour",colourADOM,colourIDOM,colourMDOM)};
 function toggleContrast() {toggleTheme("contrast",contraADOM,contraIDOM,contraMDOM)};
