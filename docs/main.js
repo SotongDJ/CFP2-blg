@@ -810,6 +810,7 @@ entryPg.appendChild(extraP);
 };
 };
 var tagDivP = document.createElement("p");
+tagDivP.className = "descripBar";
 tagDivP.innerHTML = playlist[tar]['description'];
 entryPg.appendChild(tagDivP);
 detailPgDOM.innerHTML = "";
