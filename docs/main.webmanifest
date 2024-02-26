@@ -15,56 +15,56 @@
 "screenshots": [
 {
 "src": "/ss/landscape-light-low.png",
-"sizes": "1016x635",
+"sizes": "1920x1080",
 "type": "image/png",
 "platform": "wide",
 "label": "Landscape in light theme with low contrast"
 },
 {
 "src": "/ss/landscape-light-high.png",
-"sizes": "1016x635",
+"sizes": "1920x1080",
 "type": "image/png",
 "platform": "wide",
 "label": "Landscape in light theme with high contrast"
 },
 {
 "src": "/ss/landscape-dark-low.png",
-"sizes": "1016x635",
+"sizes": "1920x1080",
 "type": "image/png",
 "platform": "wide",
 "label": "Landscape in dark theme with low contrast"
 },
 {
 "src": "/ss/landscape-dark-high.png",
-"sizes": "1016x635",
+"sizes": "1920x1080",
 "type": "image/png",
 "platform": "wide",
 "label": "Landscape in dark theme with high contrast"
 },
 {
 "src": "/ss/portrait-light-low.png",
-"sizes": "1080x2400",
+"sizes": "864X1728",
 "type": "image/png",
 "platform": "wide",
 "label": "Portrait in light theme with low contrast"
 },
 {
 "src": "/ss/portrait-light-high.png",
-"sizes": "1080x2400",
+"sizes": "864X1728",
 "type": "image/png",
 "platform": "wide",
 "label": "Portrait in light theme with high contrast"
 },
 {
 "src": "/ss/portrait-dark-low.png",
-"sizes": "1080x2400",
+"sizes": "864X1728",
 "type": "image/png",
 "platform": "wide",
 "label": "Portrait in dark theme with low contrast"
 },
 {
 "src": "/ss/portrait-dark-high.png",
-"sizes": "1080x2400",
+"sizes": "864X1728",
 "type": "image/png",
 "platform": "wide",
 "label": "Portrait in dark theme with high contrast"
