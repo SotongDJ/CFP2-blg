@@ -498,7 +498,7 @@ let nameStr = playlist[storage.getItem('now')]['image'];
 popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
 title:playlist[storage.getItem('now')]['name'],
-artist:'百靈果 News',
+artist:final_artist_str,
 album:playlist[storage.getItem('now')]['tag'].join(" "),
 artwork:[
 { src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
@@ -882,8 +882,8 @@ resizeDiv();
 function shareTags() {
 if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
-var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",");
-var targetTitle_str = "【百靈果 News】標籤："+drawKeyArr.join("、");
+var targetUrl_str = final_root_path+"?key="+drawKeyArr.join(",");
+var targetTitle_str = "【"+final_artist_str+"】標籤："+drawKeyArr.join("、");
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
@@ -895,8 +895,8 @@ if (navigator.share) {
 var drawKeyArr = getArr(storage.getItem('key'));
 var nowStr = (at=="")?storage.getItem('now'):at;
 var currentTsStr = (storage.getItem('currentTS')==""||t==0)?"":"&currentTS="+storage.getItem('currentTS');
-var targetUrl_str = "https://xn--xp8h.xn--2os22eixx6na.xn--kpry57d/?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
-var targetTitle_str = "【百靈果 News】："+playlist[nowStr]['name'];
+var targetUrl_str = final_root_path+"?key="+drawKeyArr.join(",")+"&now="+nowStr+currentTsStr;
+var targetTitle_str = "【"+final_artist_str+"】："+playlist[nowStr]['name'];
 navigatorShare(targetUrl_str,targetTitle_str);
 } else {
 clipboardShare(targetUrl_str);
