@@ -377,10 +377,18 @@ playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
 buttonPdom.appendChild(playSpan);
 var controlSpan = document.createElement('span');
 controlSpan.className = "tagBorder";
-controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+if (show_apple) {
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+}
+if (show_google) {
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+}
+if (show_spotify) {
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+}
+if (show_youtube) {
+  controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+}
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
@@ -781,10 +789,18 @@ playSpan.appendChild(link("javascript: void(goToPlay(\""+tar+"\"))",playIdArr));
 buttonPdom.appendChild(playSpan);
 var controlSpan = document.createElement('span');
 controlSpan.className = "tagBorder";
-controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
-controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+if (show_apple) {
+  controlSpan.appendChild(link(playlist[tar]["apple"],[fontAwe("fa-brands fa-apple fa-fw")],"podcast"));
+}
+if (show_google) {
+  controlSpan.appendChild(link(playlist[tar]["google"],[fontAwe("fa-brands fa-google fa-fw")],"podcast"));
+}
+if (show_spotify) {
+  controlSpan.appendChild(link(playlist[tar]["spotify"],[fontAwe("fa-brands fa-spotify fa-fw")],"podcast"));
+}
+if (show_youtube) {
+  controlSpan.appendChild(link(playlist[tar]["youtube"],[fontAwe("fa-brands fa-youtube fa-fw")],"podcast"));
+}
 buttonPdom.appendChild(controlSpan);
 var shareSpan = document.createElement('span');
 shareSpan.className = "tagBorder";
