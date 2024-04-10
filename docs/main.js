@@ -908,7 +908,7 @@ function clearShare() {shareRsDivDOM.style["display"] = "none";};
 async function navigatorShare(targetUrl,targetTitle) {
 var shareData = {
 url:targetUrl,
-title:"CFP2-BLG 百靈果播放室",
+title:final_title_str,
 text:targetTitle,
 };
 shareRsDivDOM.style["display"] = "block";
