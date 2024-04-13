@@ -46,7 +46,7 @@ In order to make it easier to listen to Bailingguo podcast, I wrote a website to
 ## Help
 
 - Go to: <https://github.com/SotongDJ/cfp2-blg/wiki>
-- Contact me: <https://www.instagram.com/cfp2_blg>
+- Contact me: <https://www.instagram.com/cfp2_pwa>
 
 ## LICENSE
 

@@ -46,7 +46,7 @@
 ## 幫助
 
 - 請查閱：<https://github.com/SotongDJ/cfp2-blg/wiki>
-- 私訊我：<https://www.instagram.com/cfp2_blg>
+- 私訊我：<https://www.instagram.com/cfp2_pwa>
 
 ## LICENSE
 
