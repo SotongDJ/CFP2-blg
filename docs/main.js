@@ -320,7 +320,7 @@ var drawKeyArr = getArr(storage.getItem('key'));
 if (drawKeyArr.length > 0) {
 toggleLayout("selected_tags","on")
 shareTagDOM.style["display"] = "block";
-tagSpanDOM.innerText = "（"+drawKeyArr.join("、")+"）";
+tagSpanDOM.innerText = "："+drawKeyArr.join("、");
 if (drawKeyArr.length > 1) {
 tagNoteDOM.innerText = "：";
 var drawUnionStr = storage.getItem('union');
@@ -595,13 +595,13 @@ currentDOM.innerHTML = convertTimer(storage.getItem("currentTS"))
 } else {
 currentDOM.innerHTML = convertTimer(playerDOM.currentTime);
 };
-cuTSpanDOM.innerText = "（"+convertTimer(playerDOM.currentTime)+"）";
+cuTSpanDOM.innerText = "："+convertTimer(playerDOM.currentTime);
 sliderDOM.max= playerDOM.duration;
 sliderDOM.setAttribute("value",playerDOM.currentTime);
 });
 playerDOM.addEventListener('timeupdate',function() {
 currentDOM.innerText = convertTimer(playerDOM.currentTime);
-cuTSpanDOM.innerText = "（"+convertTimer(playerDOM.currentTime)+"）";
+cuTSpanDOM.innerText = "："+convertTimer(playerDOM.currentTime);
 sliderDOM.value = playerDOM.currentTime;
 sliderDOM.setAttribute("value",playerDOM.currentTime);
 updatePositionState();
