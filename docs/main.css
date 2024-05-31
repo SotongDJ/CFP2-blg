@@ -201,7 +201,19 @@ margin:0 .25rem;
 color:var(--htxt);
 }
 .hideBtn.tagBorder{padding:.25rem .5rem;}
-.indexBar{padding:.5625rem 0;}
+.indexBar{
+padding: .5625rem 0 0 0;
+display: flex;
+flex-flow: row wrap;
+gap: .5625rem;
+}
+.memberBar{
+padding: .5625rem .5625rem 0 .5625rem;
+display: flex;
+flex-flow: row wrap;
+gap: .5625rem;
+justify-content: space-evenly;
+}
 .indexSection{
 margin:.125rem 0;
 padding:.25rem .5rem;

@@ -246,31 +246,32 @@ var drawKeyArr = getArr(storage.getItem('key'));
 indexBarDOM.innerText = "";
 var tagClassArr = Object.keys(class_tag);
 for (let tli = 0; tli < tagClassArr.length; tli++) {
-var tagClassP = document.createElement("div");
+var tagClassHeadP = document.createElement("div");
+tagClassHeadP.className = "indexBar";
+var tagClassMemberP = document.createElement("div");
+tagClassMemberP.className = "memberBar";
 var tagClassStr = tagClassArr[tli];
 if (tagClassStr[0] == "#") {
 var tagClassASpan = link("",[" "+tagClassStr],'','tagBorder');
 tagClassASpan.id = tagClassStr;
-tagClassP.appendChild(tagClassASpan);
-tagClassP.append("：");
+tagClassHeadP.appendChild(tagClassASpan);
 } else {
 var addTagScriptStr = "javascript: void(addTag(\""+tagClassStr+"\"))";
 var addTagStr = drawKeyArr.includes(tagClassStr)?"":addTagScriptStr;
 tagClassASpan = link(addTagStr,[fontAwe(faTagStr)," "+tagClassStr],'','tagBorder');
 tagClassASpan.id = tagClassStr;
-tagClassP.appendChild(tagClassASpan);
-tagClassP.append("：");
+tagClassHeadP.appendChild(tagClassASpan);
 };
-tagClassP.className = "indexBar";
 var tagClassEachArr = class_tag[tagClassArr[tli]];
 for (let tcea = 0; tcea < tagClassEachArr.length; tcea++) {
 var textTagStr = tagClassEachArr[tcea];
 var addTagStr = drawKeyArr.includes(textTagStr)?"":"javascript: void(addTag(\""+textTagStr+"\"))";
 var tagClassEachASpan = link(addTagStr,[fontAwe(faTagStr)," "+textTagStr],'','tagBorder');
 tagClassEachASpan.id = tagClassArr[tli]+textTagStr;
-tagClassP.appendChild(tagClassEachASpan);
+tagClassMemberP.appendChild(tagClassEachASpan);
 };
-indexBarDOM.appendChild(tagClassP);
+indexBarDOM.appendChild(tagClassHeadP);
+indexBarDOM.appendChild(tagClassMemberP);
 };
 };
 
