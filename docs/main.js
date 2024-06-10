@@ -504,18 +504,18 @@ shareCutDOM.style["display"] = "block";
 playBTN.style["display"] = "none";
 pauseBTN.style["display"] = "block";
 let nameStr = playlist[storage.getItem('now')]['image'];
-popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
+popPipDOM.style['background-image'] = `url("https://klo.lt/p/${nameStr}/512.png")`;
 navigator.mediaSession.metadata = new MediaMetadata({
 title:playlist[storage.getItem('now')]['name'],
 artist:final_artist_str,
 album:playlist[storage.getItem('now')]['tag'].join(" "),
 artwork:[
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/128.png`,sizes:'128x128',type:'image/png' },
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/192.png`,sizes:'192x192',type:'image/png' },
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/256.png`,sizes:'256x256',type:'image/png' },
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/384.png`,sizes:'384x384',type:'image/png' },
-{ src:`https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png`,sizes:'512x512',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/96.png`,sizes:'96x96',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/128.png`,sizes:'128x128',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/192.png`,sizes:'192x192',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/256.png`,sizes:'256x256',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/384.png`,sizes:'384x384',type:'image/png' },
+{ src:`https://klo.lt/p/${nameStr}/512.png`,sizes:'512x512',type:'image/png' },
 ]
 });
 };
@@ -641,7 +641,7 @@ canvasDOM.getContext('2d').clearRect(0,0,512,512);
 let nameStr = playlist[storage.getItem('now')]['image'];
 const image = new Image();
 image.crossOrigin = true;
-image.src = `https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png`;
+image.src = `https://klo.lt/p/${nameStr}/512.png`;
 await image.decode();
 canvasDOM.getContext('2d').drawImage(image,0,0,512,512);
 };
@@ -649,7 +649,7 @@ canvasDOM.getContext('2d').drawImage(image,0,0,512,512);
 async function mixPlay() {
 let nowStr = storage.getItem('now');
 let nameStr = playlist[nowStr]['image'];
-popPipDOM.style['background-image'] = `url("https://xn--2os22eixx6na.xn--kpry57d/CFP2/p/${nameStr}/512.png")`;
+popPipDOM.style['background-image'] = `url("https://klo.lt/p/${nameStr}/512.png")`;
 if (document.pictureInPictureEnabled) {popADOM.href = "javascript: void(doPiP())";};
 var playPromise = playerDOM.play();
 if (playPromise !== undefined) {
