@@ -1,3 +1,7 @@
+# CFP2 and its derivative sub-projects will be discontinued and replaced by **[klo.lt](https://github.com/SotongDJ/klo.lt)**
+
+RSS feed updater is shutdow.
+
 # CuttleFish podcast player for Bailingguo podcast
 
 The unofficial,  (CFP2) for [Bailingguo](https://www.bailingguonews.com/) podcast, located in [墨玉程市](https://xn--2os22eixx6na.xn--kpry57d/)
